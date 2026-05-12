@@ -1,4 +1,10 @@
 import { Heading, Label, Text } from "@/components/ui";
+import { Message } from "@/components/ui/message";
+import {
+  CheckCircleIcon,
+  CircleAlertIcon,
+  TriangleAlertIcon,
+} from "lucide-react";
 
 export function Dashboard() {
   return (
@@ -17,6 +23,19 @@ export function Dashboard() {
           de componentes simples (atômicos) e estilizáveis.
         </Text>
       </div>
+
+      <Message variant={"success"} startContent={<CheckCircleIcon size={12} />}>
+        Atenção esta é uma mensagem de sucesso
+      </Message>
+      <Message
+        variant={"warning"}
+        startContent={<TriangleAlertIcon size={12} />}
+      >
+        Atenção esta é uma mensagem de aviso
+      </Message>
+      <Message variant={"danger"} startContent={<CircleAlertIcon size={12} />}>
+        Atenção esta é uma mensagem de perigo
+      </Message>
     </main>
   );
 }
