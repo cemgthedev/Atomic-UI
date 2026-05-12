@@ -1,10 +1,6 @@
-import { Heading, Label, Text } from "@/components/ui";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Divider } from "@/components/ui/divider";
+import { Heading, Label, Quote, Text } from "@/components/ui";
 import { Message } from "@/components/ui/message";
 import {
-  Building2Icon,
   CheckCircleIcon,
   CircleAlertIcon,
   TriangleAlertIcon,
@@ -41,114 +37,62 @@ export function Dashboard() {
         Atenção esta é uma mensagem de perigo
       </Message>
 
-      <Heading>Botões</Heading>
-      <div className="grid grid-cols-7 gap-3">
-        <Button variant="dark" size={"xl"}>
-          Testando
-        </Button>
-        <Button variant="muted" size={"lg"}>
-          Testando
-        </Button>
-        <Button variant="primary" size={"md"}>
-          Testando
-        </Button>
-        <Button variant="secondary" size={"sm"}>
-          Testando
-        </Button>
-        <Button variant="success" size={"xs"}>
-          Testando
-        </Button>
-        <Button variant="warning">Testando</Button>
-        <Button variant="danger">Testando</Button>
-
-        <Button variant="dark-bordered">Testando</Button>
-        <Button variant="muted-bordered">Testando</Button>
-        <Button variant="primary-bordered">Testando</Button>
-        <Button variant="secondary-bordered">Testando</Button>
-        <Button variant="success-bordered">Testando</Button>
-        <Button variant="warning-bordered">Testando</Button>
-        <Button variant="danger-bordered">Testando</Button>
-
-        <Button variant="dark-ghost">Testando</Button>
-        <Button variant="muted-ghost">Testando</Button>
-        <Button variant="primary-ghost">Testando</Button>
-        <Button variant="secondary-ghost">Testando</Button>
-        <Button variant="success-ghost">Testando</Button>
-        <Button variant="warning-ghost">Testando</Button>
-        <Button variant="danger-ghost">Testando</Button>
-      </div>
-
-      <Heading>Badges</Heading>
-      <div className="grid grid-cols-7 gap-3">
-        <Badge variant="dark" size={"xl"}>
-          Testando
-        </Badge>
-        <Badge variant="muted" size={"lg"}>
-          Testando
-        </Badge>
-        <Badge variant="primary" size={"md"}>
-          Testando
-        </Badge>
-        <Badge variant="secondary" size={"sm"}>
-          Testando
-        </Badge>
-        <Badge variant="success" size={"xs"}>
-          Testando
-        </Badge>
-        <Badge variant="warning">Testando</Badge>
-        <Badge variant="danger">Testando</Badge>
-
-        <Badge variant="dark-bordered">Testando</Badge>
-        <Badge variant="muted-bordered">Testando</Badge>
-        <Badge variant="primary-bordered">Testando</Badge>
-        <Badge variant="secondary-bordered">Testando</Badge>
-        <Badge variant="success-bordered">Testando</Badge>
-        <Badge variant="warning-bordered">Testando</Badge>
-        <Badge variant="danger-bordered">Testando</Badge>
-
-        <Badge variant="dark-ghost">Testando</Badge>
-        <Badge variant="muted-ghost">Testando</Badge>
-        <Badge variant="primary-ghost">Testando</Badge>
-        <Badge variant="secondary-ghost">Testando</Badge>
-        <Badge variant="success-ghost">Testando</Badge>
-        <Badge variant="warning-ghost">Testando</Badge>
-        <Badge variant="danger-ghost">Testando</Badge>
-      </div>
-
-      <Heading>Dividers</Heading>
-      <div className="flex flex-col gap-2">
-        <Divider />
-        <Divider variant={"muted"} />
-        <Divider
-          variant={"dark"}
-          startContent={<Building2Icon size={12} />}
-          endContent={<Building2Icon size={12} />}
-        />
-        <Divider
-          variant={"primary"}
-          startContent={<Building2Icon size={12} />}
-          endContent={<Building2Icon size={12} />}
-        />
-        <Divider
-          variant={"secondary"}
-          startContent={<Building2Icon size={12} />}
-          endContent={<Building2Icon size={12} />}
-        />
-        <Divider
-          variant={"success"}
-          startContent={<Building2Icon size={12} />}
-          endContent={<Building2Icon size={12} />}
-        />
-        <Divider
-          variant={"warning"}
-          startContent={<Building2Icon size={12} />}
-          endContent={<Building2Icon size={12} />}
-        />
-        <Divider
-          variant={"danger"}
-          startContent={<Building2Icon size={12} />}
-          endContent={<Building2Icon size={12} />}
-        />
+      <Heading>Anotações</Heading>
+      <div className="flex flex-col gap-4">
+        <Quote>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </Quote>
+        <Quote variant={"primary"}>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </Quote>
+        <Quote variant={"secondary"}>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </Quote>
+        <Quote variant={"success"} size={"lg"} rounded={"full"}>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </Quote>
+        <Quote variant={"warning"} size={"md"}>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </Quote>
+        <Quote variant={"danger"} size={"sm"}>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </Quote>
       </div>
     </main>
   );
