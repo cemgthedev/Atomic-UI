@@ -4,8 +4,8 @@ import * as React from "react";
 
 import { cn } from "@/utils/cn";
 
-const buttonVariants = cva(
-  "w-fit h-fit flex justify-center items-center gap-2 transition-all duration-300 border border-border cursor-pointer",
+const badgeVariants = cva(
+  "w-fit h-fit flex justify-center items-center gap-2 transition-all duration-300 border border-border cursor-default select-none",
   {
     variants: {
       variant: {
@@ -69,14 +69,14 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonProps = React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
+type BadgeProps = React.ComponentProps<"span"> &
+  VariantProps<typeof badgeVariants> & {
     asChild?: boolean;
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
   };
 
-function Button({
+function Badge({
   className,
   variant = "default",
   size = "md",
@@ -86,16 +86,14 @@ function Button({
   endContent,
   children,
   ...props
-}: ButtonProps) {
+}: BadgeProps) {
   if (asChild)
     return (
-      <div
-        className={cn(buttonVariants({ variant, size, rounded, className }))}
-      >
+      <div className={cn(badgeVariants({ variant, size, rounded, className }))}>
         {!!startContent && startContent}
 
         <Slot.Root
-          data-slot="button"
+          data-slot="span"
           data-variant={variant}
           data-size={size}
           {...props}
@@ -108,11 +106,11 @@ function Button({
     );
 
   return (
-    <button
-      data-slot="button"
+    <span
+      data-slot="span"
       data-variant={variant}
       data-size={size}
-      className={cn(buttonVariants({ variant, size, rounded, className }))}
+      className={cn(badgeVariants({ variant, size, rounded, className }))}
       {...props}
     >
       {!!startContent && startContent}
@@ -120,8 +118,8 @@ function Button({
       {children}
 
       {!!endContent && endContent}
-    </button>
+    </span>
   );
 }
 
-export { Button, buttonVariants };
+export { Badge, badgeVariants };

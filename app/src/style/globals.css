@@ -71,6 +71,24 @@
   --text-sm: calc(var(--text-size) * 3);
   --text-xs: calc(var(--text-size) * 2);
 
+  /**
+  * Line heights
+  */
+  --leading-10xl: calc(var(--text-size) * 18);
+  --leading-9xl: calc(var(--text-size) * 17);
+  --leading-8xl: calc(var(--text-size) * 16);
+  --leading-7xl: calc(var(--text-size) * 15);
+  --leading-6xl: calc(var(--text-size) * 14);
+  --leading-5xl: calc(var(--text-size) * 13);
+  --leading-4xl: calc(var(--text-size) * 12);
+  --leading-3xl: calc(var(--text-size) * 11);
+  --leading-2xl: calc(var(--text-size) * 10);
+  --leading-xl: calc(var(--text-size) * 9);
+  --leading-lg: calc(var(--text-size) * 8);
+  --leading-md: calc(var(--text-size) * 7);
+  --leading-sm: calc(var(--text-size) * 6);
+  --leading-xs: calc(var(--text-size) * 5);
+
   /*
   * Typography classes
   */
