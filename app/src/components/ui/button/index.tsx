@@ -5,17 +5,45 @@ import * as React from "react";
 import { cn } from "@/utils/cn";
 
 const buttonVariants = cva(
-  "w-fit flex justify-center items-center gap-2 transition-all duration-300 hover:opacity-80 border border-border",
+  "w-fit flex justify-center items-center gap-2 transition-all duration-300 border border-border",
   {
     variants: {
       variant: {
-        default: "bg-muted text-foreground",
-        muted: "bg-muted text-foreground opacity-60",
-        primary: "bg-primary text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground",
-        success: "bg-success text-success-foreground",
-        warning: "bg-warning text-warning-foreground",
-        danger: "bg-danger text-danger-foreground",
+        default: "bg-muted text-foreground hover:opacity-80",
+        dark: "bg-dark text-dark-foreground hover:opacity-80",
+        muted: "bg-muted text-foreground opacity-60 hover:opacity-80",
+        primary: "bg-primary text-primary-foreground hover:opacity-80",
+        secondary: "bg-secondary text-secondary-foreground hover:opacity-80",
+        success: "bg-success text-success-foreground hover:opacity-80",
+        warning: "bg-warning text-warning-foreground hover:opacity-80",
+        danger: "bg-danger text-danger-foreground hover:opacity-80",
+        "dark-bordered":
+          "border-dark text-dark hover:bg-dark hover:text-dark-foreground",
+        "muted-bordered":
+          "border-muted text-muted opacity-60 hover:bg-muted hover:text-muted-foreground",
+        "primary-bordered":
+          "border-primary text-primary hover:bg-primary hover:text-primary-foreground",
+        "secondary-bordered":
+          "border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground",
+        "success-bordered":
+          "border-success text-success hover:bg-success hover:text-success-foreground",
+        "warning-bordered":
+          "border-warning text-warning hover:bg-warning hover:text-warning-foreground",
+        "danger-bordered":
+          "border-danger text-danger hover:bg-danger hover:text-danger-foreground",
+        "dark-ghost": "bg-muted border-dark text-dark hover:opacity-80",
+        "muted-ghost":
+          "bg-muted border-dark text-dark opacity-60 hover:opacity-80",
+        "primary-ghost":
+          "bg-cyan-200 border-cyan-800 text-cyan-800 hover:opacity-80",
+        "secondary-ghost":
+          "bg-violet-200 border-violet-800 text-violet-800 hover:opacity-80",
+        "success-ghost":
+          "bg-emerald-200 border-emerald-800 text-emerald-800 hover:opacity-80",
+        "warning-ghost":
+          "bg-yellow-200 border-yellow-800 text-yellow-800 hover:opacity-80",
+        "danger-ghost":
+          "bg-red-200 border-red-800 text-red-800 hover:opacity-80",
       },
       size: {
         xl: "text-xl p-3",
@@ -74,7 +102,7 @@ function Button({
         >
           {children}
         </Slot.Root>
-        
+
         {!!endContent && endContent}
       </div>
     );
