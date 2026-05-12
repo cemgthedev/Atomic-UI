@@ -82,8 +82,8 @@ function Button({
   size = "md",
   rounded = "md",
   asChild = false,
-  startContent,
-  endContent,
+  startContent = null,
+  endContent = null,
   children,
   ...props
 }: ButtonProps) {
@@ -92,7 +92,7 @@ function Button({
       <div
         className={cn(buttonVariants({ variant, size, rounded, className }))}
       >
-        {!!startContent && startContent}
+        {startContent}
 
         <Slot.Root
           data-slot="button"
@@ -103,7 +103,7 @@ function Button({
           {children}
         </Slot.Root>
 
-        {!!endContent && endContent}
+        {endContent}
       </div>
     );
 

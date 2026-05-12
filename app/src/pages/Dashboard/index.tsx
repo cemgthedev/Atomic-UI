@@ -1,8 +1,10 @@
 import { Heading, Label, Text } from "@/components/ui";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Divider } from "@/components/ui/divider";
 import { Message } from "@/components/ui/message";
 import {
+  Building2Icon,
   CheckCircleIcon,
   CircleAlertIcon,
   TriangleAlertIcon,
@@ -10,7 +12,7 @@ import {
 
 export function Dashboard() {
   return (
-    <main className="h-screen flex flex-col gap-4 p-3">
+    <main className="h-screen flex flex-col gap-4 p-3 my-8">
       <div className="space-y-1">
         <Heading variant={"primary"}>Atomic UI</Heading>
         <Label size="sm" variant={"muted"}>
@@ -111,6 +113,42 @@ export function Dashboard() {
         <Badge variant="success-ghost">Testando</Badge>
         <Badge variant="warning-ghost">Testando</Badge>
         <Badge variant="danger-ghost">Testando</Badge>
+      </div>
+
+      <Heading>Dividers</Heading>
+      <div className="flex flex-col gap-2">
+        <Divider />
+        <Divider variant={"muted"} />
+        <Divider
+          variant={"dark"}
+          startContent={<Building2Icon size={12} />}
+          endContent={<Building2Icon size={12} />}
+        />
+        <Divider
+          variant={"primary"}
+          startContent={<Building2Icon size={12} />}
+          endContent={<Building2Icon size={12} />}
+        />
+        <Divider
+          variant={"secondary"}
+          startContent={<Building2Icon size={12} />}
+          endContent={<Building2Icon size={12} />}
+        />
+        <Divider
+          variant={"success"}
+          startContent={<Building2Icon size={12} />}
+          endContent={<Building2Icon size={12} />}
+        />
+        <Divider
+          variant={"warning"}
+          startContent={<Building2Icon size={12} />}
+          endContent={<Building2Icon size={12} />}
+        />
+        <Divider
+          variant={"danger"}
+          startContent={<Building2Icon size={12} />}
+          endContent={<Building2Icon size={12} />}
+        />
       </div>
     </main>
   );
