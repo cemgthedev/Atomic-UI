@@ -3,7 +3,7 @@ import * as React from "react";
 
 import { cn } from "@/utils/cn";
 
-const headingVariants = cva("font-semibold font-heading", {
+const labelVariants = cva("font-medium font-label", {
   variants: {
     variant: {
       default: "text-foreground",
@@ -15,11 +15,11 @@ const headingVariants = cva("font-semibold font-heading", {
       danger: "text-danger",
     },
     size: {
-      xl: "text-5xl",
-      lg: "text-4xl",
-      md: "text-3xl",
-      sm: "text-2xl",
-      xs: "text-xl",
+      xl: "text-3xl",
+      lg: "text-2xl",
+      md: "text-xl",
+      sm: "text-lg",
+      xs: "text-md",
     },
   },
   defaultVariants: {
@@ -28,26 +28,26 @@ const headingVariants = cva("font-semibold font-heading", {
   },
 });
 
-type HeadingProps = React.ComponentProps<"h1"> &
-  VariantProps<typeof headingVariants>;
+type LabelProps = React.ComponentProps<"label"> &
+  VariantProps<typeof labelVariants>;
 
-function Heading({
+function Label({
   className,
   variant = "default",
   size = "md",
   ...props
-}: HeadingProps) {
-  const Comp = "h1";
+}: LabelProps) {
+  const Comp = "label";
 
   return (
     <Comp
       data-slot="h1"
       data-variant={variant}
       data-size={size}
-      className={cn(headingVariants({ variant, size, className }))}
+      className={cn(labelVariants({ variant, size, className }))}
       {...props}
     />
   );
 }
 
-export { Heading, headingVariants };
+export { Label, labelVariants };
