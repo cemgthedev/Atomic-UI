@@ -28,8 +28,10 @@
   --border: oklch(96.7% 0.003 264.542);
   --input: oklch(96.7% 0.003 264.542);
   --ring: oklch(96.7% 0.003 264.542);
-  --radius: 2px;
-  --text: 4px;
+  --ring-size: 1px;
+  --border-size: 1px;
+  --radius-size: 2px;
+  --text-size: 4px;
   --sidebar: oklch(98.5% 0.002 247.839);
   --sidebar-foreground: oklch(14.1% 0.005 285.823);
   --sidebar-primary: oklch(60.9% 0.126 221.723);
@@ -51,20 +53,20 @@
   /**
   * Text sizes
   */
-  --text-10xl: calc(var(--text) * 15);
-  --text-9xl: calc(var(--text) * 14);
-  --text-8xl: calc(var(--text) * 13);
-  --text-7xl: calc(var(--text) * 12);
-  --text-6xl: calc(var(--text) * 11);
-  --text-5xl: calc(var(--text) * 10);
-  --text-4xl: calc(var(--text) * 9);
-  --text-3xl: calc(var(--text) * 8);
-  --text-2xl: calc(var(--text) * 7);
-  --text-xl: calc(var(--text) * 6);
-  --text-lg: calc(var(--text) * 5);
-  --text-md: calc(var(--text) * 4);
-  --text-sm: calc(var(--text) * 3);
-  --text-xs: calc(var(--text) * 2);
+  --text-10xl: calc(var(--text-size) * 15);
+  --text-9xl: calc(var(--text-size) * 14);
+  --text-8xl: calc(var(--text-size) * 13);
+  --text-7xl: calc(var(--text-size) * 12);
+  --text-6xl: calc(var(--text-size) * 11);
+  --text-5xl: calc(var(--text-size) * 10);
+  --text-4xl: calc(var(--text-size) * 9);
+  --text-3xl: calc(var(--text-size) * 8);
+  --text-2xl: calc(var(--text-size) * 7);
+  --text-xl: calc(var(--text-size) * 6);
+  --text-lg: calc(var(--text-size) * 5);
+  --text-md: calc(var(--text-size) * 4);
+  --text-sm: calc(var(--text-size) * 3);
+  --text-xs: calc(var(--text-size) * 2);
 
   /*
   * Typography classes
@@ -104,20 +106,38 @@
   /*
   * Radius size classes
   */
-  --radius-10xl: calc(var(--radius) * 15);
-  --radius-9xl: calc(var(--radius) * 14);
-  --radius-8xl: calc(var(--radius) * 13);
-  --radius-7xl: calc(var(--radius) * 12);
-  --radius-6xl: calc(var(--radius) * 11);
-  --radius-5xl: calc(var(--radius) * 10);
-  --radius-4xl: calc(var(--radius) * 9);
-  --radius-3xl: calc(var(--radius) * 8);
-  --radius-2xl: calc(var(--radius) * 7);
-  --radius-xl: calc(var(--radius) * 6);
-  --radius-lg: calc(var(--radius) * 5);
-  --radius-md: var(--radius * 4);
-  --radius-sm: calc(var(--radius) * 3);
-  --radius-xs: calc(var(--radius) * 2);
+  --radius-10xl: calc(var(--radius-size) * 15);
+  --radius-9xl: calc(var(--radius-size) * 14);
+  --radius-8xl: calc(var(--radius-size) * 13);
+  --radius-7xl: calc(var(--radius-size) * 12);
+  --radius-6xl: calc(var(--radius-size) * 11);
+  --radius-5xl: calc(var(--radius-size) * 10);
+  --radius-4xl: calc(var(--radius-size) * 9);
+  --radius-3xl: calc(var(--radius-size) * 8);
+  --radius-2xl: calc(var(--radius-size) * 7);
+  --radius-xl: calc(var(--radius-size) * 6);
+  --radius-lg: calc(var(--radius-size) * 5);
+  --radius-md: calc(var(--radius-size) * 4);
+  --radius-sm: calc(var(--radius-size) * 3);
+  --radius-xs: calc(var(--radius-size) * 2);
+
+  /*
+  * Borders sizes classes
+  */
+  --border-width-xl: calc(var(--border-size) * 3);
+  --border-width-lg: calc(var(--border-size) * 2.5);
+  --border-width-md: calc(var(--border-size) * 2);
+  --border-width-sm: calc(var(--border-size) * 1.5);
+  --border-width-xs: calc(var(--border-size));
+
+  /*
+  * Ring sizes classes
+  */
+  --ring-width-xl: calc(var(--ring-size) * 3);
+  --ring-width-lg: calc(var(--ring-size) * 2.5);
+  --ring-width-md: calc(var(--ring-size) * 2);
+  --ring-width-sm: calc(var(--ring-size) * 1.5);
+  --ring-width-xs: calc(var(--ring-size));
 
   /*
   * Graphics colors classes
