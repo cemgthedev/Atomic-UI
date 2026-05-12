@@ -1,4 +1,5 @@
 import { Heading, Label, Text } from "@/components/ui";
+import { Button } from "@/components/ui/button";
 import { Message } from "@/components/ui/message";
 import {
   CheckCircleIcon,
@@ -36,6 +37,30 @@ export function Dashboard() {
       <Message variant={"danger"} startContent={<CircleAlertIcon size={12} />}>
         Atenção esta é uma mensagem de perigo
       </Message>
+
+      <Button>Testando</Button>
+      <Button variant={"muted"}>Testando</Button>
+      <Button variant={"primary"} size="xl" rounded="full">
+        Testando
+      </Button>
+      <Button variant={"secondary"} size="lg" rounded="xl">
+        Testando
+      </Button>
+      <Button
+        variant={"success"}
+        size="md"
+        rounded="lg"
+        startContent={<CheckCircleIcon size={20} />}
+        endContent={<CheckCircleIcon size={20} />}
+      >
+        Testando
+      </Button>
+      <Button variant={"warning"} size="sm" rounded="sm">
+        Testando
+      </Button>
+      <Button variant={"danger"} size="xs" rounded="xs">
+        Testando
+      </Button>
     </main>
   );
 }
