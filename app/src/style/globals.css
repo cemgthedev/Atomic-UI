@@ -21,15 +21,16 @@
   --secondary: oklch(54.1% 0.281 293.009);
   --secondary-foreground: oklch(98.5% 0.002 247.839);
   --success: oklch(59.6% 0.145 163.225);
+  --success-foreground: oklch(98.5% 0.002 247.839);
   --warning: oklch(68.1% 0.162 75.834);
+  --warning-foreground: oklch(98.5% 0.002 247.839);
   --danger: oklch(57.7% 0.245 27.325);
+  --danger-foreground: oklch(98.5% 0.002 247.839);
   --muted: oklch(87.2% 0.01 258.338);
   --muted-foreground: oklch(44.6% 0.03 256.802);
   --border: oklch(96.7% 0.003 264.542);
   --input: oklch(96.7% 0.003 264.542);
   --ring: oklch(96.7% 0.003 264.542);
-  --ring-size: 1px;
-  --border-size: 1px;
   --radius-size: 2px;
   --text-size: 4px;
   --sidebar: oklch(98.5% 0.002 247.839);
@@ -93,8 +94,11 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-success-foreground: var(--success-foreground);
   --color-success: var(--success);
+  --color-warning-foreground: var(--warning-foreground);
   --color-warning: var(--warning);
+  --color-danger-foreground: var(--danger-foreground);
   --color-danger: var(--danger);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
@@ -120,24 +124,6 @@
   --radius-md: calc(var(--radius-size) * 4);
   --radius-sm: calc(var(--radius-size) * 3);
   --radius-xs: calc(var(--radius-size) * 2);
-
-  /*
-  * Borders sizes classes
-  */
-  --border-width-xl: calc(var(--border-size) * 3);
-  --border-width-lg: calc(var(--border-size) * 2.5);
-  --border-width-md: calc(var(--border-size) * 2);
-  --border-width-sm: calc(var(--border-size) * 1.5);
-  --border-width-xs: calc(var(--border-size));
-
-  /*
-  * Ring sizes classes
-  */
-  --ring-width-xl: calc(var(--ring-size) * 3);
-  --ring-width-lg: calc(var(--ring-size) * 2.5);
-  --ring-width-md: calc(var(--ring-size) * 2);
-  --ring-width-sm: calc(var(--ring-size) * 1.5);
-  --ring-width-xs: calc(var(--ring-size));
 
   /*
   * Graphics colors classes
