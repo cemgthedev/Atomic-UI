@@ -10,3 +10,4 @@ export * from "@/components/ui/label";
 export * from "@/components/ui/message";
 export * from "@/components/ui/quote";
 export * from "@/components/ui/text";
+export * from "@/components/ui/textarea";
