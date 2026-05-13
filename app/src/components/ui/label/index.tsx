@@ -41,7 +41,7 @@ function Label({
 
   return (
     <Comp
-      data-slot="h1"
+      data-slot="label"
       data-variant={variant}
       data-size={size}
       className={cn(labelVariants({ variant, size, className }))}
