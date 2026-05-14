@@ -20,7 +20,6 @@ São componentes que não têm nenhum outro componente como propriedade; eles re
 
 ### Componentes de Conteúdo
 - Image
-- Avatar
 - Divider
 - Quote
 - Skeleton
@@ -47,6 +46,7 @@ São componentes que além de outros componentes como propriedade eles também r
 - Sidebar
 
 ### Componentes de Conteúdo
+- Avatar 
 - Tabs
 - Table
 - List

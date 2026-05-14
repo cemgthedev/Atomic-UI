@@ -1,5 +1,12 @@
 import { Heading, Label } from "@/components/ui";
-import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Avatar,
+  AvatarBadge,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarGroupCount,
+  AvatarImage,
+} from "@/components/ui/avatar";
 
 export function Dashboard() {
   return (
@@ -11,14 +18,44 @@ export function Dashboard() {
         </Label>
       </div>
 
-      <div className="grid grid-cols-1 gap-2 min-w-4xl max-w-4xl">
-        <Skeleton />
-        <Skeleton variant={"dark"} rounded={"full"} className="w-12 h-12" />
-        <Skeleton variant={"primary"} />
-        <Skeleton variant={"secondary"} />
-        <Skeleton variant={"success"} />
-        <Skeleton variant={"warning"} />
-        <Skeleton variant={"danger"} />
+      <div className="flex flex-row flex-wrap items-center gap-6 md:gap-12">
+        <Avatar>
+          <AvatarImage
+            src="https://github.com/shadcn.pngf"
+            alt="@shadcn"
+            className="grayscale"
+          />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <Avatar>
+          <AvatarImage
+            src="https://github.com/evilrabbit.pngd"
+            alt="@evilrabbit"
+          />
+          <AvatarFallback>ERd</AvatarFallback>
+          <AvatarBadge />
+        </Avatar>
+        <AvatarGroup>
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage
+              src="https://github.com/maxleiter.png"
+              alt="@maxleiter"
+            />
+            <AvatarFallback>LR</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage
+              src="https://github.com/evilrabbit.png"
+              alt="@evilrabbit"
+            />
+            <AvatarFallback>ER</AvatarFallback>
+          </Avatar>
+          <AvatarGroupCount>+3</AvatarGroupCount>
+        </AvatarGroup>
       </div>
     </main>
   );
