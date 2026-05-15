@@ -1,6 +1,9 @@
-import { Heading, Label, Progress, ProgressValue } from "@/components/ui";
+import { Calendar, Heading, Label } from "@/components/ui";
+import { useState } from "react";
 
 export function Dashboard() {
+  const [date, setDate] = useState<Date | undefined>(new Date());
+
   return (
     <main className="h-screen flex flex-col gap-4 p-3 my-8">
       <div className="space-y-1">
@@ -10,28 +13,150 @@ export function Dashboard() {
         </Label>
       </div>
 
-      <div className="space-y-4">
-        <Progress>
-          <ProgressValue value={50} variant={"default"} striped />
-        </Progress>
-        <Progress size={"xl"}>
-          <ProgressValue value={50} variant={"primary"} striped />
-        </Progress>
-        <Progress size={"lg"}>
-          <ProgressValue value={50} variant={"secondary"} striped />
-        </Progress>
-        <Progress size={"md"}>
-          <ProgressValue value={50} variant={"success"} striped />
-        </Progress>
-        <Progress size={"sm"}>
-          <ProgressValue value={50} variant={"warning"} striped />
-        </Progress>
-        <Progress size={"xs"}>
-          <ProgressValue value={50} variant={"danger"} striped />
-        </Progress>
-        <Progress>
-          <ProgressValue value={50} variant={"dark"} striped animated />
-        </Progress>
+      <div className="grid grid-cols-6 gap-4">
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"muted"}
+          buttonRounded={"full"}
+        />
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"primary"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"secondary"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"success"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"warning"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"danger"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"muted-bordered"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"primary-bordered"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"secondary-bordered"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"success-bordered"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"warning-bordered"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"danger-bordered"}
+          buttonRounded={"full"}
+        />
+         <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"muted-ghost"}
+        />
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"primary-ghost"}
+          buttonRounded={"full"}
+        />
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"secondary-ghost"}
+          buttonRounded={"full"}
+        />
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"success-ghost"}
+          buttonRounded={"full"}
+        />
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"warning-ghost"}
+          buttonRounded={"full"}
+        />
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          captionLayout="dropdown"
+          buttonVariant={"danger-ghost"}
+          buttonRounded={"full"}
+        />
       </div>
     </main>
   );

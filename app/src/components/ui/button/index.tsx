@@ -31,6 +31,7 @@ const buttonVariants = cva(
           "border-warning text-warning hover:bg-warning hover:text-warning-foreground",
         "danger-bordered":
           "border-danger text-danger hover:bg-danger hover:text-danger-foreground",
+        ghost: "",
         "dark-ghost": "bg-muted border-dark text-dark hover:opacity-80",
         "muted-ghost":
           "bg-muted border-dark text-dark opacity-60 hover:opacity-80",
