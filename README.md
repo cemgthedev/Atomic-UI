@@ -23,7 +23,6 @@ São componentes que não têm nenhum outro componente como propriedade; eles re
 - Quote
 - Skeleton
 - Loader
-- Progress
 - Pagination
   
 ### Componentes de Input
@@ -56,6 +55,7 @@ São componentes que além de outros componentes como propriedade eles também r
 - Accordion
 - Dialog
 - Toast
+- Progress
 
 ### Componentes de Input
 - Select
