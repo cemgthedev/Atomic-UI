@@ -9,6 +9,7 @@ export * from "@/components/ui/heading";
 export * from "@/components/ui/image";
 export * from "@/components/ui/input";
 export * from "@/components/ui/label";
+export * from "@/components/ui/loader";
 export * from "@/components/ui/message";
 export * from "@/components/ui/quote";
 export * from "@/components/ui/skeleton";
