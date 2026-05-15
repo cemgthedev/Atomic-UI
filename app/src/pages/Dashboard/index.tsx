@@ -1,12 +1,11 @@
-import { Heading, Label } from "@/components/ui";
 import {
-  Avatar,
-  AvatarBadge,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarGroupCount,
-  AvatarImage,
-} from "@/components/ui/avatar";
+  Heading,
+  Image,
+  ImageContent,
+  ImageFallback,
+  ImageSkeleton,
+  Label,
+} from "@/components/ui";
 
 export function Dashboard() {
   return (
@@ -19,43 +18,28 @@ export function Dashboard() {
       </div>
 
       <div className="flex flex-row flex-wrap items-center gap-6 md:gap-12">
-        <Avatar>
-          <AvatarImage
-            src="https://github.com/shadcn.pngf"
-            alt="@shadcn"
-            className="grayscale"
-          />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-        <Avatar>
-          <AvatarImage
-            src="https://github.com/evilrabbit.pngd"
-            alt="@evilrabbit"
-          />
-          <AvatarFallback>ERd</AvatarFallback>
-          <AvatarBadge />
-        </Avatar>
-        <AvatarGroup>
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-          <Avatar>
-            <AvatarImage
-              src="https://github.com/maxleiter.png"
-              alt="@maxleiter"
-            />
-            <AvatarFallback>LR</AvatarFallback>
-          </Avatar>
-          <Avatar>
-            <AvatarImage
-              src="https://github.com/evilrabbit.png"
-              alt="@evilrabbit"
-            />
-            <AvatarFallback>ER</AvatarFallback>
-          </Avatar>
-          <AvatarGroupCount>+3</AvatarGroupCount>
-        </AvatarGroup>
+        <Image aspect={"square"}>
+          <ImageContent src="https://github.com/shadcn.png" alt="Landscape" />
+
+          <ImageSkeleton variant={"secondary"} />
+
+          <ImageFallback>Falha ao carregar</ImageFallback>
+        </Image>
+        <Image>
+          <ImageContent src="https://github.com/shadcn.png" alt="Landscape" />
+
+          <ImageSkeleton variant={"success"} />
+        </Image>
+        <Image>
+          <ImageContent src="https://github.com/shadcn.png" alt="Landscape" />
+
+          <ImageSkeleton variant={"warning"} />
+        </Image>
+        <Image>
+          <ImageContent src="https://github.com/shadcn.png" alt="Landscape" />
+
+          <ImageSkeleton variant={"danger"} />
+        </Image>
       </div>
     </main>
   );
