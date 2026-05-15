@@ -11,6 +11,7 @@ export * from "@/components/ui/input";
 export * from "@/components/ui/label";
 export * from "@/components/ui/loader";
 export * from "@/components/ui/message";
+export * from "@/components/ui/progress";
 export * from "@/components/ui/quote";
 export * from "@/components/ui/skeleton";
 export * from "@/components/ui/text";

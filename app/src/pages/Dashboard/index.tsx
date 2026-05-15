@@ -1,5 +1,4 @@
-import { Button, Heading, Label, Loader } from "@/components/ui";
-import { MailCheckIcon } from "lucide-react";
+import { Heading, Label, Progress, ProgressValue } from "@/components/ui";
 
 export function Dashboard() {
   return (
@@ -11,21 +10,28 @@ export function Dashboard() {
         </Label>
       </div>
 
-      <div className="grid grid-cols-8 gap-4">
-        <Loader variant={"default"} size={"xs"} />
-        <Loader variant={"muted"} />
-        <Loader variant={"dark"} />
-        <Loader
-          variant={"dark"}
-          icon={<MailCheckIcon size={120} />}
-        />
-        
-        <Button variant={"primary-ghost"}>
-          <Loader className="text-cyan-800" /> Entrando...
-        </Button>
-        <Loader variant={"success"} />
-        <Loader variant={"warning"} />
-        <Loader variant={"danger"} />
+      <div className="space-y-4">
+        <Progress>
+          <ProgressValue value={50} variant={"default"} striped />
+        </Progress>
+        <Progress size={"xl"}>
+          <ProgressValue value={50} variant={"primary"} striped />
+        </Progress>
+        <Progress size={"lg"}>
+          <ProgressValue value={50} variant={"secondary"} striped />
+        </Progress>
+        <Progress size={"md"}>
+          <ProgressValue value={50} variant={"success"} striped />
+        </Progress>
+        <Progress size={"sm"}>
+          <ProgressValue value={50} variant={"warning"} striped />
+        </Progress>
+        <Progress size={"xs"}>
+          <ProgressValue value={50} variant={"danger"} striped />
+        </Progress>
+        <Progress>
+          <ProgressValue value={50} variant={"dark"} striped animated />
+        </Progress>
       </div>
     </main>
   );
