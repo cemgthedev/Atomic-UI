@@ -1,11 +1,5 @@
-import {
-  Heading,
-  Image,
-  ImageContent,
-  ImageFallback,
-  ImageSkeleton,
-  Label,
-} from "@/components/ui";
+import { Button, Heading, Label, Loader } from "@/components/ui";
+import { MailCheckIcon } from "lucide-react";
 
 export function Dashboard() {
   return (
@@ -17,29 +11,21 @@ export function Dashboard() {
         </Label>
       </div>
 
-      <div className="flex flex-row flex-wrap items-center gap-6 md:gap-12">
-        <Image aspect={"square"}>
-          <ImageContent src="https://github.com/shadcn.png" alt="Landscape" />
-
-          <ImageSkeleton variant={"secondary"} />
-
-          <ImageFallback>Falha ao carregar</ImageFallback>
-        </Image>
-        <Image>
-          <ImageContent src="https://github.com/shadcn.png" alt="Landscape" />
-
-          <ImageSkeleton variant={"success"} />
-        </Image>
-        <Image>
-          <ImageContent src="https://github.com/shadcn.png" alt="Landscape" />
-
-          <ImageSkeleton variant={"warning"} />
-        </Image>
-        <Image>
-          <ImageContent src="https://github.com/shadcn.png" alt="Landscape" />
-
-          <ImageSkeleton variant={"danger"} />
-        </Image>
+      <div className="grid grid-cols-8 gap-4">
+        <Loader variant={"default"} size={"xs"} />
+        <Loader variant={"muted"} />
+        <Loader variant={"dark"} />
+        <Loader
+          variant={"dark"}
+          icon={<MailCheckIcon size={120} />}
+        />
+        
+        <Button variant={"primary-ghost"}>
+          <Loader className="text-cyan-800" /> Entrando...
+        </Button>
+        <Loader variant={"success"} />
+        <Loader variant={"warning"} />
+        <Loader variant={"danger"} />
       </div>
     </main>
   );
