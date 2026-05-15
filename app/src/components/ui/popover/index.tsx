@@ -3,24 +3,30 @@ import * as React from "react";
 
 import { cn } from "@/utils/cn";
 
-function Popover({
-  ...props
-}: React.ComponentProps<typeof PopoverPrimitive.Root>) {
+type PopoverProps = React.ComponentProps<typeof PopoverPrimitive.Root>;
+
+function Popover({ ...props }: PopoverProps) {
   return <PopoverPrimitive.Root data-slot="popover" {...props} />;
 }
 
-function PopoverTrigger({
-  ...props
-}: React.ComponentProps<typeof PopoverPrimitive.Trigger>) {
+type PopoverTriggerProps = React.ComponentProps<
+  typeof PopoverPrimitive.Trigger
+>;
+
+function PopoverTrigger({ ...props }: PopoverTriggerProps) {
   return <PopoverPrimitive.Trigger data-slot="popover-trigger" {...props} />;
 }
+
+type PopoverContentProps = React.ComponentProps<
+  typeof PopoverPrimitive.Content
+>;
 
 function PopoverContent({
   className,
   align = "center",
   sideOffset = 4,
   ...props
-}: React.ComponentProps<typeof PopoverPrimitive.Content>) {
+}: PopoverContentProps) {
   return (
     <PopoverPrimitive.Portal>
       <PopoverPrimitive.Content
@@ -37,9 +43,9 @@ function PopoverContent({
   );
 }
 
-function PopoverAnchor({
-  ...props
-}: React.ComponentProps<typeof PopoverPrimitive.Anchor>) {
+type PopoverAnchorProps = React.ComponentProps<typeof PopoverPrimitive.Anchor>;
+
+function PopoverAnchor({ ...props }: PopoverAnchorProps) {
   return <PopoverPrimitive.Anchor data-slot="popover-anchor" {...props} />;
 }
 
@@ -53,7 +59,9 @@ function PopoverHeader({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function PopoverTitle({ className, ...props }: React.ComponentProps<"h2">) {
+type PopoverTitleProps = React.ComponentProps<"h2">;
+
+function PopoverTitle({ className, ...props }: PopoverTitleProps) {
   return (
     <div
       data-slot="popover-title"
@@ -63,10 +71,9 @@ function PopoverTitle({ className, ...props }: React.ComponentProps<"h2">) {
   );
 }
 
-function PopoverDescription({
-  className,
-  ...props
-}: React.ComponentProps<"p">) {
+type PopoverDescriptionProps = React.ComponentProps<"p">;
+
+function PopoverDescription({ className, ...props }: PopoverDescriptionProps) {
   return (
     <p
       data-slot="popover-description"
