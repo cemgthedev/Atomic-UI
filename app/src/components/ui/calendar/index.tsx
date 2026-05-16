@@ -5,6 +5,7 @@ import {
   type DayButton,
   type Locale,
 } from "react-day-picker";
+import { pt } from "react-day-picker/locale";
 
 import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -111,8 +112,8 @@ function Button({
 }
 
 type CalendarProps = React.ComponentProps<typeof DayPicker> & {
-  buttonVariant?: React.ComponentProps<typeof Button>["variant"];
-  buttonRounded?: React.ComponentProps<typeof Button>["rounded"];
+  dayVariant?: React.ComponentProps<typeof Button>["variant"];
+  dayRounded?: React.ComponentProps<typeof Button>["rounded"];
 };
 
 function Calendar({
@@ -120,9 +121,9 @@ function Calendar({
   classNames,
   showOutsideDays = true,
   captionLayout = "label",
-  buttonVariant = "ghost",
-  buttonRounded = "md",
-  locale,
+  dayVariant = "ghost",
+  dayRounded = "md",
+  locale = pt,
   formatters,
   components,
   ...props
@@ -157,12 +158,12 @@ function Calendar({
           defaultClassNames.nav,
         ),
         button_previous: cn(
-          buttonVariants({ variant: buttonVariant, rounded: buttonRounded }),
+          buttonVariants({ variant: dayVariant, rounded: dayRounded }),
           "size-(--cell-size) p-0 select-none aria-disabled:opacity-50",
           defaultClassNames.button_previous,
         ),
         button_next: cn(
-          buttonVariants({ variant: buttonVariant, rounded: buttonRounded }),
+          buttonVariants({ variant: dayVariant, rounded: dayRounded }),
           "size-(--cell-size) p-0 select-none aria-disabled:opacity-50",
           defaultClassNames.button_next,
         ),
@@ -262,8 +263,8 @@ function Calendar({
         DayButton: ({ ...props }) => (
           <CalendarDayButton
             locale={locale}
-            variant={buttonVariant}
-            rounded={buttonRounded}
+            variant={dayVariant}
+            rounded={dayRounded}
             {...props}
           />
         ),
@@ -294,7 +295,7 @@ function CalendarDayButton({
   className,
   day,
   modifiers,
-  locale,
+  locale = pt,
   variant = "ghost",
   rounded = "md",
   ...props
