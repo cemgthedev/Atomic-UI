@@ -24,13 +24,13 @@ São componentes que não têm nenhum outro componente como propriedade; eles re
 - Skeleton
 - Loader
 - Pagination
+- Calendar
   
 ### Componentes de Input
 - Input
 - Textarea
 - Switch
 - Checkbox
-- Date Picker
 
 ## Composite Components
 São componentes que além de outros componentes como propriedade eles também recebem um children do tipo ReactNode. Ex: <Card><Card.Header></Card.Header><Card.Body></Card.Body></Card>
@@ -54,9 +54,11 @@ São componentes que além de outros componentes como propriedade eles também r
 - Carousel
 - Accordion
 - Dialog
+- Popover
 - Toast
 - Progress
 
 ### Componentes de Input
 - Select
 - Uploader
+- DatePicker
