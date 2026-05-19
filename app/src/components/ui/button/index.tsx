@@ -116,11 +116,11 @@ function Button({
       className={cn(buttonVariants({ variant, size, rounded, className }))}
       {...props}
     >
-      {!!startContent && startContent}
+      {startContent}
 
       {children}
 
-      {!!endContent && endContent}
+      {endContent}
     </button>
   );
 }

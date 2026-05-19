@@ -15,7 +15,7 @@ import {
   ChevronRightIcon,
 } from "lucide-react";
 
-const buttonVariants = cva(
+const calendarButtonVariants = cva(
   "w-fit h-fit flex justify-center items-center gap-2 transition-all border border-border cursor-pointer",
   {
     variants: {
@@ -90,30 +90,34 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonProps = React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants>;
+type CalendarButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof calendarButtonVariants>;
 
-function Button({
+function CalendarButton({
   className,
   variant = "default",
   size = "md",
   rounded = "md",
   ...props
-}: ButtonProps) {
+}: CalendarButtonProps) {
   return (
     <button
       data-slot="button"
       data-variant={variant}
       data-size={size}
-      className={cn(buttonVariants({ variant, size, rounded, className }))}
+      className={cn(calendarButtonVariants({ variant, size, rounded, className }))}
       {...props}
     />
   );
 }
 
 type CalendarProps = React.ComponentProps<typeof DayPicker> & {
-  dayVariant?: React.ComponentProps<typeof Button>["variant"];
-  dayRounded?: React.ComponentProps<typeof Button>["rounded"];
+  calendarButtonVariant?: React.ComponentProps<
+    typeof CalendarButton
+  >["variant"];
+  calendarButtonRounded?: React.ComponentProps<
+    typeof CalendarButton
+  >["rounded"];
 };
 
 function Calendar({
@@ -121,8 +125,8 @@ function Calendar({
   classNames,
   showOutsideDays = true,
   captionLayout = "label",
-  dayVariant = "ghost",
-  dayRounded = "md",
+  calendarButtonVariant = "ghost",
+  calendarButtonRounded = "md",
   locale = pt,
   formatters,
   components,
@@ -158,12 +162,18 @@ function Calendar({
           defaultClassNames.nav,
         ),
         button_previous: cn(
-          buttonVariants({ variant: dayVariant, rounded: dayRounded }),
+          calendarButtonVariants({
+            variant: calendarButtonVariant,
+            rounded: calendarButtonRounded,
+          }),
           "size-(--cell-size) p-0 select-none aria-disabled:opacity-50",
           defaultClassNames.button_previous,
         ),
         button_next: cn(
-          buttonVariants({ variant: dayVariant, rounded: dayRounded }),
+          calendarButtonVariants({
+            variant: calendarButtonVariant,
+            rounded: calendarButtonRounded,
+          }),
           "size-(--cell-size) p-0 select-none aria-disabled:opacity-50",
           defaultClassNames.button_next,
         ),
@@ -263,8 +273,8 @@ function Calendar({
         DayButton: ({ ...props }) => (
           <CalendarDayButton
             locale={locale}
-            variant={dayVariant}
-            rounded={dayRounded}
+            variant={calendarButtonVariant}
+            rounded={calendarButtonRounded}
             {...props}
           />
         ),
@@ -287,8 +297,8 @@ function Calendar({
 type CalendarDayButtonProps = React.ComponentProps<typeof DayButton> & {
   locale?: Partial<Locale>;
 } & {
-  variant?: React.ComponentProps<typeof Button>["variant"];
-  rounded?: React.ComponentProps<typeof Button>["rounded"];
+  variant?: React.ComponentProps<typeof CalendarButton>["variant"];
+  rounded?: React.ComponentProps<typeof CalendarButton>["rounded"];
 };
 
 function CalendarDayButton({
@@ -308,7 +318,7 @@ function CalendarDayButton({
   }, [modifiers.focused]);
 
   return (
-    <Button
+    <CalendarButton
       ref={ref}
       variant={variant}
       rounded={rounded}
@@ -333,4 +343,4 @@ function CalendarDayButton({
   );
 }
 
-export { Calendar, CalendarDayButton };
+export { Calendar, CalendarButton };

@@ -3,20 +3,124 @@ import * as React from "react";
 import { pt } from "react-day-picker/locale";
 
 import {
-  Button as ButtonCalendar,
   Calendar,
+  CalendarButton,
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui";
 
 import { cn } from "@/utils/cn";
+import { cva, type VariantProps } from "class-variance-authority";
 import { format } from "date-fns";
+import { Slot } from "radix-ui";
 import type { DateRange, DayPicker } from "react-day-picker";
 
+const buttonVariants = cva(
+  "flex justify-between items-center gap-2 px-3 transition-all border border-border cursor-pointer",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-background text-foreground border-gray-200 hover:border-gray-400 focus-within:border-gray-900",
+        dark: "bg-dark text-dark-foreground border-gray-200 hover:border-gray-400 focus-within:border-gray-200",
+        muted:
+          "bg-background text-foreground border-gray-200 hover:border-gray-400 focus-within:border-gray-900 opacity-60",
+        primary:
+          "bg-background text-cyan-800 border-cyan-200 hover:border-cyan-400 focus-within:border-cyan-900",
+        secondary:
+          "bg-background text-violet-800 border-violet-200 hover:border-violet-400 focus-within:border-violet-900",
+        success:
+          "bg-background text-emerald-800 border-emerald-200 hover:border-emerald-400 focus-within:border-emerald-900",
+        warning:
+          "bg-background text-yellow-800 border-yellow-200 hover:border-yellow-400 focus-within:border-yellow-900",
+        danger:
+          "bg-background text-red-800 border-red-200 hover:border-red-400 focus-within:border-red-900",
+      },
+      size: {
+        xl: "min-h-13 max-h-13",
+        lg: "min-h-12 max-h-12",
+        md: "min-h-11 max-h-11",
+        sm: "min-h-10 max-h-10",
+        xs: "min-h-9 max-h-9",
+      },
+      rounded: {
+        full: "rounded-full",
+        xl: "rounded-xl",
+        lg: "rounded-lg",
+        md: "rounded-md",
+        sm: "rounded-sm",
+        xs: "rounded-xs",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "md",
+      rounded: "md",
+    },
+  },
+);
+
+type InputButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+    startContent?: React.ReactNode;
+    endContent?: React.ReactNode;
+  };
+
+function InputButton({
+  className,
+  variant = "default",
+  size = "md",
+  rounded = "md",
+  asChild = false,
+  startContent = null,
+  endContent = null,
+  children,
+  ...props
+}: InputButtonProps) {
+  if (asChild)
+    return (
+      <div
+        className={cn(buttonVariants({ variant, size, rounded, className }))}
+      >
+        {startContent}
+
+        <Slot.Root
+          data-slot="button"
+          data-variant={variant}
+          data-size={size}
+          {...props}
+        >
+          {children}
+        </Slot.Root>
+
+        {endContent}
+      </div>
+    );
+
+  return (
+    <button
+      data-slot="button"
+      data-variant={variant}
+      data-size={size}
+      className={cn(buttonVariants({ variant, size, rounded, className }))}
+      {...props}
+    >
+      {startContent}
+
+      {children}
+
+      {endContent}
+    </button>
+  );
+}
+
 type CalendarProps = Omit<React.ComponentProps<typeof DayPicker>, "mode"> & {
-  dayVariant?: React.ComponentProps<typeof ButtonCalendar>["variant"];
-  dayRounded?: React.ComponentProps<typeof ButtonCalendar>["rounded"];
+  inputVariant?: React.ComponentProps<typeof InputButton>["variant"];
+  inputRounded?: React.ComponentProps<typeof InputButton>["rounded"];
+  calendarVariant?: React.ComponentProps<typeof CalendarButton>["variant"];
+  calendarRounded?: React.ComponentProps<typeof CalendarButton>["rounded"];
 };
 
 type DatePickerSimpleProps = CalendarProps & {
@@ -44,8 +148,10 @@ const DatePickerSimple = React.forwardRef<
       className,
       formatString = "dd/MM/yyyy",
       onChange,
-      dayVariant,
-      dayRounded,
+      inputVariant = "default",
+      inputRounded = "md",
+      calendarVariant = "default",
+      calendarRounded = "md",
       ...calendarProps
     },
     ref,
@@ -83,17 +189,30 @@ const DatePickerSimple = React.forwardRef<
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <button
+          <InputButton
             ref={ref}
-            type="button"
             disabled={disabled}
-            className={cn(
-              "flex h-10 w-full items-center justify-between gap-2 rounded-md border border-border bg-background px-3 py-2 text-sm transition-colors",
-              "hover:bg-muted",
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-              "disabled:cursor-not-allowed disabled:opacity-50",
-              className,
-            )}
+            variant={inputVariant}
+            rounded={inputRounded}
+            className={className}
+            endContent={
+              <div className="flex items-center gap-1">
+                {clearable && selectedDate && (
+                  <span
+                    role="button"
+                    onClick={handleClear}
+                    className={cn(
+                      "rounded-sm p-0.5 transition-colors",
+                      "hover:bg-muted-foreground/10",
+                    )}
+                  >
+                    <X className="size-4 opacity-70" />
+                  </span>
+                )}
+
+                <CalendarIcon className="size-4 opacity-70" />
+              </div>
+            }
           >
             <span
               className={cn(
@@ -103,38 +222,18 @@ const DatePickerSimple = React.forwardRef<
             >
               {selectedDate ? format(selectedDate, formatString) : placeholder}
             </span>
-
-            <div className="flex items-center gap-1">
-              {clearable && selectedDate && (
-                <button
-                  type="button"
-                  onClick={handleClear}
-                  className={cn(
-                    "rounded-sm p-0.5 transition-colors",
-                    "hover:bg-muted-foreground/10",
-                  )}
-                >
-                  <X className="size-4 opacity-70" />
-                </button>
-              )}
-
-              <CalendarIcon className="size-4 opacity-70" />
-            </div>
-          </button>
+          </InputButton>
         </PopoverTrigger>
 
-        <PopoverContent
-          align="start"
-          className="w-auto overflow-hidden rounded-xl p-0"
-        >
+        <PopoverContent align="start" className="w-auto overflow-hidden p-0">
           <Calendar
             mode="single"
             selected={selectedDate}
             onSelect={handleSelect}
             locale={pt}
             showOutsideDays
-            dayVariant={dayVariant}
-            dayRounded={dayRounded}
+            calendarButtonVariant={calendarVariant}
+            calendarButtonRounded={calendarRounded}
             {...calendarProps}
           />
         </PopoverContent>
@@ -168,8 +267,10 @@ const DatePickerRange = React.forwardRef<
       className,
       formatString = "dd/MM/yyyy",
       onChange,
-      dayVariant,
-      dayRounded,
+      inputVariant = "default",
+      inputRounded = "md",
+      calendarVariant = "default",
+      calendarRounded = "md",
       ...calendarProps
     },
     ref,
@@ -215,17 +316,30 @@ const DatePickerRange = React.forwardRef<
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <button
+          <InputButton
             ref={ref}
-            type="button"
             disabled={disabled}
-            className={cn(
-              "flex h-10 w-full items-center justify-between gap-2 rounded-md border border-border bg-background px-3 py-2 text-sm transition-colors",
-              "hover:bg-muted",
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-              "disabled:cursor-not-allowed disabled:opacity-50",
-              className,
-            )}
+            variant={inputVariant}
+            rounded={inputRounded}
+            className={className}
+            endContent={
+              <div className="flex items-center gap-1">
+                {clearable && selectedRange?.from && (
+                  <span
+                    role="button"
+                    onClick={handleClear}
+                    className={cn(
+                      "rounded-sm p-0.5 transition-colors",
+                      "hover:bg-muted-foreground/10",
+                    )}
+                  >
+                    <X className="size-4 opacity-70" />
+                  </span>
+                )}
+
+                <CalendarIcon className="size-4 opacity-70" />
+              </div>
+            }
           >
             <span
               className={cn(
@@ -235,38 +349,18 @@ const DatePickerRange = React.forwardRef<
             >
               {formatRange(selectedRange)}
             </span>
-
-            <div className="flex items-center gap-1">
-              {clearable && selectedRange?.from && (
-                <button
-                  type="button"
-                  onClick={handleClear}
-                  className={cn(
-                    "rounded-sm p-0.5 transition-colors",
-                    "hover:bg-muted-foreground/10",
-                  )}
-                >
-                  <X className="size-4 opacity-70" />
-                </button>
-              )}
-
-              <CalendarIcon className="size-4 opacity-70" />
-            </div>
-          </button>
+          </InputButton>
         </PopoverTrigger>
 
-        <PopoverContent
-          align="start"
-          className="w-auto overflow-hidden rounded-xl p-0"
-        >
+        <PopoverContent align="start" className="w-auto overflow-hidden p-0">
           <Calendar
             mode="range"
             selected={selectedRange}
             onSelect={handleSelect}
             locale={pt}
             showOutsideDays
-            dayVariant={dayVariant}
-            dayRounded={dayRounded}
+            calendarButtonVariant={calendarVariant}
+            calendarButtonRounded={calendarRounded}
             {...calendarProps}
           />
         </PopoverContent>
@@ -300,8 +394,10 @@ const DatePickerMultiple = React.forwardRef<
       className,
       formatString = "dd/MM/yyyy",
       onChange,
-      dayVariant,
-      dayRounded,
+      inputVariant = "default",
+      inputRounded = "md",
+      calendarVariant = "default",
+      calendarRounded = "md",
       required = true,
       ...calendarProps
     },
@@ -341,17 +437,30 @@ const DatePickerMultiple = React.forwardRef<
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <button
+          <InputButton
             ref={ref}
-            type="button"
             disabled={disabled}
-            className={cn(
-              "flex h-10 w-full items-center justify-between gap-2 rounded-md border border-border bg-background px-3 py-2 text-sm transition-colors",
-              "hover:bg-muted",
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-              "disabled:cursor-not-allowed disabled:opacity-50",
-              className,
-            )}
+            variant={inputVariant}
+            rounded={inputRounded}
+            className={className}
+            endContent={
+              <div className="flex items-center gap-1">
+                {clearable && selectedDates.length > 0 && (
+                  <span
+                    role="button"
+                    onClick={handleClear}
+                    className={cn(
+                      "rounded-sm p-0.5 transition-colors",
+                      "hover:bg-muted-foreground/10",
+                    )}
+                  >
+                    <X className="size-4 opacity-70" />
+                  </span>
+                )}
+
+                <CalendarIcon className="size-4 opacity-70" />
+              </div>
+            }
           >
             <span
               className={cn(
@@ -361,30 +470,10 @@ const DatePickerMultiple = React.forwardRef<
             >
               {formatMultipleDates(selectedDates)}
             </span>
-
-            <div className="flex items-center gap-1">
-              {clearable && selectedDates.length > 0 && (
-                <button
-                  type="button"
-                  onClick={handleClear}
-                  className={cn(
-                    "rounded-sm p-0.5 transition-colors",
-                    "hover:bg-muted-foreground/10",
-                  )}
-                >
-                  <X className="size-4 opacity-70" />
-                </button>
-              )}
-
-              <CalendarIcon className="size-4 opacity-70" />
-            </div>
-          </button>
+          </InputButton>
         </PopoverTrigger>
 
-        <PopoverContent
-          align="start"
-          className="w-auto overflow-hidden rounded-xl p-0"
-        >
+        <PopoverContent align="start" className="w-auto overflow-hidden p-0">
           <Calendar
             mode="multiple"
             required
@@ -392,8 +481,8 @@ const DatePickerMultiple = React.forwardRef<
             onSelect={handleSelect}
             locale={pt}
             showOutsideDays
-            dayVariant={dayVariant}
-            dayRounded={dayRounded}
+            calendarButtonVariant={calendarVariant}
+            calendarButtonRounded={calendarRounded}
             {...calendarProps}
           />
         </PopoverContent>
