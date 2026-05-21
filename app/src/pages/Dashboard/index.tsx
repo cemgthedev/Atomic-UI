@@ -1,4 +1,13 @@
-import { Heading, Label, Switch, Text } from "@/components/ui";
+import { Heading, Label } from "@/components/ui";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 export function Dashboard() {
   return (
@@ -10,79 +19,237 @@ export function Dashboard() {
         </Label>
       </div>
 
-      <div className="grid grid-cols-6 gap-4">
-        <div className="flex items-center gap-2">
-          <Switch variant={"default"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"primary"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"secondary"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"success"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"warning"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"danger"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"muted"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"primary-bordered"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"secondary-bordered"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"success-bordered"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"warning-bordered"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"danger-bordered"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"dark-ghost"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"primary-ghost"} size="xl" />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"secondary-ghost"} size={"lg"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"success-ghost"} size={"md"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"warning-ghost"} size={"sm"} />
-          <Text>Switch</Text>
-        </div>
-        <div className="flex items-center gap-2">
-          <Switch variant={"danger-ghost"} size={"xs"} />
-          <Text>Switch</Text>
-        </div>
+      <div className="grid grid-cols-3 gap-4">
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious isActive variant={"success"} href="#" />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"success"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"success"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious isActive variant={"warning"} href="#" />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"warning"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"warning"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious isActive variant={"danger"} href="#" />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"danger"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"danger"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                isActive
+                variant={"success-bordered"}
+                href="#"
+              />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"success-bordered"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"success-bordered"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                isActive
+                variant={"warning-bordered"}
+                href="#"
+              />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"warning-bordered"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"warning-bordered"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                isActive
+                variant={"danger-bordered"}
+                href="#"
+              />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"danger-bordered"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"danger-bordered"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious isActive variant={"success-ghost"} href="#" />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"success-ghost"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"success-ghost"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious isActive variant={"warning-ghost"} href="#" />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"warning-ghost"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"warning-ghost"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious isActive variant={"danger-ghost"} href="#" />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" isActive variant={"danger-ghost"}>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext isActive variant={"danger-ghost"} href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
       </div>
     </main>
   );
