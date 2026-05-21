@@ -1,6 +1,4 @@
-import { Heading, Label, Text } from "@/components/ui";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Building2Icon, XIcon } from "lucide-react";
+import { Heading, Label, Switch, Text } from "@/components/ui";
 
 export function Dashboard() {
   return (
@@ -14,76 +12,76 @@ export function Dashboard() {
 
       <div className="grid grid-cols-6 gap-4">
         <div className="flex items-center gap-2">
-          <Checkbox variant={"default"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"default"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"primary"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"primary"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"secondary"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"secondary"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"success"}/>
-          <Text>Checkbox</Text>
+          <Switch variant={"success"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"warning"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"warning"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"danger"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"danger"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"muted"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"muted"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"primary-bordered"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"primary-bordered"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"secondary-bordered"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"secondary-bordered"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"success-bordered"}/>
-          <Text>Checkbox</Text>
+          <Switch variant={"success-bordered"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"warning-bordered"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"warning-bordered"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"danger-bordered"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"danger-bordered"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"dark-bordered"}/>
-          <Text>Checkbox</Text>
+          <Switch variant={"dark-ghost"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"primary-ghost"} className="size-12" size={"xl"} sizeIndicator={"xl"} rounded={"full"} icon={<Building2Icon size={32} className="size-10" />} />
-          <Text>Checkbox</Text>
+          <Switch variant={"primary-ghost"} size="xl" />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"secondary-ghost"} size={"lg"} sizeIndicator={"lg"} rounded={"xl"}/>
-          <Text>Checkbox</Text>
+          <Switch variant={"secondary-ghost"} size={"lg"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"success-ghost"} size={"md"} sizeIndicator={"md"} rounded={"full"}/>
-          <Text>Checkbox</Text>
+          <Switch variant={"success-ghost"} size={"md"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"warning-ghost"} size={"sm"} sizeIndicator={"sm"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"warning-ghost"} size={"sm"} />
+          <Text>Switch</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Checkbox variant={"danger-ghost"} size={"xs"} sizeIndicator={"xs"} />
-          <Text>Checkbox</Text>
+          <Switch variant={"danger-ghost"} size={"xs"} />
+          <Text>Switch</Text>
         </div>
       </div>
     </main>
