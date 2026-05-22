@@ -1,5 +1,5 @@
 /**
- * barrel file
+ * barrel file for all components
  */
 export * from "@/components/ui/avatar";
 export * from "@/components/ui/badge";
