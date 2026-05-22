@@ -1,2 +1,2 @@
 // barrel file for badge
-export * from "@/components/ui/badge";
+export * from "@/components/ui/badge/Badge";
