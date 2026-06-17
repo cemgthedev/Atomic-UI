@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/utils/cn";
 
 const dividerVariants = cva(
-  "flex-1 shrink-0 rounded-full opacity-60 border-0",
+  "peer flex-1 shrink-0 rounded-full opacity-60 border-0",
   {
     variants: {
       variant: {
@@ -33,54 +33,24 @@ const dividerVariants = cva(
 );
 
 type DividerProps = React.ComponentProps<"hr"> &
-  VariantProps<typeof dividerVariants> & {
-    startContent?: React.ReactNode;
-    endContent?: React.ReactNode;
-  };
+  VariantProps<typeof dividerVariants>;
 
 function Divider({
   className,
   variant = "default",
   size = "md",
-  startContent = null,
-  endContent = null,
   ...props
 }: DividerProps) {
   const Comp = "hr";
 
-  /**
-   * Alter color text for icons of lucide icons
-   */
-  const dividerVariantStyles = {
-    default: "text-muted",
-    dark: "text-dark",
-    muted: "text-muted",
-    primary: "text-primary",
-    secondary: "text-secondary",
-    success: "text-success",
-    warning: "text-warning",
-    danger: "text-danger",
-  };
-
   return (
-    <div
-      className={cn(
-        "flex gap-1 items-center",
-        variant && dividerVariantStyles[variant],
-      )}
-    >
-      {startContent}
-
-      <Comp
-        data-slot="hr"
-        data-variant={variant}
-        data-size={size}
-        className={cn(dividerVariants({ variant, size, className }))}
-        {...props}
-      />
-
-      {endContent}
-    </div>
+    <Comp
+      data-slot="hr"
+      data-variant={variant}
+      data-size={size}
+      className={cn(dividerVariants({ variant, size, className }))}
+      {...props}
+    />
   );
 }
 

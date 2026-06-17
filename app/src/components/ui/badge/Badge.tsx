@@ -113,11 +113,11 @@ function Badge({
       className={cn(badgeVariants({ variant, size, rounded, className }))}
       {...props}
     >
-      {!!startContent && startContent}
+      {startContent}
 
       {children}
 
-      {!!endContent && endContent}
+      {endContent}
     </span>
   );
 }
