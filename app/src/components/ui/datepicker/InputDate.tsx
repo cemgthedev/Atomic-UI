@@ -2,7 +2,7 @@ import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import { Slot } from "radix-ui";
 
-const inputButtonVariants = cva(
+const inputDateVariants = cva(
   "flex justify-between items-center gap-2 px-3 transition-all border border-border cursor-pointer",
   {
     variants: {
@@ -47,14 +47,14 @@ const inputButtonVariants = cva(
   },
 );
 
-type InputButtonProps = React.ComponentProps<"button"> &
-  VariantProps<typeof inputButtonVariants> & {
+type InputDateProps = React.ComponentProps<"button"> &
+  VariantProps<typeof inputDateVariants> & {
     asChild?: boolean;
     startContent?: React.ReactNode;
     endContent?: React.ReactNode;
   };
 
-function InputButton({
+function InputDate({
   className,
   variant = "default",
   size = "md",
@@ -64,13 +64,11 @@ function InputButton({
   endContent = null,
   children,
   ...props
-}: InputButtonProps) {
+}: InputDateProps) {
   if (asChild)
     return (
       <div
-        className={cn(
-          inputButtonVariants({ variant, size, rounded, className }),
-        )}
+        className={cn(inputDateVariants({ variant, size, rounded, className }))}
       >
         {startContent}
 
@@ -92,7 +90,7 @@ function InputButton({
       data-slot="button"
       data-variant={variant}
       data-size={size}
-      className={cn(inputButtonVariants({ variant, size, rounded, className }))}
+      className={cn(inputDateVariants({ variant, size, rounded, className }))}
       {...props}
     >
       {startContent}
@@ -104,5 +102,5 @@ function InputButton({
   );
 }
 
-export { InputButton, inputButtonVariants };
-export type { InputButtonProps };
+export { InputDate, inputDateVariants };
+export type { InputDateProps };

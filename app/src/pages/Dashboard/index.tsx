@@ -1,4 +1,4 @@
-import { Heading, Label } from "@/components/ui";
+import { Heading, Input, Label } from "@/components/ui";
 import {
   Pagination,
   PaginationContent,
@@ -8,6 +8,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { Mail } from "lucide-react";
 
 export function Dashboard() {
   return (
@@ -17,6 +18,20 @@ export function Dashboard() {
         <Label size="sm" variant={"muted"}>
           Seus componentes atômicos
         </Label>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <Input
+          variant={"danger"}
+          isClearable
+          onClear={() => {
+            console.log("Limpar input");
+          }}
+          value={"Valor do input"}
+          placeholder="Search..."
+          startContent={<Mail className="h-4 w-4" />}
+          endContent={<Mail className="h-4 w-4" />}
+        />
       </div>
 
       <div className="grid grid-cols-3 gap-4">

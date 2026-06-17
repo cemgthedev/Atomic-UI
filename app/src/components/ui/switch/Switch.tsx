@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const switchVariants = cva(
-  "peer px-0.5 group/switch relative inline-flex shrink-0 items-center rounded-full border border-transparent transition-all outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-disabled:cursor-not-allowed data-disabled:opacity-50",
+  "group/switch px-0.5 relative inline-flex shrink-0 items-center rounded-full border border-transparent transition-all outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-disabled:cursor-not-allowed data-disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -59,24 +59,6 @@ const switchVariants = cva(
   },
 );
 
-const switchThumbVariants = cva(
-  "pointer-events-none block rounded-full data-unchecked:bg-background data-checked:bg-background ring-0 transition-transform data-unchecked:translate-x-0",
-  {
-    variants: {
-      size: {
-        xl: "size-5 data-checked:translate-x-[calc(100%-9px)]",
-        lg: "size-4.5 data-checked:translate-x-[calc(100%-7px)]",
-        md: "size-4 data-checked:translate-x-[calc(100%-5px)]",
-        sm: "size-3.5 data-checked:translate-x-[calc(100%-3px)]",
-        xs: "size-3 data-checked:translate-x-[calc(100%-1px)]",
-      },
-    },
-    defaultVariants: {
-      size: "md",
-    },
-  },
-);
-
 type SwitchProps = React.ComponentProps<typeof SwitchPrimitive.Root> &
   VariantProps<typeof switchVariants>;
 
@@ -95,11 +77,19 @@ function Switch({
     >
       <SwitchPrimitive.Thumb
         data-slot="switch-thumb"
-        className={cn(switchThumbVariants({ size }))}
+        className={cn(
+          "pointer-events-none block rounded-full data-unchecked:bg-background data-checked:bg-background ring-0 transition-transform data-unchecked:translate-x-0",
+          // Size variants
+          "group-data-[size=xl]/switch:size-5 group-data-[size=xl]/switch:data-checked:translate-x-[calc(100%-9px)]",
+          "group-data-[size=lg]/switch:size-4.5 group-data-[size=lg]/switch:data-checked:translate-x-[calc(100%-7px)]",
+          "group-data-[size=md]/switch:size-4 group-data-[size=md]/switch:data-checked:translate-x-[calc(100%-5px)]",
+          "group-data-[size=sm]/switch:size-3.5 group-data-[size=sm]/switch:data-checked:translate-x-[calc(100%-3px)]",
+          "group-data-[size=xs]/switch:size-3 group-data-[size=xs]/switch:data-checked:translate-x-[calc(100%-1px)]",
+        )}
       />
     </SwitchPrimitive.Root>
   );
 }
 
-export { Switch, switchThumbVariants, switchVariants };
+export { Switch, switchVariants };
 export type { SwitchProps };

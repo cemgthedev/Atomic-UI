@@ -6,7 +6,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { CheckIcon } from "lucide-react";
 
 const checkboxVariants = cva(
-  "peer relative flex shrink-0 items-center justify-center border transition-colors outline-none group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20",
+  "group/checkbox relative flex shrink-0 items-center justify-center border transition-colors outline-none group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20",
   {
     variants: {
       variant: {
@@ -73,27 +73,10 @@ const checkboxVariants = cva(
   },
 );
 
-const checkboxIndicatorVariants = cva(
-  "grid place-content-center text-current transition-none",
-  {
-    variants: {
-      sizeIndicator: {
-        xl: "[&>svg]:size-6",
-        lg: "[&>svg]:size-5",
-        md: "[&>svg]:size-4",
-        sm: "[&>svg]:size-3",
-        xs: "[&>svg]:size-2",
-      },
-    },
-    defaultVariants: {
-      sizeIndicator: "md",
-    },
-  },
-);
+// Indicator sizing is handled via group + data-size attributes on the root
 
 type CheckboxProps = React.ComponentProps<typeof CheckboxPrimitive.Root> &
-  VariantProps<typeof checkboxVariants> &
-  VariantProps<typeof checkboxIndicatorVariants> & {
+  VariantProps<typeof checkboxVariants> & {
     icon?: React.ReactNode;
   };
 
@@ -101,7 +84,6 @@ function Checkbox({
   className,
   variant = "default",
   size = "md",
-  sizeIndicator = "md",
   rounded = "md",
   icon,
   ...props
@@ -109,12 +91,21 @@ function Checkbox({
   return (
     <CheckboxPrimitive.Root
       data-slot="checkbox"
+      data-size={size}
       className={cn(checkboxVariants({ variant, size, rounded, className }))}
       {...props}
     >
       <CheckboxPrimitive.Indicator
         data-slot="checkbox-indicator"
-        className={cn(checkboxIndicatorVariants({ sizeIndicator }))}
+        className={cn(
+          "grid place-content-center text-current transition-none",
+          // size -> svg size mapping via group data attribute
+          "group-data-[size=xl]/checkbox:[&>svg]:size-6",
+          "group-data-[size=lg]/checkbox:[&>svg]:size-5",
+          "group-data-[size=md]/checkbox:[&>svg]:size-4",
+          "group-data-[size=sm]/checkbox:[&>svg]:size-3",
+          "group-data-[size=xs]/checkbox:[&>svg]:size-2",
+        )}
       >
         {icon ? icon : <CheckIcon />}
       </CheckboxPrimitive.Indicator>

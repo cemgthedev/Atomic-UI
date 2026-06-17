@@ -5,7 +5,7 @@ import * as React from "react";
 import { X } from "lucide-react";
 
 const inputVariants = cva(
-  "flex gap-2 w-full items-center border overflow-hidden px-3",
+  "group/input flex gap-2 w-full items-center border overflow-hidden px-3",
   {
     variants: {
       variant: {
@@ -72,20 +72,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     },
     ref,
   ) => {
-    /**
-     * Alter color text for icons of lucide icons
-     */
-    const inputVariantStyles = {
-      default: "text-foreground",
-      dark: "text-dark-foreground",
-      muted: "text-foreground",
-      primary: "text-cyan-800",
-      secondary: "text-violet-800",
-      success: "text-emerald-800",
-      warning: "text-yellow-800",
-      danger: "text-red-800",
-    };
-
     return (
       <div className={inputVariants({ variant, size, rounded, className })}>
         {startContent}
@@ -94,7 +80,15 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           className={cn(
             "flex h-full w-full bg-transparent text-base focus:outline-none disabled:cursor-not-allowed",
-            variant && inputVariantStyles[variant],
+            // Variant colors
+            "group-data-[variant=default]/input:text-foreground",
+            "group-data-[variant=dark]/input:text-dark-foreground",
+            "group-data-[variant=muted]/input:text-foreground",
+            "group-data-[variant=primary]/input:text-cyan-800",
+            "group-data-[variant=secondary]/input:text-violet-800",
+            "group-data-[variant=success]/input:text-emerald-800",
+            "group-data-[variant=warning]/input:text-yellow-800",
+            "group-data-[variant=danger]/input:text-red-800",
           )}
           {...props}
         />
@@ -106,7 +100,15 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             aria-label="Limpar"
             className={cn(
               "flex items-center hover:opacity-80 transition-opacity",
-              variant && inputVariantStyles[variant],
+              // Variant colors
+              "group-data-[variant=default]/input:text-foreground",
+              "group-data-[variant=dark]/input:text-dark-foreground",
+              "group-data-[variant=muted]/input:text-foreground",
+              "group-data-[variant=primary]/input:text-cyan-800",
+              "group-data-[variant=secondary]/input:text-violet-800",
+              "group-data-[variant=success]/input:text-emerald-800",
+              "group-data-[variant=warning]/input:text-yellow-800",
+              "group-data-[variant=danger]/input:text-red-800",
             )}
             type="button"
             onClick={onClear}

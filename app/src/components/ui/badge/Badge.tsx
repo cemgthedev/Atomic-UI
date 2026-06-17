@@ -90,7 +90,7 @@ function Badge({
   if (asChild)
     return (
       <div className={cn(badgeVariants({ variant, size, rounded, className }))}>
-        {!!startContent && startContent}
+        {startContent}
 
         <Slot.Root
           data-slot="span"
@@ -101,7 +101,7 @@ function Badge({
           {children}
         </Slot.Root>
 
-        {!!endContent && endContent}
+        {endContent}
       </div>
     );
 
@@ -113,11 +113,11 @@ function Badge({
       className={cn(badgeVariants({ variant, size, rounded, className }))}
       {...props}
     >
-      {!!startContent && startContent}
+      {startContent}
 
       {children}
 
-      {!!endContent && endContent}
+      {endContent}
     </span>
   );
 }
