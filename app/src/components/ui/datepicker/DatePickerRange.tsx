@@ -1,5 +1,5 @@
 import { Calendar, type CalendarButton } from "@/components/ui/calendar";
-import { InputButton } from "@/components/ui/datepicker";
+import { InputDate } from "@/components/ui/datepicker";
 import {
   Popover,
   PopoverContent,
@@ -26,8 +26,8 @@ type DatePickerRangeProps = Omit<
   onChange?: (date: DateRange | undefined) => void;
 
   //variants
-  inputVariant?: React.ComponentProps<typeof InputButton>["variant"];
-  inputRounded?: React.ComponentProps<typeof InputButton>["rounded"];
+  inputVariant?: React.ComponentProps<typeof InputDate>["variant"];
+  inputRounded?: React.ComponentProps<typeof InputDate>["rounded"];
   calendarVariant?: React.ComponentProps<typeof CalendarButton>["variant"];
   calendarRounded?: React.ComponentProps<typeof CalendarButton>["rounded"];
 };
@@ -95,7 +95,7 @@ const DatePickerRange = React.forwardRef<
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <InputButton
+          <InputDate
             ref={ref}
             disabled={disabled}
             variant={inputVariant}
@@ -128,7 +128,7 @@ const DatePickerRange = React.forwardRef<
             >
               {formatRange(selectedRange)}
             </span>
-          </InputButton>
+          </InputDate>
         </PopoverTrigger>
 
         <PopoverContent align="start" className="w-auto overflow-hidden p-0">

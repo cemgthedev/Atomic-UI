@@ -1,4 +1,4 @@
-import { Heading, Label } from "@/components/ui";
+import { Badge, Heading, Label } from "@/components/ui";
 import {
   Pagination,
   PaginationContent,
@@ -18,6 +18,8 @@ export function Dashboard() {
           Seus componentes atômicos
         </Label>
       </div>
+
+      <Badge startContent={undefined}>teste {undefined}</Badge>
 
       <div className="grid grid-cols-3 gap-4">
         <Pagination>
