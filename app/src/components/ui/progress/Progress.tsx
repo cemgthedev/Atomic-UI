@@ -12,7 +12,7 @@ const progressVariants = cva(
         secondary: "bg-secondary/20",
         success: "bg-success/20",
         warning: "bg-warning/20",
-        destructive: "bg-destructive/20",
+        destructive: "bg-danger/20",
       },
       size: {
         xl: "h-3",

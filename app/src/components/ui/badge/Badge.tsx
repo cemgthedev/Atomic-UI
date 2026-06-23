@@ -35,15 +35,15 @@ const badgeVariants = cva(
         "muted-ghost":
           "bg-muted border-dark text-dark opacity-60 hover:opacity-80",
         "primary-ghost":
-          "bg-cyan-200 border-cyan-800 text-cyan-800 hover:opacity-80",
+          "bg-primary-200 border-primary-800 text-primary-800 hover:opacity-80",
         "secondary-ghost":
-          "bg-violet-200 border-violet-800 text-violet-800 hover:opacity-80",
+          "bg-secondary-200 border-secondary-800 text-secondary-800 hover:opacity-80",
         "success-ghost":
-          "bg-emerald-200 border-emerald-800 text-emerald-800 hover:opacity-80",
+          "bg-success-200 border-success-800 text-success-800 hover:opacity-80",
         "warning-ghost":
-          "bg-yellow-200 border-yellow-800 text-yellow-800 hover:opacity-80",
+          "bg-warning-200 border-warning-800 text-warning-800 hover:opacity-80",
         "danger-ghost":
-          "bg-red-200 border-red-800 text-red-800 hover:opacity-80",
+          "bg-danger-200 border-danger-800 text-danger-800 hover:opacity-80",
       },
       size: {
         xl: "text-lg leading-lg p-3",

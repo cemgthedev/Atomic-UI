@@ -1,4 +1,4 @@
-import { Heading, Input, Label } from "@/components/ui";
+import { Button, Heading, Label } from "@/components/ui";
 import {
   Pagination,
   PaginationContent,
@@ -8,7 +8,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { Mail } from "lucide-react";
 
 export function Dashboard() {
   return (
@@ -20,18 +19,24 @@ export function Dashboard() {
         </Label>
       </div>
 
-      <div className="flex items-center gap-2">
-        <Input
-          variant={"danger"}
-          isClearable
-          onClear={() => {
-            console.log("Limpar input");
-          }}
-          value={"Valor do input"}
-          placeholder="Search..."
-          startContent={<Mail className="h-4 w-4" />}
-          endContent={<Mail className="h-4 w-4" />}
-        />
+      <div className="grid grid-cols-5 gap-2">
+        <Button variant={"primary"}>Botão</Button>
+        <Button variant={"secondary"}>Botão</Button>
+        <Button variant={"success"}>Botão</Button>
+        <Button variant={"warning"}>Botão</Button>
+        <Button variant={"danger"}>Botão</Button>
+
+        <Button variant={"primary-bordered"}>Botão</Button>
+        <Button variant={"secondary-bordered"}>Botão</Button>
+        <Button variant={"success-bordered"}>Botão</Button>
+        <Button variant={"warning-bordered"}>Botão</Button>
+        <Button variant={"danger-bordered"}>Botão</Button>
+
+        <Button variant={"primary-ghost"}>Botão</Button>
+        <Button variant={"secondary-ghost"}>Botão</Button>
+        <Button variant={"success-ghost"}>Botão</Button>
+        <Button variant={"warning-ghost"}>Botão</Button>
+        <Button variant={"danger-ghost"}>Botão</Button>
       </div>
 
       <div className="grid grid-cols-3 gap-4">

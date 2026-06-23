@@ -8,11 +8,11 @@ const quoteVariants = cva("font-normal font-sans p-2", {
     variant: {
       default: "bg-gray-100 text-foreground",
       dark: "bg-dark text-dark-foreground",
-      primary: "bg-cyan-100 text-foreground",
-      secondary: "bg-violet-100 text-foreground",
-      success: "bg-emerald-100 text-foreground",
-      warning: "bg-yellow-100 text-foreground",
-      danger: "bg-red-100 text-foreground",
+      primary: "bg-primary-100 text-foreground",
+      secondary: "bg-secondary-100 text-foreground",
+      success: "bg-success-100 text-foreground",
+      warning: "bg-warning-100 text-foreground",
+      danger: "bg-danger-100 text-foreground",
     },
     size: {
       xl: "text-xl",
