@@ -33,21 +33,20 @@ const checkboxVariants = cva(
           "border-warning text-warning hover:bg-warning hover:text-warning-foreground aria-invalid:aria-checked:border-warning",
         "danger-bordered":
           "border-danger text-danger hover:bg-danger hover:text-danger-foreground aria-invalid:aria-checked:border-danger",
-        ghost: "",
         "dark-ghost":
           "bg-muted border-dark text-dark hover:opacity-80 aria-invalid:aria-checked:border-dark",
         "muted-ghost":
           "bg-muted border-dark text-dark opacity-60 hover:opacity-80 aria-invalid:aria-checked:border-dark",
         "primary-ghost":
-          "bg-cyan-200 border-cyan-800 text-cyan-800 hover:opacity-80 aria-invalid:aria-checked:border-cyan-800",
+          "bg-primary-200 border-primary-800 text-primary-800 hover:opacity-80 aria-invalid:aria-checked:border-primary-800",
         "secondary-ghost":
-          "bg-violet-200 border-violet-800 text-violet-800 hover:opacity-80 aria-invalid:aria-checked:border-violet-800",
+          "bg-secondary-200 border-secondary-800 text-secondary-800 hover:opacity-80 aria-invalid:aria-checked:border-secondary-800",
         "success-ghost":
-          "bg-emerald-200 border-emerald-800 text-emerald-800 hover:opacity-80 aria-invalid:aria-checked:border-emerald-800",
+          "bg-success-200 border-success-800 text-success-800 hover:opacity-80 aria-invalid:aria-checked:border-success-800",
         "warning-ghost":
-          "bg-yellow-200 border-yellow-800 text-yellow-800 hover:opacity-80 aria-invalid:aria-checked:border-yellow-800",
+          "bg-warning-200 border-warning-800 text-warning-800 hover:opacity-80 aria-invalid:aria-checked:border-warning-800",
         "danger-ghost":
-          "bg-red-200 border-red-800 text-red-800 hover:opacity-80 aria-invalid:aria-checked:border-red-800",
+          "bg-danger-200 border-danger-800 text-danger-800 hover:opacity-80 aria-invalid:aria-checked:border-danger-800",
       },
       size: {
         xl: "size-8",

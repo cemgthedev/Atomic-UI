@@ -15,15 +15,15 @@ const textareaVariants = cva(
         muted:
           "bg-background text-foreground border-gray-200 hover:border-gray-400 focus-within:border-gray-900 opacity-60",
         primary:
-          "bg-background text-cyan-800 border-cyan-200 hover:border-cyan-400 focus-within:border-cyan-900",
+          "bg-background text-primary-800 border-primary-200 hover:border-primary-400 focus-within:border-primary-900",
         secondary:
-          "bg-background text-violet-800 border-violet-200 hover:border-violet-400 focus-within:border-violet-900",
+          "bg-background text-secondary-800 border-secondary-200 hover:border-secondary-400 focus-within:border-secondary-900",
         success:
-          "bg-background text-emerald-800 border-emerald-200 hover:border-emerald-400 focus-within:border-emerald-900",
+          "bg-background text-success-800 border-success-200 hover:border-success-400 focus-within:border-success-900",
         warning:
-          "bg-background text-yellow-800 border-yellow-200 hover:border-yellow-400 focus-within:border-yellow-900",
+          "bg-background text-warning-800 border-warning-200 hover:border-warning-400 focus-within:border-warning-900",
         danger:
-          "bg-background text-red-800 border-red-200 hover:border-red-400 focus-within:border-red-900",
+          "bg-background text-danger-800 border-danger-200 hover:border-danger-400 focus-within:border-danger-900",
       },
       size: {
         xl: "min-h-13 max-h-13",

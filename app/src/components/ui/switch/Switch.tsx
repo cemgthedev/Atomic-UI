@@ -32,17 +32,17 @@ const switchVariants = cva(
         "danger-bordered":
           "border-danger data-unchecked:bg-gray-200 data-checked:bg-danger data-checked:border-danger",
         "dark-ghost":
-          "bg-gray-400 border-dark data-checked:bg-dark data-checked:border-dark",
+          "bg-dark-400 border-dark data-checked:bg-dark data-checked:border-dark",
         "primary-ghost":
-          "bg-cyan-200 border-cyan-800 data-checked:bg-cyan-800 data-checked:border-cyan-800",
+          "bg-primary-200 border-primary-800 data-checked:bg-primary-800 data-checked:border-primary-800",
         "secondary-ghost":
-          "bg-violet-200 border-violet-800 data-checked:bg-violet-800 data-checked:border-violet-800",
+          "bg-secondary-200 border-secondary-800 data-checked:bg-secondary-800 data-checked:border-secondary-800",
         "success-ghost":
-          "bg-emerald-200 border-emerald-800 data-checked:bg-emerald-800 data-checked:border-emerald-800",
+          "bg-success-200 border-success-800 data-checked:bg-success-800 data-checked:border-success-800",
         "warning-ghost":
-          "bg-yellow-200 border-yellow-800 data-checked:bg-yellow-800 data-checked:border-yellow-800",
+          "bg-warning-200 border-warning-800 data-checked:bg-warning-800 data-checked:border-warning-800",
         "danger-ghost":
-          "bg-red-200 border-red-800 data-checked:bg-red-800 data-checked:border-red-800",
+          "bg-danger-200 border-danger-800 data-checked:bg-danger-800 data-checked:border-danger-800",
       },
       size: {
         xl: "h-6 w-9",

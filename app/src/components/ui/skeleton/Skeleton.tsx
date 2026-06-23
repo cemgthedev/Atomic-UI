@@ -7,12 +7,12 @@ const skeletonVariants = cva("animate-pulse bg-linear-to-r", {
   variants: {
     variant: {
       default: "from-gray-200 to-gray-300",
-      dark: "from-gray-600 to-gray-800",
-      primary: "from-cyan-200 to-cyan-300",
-      secondary: "from-violet-200 to-violet-300",
-      success: "from-emerald-200 to-emerald-300",
-      warning: "from-yellow-200 to-yellow-300",
-      danger: "from-red-200 to-red-300",
+      dark: "from-dark-600 to-dark-800",
+      primary: "from-primary-200 to-primary-300",
+      secondary: "from-secondary-200 to-secondary-300",
+      success: "from-success-200 to-success-300",
+      warning: "from-warning-200 to-warning-300",
+      danger: "from-danger-200 to-danger-300",
     },
     size: {
       xl: "h-13",
