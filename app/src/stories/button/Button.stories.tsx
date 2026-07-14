@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "@/components/ui";
 import { Plus } from "lucide-react";
 import type { ComponentProps } from "react";
-import { buttonVariantsCode } from "@/stories/button/Button.examples";
 
 type ButtonStoryProps = Omit<
   ComponentProps<typeof Button>,
@@ -16,12 +15,15 @@ type ButtonStoryProps = Omit<
 const meta = {
   title: "Components/Button",
   component: Button,
-  tags: ["autodocs"],
   parameters: {
     layout: "centered",
     docs: {
       controls: {
         exclude: ["theme", "asChild", "startIcon", "endIcon"],
+      },
+      description: {
+        component:
+          "Botão utilizado para disparar ações. Suporta múltiplas variantes, tamanhos e bordas.",
       },
     },
   },
@@ -38,11 +40,22 @@ const meta = {
     },
     startContent: {
       control: "boolean",
+      table: {
+        type: {
+          summary: "ReactNode",
+        },
+      },
     },
     endContent: {
       control: "boolean",
+      table: {
+        type: {
+          summary: "ReactNode",
+        },
+      },
     },
     variant: {
+      description: "Define a aparência do botão.",
       control: { type: "select" },
       options: [
         "default",
@@ -69,13 +82,24 @@ const meta = {
         "danger-ghost",
       ],
     },
-
     size: {
+      description: "Define o tamanho do botão.",
+      table: {
+        type: {
+          summary: '"xs" | "sm" | "md" | "lg" | "xl"',
+        },
+      },
       control: { type: "inline-radio" },
       options: ["xs", "sm", "md", "lg", "xl"],
     },
 
     rounded: {
+      description: "Define o arredondamento do botão.",
+      table: {
+        type: {
+          summary: '"xs" | "sm" | "md" | "lg" | "xl" | "full"',
+        },
+      },
       control: { type: "inline-radio" },
       options: ["xs", "sm", "md", "lg", "xl", "full"],
     },
@@ -113,14 +137,9 @@ export const Variants: Story = {
     controls: {
       disable: true,
     },
-    docs: {
-      source: {
-        code: buttonVariantsCode,
-      },
-    },
   },
 
-  render: () => {
+  render: ({ ...props }) => {
     const variants = [
       "default",
       "dark",
@@ -149,7 +168,7 @@ export const Variants: Story = {
     return (
       <div className="flex flex-wrap items-center gap-4">
         {variants.map((variant) => (
-          <Button key={variant} variant={variant}>
+          <Button key={variant} variant={variant} {...props}>
             {variant}
           </Button>
         ))}

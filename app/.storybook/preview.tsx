@@ -1,11 +1,7 @@
 import type { Preview } from "@storybook/react-vite";
-import { themes } from "storybook/theming";
 import "../src/style/globals.css";
 
 const preview: Preview = {
-  args: {
-    theme: themes.dark,
-  },
   parameters: {
     controls: {
       matchers: {
