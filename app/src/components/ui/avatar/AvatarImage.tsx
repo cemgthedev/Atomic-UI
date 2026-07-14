@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { Avatar as AvatarPrimitive } from "radix-ui";
 
 const avatarImageVariants = cva(
-  "aspect-square size-full rounded-full object-cover",
+  "aspect-square size-full object-cover",
 );
 
 type AvatarImageProps = React.ComponentProps<typeof AvatarPrimitive.Image> &
