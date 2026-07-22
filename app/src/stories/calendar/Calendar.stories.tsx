@@ -1,61 +1,40 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button } from "@/components/ui";
-import { Plus } from "lucide-react";
-import type { ComponentProps } from "react";
-
-type ButtonStoryProps = Omit<
-  ComponentProps<typeof Button>,
-  "startContent" | "endContent"
-> & {
-  startContent?: boolean;
-  endContent?: boolean;
-};
+import { Calendar } from "@/components/ui";
 
 const meta = {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Calendar",
+  component: Calendar,
   parameters: {
     layout: "centered",
     docs: {
       controls: {
-        exclude: ["theme", "asChild", "startIcon", "endIcon"],
+        exclude: ["theme", "captionLayout", "locale"],
       },
       description: {
         component:
-          "Botão utilizado para disparar ações. Suporta múltiplas variantes, tamanhos e bordas.",
+          "Calendário utilizado para selecionar datas. Suporta múltiplas variantes, tamanhos e bordas.",
       },
     },
   },
   argTypes: {
-    children: {
+    captionLayout: {
       table: {
         disable: true,
       },
     },
-    asChild: {
+    locale: {
       table: {
         disable: true,
       },
     },
-    startContent: {
-      control: "boolean",
+    calendarButtonVariant: {
+      description: "Define a aparência do calendário.",
       table: {
         type: {
-          summary: "ReactNode",
+          summary: "string",
         },
       },
-    },
-    endContent: {
-      control: "boolean",
-      table: {
-        type: {
-          summary: "ReactNode",
-        },
-      },
-    },
-    variant: {
-      description: "Define a aparência do botão.",
       control: { type: "select" },
       options: [
         "default",
@@ -82,19 +61,9 @@ const meta = {
         "danger-ghost",
       ],
     },
-    size: {
-      description: "Define o tamanho do botão.",
-      table: {
-        type: {
-          summary: '"xs" | "sm" | "md" | "lg" | "xl"',
-        },
-      },
-      control: { type: "inline-radio" },
-      options: ["xs", "sm", "md", "lg", "xl"],
-    },
 
-    rounded: {
-      description: "Define o arredondamento do botão.",
+    calendarButtonRounded: {
+      description: "Define o arredondamento dos botões.",
       table: {
         type: {
           summary: '"xs" | "sm" | "md" | "lg" | "xl" | "full"',
@@ -103,45 +72,58 @@ const meta = {
       control: { type: "inline-radio" },
       options: ["xs", "sm", "md", "lg", "xl", "full"],
     },
+
+    showOutsideDays: {
+      description: "Define se os dias fora do mês atual devem ser exibidos.",
+      control: "boolean",
+      table: {
+        type: {
+          summary: "Boolean",
+        },
+      },
+    },
+
+    mode: {
+      description: "Define o modo de exibição do calendário.",
+      table: {
+        type: {
+          summary: '"single" | "multiple" | "range"',
+        },
+      },
+      control: { type: "inline-radio" },
+      options: ["single", "multiple", "range"],
+    },
   },
-} satisfies Meta<ButtonStoryProps>;
+} satisfies Meta<typeof Calendar>;
 
 export default meta;
-type Story = StoryObj<ButtonStoryProps>;
+type Story = StoryObj<typeof Calendar>;
 
 export const Default: Story = {
   args: {
-    children: "Button",
-    variant: "default",
-    size: "md",
-    rounded: "md",
-    startContent: false,
-    endContent: false,
+    mode: "single",
+    showOutsideDays: true,
+    calendarButtonRounded: "md",
+    calendarButtonVariant: "default",
   },
   parameters: {
-    size: {
-      options: ["xs", "sm", "md", "lg", "xl"],
-    },
-    rounded: {
+    calendarButtonRounded: {
       options: ["xs", "sm", "md", "lg", "xl", "full"],
     },
   },
-  render: ({ startContent, endContent, ...args }) => (
-    <Button
-      {...args}
-      startContent={startContent ? <Plus size={16} /> : undefined}
-      endContent={endContent ? <Plus size={16} /> : undefined}
-    />
-  ),
+  render: ({ ...args }) => <Calendar {...args} />,
 };
 
 export const Variants: Story = {
+  args: {
+    mode: "single",
+    showOutsideDays: true,
+  },
   parameters: {
     controls: {
       disable: true,
     },
   },
-
   render: ({ ...props }) => {
     const variants = [
       "default",
@@ -170,10 +152,12 @@ export const Variants: Story = {
 
     return (
       <div className="flex flex-wrap items-center gap-4">
-        {variants.map((variant) => (
-          <Button key={variant} variant={variant} {...props}>
-            {variant}
-          </Button>
+        {variants.map((calendarButtonVariant) => (
+          <Calendar
+            key={calendarButtonVariant}
+            calendarButtonVariant={calendarButtonVariant}
+            {...props}
+          />
         ))}
       </div>
     );
