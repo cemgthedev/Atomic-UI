@@ -1,0 +1,19 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as HeadingStories from './Heading.stories';
+
+<Meta of={HeadingStories} />
+
+# Heading
+
+Componente para exibir títulos com variações de cor e tamanho.
+
+## Padrão
+
+<Canvas of={HeadingStories.Default} />
+
+<Controls />
+
+## Tamanhos
+
+<Canvas of={HeadingStories.Sizes} />
