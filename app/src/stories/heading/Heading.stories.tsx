@@ -63,10 +63,33 @@ export const Default: Story = {
 export const Sizes: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div className="space-y-3">
+    <div className="flex flex-col gap-3">
       {(["xs", "sm", "md", "lg", "xl"] as const).map((size) => (
         <Heading key={size} size={size}>
           Heading {size.toUpperCase()}
+        </Heading>
+      ))}
+    </div>
+  ),
+};
+
+export const Variants: Story = {
+  parameters: { controls: { disable: true } },
+  render: () => (
+    <div className="flex flex-wrap gap-4">
+      {(
+        [
+          "default",
+          "muted",
+          "primary",
+          "secondary",
+          "success",
+          "warning",
+          "danger",
+        ] as const
+      ).map((variant) => (
+        <Heading key={variant} variant={variant}>
+          {variant}
         </Heading>
       ))}
     </div>
