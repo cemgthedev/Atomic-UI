@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as CheckboxStories from './Checkbox.stories';
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+Checkbox utilizado para seleção binária em formulários e interfaces de confirmação.
+
+## Padrão
+
+Exemplo principal do componente com estado marcado e texto associado.
+
+<Canvas of={CheckboxStories.Default} />
+
+<Controls />
+
+## Variantes
+
+O componente oferece diversas variantes visuais para combinar com o tema da interface.
+
+<Canvas of={CheckboxStories.Variants} />
+
+## Estados
+
+Utilize os estados disabled e invalid para indicar interações indisponíveis ou entradas inválidas.
+
+<Canvas of={CheckboxStories.States} />

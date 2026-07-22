@@ -1,53 +1,30 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button } from "@/components/ui";
+import { Checkbox } from "@/components/ui";
 import { Plus } from "lucide-react";
 import type { ComponentProps } from "react";
 
-type ButtonStoryProps = Omit<
-  ComponentProps<typeof Button>,
-  "startContent" | "endContent"
-> & {
-  startContent?: boolean;
-  endContent?: boolean;
+type CheckboxStoryProps = Omit<ComponentProps<typeof Checkbox>, "icon"> & {
+  label?: string;
+  icon?: boolean;
 };
 
 const meta = {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Checkbox",
+  component: Checkbox,
   parameters: {
     layout: "centered",
     docs: {
-      controls: {
-        exclude: ["theme", "asChild"],
-      },
       description: {
         component:
-          "Botão utilizado para disparar ações. Suporta múltiplas variantes, tamanhos e bordas.",
+          "Checkbox utilizado para seleção binária com suporte a variantes, tamanhos, estados de disabled e validação visual.",
       },
     },
   },
   argTypes: {
-    children: {
-      table: {
-        disable: true,
-      },
-    },
-    asChild: {
-      table: {
-        disable: true,
-      },
-    },
-    startContent: {
+    icon: {
       control: "boolean",
-      table: {
-        type: {
-          summary: "ReactNode",
-        },
-      },
-    },
-    endContent: {
-      control: "boolean",
+      description: "Exibe um ícone personalizado no checkbox.",
       table: {
         type: {
           summary: "ReactNode",
@@ -55,7 +32,7 @@ const meta = {
       },
     },
     variant: {
-      description: "Define a aparência do botão.",
+      description: "Define a aparência visual do checkbox.",
       control: { type: "select" },
       options: [
         "default",
@@ -73,7 +50,7 @@ const meta = {
         "success-bordered",
         "warning-bordered",
         "danger-bordered",
-        "ghost",
+        "dark-ghost",
         "muted-ghost",
         "primary-ghost",
         "secondary-ghost",
@@ -81,58 +58,72 @@ const meta = {
         "warning-ghost",
         "danger-ghost",
       ],
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
     },
     size: {
-      description: "Define o tamanho do botão.",
-      table: {
-        type: {
-          summary: '"xs" | "sm" | "md" | "lg" | "xl"',
-        },
-      },
+      description: "Define o tamanho do checkbox.",
       control: { type: "inline-radio" },
       options: ["xs", "sm", "md", "lg", "xl"],
-    },
-
-    rounded: {
-      description: "Define o arredondamento do botão.",
       table: {
         type: {
-          summary: '"xs" | "sm" | "md" | "lg" | "xl" | "full"',
+          summary: "string",
         },
       },
+    },
+    rounded: {
+      description: "Define o arredondamento do checkbox.",
       control: { type: "inline-radio" },
       options: ["xs", "sm", "md", "lg", "xl", "full"],
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+    },
+    defaultChecked: {
+      control: "boolean",
+      description: "Define o estado inicial marcado.",
     },
   },
-} satisfies Meta<ButtonStoryProps>;
+} satisfies Meta<CheckboxStoryProps>;
 
 export default meta;
-type Story = StoryObj<ButtonStoryProps>;
+type Story = StoryObj<CheckboxStoryProps>;
+
+const CheckboxField = ({
+  label = "Aceitar termos",
+  icon = false,
+  ...props
+}: CheckboxStoryProps) => {
+  const id = props.id ?? "checkbox-story";
+
+  return (
+    <div className="flex items-center gap-2">
+      <Checkbox
+        id={id}
+        {...props}
+        icon={icon ? <Plus size={16} /> : undefined}
+      />
+      <label htmlFor={id} className="text-sm font-medium">
+        {label}
+      </label>
+    </div>
+  );
+};
 
 export const Default: Story = {
   args: {
-    children: "Button",
+    defaultChecked: true,
     variant: "default",
     size: "md",
     rounded: "md",
-    startContent: false,
-    endContent: false,
+    icon: false,
   },
-  parameters: {
-    size: {
-      options: ["xs", "sm", "md", "lg", "xl"],
-    },
-    rounded: {
-      options: ["xs", "sm", "md", "lg", "xl", "full"],
-    },
-  },
-  render: ({ startContent, endContent, ...args }) => (
-    <Button
-      {...args}
-      startContent={startContent ? <Plus size={16} /> : undefined}
-      endContent={endContent ? <Plus size={16} /> : undefined}
-    />
-  ),
+  render: (args) => <CheckboxField {...args} />,
 };
 
 export const Variants: Story = {
@@ -141,8 +132,7 @@ export const Variants: Story = {
       disable: true,
     },
   },
-
-  render: ({ ...props }) => {
+  render: () => {
     const variants = [
       "default",
       "dark",
@@ -159,7 +149,7 @@ export const Variants: Story = {
       "success-bordered",
       "warning-bordered",
       "danger-bordered",
-      "ghost",
+      "dark-ghost",
       "muted-ghost",
       "primary-ghost",
       "secondary-ghost",
@@ -171,11 +161,29 @@ export const Variants: Story = {
     return (
       <div className="flex flex-wrap items-center gap-4">
         {variants.map((variant) => (
-          <Button key={variant} variant={variant} {...props}>
-            {variant}
-          </Button>
+          <CheckboxField
+            key={variant}
+            label={variant}
+            variant={variant}
+            defaultChecked
+          />
         ))}
       </div>
     );
   },
+};
+
+export const States: Story = {
+  parameters: {
+    controls: {
+      disable: true,
+    },
+  },
+  render: () => (
+    <div className="flex flex-col gap-4">
+      <CheckboxField label="Padrão" defaultChecked />
+      <CheckboxField label="Desabilitado" disabled />
+      <CheckboxField label="Inválido" aria-invalid defaultChecked />
+    </div>
+  ),
 };
