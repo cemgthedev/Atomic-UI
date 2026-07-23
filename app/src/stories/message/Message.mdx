@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as MessageStories from './Message.stories';
+
+<Meta of={MessageStories} />
+
+# Message
+
+Componente de texto para exibir mensagens curtas, avisos e conteúdos informativos.
+
+## Padrão
+
+Use o componente para apresentar texto simples com estilo e tamanho configuráveis.
+
+<Canvas of={MessageStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Veja as diferentes cores disponíveis para destacar mensagens.
+
+<Canvas of={MessageStories.Variants} />
+
+## Tamanhos
+
+Ajuste o tamanho do texto conforme o contexto de uso.
+
+<Canvas of={MessageStories.Sizes} />
