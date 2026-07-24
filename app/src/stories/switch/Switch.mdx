@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as SwitchStories from "./Switch.stories";
+
+<Meta of={SwitchStories} />
+
+# Switch
+
+Componente de alternância para ligar e desligar opções em formulários e configurações.
+
+## Padrão
+
+Exibe o comportamento padrão de seleção binária.
+
+<Canvas of={SwitchStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Veja as opções de estilo disponíveis.
+
+<Canvas of={SwitchStories.Variants} />
+
+## Tamanhos
+
+Mostra como o switch aparece em cada tamanho.
+
+<Canvas of={SwitchStories.Sizes} />
