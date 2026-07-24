@@ -26,11 +26,11 @@ const textareaVariants = cva(
           "bg-background text-danger-800 border-danger-200 hover:border-danger-400 focus-within:border-danger-900",
       },
       size: {
-        xl: "min-h-13 max-h-13",
-        lg: "min-h-12 max-h-12",
-        md: "min-h-20 max-h-40",
-        sm: "min-h-10 max-h-10",
-        xs: "min-h-9 max-h-9",
+        xl: "min-h-16",
+        lg: "min-h-14",
+        md: "min-h-12",
+        sm: "min-h-10",
+        xs: "min-h-9",
       },
       rounded: {
         xl: "rounded-xl",
@@ -93,16 +93,11 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
             "group-data-[variant=warning]/textarea:text-yellow-800",
             "group-data-[variant=danger]/textarea:text-red-800",
             // Size constraints
-            "group-data-[size=xl]/textarea:min-h-13",
-            "group-data-[size=xl]/textarea:max-h-13",
-            "group-data-[size=lg]/textarea:min-h-12",
-            "group-data-[size=lg]/textarea:max-h-12",
-            "group-data-[size=md]/textarea:min-h-20",
-            "group-data-[size=md]/textarea:max-h-40",
+            "group-data-[size=xl]/textarea:min-h-16",
+            "group-data-[size=lg]/textarea:min-h-14",
+            "group-data-[size=md]/textarea:min-h-12",
             "group-data-[size=sm]/textarea:min-h-10",
-            "group-data-[size=sm]/textarea:max-h-10",
             "group-data-[size=xs]/textarea:min-h-9",
-            "group-data-[size=xs]/textarea:max-h-9",
           )}
           {...props}
         />
@@ -113,7 +108,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           <button
             aria-label="Limpar"
             className={cn(
-              "flex items-center hover:opacity-80 transition-opacity",
+              "flex hover:opacity-80 transition-opacity",
               // Variant colors
               "group-data-[variant=default]/textarea:text-foreground",
               "group-data-[variant=dark]/textarea:text-dark-foreground",
