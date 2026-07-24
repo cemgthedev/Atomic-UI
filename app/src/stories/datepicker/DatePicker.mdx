@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as DatePickerStories from './DatePicker.stories';
+
+<Meta of={DatePickerStories} />
+
+# DatePicker
+
+Seletores de data com modos simples, intervalo e múltiplo para formulários e filtros.
+
+## DatePickerSimple
+
+Componente para seleção única de data com entrada e calendário embutidos.
+
+<Canvas of={DatePickerStories.DatePickerSimpleStory} />
+
+<Controls of={DatePickerStories.DatePickerSimpleStory} />
+
+## DatePickerRange
+
+Permite selecionar um intervalo de datas, útil para filtros e agendamentos.
+
+<Canvas of={DatePickerStories.DatePickerRangeStory} />
+
+<Controls of={DatePickerStories.DatePickerRangeStory} />
+
+## DatePickerMultiple
+
+Ideal para selecionar várias datas em um único campo.
+
+<Canvas of={DatePickerStories.DatePickerMultipleStory} />
+
+<Controls of={DatePickerStories.DatePickerMultipleStory} />
+
+## Variantes
+
+Exemplo de variantes do DatePickerSimple.
+
+<Canvas of={DatePickerStories.Variants} />

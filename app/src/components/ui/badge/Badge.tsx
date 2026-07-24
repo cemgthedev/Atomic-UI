@@ -32,6 +32,7 @@ const badgeVariants = cva(
         "danger-bordered":
           "border-danger text-danger hover:bg-danger hover:text-danger-foreground",
         "dark-ghost": "bg-muted border-dark text-dark hover:opacity-80",
+        ghost: "bg-transparent border-transparent hover:bg-muted",
         "muted-ghost":
           "bg-muted border-dark text-dark opacity-60 hover:opacity-80",
         "primary-ghost":

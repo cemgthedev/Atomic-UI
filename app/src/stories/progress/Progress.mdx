@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as ProgressStories from './Progress.stories';
+
+<Meta of={ProgressStories} />
+
+# Progress
+
+Componente de barra de progresso para indicar avanço ou estado de execução.
+
+## Padrão
+
+Use a barra para mostrar uma porcentagem visualmente clara.
+
+<Canvas of={ProgressStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Exiba diferentes cores de status para o mesmo contexto.
+
+<Canvas of={ProgressStories.Variants} />
+
+## Striped
+
+A barra pode receber um estilo listrado e animado para reforçar visualmente o progresso.
+
+<Canvas of={ProgressStories.Striped} />

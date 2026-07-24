@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as TextareaStories from "./Textarea.stories";
+
+<Meta of={TextareaStories} />
+
+# Textarea
+
+Área de texto multilinha para entradas maiores, notas e comentários.
+
+## Padrão
+
+Use para capturar textos mais longos com estilo de formulário consistente.
+
+<Canvas of={TextareaStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Veja as diferentes aparências suportadas pelo componente.
+
+<Canvas of={TextareaStories.Variants} />
+
+## Clearable
+
+Demonstrando o botão de limpar quando habilitado.
+
+<Canvas of={TextareaStories.Clearable} />

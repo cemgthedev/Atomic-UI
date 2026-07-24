@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { Avatar as AvatarPrimitive } from "radix-ui";
 
 const avatarFallbackVariants = cva(
-  "flex size-full items-center justify-center rounded-full text-sm group-data-[size=sm]/avatar:text-xs",
+  "flex size-full items-center justify-center",
   {
     variants: {
       variant: {
@@ -36,7 +36,22 @@ function AvatarFallback({
   return (
     <AvatarPrimitive.Fallback
       data-slot="avatar-fallback"
-      className={cn(avatarFallbackVariants({ variant, className }))}
+      className={cn(
+        avatarFallbackVariants({ variant, className }),
+        // Avatar text size
+        "group-data-[size=xs]/avatar:text-sm",
+        "group-data-[size=sm]/avatar:text-sm",
+        "group-data-[size=md]/avatar:text-md",
+        "group-data-[size=lg]/avatar:text-md",
+        "group-data-[size=xl]/avatar:text-md",
+        // Avatar rounded variant styles
+        "group-data-[rounded=xs]/avatar:rounded-xs",
+        "group-data-[rounded=sm]/avatar:rounded-sm",
+        "group-data-[rounded=md]/avatar:rounded-md",
+        "group-data-[rounded=lg]/avatar:rounded-lg",
+        "group-data-[rounded=xl]/avatar:rounded-xl",
+        "group-data-[rounded=full]/avatar:rounded-full",
+      )}
       {...props}
     />
   );

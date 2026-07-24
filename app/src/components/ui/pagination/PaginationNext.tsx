@@ -14,7 +14,6 @@ function PaginationNext({
   return (
     <PaginationLink
       aria-label="Vá para a próxima página"
-      size="md"
       className={cn("group", className)}
       {...props}
     >

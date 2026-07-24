@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as ImageStories from './Image.stories';
+
+<Meta of={ImageStories} />
+
+# Image
+
+Componente para exibir imagens com suporte a carregamento, estado de erro e sobreposição visual.
+
+## Padrão
+
+Utilize esse layout para apresentar uma imagem com skeleton e fallback em conjunto.
+
+<Canvas of={ImageStories.Default} />
+
+<Controls />
+
+## Overlay
+
+Adicione uma camada visual sobre a imagem para destacar conteúdo complementar.
+
+<Canvas of={ImageStories.WithOverlay} />
+
+## Fallback
+
+Quando a imagem não é carregada corretamente, o componente pode exibir um estado alternativo.
+
+<Canvas of={ImageStories.Fallback} />

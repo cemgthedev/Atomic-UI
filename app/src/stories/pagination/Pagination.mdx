@@ -1,0 +1,34 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+# Pagination
+
+Componente de navegação para dividir conteúdo em páginas sequenciais.
+
+## Padrão
+
+Use esse layout para mostrar a página atual, páginas próximas e ações de navegação.
+
+<Canvas of={PaginationStories.Default} />
+
+<Controls />
+
+## Simples
+
+Uma versão reduzida com poucos itens.
+
+<Canvas of={PaginationStories.Simple} />
+
+## Com botões de navegação
+
+Inclua ações explícitas para avançar e voltar entre páginas.
+
+<Canvas of={PaginationStories.WithButtons} />
+
+## Variantes
+Exemplos de cada variante visual disponível.
+
+<Canvas of={PaginationStories.Variants} />

@@ -18,6 +18,7 @@ function PaginationLink({
   className,
   variant,
   size = "md",
+  rounded = "md",
   isActive = false,
   ...props
 }: PaginationLinkProps) {
@@ -26,6 +27,7 @@ function PaginationLink({
       asChild
       variant={variant ? variant : "ghost"}
       size={size}
+      rounded={rounded}
       className={cn(className)}
     >
       <a

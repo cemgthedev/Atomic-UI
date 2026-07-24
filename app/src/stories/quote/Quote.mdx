@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as QuoteStories from "./Quote.stories";
+
+<Meta of={QuoteStories} />
+
+# Quote
+
+Bloco de citação para destacar declarações, depoimentos e trechos importantes.
+
+## Padrão
+
+Use o componente para exibir textos estilizados com bordas suaves e cores de destaque.
+
+<Canvas of={QuoteStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Veja as opções de tema disponíveis.
+
+<Canvas of={QuoteStories.Variants} />
+
+## Tamanhos
+
+Demonstração dos tamanhos suportados pelo componente.
+
+<Canvas of={QuoteStories.Sizes} />

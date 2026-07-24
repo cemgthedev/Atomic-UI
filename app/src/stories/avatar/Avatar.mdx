@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as AvatarStories from "./Avatar.stories";
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+Avatar utilizado para exibir imagens ou ícones de perfil.
+
+## Padrão
+
+Esta variante deve ser utilizada para a ação principal da tela.
+
+<Canvas of={AvatarStories.Default} />
+
+<Controls />
+
+## Fallback
+
+Componente de fallback para quando a imagem do avatar não estiver disponível.
+
+<Canvas of={AvatarStories.Fallback} />
+
+## With Badge
+
+Componente de badge para exibir informações adicionais no avatar.
+
+<Canvas of={AvatarStories.WithBadge} />
+
+## Group
+
+Componente de grupo de avatares para exibir múltiplos perfis.
+
+<Canvas of={AvatarStories.Group} />

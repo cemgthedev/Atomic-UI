@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as InputStories from './Input.stories';
+
+<Meta of={InputStories} />
+
+# Input
+
+Campo de entrada flexível para formulários e buscas, com suporte a ícones, variantes e ação de limpar.
+
+## Padrão
+
+Use o componente com texto, placeholder e opções de estilo básicas.
+
+<Canvas of={InputStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Exemplos de cada variante visual disponível.
+
+<Canvas of={InputStories.Variants} />
+
+## Com ícones
+
+Adicione conteúdo auxiliar à esquerda ou à direita para melhorar a experiência.
+
+<Canvas of={InputStories.WithIcons} />
+
+## Clearable
+
+Ative a ação de limpar para permitir apagar rapidamente o valor digitado.
+
+<Canvas of={InputStories.Clearable} />

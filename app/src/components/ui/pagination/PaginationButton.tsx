@@ -45,11 +45,11 @@ const paginationButtonVariants = cva(
           "bg-danger-200 border-danger-800 text-danger-800 hover:opacity-80",
       },
       size: {
-        xl: "text-lg leading-lg p-3 min-w-13",
-        lg: "text-md leading-md px-2.5 py-2 min-w-11",
-        md: "text-md leading-md p-2 min-w-10",
-        sm: "text-sm leading-sm px-2 py-1.5 min-w-9",
-        xs: "text-sm leading-xs p-1.5 min-w-8",
+        xl: "h-13 min-w-13 px-3 text-lg leading-none",
+        lg: "h-11 min-w-11 px-2.5 text-md leading-none",
+        md: "h-10 min-w-10 px-2 text-md leading-none",
+        sm: "h-9 min-w-9 px-2 text-sm leading-none",
+        xs: "h-8 min-w-8 px-1.5 text-sm leading-none",
       },
       rounded: {
         full: "rounded-full",

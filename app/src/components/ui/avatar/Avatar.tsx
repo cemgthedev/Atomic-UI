@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const avatarVariants = cva(
-  "group/avatar relative flex size-8 shrink-0 rounded-full select-none after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten",
+  "group/avatar relative flex shrink-0 select-none",
   {
     variants: {
       size: {
@@ -26,7 +26,7 @@ const avatarVariants = cva(
     },
     defaultVariants: {
       size: "md",
-      rounded: "md",
+      rounded: "full",
     },
   },
 );
@@ -35,16 +35,17 @@ type AvatarProps = React.ComponentProps<typeof AvatarPrimitive.Root> &
   VariantProps<typeof avatarVariants>;
 
 function Avatar({
-  className,
-  rounded = "full",
   size = "md",
+  rounded = "full",
+  className,
   ...props
 }: AvatarProps) {
   return (
     <AvatarPrimitive.Root
       data-slot="avatar"
       data-size={size}
-      className={cn(avatarVariants({ rounded, size, className }))}
+      data-rounded={rounded}
+      className={cn(avatarVariants({ size, rounded, className }))}
       {...props}
     />
   );
