@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as SkeletonStories from "./Skeleton.stories";
+
+<Meta of={SkeletonStories} />
+
+# Skeleton
+
+Componente de carregamento para indicar que o conteúdo está sendo preparado.
+
+## Padrão
+
+Use em listas ou cards para exibir uma prévia de carregamento.
+
+<Canvas of={SkeletonStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Demonstração das variações de cor disponíveis.
+
+<Canvas of={SkeletonStories.Variants} />
+
+## Tamanhos
+
+Exibe como o componente se adapta a diferentes alturas.
+
+<Canvas of={SkeletonStories.Sizes} />
