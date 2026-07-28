@@ -47,10 +47,10 @@ const buttonVariants = cva(
       },
       size: {
         xl: "text-lg leading-lg p-3",
-        lg: "text-md leading-md px-2.5 py-2",
+        lg: "text-md leading-md p-3",
         md: "text-md leading-md p-2",
-        sm: "text-sm leading-sm px-2 py-1.5",
-        xs: "text-sm leading-xs p-1.5",
+        sm: "text-sm leading-sm p-2",
+        xs: "text-sm leading-xs p-2",
       },
       rounded: {
         full: "rounded-full",
