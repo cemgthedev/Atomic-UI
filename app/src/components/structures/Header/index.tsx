@@ -13,7 +13,7 @@ export function Header() {
         </Avatar>
       </Link>
 
-      <Navbar />
+      <Navbar className="hidden md:block" />
     </header>
   );
 }

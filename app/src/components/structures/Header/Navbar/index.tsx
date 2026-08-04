@@ -1,13 +1,22 @@
 import { urls } from "@/constants/urls";
 import { cn } from "@/utils/cn";
 import { BookOpen, Component, Home, Settings2 } from "lucide-react";
+import type { ComponentProps } from "react";
 import { Link, useLocation } from "react-router";
 
-export function Navbar() {
+export type NavbarProps = ComponentProps<"nav">;
+
+export function Navbar({ className, ...props }: NavbarProps) {
   const { pathname } = useLocation();
 
   return (
-    <nav className="flex items-center justify-start gap-8 px-6 py-3">
+    <nav
+      className={cn(
+        "flex items-center justify-start gap-8 px-6 py-3",
+        className,
+      )}
+      {...props}
+    >
       <ul className="flex gap-8">
         <li>
           <Link
