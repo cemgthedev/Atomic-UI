@@ -1,11 +1,19 @@
+import { forwardRef } from "react";
+
 export type MainProps = {
   children: React.ReactNode;
 };
 
-export function Main({ children }: MainProps) {
+export const Main = forwardRef<HTMLElement, MainProps>(function Main(
+  { children },
+  ref,
+) {
   return (
-    <main className="min-h-[calc(100vh-73px)] flex justify-start items-start gap-0 p-0">
+    <main
+      ref={ref}
+      className="min-h-[calc(100vh-73px)] flex justify-start items-start gap-0 p-0"
+    >
       {children}
     </main>
   );
-}
+});

@@ -32,7 +32,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] min-w-60 max-w-60 border-r border-muted-200 px-6 py-8 flex flex-col gap-4">
+    <aside className="min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] min-w-60 max-w-60 border-r border-muted-200 px-6 py-8 flex flex-col gap-4 overflow-auto scrollbar-none">
       <Label size="sm">Web</Label>
 
       <div className="space-y-3">
