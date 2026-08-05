@@ -32,8 +32,8 @@ const buttonVariants = cva(
         "danger-bordered":
           "border-danger text-danger hover:bg-danger hover:text-danger-foreground",
         ghost: "bg-transparent border-transparent hover:bg-muted",
-        "muted-ghost":
-          "bg-muted border-dark text-dark opacity-60 hover:opacity-80",
+        "dark-ghost":
+          "bg-muted border-dark text-dark hover:opacity-80",
         "primary-ghost":
           "bg-primary-200 border-primary-800 text-primary-800 hover:opacity-80",
         "secondary-ghost":
