@@ -45,7 +45,7 @@ export const webUrls: UrlProps[] = [
       },
       {
         name: "Tailwind CSS",
-        href: `/${urls.documentation}/${urls.installation}#tailwind-css`,
+        href: `/${urls.documentation}/${urls.installation}#tailwindcss`,
       },
       {
         name: "Aliases",

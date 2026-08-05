@@ -3,6 +3,7 @@ import {
   AvatarFallback,
   AvatarImage,
   Divider,
+  Heading,
   Image,
   ImageContent,
   ImageOverlay,
@@ -62,7 +63,7 @@ export function Documentation() {
       {/* Introdução */}
       <div id="introducao" className="flex flex-col gap-3 py-4">
         <div className="flex flex-col gap-1">
-          <Label>Introdução</Label>
+          <Heading>Introdução</Heading>
           <Text className="indent-8">
             {" "}
             O AtomicUI é um Design System desenvolvido com componentes
@@ -85,7 +86,7 @@ export function Documentation() {
       {/* Proposta */}
       <div id="proposta" className="flex flex-col gap-3 py-4">
         <div className="flex flex-col gap-1">
-          <Label>Proposta do AtomicUI</Label>
+          <Heading>Proposta do AtomicUI</Heading>
           <Text className="indent-8">
             {" "}
             O AtomicUI centraliza a estilização dos componentes do shadcn/ui por
@@ -112,7 +113,7 @@ export function Documentation() {
       {/* Ecossistema */}
       <div id="ecossistema" className="flex flex-col gap-3 pt-4 pb-16">
         <div className="flex flex-col gap-1">
-          <Label>Ecossistema AtomicUI</Label>
+          <Heading>Ecossistema AtomicUI</Heading>
           <Text className="indent-8">
             {" "}
             O AtomicUI reúne tecnologias do ecossistema React para fornecer uma
