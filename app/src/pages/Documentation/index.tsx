@@ -5,6 +5,7 @@ import {
   Divider,
   Image,
   ImageContent,
+  ImageOverlay,
   Label,
   Text,
 } from "@/components/ui";
@@ -72,11 +73,12 @@ export function Documentation() {
 
         <Divider size="xs" />
 
-        <Image className="w-full h-90">
+        <Image className="w-full h-112">
           <ImageContent
-            src="/introduction-banner.svg"
-            className="object-cover"
+            src="/introduction-banner.png"
+            className="object-cover object-top"
           />
+          <ImageOverlay variant={"dark"} className="opacity-60" />
         </Image>
       </div>
 
