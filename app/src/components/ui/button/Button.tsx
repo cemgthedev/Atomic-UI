@@ -32,8 +32,8 @@ const buttonVariants = cva(
         "danger-bordered":
           "border-danger text-danger hover:bg-danger hover:text-danger-foreground",
         ghost: "bg-transparent border-transparent hover:bg-muted",
-        "muted-ghost":
-          "bg-muted border-dark text-dark opacity-60 hover:opacity-80",
+        "dark-ghost":
+          "bg-muted border-dark text-dark hover:opacity-80",
         "primary-ghost":
           "bg-primary-200 border-primary-800 text-primary-800 hover:opacity-80",
         "secondary-ghost":
@@ -47,10 +47,10 @@ const buttonVariants = cva(
       },
       size: {
         xl: "text-lg leading-lg p-3",
-        lg: "text-md leading-md px-2.5 py-2",
+        lg: "text-md leading-md p-3",
         md: "text-md leading-md p-2",
-        sm: "text-sm leading-sm px-2 py-1.5",
-        xs: "text-sm leading-xs p-1.5",
+        sm: "text-sm leading-sm p-2",
+        xs: "text-sm leading-xs p-2",
       },
       rounded: {
         full: "rounded-full",
