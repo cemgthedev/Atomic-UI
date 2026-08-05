@@ -1,18 +1,50 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router";
 
 import { Footer } from "@/components/structures/Footer";
 import { Header } from "@/components/structures/Header";
 import { Main } from "@/components/structures/Main";
+import { Sidebar } from "@/components/structures/Sidebar";
 import { Progress, ProgressValue } from "@/components/ui";
 import { Outlet } from "react-router";
 
+function findScrollableElement(root: HTMLElement): HTMLElement | null {
+  const elements = Array.from(
+    root.querySelectorAll<HTMLElement>("section"),
+  ).filter((el) => el !== root);
+
+  return (
+    elements.find((el) => {
+      const { overflowY } = window.getComputedStyle(el);
+      return (
+        (overflowY === "auto" || overflowY === "scroll") &&
+        el.scrollHeight > el.clientHeight
+      );
+    }) ?? null
+  );
+}
+
 export function DefaultLayout() {
+  const { pathname } = useLocation();
   const [scrollProgress, setScrollProgress] = useState(0);
+  const mainRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    const scrollableElement =
+      mainRef.current && findScrollableElement(mainRef.current);
+    const useWindowScroll = !scrollableElement;
+    const target: HTMLElement | Window = scrollableElement ?? window;
+
     const updateScrollProgress = () => {
-      const { scrollTop, scrollHeight, clientHeight } =
-        document.documentElement;
+      const scrollTop = useWindowScroll
+        ? window.scrollY
+        : (target as HTMLElement).scrollTop;
+      const scrollHeight = useWindowScroll
+        ? document.documentElement.scrollHeight
+        : (target as HTMLElement).scrollHeight;
+      const clientHeight = useWindowScroll
+        ? window.innerHeight
+        : (target as HTMLElement).clientHeight;
 
       if (scrollHeight <= clientHeight) {
         setScrollProgress(0);
@@ -24,14 +56,16 @@ export function DefaultLayout() {
     };
 
     updateScrollProgress();
-    window.addEventListener("scroll", updateScrollProgress, { passive: true });
+    target.addEventListener("scroll", updateScrollProgress, {
+      passive: true,
+    });
     window.addEventListener("resize", updateScrollProgress);
 
     return () => {
-      window.removeEventListener("scroll", updateScrollProgress);
+      target.removeEventListener("scroll", updateScrollProgress);
       window.removeEventListener("resize", updateScrollProgress);
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <>
@@ -47,7 +81,8 @@ export function DefaultLayout() {
         </Progress>
       </div>
       <Header />
-      <Main>
+      <Main ref={mainRef}>
+        <Sidebar />
         <Outlet />
       </Main>
       <Footer />

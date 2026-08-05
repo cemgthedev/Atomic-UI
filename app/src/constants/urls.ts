@@ -2,17 +2,21 @@ export const urls = {
   /**
    * Dashboard page
    */
-  dashboard: "/",
+  dashboard: "",
   /**
    * Documentation page
    */
-  documentation: "/documentation",
+  documentation: "documentation",
+  /**
+   * Installation page
+   */
+  installation: "installation",
   /**
    * Components page
    */
-  components: "/components",
+  components: "components",
   /**
    * Customization page
    */
-  customization: "/customization",
+  customization: "customization",
 };
