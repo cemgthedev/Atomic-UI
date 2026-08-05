@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Footer } from "@/components/structures/Footer";
 import { Header } from "@/components/structures/Header";
 import { Main } from "@/components/structures/Main";
+import { Sidebar } from "@/components/structures/Sidebar";
 import { Progress, ProgressValue } from "@/components/ui";
 import { Outlet } from "react-router";
 
@@ -48,6 +49,7 @@ export function DefaultLayout() {
       </div>
       <Header />
       <Main>
+        <Sidebar />
         <Outlet />
       </Main>
       <Footer />

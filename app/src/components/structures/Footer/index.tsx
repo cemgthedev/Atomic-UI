@@ -14,10 +14,28 @@ import {
   Phone,
   Settings2,
 } from "lucide-react";
+import { useMemo } from "react";
 import { Link, useLocation } from "react-router";
+
+const footerRoutes = [urls.dashboard];
 
 export function Footer() {
   const { pathname } = useLocation();
+
+  const shouldShowSidebar = useMemo(
+    () =>
+      footerRoutes.some(
+        (route) => {
+          const normalized = route.startsWith("/") ? route : `/${route}`;
+          return pathname === normalized || pathname.startsWith(`${normalized}/`);
+        },
+      ),
+    [pathname],
+  );
+
+  if (!shouldShowSidebar) {
+    return null;
+  }
 
   return (
     <footer className="flex flex-col items-center justify-center gap-4 px-6 py-3 border-t border-border backdrop-blur-2xl bg-muted-50/30">
