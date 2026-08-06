@@ -25,6 +25,11 @@ const InstallationPage = async () => {
   return { Component: Component.Installation };
 };
 
+const ComponentsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components")]);
+  return { Component: Component.Components };
+};
+
 export const router = createBrowserRouter([
   {
     path: urls.dashboard,
@@ -46,6 +51,15 @@ export const router = createBrowserRouter([
           {
             path: urls.installation,
             lazy: InstallationPage,
+          },
+        ],
+      },
+      {
+        path: urls.components,
+        children: [
+          {
+            index: true,
+            lazy: ComponentsPage,
           },
         ],
       },

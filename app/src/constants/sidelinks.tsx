@@ -1,6 +1,6 @@
 import { urls } from "@/constants/urls";
 import type { UrlProps } from "@/types/urls";
-import { BookOpen, Download } from "lucide-react";
+import { BookOpen, Component, Download } from "lucide-react";
 
 export const webUrls: UrlProps[] = [
   {
@@ -50,6 +50,21 @@ export const webUrls: UrlProps[] = [
       {
         name: "Aliases",
         href: `/${urls.documentation}/${urls.installation}#aliases`,
+      },
+    ],
+  },
+  {
+    name: "Componentes",
+    icon: <Component size={20} />,
+    href: `/${urls.components}#todos`,
+    sub: [
+      {
+        name: "Todos",
+        href: `/${urls.components}#todos`,
+      },
+      {
+        name: "Button",
+        href: `/${urls.components}/button`,
       },
     ],
   },

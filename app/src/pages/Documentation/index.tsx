@@ -153,7 +153,7 @@ export function Documentation() {
                   className="flex gap-1 items-center hover:underline"
                 >
                   <SquareArrowOutUpRight size={16} />
-                  <Text size="sm">Saiba mais</Text>
+                  <Text size="sm">saiba mais</Text>
                 </a>
               </div>
             </div>
