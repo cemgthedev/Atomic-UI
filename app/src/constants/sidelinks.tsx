@@ -64,7 +64,7 @@ export const webUrls: UrlProps[] = [
       },
       {
         name: "Button",
-        href: `/${urls.components}/button`,
+        href: `/${urls.components}/${urls.button}`,
       },
     ],
   },

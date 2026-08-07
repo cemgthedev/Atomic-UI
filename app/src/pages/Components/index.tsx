@@ -1,6 +1,7 @@
 import { Divider, Heading, Label, Text } from "@/components/ui";
 import { urls } from "@/constants/urls";
 import { SquareArrowOutUpRight } from "lucide-react";
+import { Link } from "react-router";
 
 type ComponentProps = {
   name: string;
@@ -119,9 +120,9 @@ const components: ComponentProps[] = [
 
 export function Components() {
   return (
-    <section className="min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
+    <section className="scroll-progress min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
       {/* Todos */}
-      <div id="todos" className="flex flex-col gap-3 pt-8 pb-16">
+      <div id="todos" className="flex flex-col gap-3 py-4">
         <div className="flex flex-col gap-1">
           <Heading>Componentes</Heading>
           <Text className="indent-8">
@@ -139,15 +140,13 @@ export function Components() {
             <div className="flex flex-col gap-1 p-3 rounded-lg border border-muted-200">
               <Label size="xs">{component.name}</Label>
               <Text>{component.description}</Text>
-              <a
-                href={component.href}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={component.href}
                 className="flex gap-1 items-center hover:underline"
               >
                 <SquareArrowOutUpRight size={16} />
                 <Text size="sm">ver detalhes</Text>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

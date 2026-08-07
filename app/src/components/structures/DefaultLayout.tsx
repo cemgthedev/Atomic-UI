@@ -10,7 +10,7 @@ import { Outlet } from "react-router";
 
 function findScrollableElement(root: HTMLElement): HTMLElement | null {
   const elements = Array.from(
-    root.querySelectorAll<HTMLElement>("section"),
+    root.querySelectorAll<HTMLElement>(".scroll-progress"),
   ).filter((el) => el !== root);
 
   return (
@@ -25,9 +25,23 @@ function findScrollableElement(root: HTMLElement): HTMLElement | null {
 }
 
 export function DefaultLayout() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const [scrollProgress, setScrollProgress] = useState(0);
   const mainRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!hash) return;
+
+    const id = decodeURIComponent(hash.slice(1));
+    const element = document.getElementById(id);
+
+    if (!element) return;
+
+    element.scrollIntoView({
+      behavior: "instant",
+      block: "start",
+    });
+  }, [hash]);
 
   useEffect(() => {
     const scrollableElement =

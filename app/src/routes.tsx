@@ -30,6 +30,11 @@ const ComponentsPage = async () => {
   return { Component: Component.Components };
 };
 
+const ButtonDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/button")]);
+  return { Component: Component.ButtonDetails };
+};
+
 export const router = createBrowserRouter([
   {
     path: urls.dashboard,
@@ -60,6 +65,10 @@ export const router = createBrowserRouter([
           {
             index: true,
             lazy: ComponentsPage,
+          },
+          {
+            path: urls.button,
+            lazy: ButtonDetailsPage,
           },
         ],
       },

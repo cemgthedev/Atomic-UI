@@ -16,6 +16,10 @@ export const urls = {
    */
   components: "components",
   /**
+   * Button page
+   */
+  button: "button",
+  /**
    * Customization page
    */
   customization: "customization",

@@ -14,7 +14,7 @@ import { Link } from "react-router";
 
 export function Dashboard() {
   return (
-    <section className="w-full flex flex-col items-center gap-8 px-4 py-8 md:px-8 md:py-16 mb-16">
+    <section className="scroll-progress w-full flex flex-col items-center gap-8 px-4 py-8 md:px-8 md:py-16 mb-16">
       {/* Introduction */}
       <div className="relative flex flex-col items-center gap-6">
         <Image className="absolute -top-8 w-full h-72 -z-10 border-none opacity-30 backdrop-blur-xs">
