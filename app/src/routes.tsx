@@ -35,6 +35,38 @@ const ButtonDetailsPage = async () => {
   return { Component: Component.ButtonDetails };
 };
 
+const BadgeDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/badge")]);
+  return { Component: Component.BadgeDetails };
+};
+
+const TextDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/text")]);
+  return { Component: Component.TextDetails };
+};
+
+const LabelDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/label")]);
+  return { Component: Component.LabelDetails };
+};
+
+const HeadingDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/heading")]);
+  return { Component: Component.HeadingDetails };
+};
+
+const DividerDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/divider")]);
+  return { Component: Component.DividerDetails };
+};
+
+const ProgressDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/progress"),
+  ]);
+  return { Component: Component.ProgressDetails };
+};
+
 export const router = createBrowserRouter([
   {
     path: urls.dashboard,
@@ -69,6 +101,30 @@ export const router = createBrowserRouter([
           {
             path: urls.button,
             lazy: ButtonDetailsPage,
+          },
+          {
+            path: urls.badge,
+            lazy: BadgeDetailsPage,
+          },
+          {
+            path: urls.text,
+            lazy: TextDetailsPage,
+          },
+          {
+            path: urls.label,
+            lazy: LabelDetailsPage,
+          },
+          {
+            path: urls.heading,
+            lazy: HeadingDetailsPage,
+          },
+          {
+            path: urls.divider,
+            lazy: DividerDetailsPage,
+          },
+          {
+            path: urls.progress,
+            lazy: ProgressDetailsPage,
           },
         ],
       },

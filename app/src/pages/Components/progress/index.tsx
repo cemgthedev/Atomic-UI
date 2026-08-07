@@ -3,6 +3,8 @@ import {
   Divider,
   Heading,
   Label,
+  Progress,
+  ProgressValue,
   Table,
   TableBody,
   TableCell,
@@ -17,13 +19,15 @@ import {
 } from "@/components/ui";
 import { urls } from "@/constants/urls";
 import {
-  buttonExemple,
-  buttonPropertiesExemple,
-  buttonRoundsExemple,
-  buttonSizesExemple,
-  buttonVariantsExemple,
-} from "@/pages/Components/button/codes";
-import { sourceCodeButton } from "@/pages/Components/button/codes/source-code";
+  progressAnimatedExample,
+  progressExample,
+  progressPropertiesExample,
+  progressRoundsExample,
+  progressSizesExample,
+  progressStripedExample,
+  progressVariantsExample,
+} from "@/pages/Components/progress/codes";
+import { progressSourceCode } from "@/pages/Components/progress/codes/source-code";
 import type { UrlProps } from "@/types/urls";
 import { cn } from "@/utils/cn";
 import { copy } from "@/utils/copy";
@@ -33,27 +37,35 @@ import { Link, useLocation } from "react-router";
 export const sectionLinks: UrlProps[] = [
   {
     name: "Importação",
-    href: `/${urls.components}/${urls.button}#importacao`,
+    href: `/${urls.components}/${urls.progress}#importacao`,
   },
   {
     name: "Variantes",
-    href: `/${urls.components}/${urls.button}#variantes`,
+    href: `/${urls.components}/${urls.progress}#variantes`,
   },
   {
     name: "Tamanhos",
-    href: `/${urls.components}/${urls.button}#tamanhos`,
+    href: `/${urls.components}/${urls.progress}#tamanhos`,
   },
   {
     name: "Arredondamentos",
-    href: `/${urls.components}/${urls.button}#arredondamentos`,
+    href: `/${urls.components}/${urls.progress}#arredondamentos`,
+  },
+  {
+    name: "Listras",
+    href: `/${urls.components}/${urls.progress}#listras`,
+  },
+  {
+    name: "Animação",
+    href: `/${urls.components}/${urls.progress}#animacao`,
   },
   {
     name: "Propriedades",
-    href: `/${urls.components}/${urls.button}#propriedades`,
+    href: `/${urls.components}/${urls.progress}#propriedades`,
   },
 ];
 
-export function ButtonDetails() {
+export function ProgressDetails() {
   const { pathname, hash } = useLocation();
   const currentUrl = `${pathname}${hash ?? ""}`;
 
@@ -64,18 +76,16 @@ export function ButtonDetails() {
         <div id="importacao" className="flex flex-col gap-3 py-4">
           <div className="flex flex-col justify-between gap-4 lg:flex-row">
             <div className="flex flex-col gap-1">
-              <Heading>Button</Heading>
+              <Heading>Progress</Heading>
               <Text className="indent-8">
-                {" "}
-                Explore todos os componentes disponíveis no AtomicUI,
-                desenvolvidos para oferecer consistência, personalização e
-                reutilização na construção de interfaces modernas.
+                Indica visualmente o status de conclusão de uma tarefa ou
+                processo.
               </Text>
             </div>
             <Button
               startContent={<Copy size={20} />}
               variant="dark-ghost"
-              onClick={() => copy(sourceCodeButton)}
+              onClick={() => copy(progressSourceCode)}
               className="min-w-fit"
             >
               Copiar código fonte
@@ -84,34 +94,38 @@ export function ButtonDetails() {
 
           <Divider size="xs" />
 
-          <Tabs defaultValue="button-exemple" className="w-full">
+          <Tabs defaultValue="progress-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
-                value="button-exemple"
+                value="progress-example"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Exemplo</Text>
+                <Text size="sm">Exemplo</Text>
               </TabsTrigger>
               <TabsTrigger
-                value="button-code"
+                value="progress-code"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Código</Text>
+                <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="button-exemple">
+            <TabsContent value="progress-example">
               <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-                <Button variant={"primary"}>Botão</Button>
+                <div className="w-full max-w-md">
+                  <Progress value={60}>
+                    <ProgressValue value={60} />
+                  </Progress>
+                </div>
               </div>
             </TabsContent>
-            <TabsContent value="button-code">
+            <TabsContent value="progress-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonExemple}</code>
+                  <code>{progressExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonExemple)}
+                  onClick={() => copy(progressExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -125,96 +139,57 @@ export function ButtonDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Variantes</Heading>
               <Text className="indent-8">
-                Exemplos de variantes do componente Button.
+                Exemplos de variantes do componente Progress.
               </Text>
             </div>
           </div>
 
           <Divider size="xs" />
 
-          <Tabs defaultValue="variants-exemple" className="w-full">
+          <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
-                value="variants-exemple"
+                value="variants-example"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Exemplo</Text>
+                <Text size="sm">Exemplo</Text>
               </TabsTrigger>
               <TabsTrigger
                 value="variants-code"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Código</Text>
+                <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="variants-exemple">
-              <div className="w-full flex justify-center items-center p-3 gap-4 bg-muted-100 border border-muted-200 rounded-lg">
-                <div className="flex justify-center flex-wrap gap-4">
-                  <div className="space-y-1">
-                    <Button variant={"primary"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>primary</Text>
-                  </div>
-                  <div className="space-y-1">
-                    <Button variant={"primary-bordered"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>primary-bordered</Text>
-                  </div>
-                  <div className="space-y-1">
-                    <Button variant={"primary-ghost"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>primary-ghost</Text>
-                  </div>
-                  <div className="space-y-1">
-                    <Button variant={"secondary"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>secondary</Text>
-                  </div>
-                  <div className="space-y-1">
-                    <Button variant={"dark"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>dark</Text>
-                  </div>
-                  <div className="space-y-1">
-                    <Button variant={"success"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>success</Text>
-                  </div>
-                  <div className="space-y-1">
-                    <Button variant={"warning"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>warning</Text>
-                  </div>
-                  <div className="space-y-1">
-                    <Button variant={"danger"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>danger</Text>
-                  </div>
-                  <div className="space-y-1">
-                    <Button variant={"muted"} className="w-full">
-                      Botão
-                    </Button>
-                    <Text>muted</Text>
-                  </div>
+            <TabsContent value="variants-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <div className="flex flex-col gap-4 w-full">
+                  <Progress value={40} variant="primary">
+                    <ProgressValue value={40} variant="primary" />
+                  </Progress>
+                  <Progress value={40} variant="secondary">
+                    <ProgressValue value={40} variant="secondary" />
+                  </Progress>
+                  <Progress value={70} variant="success">
+                    <ProgressValue value={70} variant="success" />
+                  </Progress>
+                  <Progress value={70} variant="warning">
+                    <ProgressValue value={70} variant="warning" />
+                  </Progress>
+                  <Progress value={70} variant="danger">
+                    <ProgressValue value={70} variant="danger" />
+                  </Progress>
                 </div>
               </div>
             </TabsContent>
             <TabsContent value="variants-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonVariantsExemple}</code>
+                  <code>{progressVariantsExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonVariantsExemple)}
+                  onClick={() => copy(progressVariantsExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -228,75 +203,59 @@ export function ButtonDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Tamanhos</Heading>
               <Text className="indent-8">
-                Exemplos de tamanhos do componente Button.
+                Exemplos de tamanhos do componente Progress.
               </Text>
             </div>
           </div>
 
           <Divider size="xs" />
 
-          <Tabs defaultValue="sizes-exemple" className="w-full">
+          <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
-                value="sizes-exemple"
+                value="sizes-example"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Exemplo</Text>
+                <Text size="sm">Exemplo</Text>
               </TabsTrigger>
               <TabsTrigger
                 value="sizes-code"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Código</Text>
+                <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="sizes-exemple">
-              <div className="w-full flex justify-center items-center p-3 gap-4 bg-muted-100 border border-muted-200 rounded-lg">
-                <div className="flex justify-center flex-wrap gap-4">
+            <TabsContent value="sizes-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <div className="flex flex-col gap-4 w-full">
                   <div className="space-y-1">
-                    <Button
-                      variant={"dark-bordered"}
-                      size={"xs"}
-                      className="w-full"
-                    >
-                      Botão
-                    </Button>
+                    <Progress value={40} size="xs">
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>xs</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
-                      variant={"dark-bordered"}
-                      size={"sm"}
-                      className="w-full"
-                    >
-                      Botão
-                    </Button>
+                    <Progress value={40} size="sm">
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>sm</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"dark-bordered"} className="w-full">
-                      Botão
-                    </Button>
+                    <Progress value={40}>
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>md</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
-                      variant={"dark-bordered"}
-                      size={"lg"}
-                      className="w-full"
-                    >
-                      Botão
-                    </Button>
+                    <Progress value={40} size="lg">
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>lg</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
-                      variant={"dark-bordered"}
-                      size={"xl"}
-                      className="w-full"
-                    >
-                      Botão
-                    </Button>
+                    <Progress value={40} size="xl">
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>xl</Text>
                   </div>
                 </div>
@@ -305,11 +264,11 @@ export function ButtonDetails() {
             <TabsContent value="sizes-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonSizesExemple}</code>
+                  <code>{progressSizesExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonSizesExemple)}
+                  onClick={() => copy(progressSizesExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -323,7 +282,7 @@ export function ButtonDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Arrendondamentos</Heading>
               <Text className="indent-8">
-                Exemplos de arredondamentos do componente Button.
+                Exemplos de arredondamentos do componente Badge.
               </Text>
             </div>
           </div>
@@ -347,61 +306,66 @@ export function ButtonDetails() {
             </TabsList>
             <TabsContent value="rounds-exemple">
               <div className="w-full flex justify-center items-center p-3 gap-4 bg-muted-100 border border-muted-200 rounded-lg">
-                <div className="flex justify-center flex-wrap gap-4">
+                <div className="flex flex-col gap-4 w-full">
                   <div className="space-y-1">
-                    <Button
-                      variant={"primary"}
-                      rounded={"xs"}
-                      className="w-full"
+                    <Progress
+                      value={40}
+                      variant="primary"
+                      rounded="xs"
+                      className="h-8"
                     >
-                      Botão
-                    </Button>
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>xs</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
-                      variant={"primary"}
-                      rounded={"sm"}
-                      className="w-full"
+                    <Progress
+                      value={40}
+                      variant="primary"
+                      rounded="sm"
+                      className="h-8"
                     >
-                      Botão
-                    </Button>
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>sm</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"primary"} className="w-full">
-                      Botão
-                    </Button>
+                    <Progress
+                      value={40}
+                      variant="primary"
+                      rounded="md"
+                      className="h-8"
+                    >
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>md</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
-                      variant={"primary"}
-                      rounded={"lg"}
-                      className="w-full"
+                    <Progress
+                      value={40}
+                      variant="primary"
+                      rounded="lg"
+                      className="h-8"
                     >
-                      Botão
-                    </Button>
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>lg</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
-                      variant={"primary"}
-                      rounded={"xl"}
-                      className="w-full"
+                    <Progress
+                      value={40}
+                      variant="primary"
+                      rounded="xl"
+                      className="h-8"
                     >
-                      Botão
-                    </Button>
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>xl</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
-                      variant={"primary"}
-                      rounded={"full"}
-                      className="w-full"
-                    >
-                      Botão
-                    </Button>
+                    <Progress value={40} variant="primary" className="h-8">
+                      <ProgressValue value={40} variant="primary" />
+                    </Progress>
                     <Text>full</Text>
                   </div>
                 </div>
@@ -410,11 +374,134 @@ export function ButtonDetails() {
             <TabsContent value="rounds-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonRoundsExemple}</code>
+                  <code>{progressRoundsExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonRoundsExemple)}
+                  onClick={() => copy(progressRoundsExample)}
+                  className="bg-transparent border-none p-0"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+
+        {/* Listras */}
+        <div id="listras" className="flex flex-col gap-3 py-4">
+          <div className="flex flex-col justify-between gap-4 lg:flex-row">
+            <div className="flex flex-col gap-1">
+              <Heading>Listras</Heading>
+              <Text className="indent-8">
+                Exemplos de barras com efeito de listras no componente Progress.
+              </Text>
+            </div>
+          </div>
+
+          <Divider size="xs" />
+
+          <Tabs defaultValue="stripes-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="stripes-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="stripes-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="stripes-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <div className="flex flex-col gap-4 w-full">
+                  <Progress value={40} variant="primary">
+                    <ProgressValue value={40} variant="primary" striped />
+                  </Progress>
+                  <Progress value={60} variant="success">
+                    <ProgressValue value={60} variant="success" striped />
+                  </Progress>
+                  <Progress value={80} variant="warning">
+                    <ProgressValue value={80} variant="warning" striped />
+                  </Progress>
+                </div>
+              </div>
+            </TabsContent>
+            <TabsContent value="stripes-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{progressStripedExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(progressStripedExample)}
+                  className="bg-transparent border-none p-0"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+
+        {/* Animação */}
+        <div id="animacao" className="flex flex-col gap-3 py-4">
+          <div className="flex flex-col justify-between gap-4 lg:flex-row">
+            <div className="flex flex-col gap-1">
+              <Heading>Animação</Heading>
+              <Text className="indent-8">
+                Exemplos de barras com animação no componente Progress.
+              </Text>
+            </div>
+          </div>
+
+          <Divider size="xs" />
+
+          <Tabs defaultValue="animation-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="animation-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="animation-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="animation-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <div className="flex flex-col gap-4 w-full">
+                  <Progress value={40} variant="primary">
+                    <ProgressValue
+                      value={40}
+                      variant="primary"
+                      striped
+                      animated
+                    />
+                  </Progress>
+                  <Progress value={60} variant="secondary">
+                    <ProgressValue
+                      value={60}
+                      variant="secondary"
+                      striped
+                      animated
+                    />
+                  </Progress>
+                </div>
+              </div>
+            </TabsContent>
+            <TabsContent value="animation-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{progressAnimatedExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(progressAnimatedExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -429,7 +516,7 @@ export function ButtonDetails() {
               <Heading>Propriedades</Heading>
               <Text className="indent-8">
                 {" "}
-                Propriedades para estilização do componente Button.
+                Propriedades para estilização do componente Progress.
               </Text>
             </div>
           </div>
@@ -453,19 +540,24 @@ export function ButtonDetails() {
             </TabsList>
             <TabsContent value="properties-exemple">
               <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-                <Button variant={"default"} size={"md"} rounded={"md"}>
-                  Botão
-                </Button>
+                <Progress
+                  value={70}
+                  variant="default"
+                  size={"md"}
+                  rounded={"md"}
+                >
+                  <ProgressValue value={70} variant="default" />
+                </Progress>
               </div>
             </TabsContent>
             <TabsContent value="properties-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonPropertiesExemple}</code>
+                  <code>{progressPropertiesExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonPropertiesExemple)}
+                  onClick={() => copy(progressPropertiesExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -490,32 +582,10 @@ export function ButtonDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
-                    <Text>startContent</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>Conteúdo exibido antes do texto.</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>-</Text>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Text>endContent</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>Conteúdo exibido depois do texto.</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>-</Text>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Define a aparência visual do botão.</Text>
+                    <Text>Define a aparência visual do progress.</Text>
                   </TableCell>
                   <TableCell>
                     <Text>default</Text>
@@ -526,7 +596,7 @@ export function ButtonDetails() {
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Controla o tamanho do botão.</Text>
+                    <Text>Controla o tamanho do progress.</Text>
                   </TableCell>
                   <TableCell>
                     <Text>md</Text>
@@ -540,7 +610,33 @@ export function ButtonDetails() {
                     <Text>Define o arredondamento das bordas.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>md</Text>
+                    <Text>full</Text>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    <Text>striped</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>
+                      Aplica um efeito de listras decorativas à barra.
+                    </Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>false</Text>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    <Text>animated</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>
+                      Ativa uma animação visual na barra de progresso.
+                    </Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>false</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

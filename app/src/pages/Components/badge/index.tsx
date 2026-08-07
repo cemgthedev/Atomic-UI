@@ -1,4 +1,5 @@
 import {
+  Badge,
   Button,
   Divider,
   Heading,
@@ -17,13 +18,13 @@ import {
 } from "@/components/ui";
 import { urls } from "@/constants/urls";
 import {
-  buttonExemple,
-  buttonPropertiesExemple,
-  buttonRoundsExemple,
-  buttonSizesExemple,
-  buttonVariantsExemple,
-} from "@/pages/Components/button/codes";
-import { sourceCodeButton } from "@/pages/Components/button/codes/source-code";
+  badgeExample,
+  badgePropertiesExemple,
+  badgeRoundsExemple,
+  badgeSizesExample,
+  badgeVariantsExample,
+} from "@/pages/Components/badge/codes";
+import { badgeSourceCode } from "@/pages/Components/badge/codes/source-code";
 import type { UrlProps } from "@/types/urls";
 import { cn } from "@/utils/cn";
 import { copy } from "@/utils/copy";
@@ -33,27 +34,27 @@ import { Link, useLocation } from "react-router";
 export const sectionLinks: UrlProps[] = [
   {
     name: "Importação",
-    href: `/${urls.components}/${urls.button}#importacao`,
+    href: `/${urls.components}/${urls.badge}#importacao`,
   },
   {
     name: "Variantes",
-    href: `/${urls.components}/${urls.button}#variantes`,
+    href: `/${urls.components}/${urls.badge}#variantes`,
   },
   {
     name: "Tamanhos",
-    href: `/${urls.components}/${urls.button}#tamanhos`,
+    href: `/${urls.components}/${urls.badge}#tamanhos`,
   },
   {
     name: "Arredondamentos",
-    href: `/${urls.components}/${urls.button}#arredondamentos`,
+    href: `/${urls.components}/${urls.badge}#arredondamentos`,
   },
   {
     name: "Propriedades",
-    href: `/${urls.components}/${urls.button}#propriedades`,
+    href: `/${urls.components}/${urls.badge}#propriedades`,
   },
 ];
 
-export function ButtonDetails() {
+export function BadgeDetails() {
   const { pathname, hash } = useLocation();
   const currentUrl = `${pathname}${hash ?? ""}`;
 
@@ -64,18 +65,16 @@ export function ButtonDetails() {
         <div id="importacao" className="flex flex-col gap-3 py-4">
           <div className="flex flex-col justify-between gap-4 lg:flex-row">
             <div className="flex flex-col gap-1">
-              <Heading>Button</Heading>
+              <Heading>Badge</Heading>
               <Text className="indent-8">
-                {" "}
-                Explore todos os componentes disponíveis no AtomicUI,
-                desenvolvidos para oferecer consistência, personalização e
-                reutilização na construção de interfaces modernas.
+                Componentes pequenos e destacados para evidenciar estados,
+                categorias ou status em interfaces.
               </Text>
             </div>
             <Button
               startContent={<Copy size={20} />}
               variant="dark-ghost"
-              onClick={() => copy(sourceCodeButton)}
+              onClick={() => copy(badgeSourceCode)}
               className="min-w-fit"
             >
               Copiar código fonte
@@ -84,34 +83,34 @@ export function ButtonDetails() {
 
           <Divider size="xs" />
 
-          <Tabs defaultValue="button-exemple" className="w-full">
+          <Tabs defaultValue="badge-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
-                value="button-exemple"
+                value="badge-example"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Exemplo</Text>
+                <Text size="sm">Exemplo</Text>
               </TabsTrigger>
               <TabsTrigger
-                value="button-code"
+                value="badge-code"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Código</Text>
+                <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="button-exemple">
+            <TabsContent value="badge-example">
               <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-                <Button variant={"primary"}>Botão</Button>
+                <Badge variant="primary">Badge</Badge>
               </div>
             </TabsContent>
-            <TabsContent value="button-code">
+            <TabsContent value="badge-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonExemple}</code>
+                  <code>{badgeExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonExemple)}
+                  onClick={() => copy(badgeExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -125,83 +124,83 @@ export function ButtonDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Variantes</Heading>
               <Text className="indent-8">
-                Exemplos de variantes do componente Button.
+                Exemplos de variantes do componente Badge.
               </Text>
             </div>
           </div>
 
           <Divider size="xs" />
 
-          <Tabs defaultValue="variants-exemple" className="w-full">
+          <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
-                value="variants-exemple"
+                value="variants-example"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Exemplo</Text>
+                <Text size="sm">Exemplo</Text>
               </TabsTrigger>
               <TabsTrigger
                 value="variants-code"
                 className="data-active:bg-primary-100"
               >
-                <Text size={"sm"}>Código</Text>
+                <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="variants-exemple">
-              <div className="w-full flex justify-center items-center p-3 gap-4 bg-muted-100 border border-muted-200 rounded-lg">
+            <TabsContent value="variants-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <div className="flex justify-center flex-wrap gap-4">
                   <div className="space-y-1">
-                    <Button variant={"primary"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"primary"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>primary</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"primary-bordered"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"primary-bordered"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>primary-bordered</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"primary-ghost"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"primary-ghost"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>primary-ghost</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"secondary"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"secondary"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>secondary</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"dark"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"dark"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>dark</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"success"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"success"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>success</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"warning"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"warning"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>warning</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"danger"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"danger"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>danger</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"muted"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"muted"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>muted</Text>
                   </div>
                 </div>
@@ -210,11 +209,11 @@ export function ButtonDetails() {
             <TabsContent value="variants-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonVariantsExemple}</code>
+                  <code>{badgeVariantsExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonVariantsExemple)}
+                  onClick={() => copy(badgeVariantsExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -228,7 +227,7 @@ export function ButtonDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Tamanhos</Heading>
               <Text className="indent-8">
-                Exemplos de tamanhos do componente Button.
+                Exemplos de tamanhos do componente Badge.
               </Text>
             </div>
           </div>
@@ -254,49 +253,49 @@ export function ButtonDetails() {
               <div className="w-full flex justify-center items-center p-3 gap-4 bg-muted-100 border border-muted-200 rounded-lg">
                 <div className="flex justify-center flex-wrap gap-4">
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"dark-bordered"}
                       size={"xs"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>xs</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"dark-bordered"}
                       size={"sm"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>sm</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"dark-bordered"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"dark-bordered"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>md</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"dark-bordered"}
                       size={"lg"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>lg</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"dark-bordered"}
                       size={"xl"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>xl</Text>
                   </div>
                 </div>
@@ -305,11 +304,11 @@ export function ButtonDetails() {
             <TabsContent value="sizes-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonSizesExemple}</code>
+                  <code>{badgeSizesExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonSizesExemple)}
+                  onClick={() => copy(badgeSizesExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -323,7 +322,7 @@ export function ButtonDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Arrendondamentos</Heading>
               <Text className="indent-8">
-                Exemplos de arredondamentos do componente Button.
+                Exemplos de arredondamentos do componente Badge.
               </Text>
             </div>
           </div>
@@ -349,59 +348,59 @@ export function ButtonDetails() {
               <div className="w-full flex justify-center items-center p-3 gap-4 bg-muted-100 border border-muted-200 rounded-lg">
                 <div className="flex justify-center flex-wrap gap-4">
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"primary"}
                       rounded={"xs"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>xs</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"primary"}
                       rounded={"sm"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>sm</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button variant={"primary"} className="w-full">
-                      Botão
-                    </Button>
+                    <Badge variant={"primary"} className="w-full">
+                      Badge
+                    </Badge>
                     <Text>md</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"primary"}
                       rounded={"lg"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>lg</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"primary"}
                       rounded={"xl"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>xl</Text>
                   </div>
                   <div className="space-y-1">
-                    <Button
+                    <Badge
                       variant={"primary"}
                       rounded={"full"}
                       className="w-full"
                     >
-                      Botão
-                    </Button>
+                      Badge
+                    </Badge>
                     <Text>full</Text>
                   </div>
                 </div>
@@ -410,11 +409,11 @@ export function ButtonDetails() {
             <TabsContent value="rounds-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonRoundsExemple}</code>
+                  <code>{badgeRoundsExemple}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonRoundsExemple)}
+                  onClick={() => copy(badgeRoundsExemple)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -429,7 +428,7 @@ export function ButtonDetails() {
               <Heading>Propriedades</Heading>
               <Text className="indent-8">
                 {" "}
-                Propriedades para estilização do componente Button.
+                Propriedades para estilização do componente Badge.
               </Text>
             </div>
           </div>
@@ -453,19 +452,19 @@ export function ButtonDetails() {
             </TabsList>
             <TabsContent value="properties-exemple">
               <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-                <Button variant={"default"} size={"md"} rounded={"md"}>
-                  Botão
-                </Button>
+                <Badge variant={"default"} size={"md"} rounded={"md"}>
+                  Badge
+                </Badge>
               </div>
             </TabsContent>
             <TabsContent value="properties-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{buttonPropertiesExemple}</code>
+                  <code>{badgePropertiesExemple}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(buttonPropertiesExemple)}
+                  onClick={() => copy(badgePropertiesExemple)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -515,7 +514,7 @@ export function ButtonDetails() {
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Define a aparência visual do botão.</Text>
+                    <Text>Define a aparência visual do badge.</Text>
                   </TableCell>
                   <TableCell>
                     <Text>default</Text>
@@ -526,7 +525,7 @@ export function ButtonDetails() {
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Controla o tamanho do botão.</Text>
+                    <Text>Controla o tamanho do badge.</Text>
                   </TableCell>
                   <TableCell>
                     <Text>md</Text>

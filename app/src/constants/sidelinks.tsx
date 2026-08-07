@@ -66,6 +66,30 @@ export const webUrls: UrlProps[] = [
         name: "Button",
         href: `/${urls.components}/${urls.button}`,
       },
+      {
+        name: "Badge",
+        href: `/${urls.components}/${urls.badge}`,
+      },
+      {
+        name: "Divider",
+        href: `/${urls.components}/${urls.divider}`,
+      },
+      {
+        name: "Heading",
+        href: `/${urls.components}/${urls.heading}`,
+      },
+      {
+        name: "Label",
+        href: `/${urls.components}/${urls.label}`,
+      },
+      {
+        name: "Progress",
+        href: `/${urls.components}/${urls.progress}`,
+      },
+      {
+        name: "Text",
+        href: `/${urls.components}/${urls.text}`,
+      },
     ],
   },
 ];
