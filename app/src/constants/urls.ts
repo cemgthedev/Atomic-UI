@@ -44,6 +44,26 @@ export const urls = {
    */
   progress: "progress",
   /**
+   * Avatar page
+   */
+  avatar: "avatar",
+  /**
+   * Image page
+   */
+  image: "image",
+  /**
+   * Input page
+   */
+  input: "input",
+  /**
+   * Textarea page
+   */
+  textarea: "textarea",
+  /**
+   * Message page
+   */
+  message: "message",
+  /**
    * Customization page
    */
   customization: "customization",

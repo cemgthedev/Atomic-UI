@@ -63,6 +63,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}#todos`,
       },
       {
+        name: "Avatar",
+        href: `/${urls.components}/${urls.avatar}`,
+      },
+      {
         name: "Button",
         href: `/${urls.components}/${urls.button}`,
       },
@@ -79,8 +83,20 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.heading}`,
       },
       {
+        name: "Image",
+        href: `/${urls.components}/${urls.image}`,
+      },
+      {
+        name: "Input",
+        href: `/${urls.components}/${urls.input}`,
+      },
+      {
         name: "Label",
         href: `/${urls.components}/${urls.label}`,
+      },
+      {
+        name: "Message",
+        href: `/${urls.components}/${urls.message}`,
       },
       {
         name: "Progress",
@@ -89,6 +105,10 @@ export const webUrls: UrlProps[] = [
       {
         name: "Text",
         href: `/${urls.components}/${urls.text}`,
+      },
+      {
+        name: "Textarea",
+        href: `/${urls.components}/${urls.textarea}`,
       },
     ],
   },

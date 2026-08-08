@@ -67,6 +67,33 @@ const ProgressDetailsPage = async () => {
   return { Component: Component.ProgressDetails };
 };
 
+const AvatarDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/avatar")]);
+  return { Component: Component.AvatarDetails };
+};
+
+const ImageDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/image")]);
+  return { Component: Component.ImageDetails };
+};
+
+const InputDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/input")]);
+  return { Component: Component.InputDetails };
+};
+
+const TextareaDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/textarea"),
+  ]);
+  return { Component: Component.TextareaDetails };
+};
+
+const MessageDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/message")]);
+  return { Component: Component.MessageDetails };
+};
+
 export const router = createBrowserRouter([
   {
     path: urls.dashboard,
@@ -125,6 +152,26 @@ export const router = createBrowserRouter([
           {
             path: urls.progress,
             lazy: ProgressDetailsPage,
+          },
+          {
+            path: urls.avatar,
+            lazy: AvatarDetailsPage,
+          },
+          {
+            path: urls.image,
+            lazy: ImageDetailsPage,
+          },
+          {
+            path: urls.input,
+            lazy: InputDetailsPage,
+          },
+          {
+            path: urls.textarea,
+            lazy: TextareaDetailsPage,
+          },
+          {
+            path: urls.message,
+            lazy: MessageDetailsPage,
           },
         ],
       },
