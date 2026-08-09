@@ -94,6 +94,32 @@ const MessageDetailsPage = async () => {
   return { Component: Component.MessageDetails };
 };
 
+const CalendarDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/calendar"),
+  ]);
+  return { Component: Component.CalendarDetails };
+};
+
+const CheckboxDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/checkbox"),
+  ]);
+  return { Component: Component.CheckboxDetails };
+};
+
+const DatepickerDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/datepicker"),
+  ]);
+  return { Component: Component.DatepickerDetails };
+};
+
+const LoaderDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/loader")]);
+  return { Component: Component.LoaderDetails };
+};
+
 export const router = createBrowserRouter([
   {
     path: urls.dashboard,
@@ -172,6 +198,22 @@ export const router = createBrowserRouter([
           {
             path: urls.message,
             lazy: MessageDetailsPage,
+          },
+          {
+            path: urls.calendar,
+            lazy: CalendarDetailsPage,
+          },
+          {
+            path: urls.checkbox,
+            lazy: CheckboxDetailsPage,
+          },
+          {
+            path: urls.datepicker,
+            lazy: DatepickerDetailsPage,
+          },
+          {
+            path: urls.loader,
+            lazy: LoaderDetailsPage,
           },
         ],
       },

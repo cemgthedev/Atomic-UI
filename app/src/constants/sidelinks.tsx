@@ -71,6 +71,18 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.button}`,
       },
       {
+        name: "Calendar",
+        href: `/${urls.components}/${urls.calendar}`,
+      },
+      {
+        name: "Checkbox",
+        href: `/${urls.components}/${urls.checkbox}`,
+      },
+      {
+        name: "Datepicker",
+        href: `/${urls.components}/${urls.datepicker}`,
+      },
+      {
         name: "Badge",
         href: `/${urls.components}/${urls.badge}`,
       },
@@ -93,6 +105,10 @@ export const webUrls: UrlProps[] = [
       {
         name: "Label",
         href: `/${urls.components}/${urls.label}`,
+      },
+      {
+        name: "Loader",
+        href: `/${urls.components}/${urls.loader}`,
       },
       {
         name: "Message",

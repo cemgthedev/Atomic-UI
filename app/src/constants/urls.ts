@@ -64,6 +64,22 @@ export const urls = {
    */
   message: "message",
   /**
+   * Calendar page
+   */
+  calendar: "calendar",
+  /**
+   * Checkbox page
+   */
+  checkbox: "checkbox",
+  /**
+   * Datepicker page
+   */
+  datepicker: "datepicker",
+  /**
+   * Loader page
+   */
+  loader: "loader",
+  /**
    * Customization page
    */
   customization: "customization",
