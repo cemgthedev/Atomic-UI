@@ -80,6 +80,26 @@ export const urls = {
    */
   loader: "loader",
   /**
+   * Pagination page
+   */
+  pagination: "pagination",
+  /**
+   * Popover page
+   */
+  popover: "popover",
+  /**
+   * Quote page
+   */
+  quote: "quote",
+  /**
+   * Skeleton page
+   */
+  skeleton: "skeleton",
+  /**
+   * Switch page
+   */
+  switch: "switch",
+  /**
    * Customization page
    */
   customization: "customization",

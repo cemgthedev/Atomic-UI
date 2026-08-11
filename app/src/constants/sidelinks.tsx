@@ -115,8 +115,28 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.message}`,
       },
       {
+        name: "Pagination",
+        href: `/${urls.components}/${urls.pagination}`,
+      },
+      {
+        name: "Popover",
+        href: `/${urls.components}/${urls.popover}`,
+      },
+      {
         name: "Progress",
         href: `/${urls.components}/${urls.progress}`,
+      },
+      {
+        name: "Quote",
+        href: `/${urls.components}/${urls.quote}`,
+      },
+      {
+        name: "Skeleton",
+        href: `/${urls.components}/${urls.skeleton}`,
+      },
+      {
+        name: "Switch",
+        href: `/${urls.components}/${urls.switch}`,
       },
       {
         name: "Text",

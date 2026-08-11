@@ -120,6 +120,35 @@ const LoaderDetailsPage = async () => {
   return { Component: Component.LoaderDetails };
 };
 
+const PaginationDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/pagination"),
+  ]);
+  return { Component: Component.PaginationDetails };
+};
+
+const PopoverDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/popover")]);
+  return { Component: Component.PopoverDetails };
+};
+
+const QuoteDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/quote")]);
+  return { Component: Component.QuoteDetails };
+};
+
+const SkeletonDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/skeleton"),
+  ]);
+  return { Component: Component.SkeletonDetails };
+};
+
+const SwitchDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/switch")]);
+  return { Component: Component.SwitchDetails };
+};
+
 export const router = createBrowserRouter([
   {
     path: urls.dashboard,
@@ -214,6 +243,26 @@ export const router = createBrowserRouter([
           {
             path: urls.loader,
             lazy: LoaderDetailsPage,
+          },
+          {
+            path: urls.pagination,
+            lazy: PaginationDetailsPage,
+          },
+          {
+            path: urls.popover,
+            lazy: PopoverDetailsPage,
+          },
+          {
+            path: urls.quote,
+            lazy: QuoteDetailsPage,
+          },
+          {
+            path: urls.skeleton,
+            lazy: SkeletonDetailsPage,
+          },
+          {
+            path: urls.switch,
+            lazy: SwitchDetailsPage,
           },
         ],
       },
