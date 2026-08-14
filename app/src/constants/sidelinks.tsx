@@ -1,6 +1,6 @@
 import { urls } from "@/constants/urls";
 import type { UrlProps } from "@/types/urls";
-import { BookOpen, Download } from "lucide-react";
+import { BookOpen, Component, Download } from "lucide-react";
 
 export const webUrls: UrlProps[] = [
   {
@@ -50,6 +50,101 @@ export const webUrls: UrlProps[] = [
       {
         name: "Aliases",
         href: `/${urls.documentation}/${urls.installation}#aliases`,
+      },
+    ],
+  },
+  {
+    name: "Componentes",
+    icon: <Component size={20} />,
+    href: `/${urls.components}#todos`,
+    sub: [
+      {
+        name: "Todos",
+        href: `/${urls.components}#todos`,
+      },
+      {
+        name: "Avatar",
+        href: `/${urls.components}/${urls.avatar}`,
+      },
+      {
+        name: "Button",
+        href: `/${urls.components}/${urls.button}`,
+      },
+      {
+        name: "Calendar",
+        href: `/${urls.components}/${urls.calendar}`,
+      },
+      {
+        name: "Checkbox",
+        href: `/${urls.components}/${urls.checkbox}`,
+      },
+      {
+        name: "Datepicker",
+        href: `/${urls.components}/${urls.datepicker}`,
+      },
+      {
+        name: "Badge",
+        href: `/${urls.components}/${urls.badge}`,
+      },
+      {
+        name: "Divider",
+        href: `/${urls.components}/${urls.divider}`,
+      },
+      {
+        name: "Heading",
+        href: `/${urls.components}/${urls.heading}`,
+      },
+      {
+        name: "Image",
+        href: `/${urls.components}/${urls.image}`,
+      },
+      {
+        name: "Input",
+        href: `/${urls.components}/${urls.input}`,
+      },
+      {
+        name: "Label",
+        href: `/${urls.components}/${urls.label}`,
+      },
+      {
+        name: "Loader",
+        href: `/${urls.components}/${urls.loader}`,
+      },
+      {
+        name: "Message",
+        href: `/${urls.components}/${urls.message}`,
+      },
+      {
+        name: "Pagination",
+        href: `/${urls.components}/${urls.pagination}`,
+      },
+      {
+        name: "Popover",
+        href: `/${urls.components}/${urls.popover}`,
+      },
+      {
+        name: "Progress",
+        href: `/${urls.components}/${urls.progress}`,
+      },
+      {
+        name: "Quote",
+        href: `/${urls.components}/${urls.quote}`,
+      },
+      {
+        name: "Skeleton",
+        href: `/${urls.components}/${urls.skeleton}`,
+      },
+      {
+        name: "Switch",
+        href: `/${urls.components}/${urls.switch}`,
+      },
+      {
+        name: "Text",
+        href: `/${urls.components}/${urls.text}`,
+      },
+      {
+        name: "Textarea",
+        href: `/${urls.components}/${urls.textarea}`,
       },
     ],
   },

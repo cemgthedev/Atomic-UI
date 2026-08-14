@@ -59,7 +59,7 @@ const technologies: TechnologyProps[] = [
 
 export function Documentation() {
   return (
-    <section className="min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
+    <section className="scroll-progress min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
       {/* Introdução */}
       <div id="introducao" className="flex flex-col gap-3 py-4">
         <div className="flex flex-col gap-1">
@@ -153,7 +153,7 @@ export function Documentation() {
                   className="flex gap-1 items-center hover:underline"
                 >
                   <SquareArrowOutUpRight size={16} />
-                  <Text size="sm">Saiba mais</Text>
+                  <Text size="sm">saiba mais</Text>
                 </a>
               </div>
             </div>

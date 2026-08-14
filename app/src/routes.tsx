@@ -25,6 +25,130 @@ const InstallationPage = async () => {
   return { Component: Component.Installation };
 };
 
+const ComponentsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components")]);
+  return { Component: Component.Components };
+};
+
+const ButtonDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/button")]);
+  return { Component: Component.ButtonDetails };
+};
+
+const BadgeDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/badge")]);
+  return { Component: Component.BadgeDetails };
+};
+
+const TextDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/text")]);
+  return { Component: Component.TextDetails };
+};
+
+const LabelDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/label")]);
+  return { Component: Component.LabelDetails };
+};
+
+const HeadingDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/heading")]);
+  return { Component: Component.HeadingDetails };
+};
+
+const DividerDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/divider")]);
+  return { Component: Component.DividerDetails };
+};
+
+const ProgressDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/progress"),
+  ]);
+  return { Component: Component.ProgressDetails };
+};
+
+const AvatarDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/avatar")]);
+  return { Component: Component.AvatarDetails };
+};
+
+const ImageDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/image")]);
+  return { Component: Component.ImageDetails };
+};
+
+const InputDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/input")]);
+  return { Component: Component.InputDetails };
+};
+
+const TextareaDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/textarea"),
+  ]);
+  return { Component: Component.TextareaDetails };
+};
+
+const MessageDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/message")]);
+  return { Component: Component.MessageDetails };
+};
+
+const CalendarDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/calendar"),
+  ]);
+  return { Component: Component.CalendarDetails };
+};
+
+const CheckboxDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/checkbox"),
+  ]);
+  return { Component: Component.CheckboxDetails };
+};
+
+const DatepickerDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/datepicker"),
+  ]);
+  return { Component: Component.DatepickerDetails };
+};
+
+const LoaderDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/loader")]);
+  return { Component: Component.LoaderDetails };
+};
+
+const PaginationDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/pagination"),
+  ]);
+  return { Component: Component.PaginationDetails };
+};
+
+const PopoverDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/popover")]);
+  return { Component: Component.PopoverDetails };
+};
+
+const QuoteDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/quote")]);
+  return { Component: Component.QuoteDetails };
+};
+
+const SkeletonDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/skeleton"),
+  ]);
+  return { Component: Component.SkeletonDetails };
+};
+
+const SwitchDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/switch")]);
+  return { Component: Component.SwitchDetails };
+};
+
 export const router = createBrowserRouter([
   {
     path: urls.dashboard,
@@ -46,6 +170,99 @@ export const router = createBrowserRouter([
           {
             path: urls.installation,
             lazy: InstallationPage,
+          },
+        ],
+      },
+      {
+        path: urls.components,
+        children: [
+          {
+            index: true,
+            lazy: ComponentsPage,
+          },
+          {
+            path: urls.button,
+            lazy: ButtonDetailsPage,
+          },
+          {
+            path: urls.badge,
+            lazy: BadgeDetailsPage,
+          },
+          {
+            path: urls.text,
+            lazy: TextDetailsPage,
+          },
+          {
+            path: urls.label,
+            lazy: LabelDetailsPage,
+          },
+          {
+            path: urls.heading,
+            lazy: HeadingDetailsPage,
+          },
+          {
+            path: urls.divider,
+            lazy: DividerDetailsPage,
+          },
+          {
+            path: urls.progress,
+            lazy: ProgressDetailsPage,
+          },
+          {
+            path: urls.avatar,
+            lazy: AvatarDetailsPage,
+          },
+          {
+            path: urls.image,
+            lazy: ImageDetailsPage,
+          },
+          {
+            path: urls.input,
+            lazy: InputDetailsPage,
+          },
+          {
+            path: urls.textarea,
+            lazy: TextareaDetailsPage,
+          },
+          {
+            path: urls.message,
+            lazy: MessageDetailsPage,
+          },
+          {
+            path: urls.calendar,
+            lazy: CalendarDetailsPage,
+          },
+          {
+            path: urls.checkbox,
+            lazy: CheckboxDetailsPage,
+          },
+          {
+            path: urls.datepicker,
+            lazy: DatepickerDetailsPage,
+          },
+          {
+            path: urls.loader,
+            lazy: LoaderDetailsPage,
+          },
+          {
+            path: urls.pagination,
+            lazy: PaginationDetailsPage,
+          },
+          {
+            path: urls.popover,
+            lazy: PopoverDetailsPage,
+          },
+          {
+            path: urls.quote,
+            lazy: QuoteDetailsPage,
+          },
+          {
+            path: urls.skeleton,
+            lazy: SkeletonDetailsPage,
+          },
+          {
+            path: urls.switch,
+            lazy: SwitchDetailsPage,
           },
         ],
       },

@@ -20,7 +20,7 @@ import { Copy } from "lucide-react";
 
 export function Installation() {
   return (
-    <section className="min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
+    <section className="scroll-progress min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
       {/* Instalação */}
       <div id="instalacao" className="flex flex-col gap-3 py-4">
         <div className="flex flex-col gap-1">
@@ -75,7 +75,7 @@ export function Installation() {
             <code>{createProject}</code>
           </pre>
           <Button
-            startContent={<Copy size={24} className="text-zinc-600" />}
+            startContent={<Copy size={20} className="text-zinc-600" />}
             onClick={() => copy(createProject)}
             className="bg-transparent border-none p-0"
           />
@@ -100,7 +100,7 @@ export function Installation() {
             <code>{installDependencies}</code>
           </pre>
           <Button
-            startContent={<Copy size={24} className="text-zinc-600" />}
+            startContent={<Copy size={20} className="text-zinc-600" />}
             onClick={() => copy(installDependencies)}
             className="bg-transparent border-none p-0"
           />
@@ -120,7 +120,7 @@ export function Installation() {
               <code>{datesAndCalendars}</code>
             </pre>
             <Button
-              startContent={<Copy size={24} className="text-zinc-600" />}
+              startContent={<Copy size={20} className="text-zinc-600" />}
               onClick={() => copy(datesAndCalendars)}
               className="bg-transparent border-none p-0"
             />
@@ -134,7 +134,7 @@ export function Installation() {
               <code>{googleFonts}</code>
             </pre>
             <Button
-              startContent={<Copy size={24} className="text-zinc-600" />}
+              startContent={<Copy size={20} className="text-zinc-600" />}
               onClick={() => copy(googleFonts)}
               className="bg-transparent border-none p-0"
             />
@@ -152,7 +152,7 @@ export function Installation() {
               <code>{typographyTokens}</code>
             </pre>
             <Button
-              startContent={<Copy size={24} className="text-zinc-600" />}
+              startContent={<Copy size={20} className="text-zinc-600" />}
               onClick={() => copy(typographyTokens)}
               className="bg-transparent border-none p-0"
             />
@@ -183,7 +183,7 @@ export function Installation() {
                 <code>{activatePlugin}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(activatePlugin)}
                 className="bg-transparent border-none p-0"
               />
@@ -198,7 +198,7 @@ export function Installation() {
                 <code>{tailwindImports}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(tailwindImports)}
                 className="bg-transparent border-none p-0"
               />
@@ -217,7 +217,7 @@ export function Installation() {
                 <code>{tokensAndThemeDefinition}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(tokensAndThemeDefinition)}
                 className="bg-transparent border-none p-0"
               />
@@ -232,7 +232,7 @@ export function Installation() {
                 <code>{importCSS}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(importCSS)}
                 className="bg-transparent border-none p-0"
               />
@@ -265,7 +265,7 @@ export function Installation() {
                 <code>{typeScriptAliasConfiguration}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(typeScriptAliasConfiguration)}
                 className="bg-transparent border-none p-0"
               />
@@ -280,7 +280,7 @@ export function Installation() {
                 <code>{viteAliasConfiguration}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(viteAliasConfiguration)}
                 className="bg-transparent border-none p-0"
               />
@@ -294,7 +294,7 @@ export function Installation() {
                 <code>{aliasExemple}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(aliasExemple)}
                 className="bg-transparent border-none p-0"
               />
@@ -311,7 +311,7 @@ export function Installation() {
                 <code>{barrelFileExport}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(barrelFileExport)}
                 className="bg-transparent border-none p-0"
               />
@@ -326,7 +326,7 @@ export function Installation() {
                 <code>{barrelFileImport}</code>
               </pre>
               <Button
-                startContent={<Copy size={24} className="text-zinc-600" />}
+                startContent={<Copy size={20} className="text-zinc-600" />}
                 onClick={() => copy(barrelFileImport)}
                 className="bg-transparent border-none p-0"
               />
