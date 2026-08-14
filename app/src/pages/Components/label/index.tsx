@@ -117,7 +117,9 @@ export function LabelDetails() {
           <div className="flex flex-col justify-between gap-4 lg:flex-row">
             <div className="flex flex-col gap-1">
               <Heading>Variantes</Heading>
-              <Text className="indent-8">Exemplos de variantes do componente Label.</Text>
+              <Text className="indent-8">
+                Exemplos de variantes do componente Label.
+              </Text>
             </div>
           </div>
 
@@ -170,7 +172,9 @@ export function LabelDetails() {
           <div className="flex flex-col justify-between gap-4 lg:flex-row">
             <div className="flex flex-col gap-1">
               <Heading>Tamanhos</Heading>
-              <Text className="indent-8">Exemplos de tamanhos do componente Label.</Text>
+              <Text className="indent-8">
+                Exemplos de tamanhos do componente Label.
+              </Text>
             </div>
           </div>
 
@@ -311,7 +315,7 @@ export function LabelDetails() {
         </div>
       </section>
 
-      <aside className="min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] min-w-fit max-w-fit border-l border-muted-200 px-3 py-8 flex flex-col gap-2 overflow-auto scrollbar-none">
+      <aside className="hidden lg:flex flex-col gap-2 min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] min-w-fit max-w-fit border-l border-muted-200 px-3 py-8 overflow-auto scrollbar-none">
         <Label size="sm" className="text-right px-3">
           Seções
         </Label>

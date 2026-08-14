@@ -132,11 +132,6 @@ const PopoverDetailsPage = async () => {
   return { Component: Component.PopoverDetails };
 };
 
-const QuoteDetailsPage = async () => {
-  const [Component] = await Promise.all([import("@/pages/Components/quote")]);
-  return { Component: Component.QuoteDetails };
-};
-
 const SkeletonDetailsPage = async () => {
   const [Component] = await Promise.all([
     import("@/pages/Components/skeleton"),
@@ -251,10 +246,6 @@ export const router = createBrowserRouter([
           {
             path: urls.popover,
             lazy: PopoverDetailsPage,
-          },
-          {
-            path: urls.quote,
-            lazy: QuoteDetailsPage,
           },
           {
             path: urls.skeleton,

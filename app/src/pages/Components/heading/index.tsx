@@ -315,7 +315,7 @@ export function HeadingDetails() {
         </div>
       </section>
 
-      <aside className="min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] min-w-fit max-w-fit border-l border-muted-200 px-3 py-8 flex flex-col gap-2 overflow-auto scrollbar-none">
+      <aside className="hidden lg:flex flex-col gap-2 min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] min-w-fit max-w-fit border-l border-muted-200 px-3 py-8 overflow-auto scrollbar-none">
         <Label size="sm" className="text-right px-3">
           Seções
         </Label>

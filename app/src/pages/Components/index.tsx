@@ -13,108 +13,103 @@ const components: ComponentProps[] = [
   {
     name: "Avatar",
     description: "Exibe a imagem ou as iniciais de um usuário ou entidade.",
-    href: `/${urls.components}/avatar`,
+    href: `/${urls.components}/${urls.avatar}`,
   },
   {
     name: "Badge",
     description: "Destaca informações com rótulos compactos e personalizáveis.",
-    href: `/${urls.components}/badge`,
+    href: `/${urls.components}/${urls.badge}`,
   },
   {
     name: "Button",
     description: "Aciona ações por meio de botões com variantes e estados.",
-    href: `/${urls.components}/button`,
+    href: `/${urls.components}/${urls.button}`,
   },
   {
     name: "Calendar",
     description: "Exibe um calendário para navegação e seleção de datas.",
-    href: `/${urls.components}/calendar`,
+    href: `/${urls.components}/${urls.calendar}`,
   },
   {
     name: "Checkbox",
     description: "Permite selecionar ou desmarcar opções independentes.",
-    href: `/${urls.components}/checkbox`,
+    href: `/${urls.components}/${urls.checkbox}`,
   },
   {
     name: "Datepicker",
     description: "Combina calendário e campo para seleção de datas.",
-    href: `/${urls.components}/datepicker`,
+    href: `/${urls.components}/${urls.datepicker}`,
   },
   {
     name: "Divider",
     description: "Separa visualmente seções e grupos de conteúdo.",
-    href: `/${urls.components}/divider`,
+    href: `/${urls.components}/${urls.divider}`,
   },
   {
     name: "Heading",
     description: "Renderiza títulos semânticos com estilos padronizados.",
-    href: `/${urls.components}/heading`,
+    href: `/${urls.components}/${urls.heading}`,
   },
   {
     name: "Image",
     description: "Exibe imagens com suporte a personalização e responsividade.",
-    href: `/${urls.components}/image`,
+    href: `/${urls.components}/${urls.image}`,
   },
   {
     name: "Input",
     description: "Campo de entrada para textos e outros valores.",
-    href: `/${urls.components}/input`,
+    href: `/${urls.components}/${urls.input}`,
   },
   {
     name: "Label",
     description:
       "Identifica e descreve campos de formulário de forma acessível.",
-    href: `/${urls.components}/label`,
+    href: `/${urls.components}/${urls.label}`,
   },
   {
     name: "Loader",
     description: "Indica carregamento ou processamento de informações.",
-    href: `/${urls.components}/loader`,
+    href: `/${urls.components}/${urls.loader}`,
   },
   {
     name: "Message",
     description: "Exibe mensagens informativas, de sucesso, aviso ou erro.",
-    href: `/${urls.components}/message`,
+    href: `/${urls.components}/${urls.message}`,
   },
   {
     name: "Pagination",
     description: "Navega entre páginas de grandes conjuntos de dados.",
-    href: `/${urls.components}/pagination`,
+    href: `/${urls.components}/${urls.pagination}`,
   },
   {
     name: "Popover",
     description: "Exibe conteúdo contextual sobreposto ao elemento acionador.",
-    href: `/${urls.components}/popover`,
+    href: `/${urls.components}/${urls.popover}`,
   },
   {
     name: "Progress",
     description: "Representa visualmente o progresso de uma tarefa.",
-    href: `/${urls.components}/progress`,
-  },
-  {
-    name: "Quote",
-    description: "Destaca citações com formatação semântica e estilizada.",
-    href: `/${urls.components}/quote`,
+    href: `/${urls.components}/${urls.progress}`,
   },
   {
     name: "Skeleton",
     description: "Exibe um placeholder durante o carregamento do conteúdo.",
-    href: `/${urls.components}/skeleton`,
+    href: `/${urls.components}/${urls.skeleton}`,
   },
   {
     name: "Switch",
     description: "Alterna entre estados ligado e desligado.",
-    href: `/${urls.components}/switch`,
+    href: `/${urls.components}/${urls.switch}`,
   },
   {
     name: "Text",
     description: "Renderiza textos com estilos tipográficos consistentes.",
-    href: `/${urls.components}/text`,
+    href: `/${urls.components}/${urls.text}`,
   },
   {
     name: "Textarea",
     description: "Campo para entrada de textos com múltiplas linhas.",
-    href: `/${urls.components}/textarea`,
+    href: `/${urls.components}/${urls.textarea}`,
   },
 ];
 
