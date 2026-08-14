@@ -4,9 +4,15 @@ import { BookOpen, Component, Home, Settings2 } from "lucide-react";
 import type { ComponentProps } from "react";
 import { Link, useLocation } from "react-router";
 
-export type NavbarProps = ComponentProps<"nav">;
+export type NavbarProps = ComponentProps<"nav"> & {
+  orientation?: "vertical" | "horizontal";
+};
 
-export function Navbar({ className, ...props }: NavbarProps) {
+export function Navbar({
+  className,
+  orientation = "horizontal",
+  ...props
+}: NavbarProps) {
   const { pathname } = useLocation();
 
   return (
@@ -17,7 +23,12 @@ export function Navbar({ className, ...props }: NavbarProps) {
       )}
       {...props}
     >
-      <ul className="flex gap-8">
+      <ul
+        className={cn(
+          "flex gap-8",
+          orientation === "vertical" && "flex-col items-start gap-4",
+        )}
+      >
         <li>
           <Link
             to={urls.dashboard}

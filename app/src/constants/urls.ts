@@ -88,10 +88,6 @@ export const urls = {
    */
   popover: "popover",
   /**
-   * Quote page
-   */
-  quote: "quote",
-  /**
    * Skeleton page
    */
   skeleton: "skeleton",

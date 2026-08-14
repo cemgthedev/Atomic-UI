@@ -96,7 +96,7 @@ export function DefaultLayout() {
       </div>
       <Header />
       <Main ref={mainRef}>
-        <Sidebar />
+        <Sidebar collapsible="icon" defaultOpen={false} className="hidden md:block" />
         <Outlet />
       </Main>
       <Footer />
