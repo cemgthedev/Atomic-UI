@@ -68,6 +68,10 @@ export const urls = {
    */
   calendar: "calendar",
   /**
+   * Card page
+   */
+  card: "card",
+  /**
    * Checkbox page
    */
   checkbox: "checkbox",

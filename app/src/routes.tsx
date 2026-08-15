@@ -101,6 +101,11 @@ const CalendarDetailsPage = async () => {
   return { Component: Component.CalendarDetails };
 };
 
+const CardDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/card")]);
+  return { Component: Component.CardDetails };
+};
+
 const CheckboxDetailsPage = async () => {
   const [Component] = await Promise.all([
     import("@/pages/Components/checkbox"),
@@ -226,6 +231,10 @@ export const router = createBrowserRouter([
           {
             path: urls.calendar,
             lazy: CalendarDetailsPage,
+          },
+          {
+            path: urls.card,
+            lazy: CardDetailsPage,
           },
           {
             path: urls.checkbox,

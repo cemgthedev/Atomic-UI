@@ -31,6 +31,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.calendar}`,
   },
   {
+    name: "Card",
+    description: "Exibe um card para agrupamento de informações.",
+    href: `/${urls.components}/${urls.card}`,
+  },
+  {
     name: "Checkbox",
     description: "Permite selecionar ou desmarcar opções independentes.",
     href: `/${urls.components}/${urls.checkbox}`,

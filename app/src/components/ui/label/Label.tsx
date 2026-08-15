@@ -6,7 +6,7 @@ import { cn } from "@/utils/cn";
 const labelVariants = cva("font-medium font-label", {
   variants: {
     variant: {
-      default: "text-foreground",
+      default: "",
       muted: "text-muted",
       primary: "text-primary",
       secondary: "text-secondary",

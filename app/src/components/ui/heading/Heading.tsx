@@ -6,7 +6,7 @@ import { cn } from "@/utils/cn";
 const headingVariants = cva("font-semibold font-heading", {
   variants: {
     variant: {
-      default: "text-foreground",
+      default: "",
       muted: "text-muted",
       primary: "text-primary",
       secondary: "text-secondary",
