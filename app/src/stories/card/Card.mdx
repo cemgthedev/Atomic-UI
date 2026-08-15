@@ -1,0 +1,23 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as CardStories from "./Card.stories";
+
+<Meta of={CardStories} />
+
+# Card
+
+Exibe um card para agrupamento de informações.
+
+## Padrão
+
+Esta variante deve ser utilizada para a ação principal da tela.
+
+<Canvas of={CardStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Exemplo de todas as variantes do card.
+
+<Canvas of={CardStories.Variants} />
