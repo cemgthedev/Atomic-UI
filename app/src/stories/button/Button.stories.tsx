@@ -160,7 +160,6 @@ export const Variants: Story = {
       "warning-bordered",
       "danger-bordered",
       "ghost",
-      "muted-ghost",
       "primary-ghost",
       "secondary-ghost",
       "success-ghost",
