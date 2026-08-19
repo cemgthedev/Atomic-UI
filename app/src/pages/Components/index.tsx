@@ -92,6 +92,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.popover}`,
   },
   {
+    name: "Sheet",
+    description: "Exibe conteúdo em um painel deslizante sobre a interface.",
+    href: `/${urls.components}/${urls.sheet}`,
+  },
+  {
     name: "Progress",
     description: "Representa visualmente o progresso de uma tarefa.",
     href: `/${urls.components}/${urls.progress}`,

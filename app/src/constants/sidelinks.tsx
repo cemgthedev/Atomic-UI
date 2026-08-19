@@ -127,6 +127,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.popover}`,
       },
       {
+        name: "Sheet",
+        href: `/${urls.components}/${urls.sheet}`,
+      },
+      {
         name: "Progress",
         href: `/${urls.components}/${urls.progress}`,
       },
