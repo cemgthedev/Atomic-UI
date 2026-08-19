@@ -1,12 +1,6 @@
-export const codeSourceSheet = `// index.tsx
-export * from "@/components/ui/sheet/Sheet";
-export * from "@/components/ui/sheet/SheetClose";
-export * from "@/components/ui/sheet/SheetContent";
-export * from "@/components/ui/sheet/SheetFooter";
-export * from "@/components/ui/sheet/SheetHeader";
-export * from "@/components/ui/sheet/SheetTrigger";
-
-// Sheet.tsx
+export const codeSourceSheet = `import { Button } from "@/components/ui/button";
+import { cn } from "@/utils/cn";
+import { XIcon } from "lucide-react";
 import { Dialog as SheetPrimitive } from "radix-ui";
 import * as React from "react";
 
@@ -16,29 +10,11 @@ function Sheet({ ...props }: SheetProps) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />;
 }
 
-export { Sheet };
-export type { SheetProps };
-
-// SheetClose.tsx
-import { Dialog as SheetPrimitive } from "radix-ui";
-import * as React from "react";
-
 type SheetCloseProps = React.ComponentProps<typeof SheetPrimitive.Close>;
 
 function SheetClose({ ...props }: SheetCloseProps) {
   return <SheetPrimitive.Close data-slot="sheet-close" {...props} />;
 }
-
-export { SheetClose };
-export type { SheetCloseProps };
-
-// SheetContent.tsx
-import { Dialog as SheetPrimitive } from "radix-ui";
-import * as React from "react";
-
-import { Button } from "@/components/ui/button";
-import { cn } from "@/utils/cn";
-import { XIcon } from "lucide-react";
 
 type SheetPortalProps = React.ComponentProps<typeof SheetPrimitive.Portal>;
 
@@ -66,7 +42,13 @@ type SheetContentProps = React.ComponentProps<typeof SheetPrimitive.Content> & {
   showCloseButton?: boolean;
 };
 
-function SheetContent({ className, children, side = "right", showCloseButton = true, ...props }: SheetContentProps) {
+function SheetContent({
+  className,
+  children,
+  side = "right",
+  showCloseButton = true,
+  ...props
+}: SheetContentProps) {
   return (
     <SheetPortal>
       <SheetOverlay />
@@ -82,7 +64,11 @@ function SheetContent({ className, children, side = "right", showCloseButton = t
         {children}
         {showCloseButton && (
           <SheetPrimitive.Close data-slot="sheet-close" asChild>
-            <Button variant="ghost" className="absolute top-3 right-3" size="sm">
+            <Button
+              variant="ghost"
+              className="absolute top-3 right-3"
+              size="sm"
+            >
               <XIcon />
               <span className="sr-only">Close</span>
             </Button>
@@ -93,36 +79,29 @@ function SheetContent({ className, children, side = "right", showCloseButton = t
   );
 }
 
-export { SheetContent };
-export type { SheetContentProps };
-
-// SheetFooter.tsx
-import { cn } from "@/utils/cn";
-
 type SheetFooterProps = React.ComponentProps<"div">;
 
 function SheetFooter({ className, ...props }: SheetFooterProps) {
-  return <div data-slot="sheet-footer" className={cn("mt-auto flex flex-col gap-2 p-4", className)} {...props} />;
+  return (
+    <div
+      data-slot="sheet-footer"
+      className={cn("mt-auto flex flex-col gap-2 p-4", className)}
+      {...props}
+    />
+  );
 }
-
-export { SheetFooter };
-export type { SheetFooterProps };
-
-// SheetHeader.tsx
-import { cn } from "@/utils/cn";
 
 type SheetHeaderProps = React.ComponentProps<"div">;
 
 function SheetHeader({ className, ...props }: SheetHeaderProps) {
-  return <div data-slot="sheet-header" className={cn("flex flex-col gap-0.5 p-4", className)} {...props} />;
+  return (
+    <div
+      data-slot="sheet-header"
+      className={cn("flex flex-col gap-0.5 p-4", className)}
+      {...props}
+    />
+  );
 }
-
-export { SheetHeader };
-export type { SheetHeaderProps };
-
-// SheetTrigger.tsx
-import { Dialog as SheetPrimitive } from "radix-ui";
-import * as React from "react";
 
 type SheetTriggerProps = React.ComponentProps<typeof SheetPrimitive.Trigger>;
 
@@ -130,6 +109,20 @@ function SheetTrigger({ ...props }: SheetTriggerProps) {
   return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />;
 }
 
-export { SheetTrigger };
-export type { SheetTriggerProps };
+export {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetFooter,
+  SheetHeader,
+  SheetTrigger,
+};
+export type {
+  SheetCloseProps,
+  SheetContentProps,
+  SheetFooterProps,
+  SheetHeaderProps,
+  SheetProps,
+  SheetTriggerProps,
+};
 `;
