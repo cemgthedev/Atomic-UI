@@ -5,7 +5,7 @@ import * as React from "react";
 import { cn } from "@/utils/cn";
 
 const buttonVariants = cva(
-  "w-fit h-fit flex justify-center items-center gap-2 transition-all border border-border cursor-pointer",
+  "w-fit h-fit flex justify-center items-center gap-2 transition-all cursor-pointer",
   {
     variants: {
       variant: {
@@ -18,22 +18,21 @@ const buttonVariants = cva(
         warning: "bg-warning text-warning-foreground hover:opacity-80",
         danger: "bg-danger text-danger-foreground hover:opacity-80",
         "dark-bordered":
-          "border-dark text-dark hover:bg-dark hover:text-dark-foreground",
+          "border border-dark text-dark hover:bg-dark hover:text-dark-foreground",
         "muted-bordered":
-          "border-muted text-muted opacity-60 hover:bg-muted hover:text-muted-foreground",
+          "border border-muted text-muted opacity-60 hover:bg-muted hover:text-muted-foreground",
         "primary-bordered":
-          "border-primary text-primary hover:bg-primary hover:text-primary-foreground",
+          "border border-primary text-primary hover:bg-primary hover:text-primary-foreground",
         "secondary-bordered":
-          "border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground",
+          "border border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground",
         "success-bordered":
-          "border-success text-success hover:bg-success hover:text-success-foreground",
+          "border border-success text-success hover:bg-success hover:text-success-foreground",
         "warning-bordered":
-          "border-warning text-warning hover:bg-warning hover:text-warning-foreground",
+          "border border-warning text-warning hover:bg-warning hover:text-warning-foreground",
         "danger-bordered":
-          "border-danger text-danger hover:bg-danger hover:text-danger-foreground",
+          "border border-danger text-danger hover:bg-danger hover:text-danger-foreground",
         ghost: "bg-transparent border-transparent hover:bg-muted",
-        "dark-ghost":
-          "bg-muted border-dark text-dark hover:opacity-80",
+        "dark-ghost": "bg-muted border-dark text-dark hover:opacity-80",
         "primary-ghost":
           "bg-primary-200 border-primary-800 text-primary-800 hover:opacity-80",
         "secondary-ghost":

@@ -6,7 +6,7 @@ import { cn } from "@/utils/cn";
 const textVariants = cva("font-normal font-sans", {
   variants: {
     variant: {
-      default: "text-foreground",
+      default: "",
       muted: "text-muted",
       primary: "text-primary",
       secondary: "text-secondary",

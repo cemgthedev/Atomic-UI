@@ -75,6 +75,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.calendar}`,
       },
       {
+        name: "Card",
+        href: `/${urls.components}/${urls.card}`,
+      },
+      {
         name: "Checkbox",
         href: `/${urls.components}/${urls.checkbox}`,
       },

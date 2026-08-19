@@ -1,20 +1,25 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button } from "@/components/ui";
-import { Plus } from "lucide-react";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  Image,
+  ImageContent,
+  ImageFallback,
+  Label,
+  Text,
+} from "@/components/ui";
+import { ExternalLinkIcon } from "lucide-react";
 import type { ComponentProps } from "react";
 
-type ButtonStoryProps = Omit<
-  ComponentProps<typeof Button>,
-  "startContent" | "endContent"
-> & {
-  startContent?: boolean;
-  endContent?: boolean;
-};
+type CardStoryProps = ComponentProps<typeof Card>;
 
 const meta = {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Card",
+  component: Card,
   parameters: {
     layout: "centered",
     docs: {
@@ -22,8 +27,7 @@ const meta = {
         exclude: ["theme", "asChild"],
       },
       description: {
-        component:
-          "Botão utilizado para disparar ações. Suporta múltiplas variantes, tamanhos e bordas.",
+        component: "Componente para agrupamento de informações.",
       },
     },
   },
@@ -33,29 +37,8 @@ const meta = {
         disable: true,
       },
     },
-    asChild: {
-      table: {
-        disable: true,
-      },
-    },
-    startContent: {
-      control: "boolean",
-      table: {
-        type: {
-          summary: "ReactNode",
-        },
-      },
-    },
-    endContent: {
-      control: "boolean",
-      table: {
-        type: {
-          summary: "ReactNode",
-        },
-      },
-    },
     variant: {
-      description: "Define a aparência do botão.",
+      description: "Define a aparência do card.",
       control: { type: "select" },
       options: [
         "default",
@@ -74,7 +57,6 @@ const meta = {
         "warning-bordered",
         "danger-bordered",
         "ghost",
-        "muted-ghost",
         "primary-ghost",
         "secondary-ghost",
         "success-ghost",
@@ -83,7 +65,7 @@ const meta = {
       ],
     },
     size: {
-      description: "Define o tamanho do botão.",
+      description: "Define o tamanho do card.",
       table: {
         type: {
           summary: '"xs" | "sm" | "md" | "lg" | "xl"',
@@ -94,7 +76,7 @@ const meta = {
     },
 
     rounded: {
-      description: "Define o arredondamento do botão.",
+      description: "Define o arredondamento do card.",
       table: {
         type: {
           summary: '"xs" | "sm" | "md" | "lg" | "xl" | "full"',
@@ -104,19 +86,16 @@ const meta = {
       options: ["xs", "sm", "md", "lg", "xl", "full"],
     },
   },
-} satisfies Meta<ButtonStoryProps>;
+} satisfies Meta<CardStoryProps>;
 
 export default meta;
-type Story = StoryObj<ButtonStoryProps>;
+type Story = StoryObj<CardStoryProps>;
 
 export const Default: Story = {
   args: {
-    children: "Button",
     variant: "default",
     size: "md",
     rounded: "md",
-    startContent: false,
-    endContent: false,
   },
   parameters: {
     size: {
@@ -126,12 +105,31 @@ export const Default: Story = {
       options: ["xs", "sm", "md", "lg", "xl", "full"],
     },
   },
-  render: ({ startContent, endContent, ...args }) => (
-    <Button
-      {...args}
-      startContent={startContent ? <Plus size={16} /> : undefined}
-      endContent={endContent ? <Plus size={16} /> : undefined}
-    />
+  render: ({ ...args }) => (
+    <Card className="min-w-0" {...args}>
+      <CardHeader>
+        <Image rounded="md" aspect="square" className="w-full h-40">
+          <ImageContent
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+            alt="Imagem"
+          />
+          <ImageFallback>Imagem</ImageFallback>
+        </Image>
+      </CardHeader>
+      <CardContent>
+        <Label>Serra da Mantiqueira</Label>
+        <Text>
+          Uma região montanhosa conhecida por suas paisagens naturais, áreas de
+          vegetação e cidades turísticas.
+        </Text>
+      </CardContent>
+      <CardFooter>
+        <Button variant="default" size="xs">
+          <ExternalLinkIcon size={16} />
+          <Text size="sm">Saber mais</Text>
+        </Button>
+      </CardFooter>
+    </Card>
   ),
 };
 
@@ -170,9 +168,30 @@ export const Variants: Story = {
     return (
       <div className="flex flex-wrap items-center gap-4">
         {variants.map((variant) => (
-          <Button key={variant} variant={variant} {...props}>
-            {variant}
-          </Button>
+          <Card variant={variant} className="min-w-0 max-w-xs" {...props}>
+            <CardHeader>
+              <Image rounded="md" aspect="square" className="w-full h-40">
+                <ImageContent
+                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                  alt="Imagem"
+                />
+                <ImageFallback>Imagem</ImageFallback>
+              </Image>
+            </CardHeader>
+            <CardContent>
+              <Label>Serra da Mantiqueira</Label>
+              <Text>
+                Uma região montanhosa conhecida por suas paisagens naturais,
+                áreas de vegetação e cidades turísticas.
+              </Text>
+            </CardContent>
+            <CardFooter>
+              <Button variant={variant} size="xs">
+                <ExternalLinkIcon size={16} />
+                <Text size="sm">Saber mais</Text>
+              </Button>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     );
