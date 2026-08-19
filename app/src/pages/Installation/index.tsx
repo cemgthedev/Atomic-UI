@@ -1,4 +1,4 @@
-import { Button, Divider, Heading, Label, Text } from "@/components/ui";
+import { Button, Heading, Label, Separator, Text } from "@/components/ui";
 import {
   activatePlugin,
   aliasExemple,
@@ -45,7 +45,7 @@ export function Installation() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <div className="flex flex-col gap-2">
           <Label size="sm">Pacotes</Label>
@@ -68,7 +68,7 @@ export function Installation() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
           <pre className="w-full overflow-auto scrollbar-thin mr-1">
@@ -93,7 +93,7 @@ export function Installation() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
           <pre className="w-full overflow-auto scrollbar-thin mr-1">
@@ -172,7 +172,7 @@ export function Installation() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
@@ -252,7 +252,7 @@ export function Installation() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">

@@ -1,7 +1,7 @@
 import {
   Button,
-  Divider,
   Heading,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -74,7 +74,7 @@ export function TextDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="text-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -122,7 +122,7 @@ export function TextDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -177,7 +177,7 @@ export function TextDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -232,7 +232,7 @@ export function TextDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">

@@ -1,9 +1,9 @@
 import {
   Button,
-  Divider,
   Heading,
   Input,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -81,7 +81,7 @@ export function InputDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="input-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -131,7 +131,7 @@ export function InputDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -196,7 +196,7 @@ export function InputDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -248,7 +248,7 @@ export function InputDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="rounds-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -304,7 +304,7 @@ export function InputDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">

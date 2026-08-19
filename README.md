@@ -19,7 +19,7 @@ São componentes que não têm nenhum outro componente como propriedade; eles re
 - Link
 
 ### Componentes de Conteúdo
-- Divider
+- Separator
 - Quote
 - Skeleton
 - Loader

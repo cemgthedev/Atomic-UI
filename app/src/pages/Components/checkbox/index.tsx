@@ -1,9 +1,9 @@
 import {
   Button,
   Checkbox,
-  Divider,
   Heading,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -76,7 +76,7 @@ export function CheckboxDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="checkbox-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -132,7 +132,7 @@ export function CheckboxDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="checkbox-variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -246,7 +246,7 @@ export function CheckboxDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="checkbox-states-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -320,7 +320,7 @@ export function CheckboxDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="checkbox-properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">

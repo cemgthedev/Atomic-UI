@@ -1,9 +1,9 @@
 import {
   Button,
   Calendar,
-  Divider,
   Heading,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -81,7 +81,7 @@ export function CalendarDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="calendar-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -129,7 +129,7 @@ export function CalendarDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="calendar-variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -192,7 +192,7 @@ export function CalendarDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="calendar-rounds-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -265,7 +265,7 @@ export function CalendarDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="calendar-modes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -327,7 +327,7 @@ export function CalendarDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="calendar-properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">

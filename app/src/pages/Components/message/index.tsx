@@ -1,9 +1,9 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
   Message,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -76,7 +76,7 @@ export function MessageDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="message-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -124,7 +124,7 @@ export function MessageDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -188,7 +188,7 @@ export function MessageDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -242,7 +242,7 @@ export function MessageDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">

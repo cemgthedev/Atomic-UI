@@ -1,8 +1,8 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -17,12 +17,13 @@ import {
 } from "@/components/ui";
 import { urls } from "@/constants/urls";
 import {
-  dividerExample,
-  dividerPropertiesExemple,
-  dividerSizesExample,
-  dividerVariantsExample,
-} from "@/pages/Components/divider/codes";
-import { dividerSourceCode } from "@/pages/Components/divider/codes/source-code";
+  separatorExample,
+  separatorOrientationExample,
+  separatorPropertiesExemple,
+  separatorSizesExample,
+  separatorVariantsExample,
+} from "@/pages/Components/separator/codes";
+import { separatorSourceCode } from "@/pages/Components/separator/codes/source-code";
 import type { UrlProps } from "@/types/urls";
 import { cn } from "@/utils/cn";
 import { copy } from "@/utils/copy";
@@ -32,23 +33,27 @@ import { Link, useLocation } from "react-router";
 export const sectionLinks: UrlProps[] = [
   {
     name: "Importação",
-    href: `/${urls.components}/${urls.divider}#importacao`,
+    href: `/${urls.components}/${urls.separator}#importacao`,
   },
   {
     name: "Variantes",
-    href: `/${urls.components}/${urls.divider}#variantes`,
+    href: `/${urls.components}/${urls.separator}#variantes`,
   },
   {
     name: "Tamanhos",
-    href: `/${urls.components}/${urls.divider}#tamanhos`,
+    href: `/${urls.components}/${urls.separator}#tamanhos`,
+  },
+  {
+    name: "Orientação",
+    href: `/${urls.components}/${urls.separator}#orientacao`,
   },
   {
     name: "Propriedades",
-    href: `/${urls.components}/${urls.divider}#propriedades`,
+    href: `/${urls.components}/${urls.separator}#propriedades`,
   },
 ];
 
-export function DividerDetails() {
+export function SeparatorDetails() {
   const { pathname, hash } = useLocation();
   const currentUrl = `${pathname}${hash ?? ""}`;
 
@@ -59,7 +64,7 @@ export function DividerDetails() {
         <div id="importacao" className="flex flex-col gap-3 py-4">
           <div className="flex flex-col justify-between gap-4 lg:flex-row">
             <div className="flex flex-col gap-1">
-              <Heading>Divider</Heading>
+              <Heading>Separator</Heading>
               <Text className="indent-8">
                 Separa conteúdos em blocos visuais com uma linha horizontal
                 elegante.
@@ -68,47 +73,47 @@ export function DividerDetails() {
             <Button
               startContent={<Copy size={20} />}
               variant="dark-ghost"
-              onClick={() => copy(dividerSourceCode)}
+              onClick={() => copy(separatorSourceCode)}
               className="min-w-fit"
             >
               Copiar código fonte
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
-          <Tabs defaultValue="divider-example" className="w-full">
+          <Tabs defaultValue="separator-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
-                value="divider-example"
+                value="separator-example"
                 className="data-active:bg-primary-100"
               >
                 <Text size="sm">Exemplo</Text>
               </TabsTrigger>
               <TabsTrigger
-                value="divider-code"
+                value="separator-code"
                 className="data-active:bg-primary-100"
               >
                 <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="divider-example">
+            <TabsContent value="separator-example">
               <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <div className="w-full">
                   <Text>Conteúdo acima</Text>
-                  <Divider className="my-3" />
+                  <Separator className="my-3" />
                   <Text>Conteúdo abaixo</Text>
                 </div>
               </div>
             </TabsContent>
-            <TabsContent value="divider-code">
+            <TabsContent value="separator-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{dividerExample}</code>
+                  <code>{separatorExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(dividerExample)}
+                  onClick={() => copy(separatorExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -122,12 +127,12 @@ export function DividerDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Variantes</Heading>
               <Text className="indent-8">
-                Exemplos de variantes do componente Divider.
+                Exemplos de variantes do componente Separator.
               </Text>
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -148,31 +153,31 @@ export function DividerDetails() {
               <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <div className="flex flex-col gap-4 w-full">
                   <div className="space-y-1">
-                    <Divider variant={"primary"} className="w-full" />
+                    <Separator variant={"primary"} className="w-full" />
                     <Text>primary</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider variant={"secondary"} className="w-full" />
+                    <Separator variant={"secondary"} className="w-full" />
                     <Text>secondary</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider variant={"dark"} className="w-full" />
+                    <Separator variant={"dark"} className="w-full" />
                     <Text>dark</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider variant={"success"} className="w-full" />
+                    <Separator variant={"success"} className="w-full" />
                     <Text>success</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider variant={"warning"} className="w-full" />
+                    <Separator variant={"warning"} className="w-full" />
                     <Text>warning</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider variant={"danger"} className="w-full" />
+                    <Separator variant={"danger"} className="w-full" />
                     <Text>danger</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider variant={"muted"} className="w-full" />
+                    <Separator variant={"muted"} className="w-full" />
                     <Text>muted</Text>
                   </div>
                 </div>
@@ -181,11 +186,11 @@ export function DividerDetails() {
             <TabsContent value="variants-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{dividerVariantsExample}</code>
+                  <code>{separatorVariantsExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(dividerVariantsExample)}
+                  onClick={() => copy(separatorVariantsExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -199,12 +204,12 @@ export function DividerDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Tamanhos</Heading>
               <Text className="indent-8">
-                Exemplos de tamanhos do componente Divider.
+                Exemplos de tamanhos do componente Separator.
               </Text>
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -225,23 +230,23 @@ export function DividerDetails() {
               <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <div className="flex flex-col gap-4 w-full">
                   <div className="space-y-1">
-                    <Divider size="xs" />
+                    <Separator size="xs" />
                     <Text>xs</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider size="sm" />
+                    <Separator size="sm" />
                     <Text>sm</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider />
+                    <Separator size="md" />
                     <Text>md</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider size="lg" />
+                    <Separator size="lg" />
                     <Text>lg</Text>
                   </div>
                   <div className="space-y-1">
-                    <Divider size="xl" />
+                    <Separator size="xl" />
                     <Text>xl</Text>
                   </div>
                 </div>
@@ -250,11 +255,81 @@ export function DividerDetails() {
             <TabsContent value="sizes-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{dividerSizesExample}</code>
+                  <code>{separatorSizesExample}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(dividerSizesExample)}
+                  onClick={() => copy(separatorSizesExample)}
+                  className="bg-transparent border-none p-0"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+
+        {/* Orientação */}
+        <div id="orientacao" className="flex flex-col gap-3 py-4">
+          <div className="flex flex-col justify-between gap-4 lg:flex-row">
+            <div className="flex flex-col gap-1">
+              <Heading>Orientação</Heading>
+              <Text className="indent-8">
+                Exemplos de orientação do componente Separator.
+              </Text>
+            </div>
+          </div>
+
+          <Separator size="xs" />
+
+          <Tabs defaultValue="orientation-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="orientation-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+
+              <TabsTrigger
+                value="orientation-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="orientation-example">
+              <div className="w-full flex justify-center items-center p-6 bg-muted-100 border border-muted-200 rounded-lg">
+                <div className="flex items-center justify-center gap-6 w-full h-32">
+                  <div className="flex flex-col items-center gap-2 flex-1">
+                    <Separator
+                      orientation="horizontal"
+                      variant="primary"
+                      className="w-full"
+                    />
+                    <Text>horizontal</Text>
+                  </div>
+
+                  <div className="flex flex-col items-center gap-2 h-full">
+                    <Separator
+                      orientation="vertical"
+                      variant="primary"
+                      className="h-full"
+                    />
+                    <Text>vertical</Text>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="orientation-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{separatorOrientationExample}</code>
+                </pre>
+
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(separatorOrientationExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -269,12 +344,12 @@ export function DividerDetails() {
               <Heading>Propriedades</Heading>
               <Text className="indent-8">
                 {" "}
-                Propriedades para estilização do componente Divider.
+                Propriedades para estilização do componente Separator.
               </Text>
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -293,17 +368,21 @@ export function DividerDetails() {
             </TabsList>
             <TabsContent value="properties-exemple">
               <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-                <Divider variant={"default"} size={"md"} />
+                <Separator
+                  variant={"default"}
+                  size={"xs"}
+                  orientation="horizontal"
+                />
               </div>
             </TabsContent>
             <TabsContent value="properties-code">
               <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{dividerPropertiesExemple}</code>
+                  <code>{separatorPropertiesExemple}</code>
                 </pre>
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(dividerPropertiesExemple)}
+                  onClick={() => copy(separatorPropertiesExemple)}
                   className="bg-transparent border-none p-0"
                 />
               </div>
@@ -331,7 +410,7 @@ export function DividerDetails() {
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Define a aparência visual do divider.</Text>
+                    <Text>Define a aparência visual do Separator.</Text>
                   </TableCell>
                   <TableCell>
                     <Text>default</Text>
@@ -342,10 +421,21 @@ export function DividerDetails() {
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Controla o tamanho do divider.</Text>
+                    <Text>Controla o tamanho do Separator.</Text>
                   </TableCell>
                   <TableCell>
                     <Text>md</Text>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    <Text>orientation</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>Define a orientação do Separator.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>horizontal</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

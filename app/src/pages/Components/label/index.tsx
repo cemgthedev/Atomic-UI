@@ -1,8 +1,8 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -75,7 +75,7 @@ export function LabelDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="label-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -123,7 +123,7 @@ export function LabelDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -178,7 +178,7 @@ export function LabelDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -233,7 +233,7 @@ export function LabelDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">

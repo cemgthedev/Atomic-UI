@@ -1,11 +1,11 @@
 import {
   Button,
-  Divider,
   Heading,
   Image,
   ImageContent,
   ImageFallback,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -83,7 +83,7 @@ export function ImageDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="image-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -137,7 +137,7 @@ export function ImageDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -201,7 +201,7 @@ export function ImageDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="rounds-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -267,7 +267,7 @@ export function ImageDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="aspect-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -333,7 +333,7 @@ export function ImageDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">

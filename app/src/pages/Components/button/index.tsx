@@ -1,8 +1,8 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -82,7 +82,7 @@ export function ButtonDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="button-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -130,7 +130,7 @@ export function ButtonDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -233,7 +233,7 @@ export function ButtonDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -328,7 +328,7 @@ export function ButtonDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="rounds-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -434,7 +434,7 @@ export function ButtonDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">

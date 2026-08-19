@@ -1,11 +1,11 @@
 import {
   Button,
   buttonVariants,
-  Divider,
   Heading,
   Image,
   ImageContent,
   Label,
+  Separator,
   Text,
 } from "@/components/ui";
 import { urls } from "@/constants/urls";
@@ -56,7 +56,7 @@ export function Dashboard() {
         </div>
       </div>
 
-      <Divider size="xs" />
+      <Separator size="xs" />
 
       {/* Customization */}
       <div className="flex flex-col items-center gap-6">

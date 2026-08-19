@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Divider } from "@/components/ui";
+import { Separator } from "@/components/ui";
 import type { ComponentProps } from "react";
 
-type DividerStoryProps = ComponentProps<typeof Divider>;
+type SeparatorStoryProps = ComponentProps<typeof Separator>;
 
 const meta = {
-  title: "Components/Divider",
-  component: Divider,
+  title: "Components/Separator",
+  component: Separator,
   parameters: {
     layout: "padded",
     docs: {
@@ -47,10 +47,10 @@ const meta = {
       },
     },
   },
-} satisfies Meta<DividerStoryProps>;
+} satisfies Meta<SeparatorStoryProps>;
 
 export default meta;
-type Story = StoryObj<DividerStoryProps>;
+type Story = StoryObj<SeparatorStoryProps>;
 
 export const Default: Story = {
   args: {
@@ -60,7 +60,7 @@ export const Default: Story = {
   render: (args) => (
     <div className="w-full space-y-3">
       <p className="text-sm text-muted-foreground">Conteúdo acima</p>
-      <Divider {...args} />
+      <Separator {...args} />
       <p className="text-sm text-muted-foreground">Conteúdo abaixo</p>
     </div>
   ),
@@ -82,7 +82,7 @@ export const Variants: Story = {
       ).map((variant) => (
         <div key={variant} className="space-y-2">
           <p className="text-sm capitalize">{variant}</p>
-          <Divider variant={variant} />
+          <Separator variant={variant} />
         </div>
       ))}
     </div>

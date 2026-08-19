@@ -1,8 +1,8 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
+  Separator,
   Switch,
   Table,
   TableBody,
@@ -67,7 +67,7 @@ export function SwitchDetails() {
               Copiar código fonte
             </Button>
           </div>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="switch-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -109,7 +109,7 @@ export function SwitchDetails() {
           <Text className="indent-8">
             Exemplos de variantes do componente Switch.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="skeleton-variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -170,7 +170,7 @@ export function SwitchDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -217,7 +217,7 @@ export function SwitchDetails() {
           <Text className="indent-8">
             Exemplos de estados do componente Switch.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="switch-states-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -262,7 +262,7 @@ export function SwitchDetails() {
           <Text className="indent-8">
             Propriedades para personalizar o Switch.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="switch-properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger

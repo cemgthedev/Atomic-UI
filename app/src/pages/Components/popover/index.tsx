@@ -1,6 +1,5 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
   Popover,
@@ -9,6 +8,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -75,7 +75,7 @@ export function PopoverDetails() {
               Copiar código fonte
             </Button>
           </div>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="popover-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -130,7 +130,7 @@ export function PopoverDetails() {
           <Text className="indent-8">
             Exemplos de alinhamento e posicionamento do Popover.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="popover-trigger-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -185,7 +185,7 @@ export function PopoverDetails() {
           <Text className="indent-8">
             Propriedades para personalizar o Popover.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="popover-properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
