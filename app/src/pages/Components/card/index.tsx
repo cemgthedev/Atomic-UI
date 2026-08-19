@@ -4,12 +4,12 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-  Divider,
   Heading,
   Image,
   ImageContent,
   ImageFallback,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -90,7 +90,7 @@ export function CardDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="card-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -165,7 +165,7 @@ export function CardDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -258,7 +258,7 @@ export function CardDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -341,7 +341,7 @@ export function CardDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="rounds-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -427,7 +427,7 @@ export function CardDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">

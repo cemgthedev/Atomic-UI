@@ -1,6 +1,5 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
   Pagination,
@@ -10,6 +9,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -83,7 +83,7 @@ export function PaginationDetails() {
               Copiar código fonte
             </Button>
           </div>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="pagination-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -147,7 +147,7 @@ export function PaginationDetails() {
           <Text className="indent-8">
             Exemplos de variantes do componente Pagination.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="pagination-variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -225,7 +225,7 @@ export function PaginationDetails() {
           <Text className="indent-8">
             Exemplos de tamanhos do componente Pagination.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="pagination-sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -310,7 +310,7 @@ export function PaginationDetails() {
           <Text className="indent-8">
             Exemplos de arredondamentos do componente Pagination.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="pagination-rounded-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -397,7 +397,7 @@ export function PaginationDetails() {
           <Text className="indent-8">
             Propriedades para personalizar o Pagination.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="pagination-properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger

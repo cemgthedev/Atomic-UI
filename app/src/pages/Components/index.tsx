@@ -1,4 +1,4 @@
-import { Divider, Heading, Label, Text } from "@/components/ui";
+import { Heading, Label, Separator, Text } from "@/components/ui";
 import { urls } from "@/constants/urls";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { Link } from "react-router";
@@ -46,9 +46,9 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.datepicker}`,
   },
   {
-    name: "Divider",
+    name: "Separator",
     description: "Separa visualmente seções e grupos de conteúdo.",
-    href: `/${urls.components}/${urls.divider}`,
+    href: `/${urls.components}/${urls.separator}`,
   },
   {
     name: "Heading",
@@ -133,7 +133,7 @@ export function Components() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {components?.map((component) => (

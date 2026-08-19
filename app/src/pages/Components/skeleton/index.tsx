@@ -1,8 +1,8 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
+  Separator,
   Skeleton,
   Table,
   TableBody,
@@ -77,7 +77,7 @@ export function SkeletonDetails() {
               Copiar código fonte
             </Button>
           </div>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="skeleton-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -123,7 +123,7 @@ export function SkeletonDetails() {
           <Text className="indent-8">
             Exemplos de variantes do componente Skeleton.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="skeleton-variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -182,7 +182,7 @@ export function SkeletonDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -234,7 +234,7 @@ export function SkeletonDetails() {
           <Text className="indent-8">
             Exemplos de arredondamento para o Skeleton.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="skeleton-rounded-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger
@@ -286,7 +286,7 @@ export function SkeletonDetails() {
           <Text className="indent-8">
             Propriedades para personalizar o Skeleton.
           </Text>
-          <Divider size="xs" />
+          <Separator size="xs" />
           <Tabs defaultValue="skeleton-properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
               <TabsTrigger

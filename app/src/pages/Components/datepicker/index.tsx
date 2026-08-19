@@ -3,9 +3,9 @@ import {
   DatePickerMultiple,
   DatePickerRange,
   DatePickerSimple,
-  Divider,
   Heading,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -78,7 +78,7 @@ export function DatepickerDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="datepicker-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -130,7 +130,7 @@ export function DatepickerDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="datepicker-variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -209,7 +209,7 @@ export function DatepickerDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="datepicker-modes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -261,7 +261,7 @@ export function DatepickerDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="datepicker-properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">

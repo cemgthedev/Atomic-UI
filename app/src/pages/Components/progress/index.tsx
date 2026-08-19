@@ -1,10 +1,10 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
   Progress,
   ProgressValue,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -92,7 +92,7 @@ export function ProgressDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="progress-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -144,7 +144,7 @@ export function ProgressDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -208,7 +208,7 @@ export function ProgressDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -287,7 +287,7 @@ export function ProgressDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="rounds-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -397,7 +397,7 @@ export function ProgressDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="stripes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -455,7 +455,7 @@ export function ProgressDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="animation-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -521,7 +521,7 @@ export function ProgressDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">

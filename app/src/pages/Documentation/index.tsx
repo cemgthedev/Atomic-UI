@@ -2,12 +2,12 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-  Divider,
   Heading,
   Image,
   ImageContent,
   ImageOverlay,
   Label,
+  Separator,
   Text,
 } from "@/components/ui";
 import { SquareArrowOutUpRight } from "lucide-react";
@@ -72,7 +72,7 @@ export function Documentation() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <Image className="w-full h-112">
           <ImageContent
@@ -95,7 +95,7 @@ export function Documentation() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <div className="flex flex-col gap-2">
           <Label size="sm">Propostas</Label>
@@ -128,7 +128,7 @@ export function Documentation() {
           </Text>
         </div>
 
-        <Divider size="xs" />
+        <Separator size="xs" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
           {technologies.map((tech) => (

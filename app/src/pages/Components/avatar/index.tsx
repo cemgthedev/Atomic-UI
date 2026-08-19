@@ -3,9 +3,9 @@ import {
   AvatarFallback,
   AvatarImage,
   Button,
-  Divider,
   Heading,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -78,7 +78,7 @@ export function AvatarDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="avatar-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -129,7 +129,7 @@ export function AvatarDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -228,7 +228,7 @@ export function AvatarDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="rounds-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -294,7 +294,7 @@ export function AvatarDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">

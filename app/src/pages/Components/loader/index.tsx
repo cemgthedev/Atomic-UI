@@ -1,9 +1,9 @@
 import {
   Button,
-  Divider,
   Heading,
   Label,
   Loader,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -75,7 +75,7 @@ export function LoaderDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="loader-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -123,7 +123,7 @@ export function LoaderDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="loader-variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -178,7 +178,7 @@ export function LoaderDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="loader-sizes-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -232,7 +232,7 @@ export function LoaderDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="loader-properties-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">

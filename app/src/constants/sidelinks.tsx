@@ -91,8 +91,8 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.badge}`,
       },
       {
-        name: "Divider",
-        href: `/${urls.components}/${urls.divider}`,
+        name: "Separator",
+        href: `/${urls.components}/${urls.separator}`,
       },
       {
         name: "Heading",

@@ -55,9 +55,11 @@ const HeadingDetailsPage = async () => {
   return { Component: Component.HeadingDetails };
 };
 
-const DividerDetailsPage = async () => {
-  const [Component] = await Promise.all([import("@/pages/Components/divider")]);
-  return { Component: Component.DividerDetails };
+const SeparatorDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/separator"),
+  ]);
+  return { Component: Component.SeparatorDetails };
 };
 
 const ProgressDetailsPage = async () => {
@@ -201,8 +203,8 @@ export const router = createBrowserRouter([
             lazy: HeadingDetailsPage,
           },
           {
-            path: urls.divider,
-            lazy: DividerDetailsPage,
+            path: urls.separator,
+            lazy: SeparatorDetailsPage,
           },
           {
             path: urls.progress,

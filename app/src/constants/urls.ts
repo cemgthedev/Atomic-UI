@@ -36,9 +36,9 @@ export const urls = {
    */
   heading: "heading",
   /**
-   * Divider page
+   * Separator page
    */
-  divider: "divider",
+  separator: "separator",
   /**
    * Progress page
    */

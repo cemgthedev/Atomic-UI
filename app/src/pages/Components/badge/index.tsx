@@ -1,9 +1,9 @@
 import {
   Badge,
   Button,
-  Divider,
   Heading,
   Label,
+  Separator,
   Table,
   TableBody,
   TableCell,
@@ -81,7 +81,7 @@ export function BadgeDetails() {
             </Button>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="badge-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -129,7 +129,7 @@ export function BadgeDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="variants-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -232,7 +232,7 @@ export function BadgeDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="sizes-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -327,7 +327,7 @@ export function BadgeDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="rounds-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
@@ -433,7 +433,7 @@ export function BadgeDetails() {
             </div>
           </div>
 
-          <Divider size="xs" />
+          <Separator size="xs" />
 
           <Tabs defaultValue="properties-exemple" className="w-full">
             <TabsList className="bg-background border border-muted-200">
