@@ -92,6 +92,10 @@ export const urls = {
    */
   popover: "popover",
   /**
+   * Sheet page
+   */
+  sheet: "sheet",
+  /**
    * Skeleton page
    */
   skeleton: "skeleton",

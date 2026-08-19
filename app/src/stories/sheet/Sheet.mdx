@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as SheetStories from './Sheet.stories';
+
+<Meta of={SheetStories} />
+
+# Sheet
+
+Componente para exibir conteúdo em um painel deslizante sobre a interface.
+
+## Padrão
+
+Use o Sheet para apresentar informações, ações ou navegação sem mudar de página.
+
+<Canvas of={SheetStories.Default} />
+
+<Controls />
+
+## Lados
+
+O painel pode ser aberto pelos lados superior, direito, inferior ou esquerdo.
+
+<Canvas of={SheetStories.Sides} />
+
+## Botão de fechar
+
+Desabilite o botão padrão e forneça uma ação de fechamento personalizada quando necessário.
+
+<Canvas of={SheetStories.WithoutCloseButton} />

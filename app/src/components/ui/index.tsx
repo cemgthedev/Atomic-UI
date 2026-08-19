@@ -19,6 +19,7 @@ export * from "@/components/ui/pagination";
 export * from "@/components/ui/popover";
 export * from "@/components/ui/progress";
 export * from "@/components/ui/separator";
+export * from "@/components/ui/sheet";
 export * from "@/components/ui/skeleton";
 export * from "@/components/ui/switch";
 export * from "@/components/ui/table";
