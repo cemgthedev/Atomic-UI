@@ -7,8 +7,10 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
+  Sheet,
+  SheetContent,
+  SheetTrigger,
 } from "@/components/ui";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { webUrls } from "@/constants/sidelinks";
 import { urls } from "@/constants/urls";
 import { cn } from "@/utils/cn";
