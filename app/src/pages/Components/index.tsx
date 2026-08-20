@@ -51,6 +51,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.drawer}`,
   },
   {
+    name: "Dialog",
+    description: "Exibe conteúdo sobreposto que requer a atenção do usuário.",
+    href: `/${urls.components}/${urls.dialog}`,
+  },
+  {
     name: "Separator",
     description: "Separa visualmente seções e grupos de conteúdo.",
     href: `/${urls.components}/${urls.separator}`,

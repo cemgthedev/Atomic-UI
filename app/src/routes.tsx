@@ -127,6 +127,11 @@ const DrawerDetailsPage = async () => {
   return { Component: Component.DrawerDetails };
 };
 
+const DialogDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/dialog")]);
+  return { Component: Component.DialogDetails };
+};
+
 const LoaderDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/loader")]);
   return { Component: Component.LoaderDetails };
@@ -259,6 +264,10 @@ export const router = createBrowserRouter([
           {
             path: urls.drawer,
             lazy: DrawerDetailsPage,
+          },
+          {
+            path: urls.dialog,
+            lazy: DialogDetailsPage,
           },
           {
             path: urls.loader,

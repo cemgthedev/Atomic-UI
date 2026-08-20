@@ -84,6 +84,10 @@ export const urls = {
    */
   drawer: "drawer",
   /**
+   * Dialog page
+   */
+  dialog: "dialog",
+  /**
    * Loader page
    */
   loader: "loader",

@@ -1,0 +1,23 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as DialogStories from './Dialog.stories';
+
+<Meta of={DialogStories} />
+
+# Dialog
+
+Componente para exibir conteúdo sobreposto que requer a atenção do usuário.
+
+## Padrão
+
+Use o Dialog para confirmar ações ou apresentar informações que precisam ser tratadas antes de continuar.
+
+<Canvas of={DialogStories.Default} />
+
+<Controls />
+
+## Botão de fechar personalizado
+
+Desabilite o botão de fechar padrão e apresente uma ação de fechamento no rodapé quando necessário.
+
+<Canvas of={DialogStories.CustomCloseButton} />

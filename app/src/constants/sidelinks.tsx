@@ -91,6 +91,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.drawer}`,
       },
       {
+        name: "Dialog",
+        href: `/${urls.components}/${urls.dialog}`,
+      },
+      {
         name: "Badge",
         href: `/${urls.components}/${urls.badge}`,
       },
