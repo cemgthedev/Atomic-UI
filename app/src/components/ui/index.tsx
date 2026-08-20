@@ -9,6 +9,7 @@ export * from "@/components/ui/card";
 export * from "@/components/ui/checkbox";
 export * from "@/components/ui/collapsible";
 export * from "@/components/ui/datepicker";
+export * from "@/components/ui/drawer";
 export * from "@/components/ui/heading";
 export * from "@/components/ui/image";
 export * from "@/components/ui/input";

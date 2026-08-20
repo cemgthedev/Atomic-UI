@@ -46,6 +46,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.datepicker}`,
   },
   {
+    name: "Drawer",
+    description: "Exibe conteúdo em um painel deslizante que pode ser arrastado.",
+    href: `/${urls.components}/${urls.drawer}`,
+  },
+  {
     name: "Separator",
     description: "Separa visualmente seções e grupos de conteúdo.",
     href: `/${urls.components}/${urls.separator}`,
