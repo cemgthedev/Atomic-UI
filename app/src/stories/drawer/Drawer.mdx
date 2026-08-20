@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as DrawerStories from './Drawer.stories';
+
+<Meta of={DrawerStories} />
+
+# Drawer
+
+Componente para exibir conteúdo em um painel deslizante que pode ser arrastado para fechar.
+
+## Padrão
+
+Use o Drawer para apresentar informações ou ações contextuais sem mudar de página.
+
+<Canvas of={DrawerStories.Default} />
+
+<Controls />
+
+## Direções
+
+O painel pode ser aberto pelas direções superior, direita, inferior ou esquerda.
+
+<Canvas of={DrawerStories.Directions} />
+
+## Não modal
+
+Desabilite o comportamento modal para manter o conteúdo ao fundo interativo.
+
+<Canvas of={DrawerStories.NonModal} />

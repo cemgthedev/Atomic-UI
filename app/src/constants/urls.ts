@@ -80,6 +80,10 @@ export const urls = {
    */
   datepicker: "datepicker",
   /**
+   * Drawer page
+   */
+  drawer: "drawer",
+  /**
    * Loader page
    */
   loader: "loader",

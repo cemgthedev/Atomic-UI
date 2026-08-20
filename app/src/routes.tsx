@@ -122,6 +122,11 @@ const DatepickerDetailsPage = async () => {
   return { Component: Component.DatepickerDetails };
 };
 
+const DrawerDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/drawer")]);
+  return { Component: Component.DrawerDetails };
+};
+
 const LoaderDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/loader")]);
   return { Component: Component.LoaderDetails };
@@ -250,6 +255,10 @@ export const router = createBrowserRouter([
           {
             path: urls.datepicker,
             lazy: DatepickerDetailsPage,
+          },
+          {
+            path: urls.drawer,
+            lazy: DrawerDetailsPage,
           },
           {
             path: urls.loader,
