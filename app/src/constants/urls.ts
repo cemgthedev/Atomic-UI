@@ -19,6 +19,7 @@ export const urls = {
    * Breadcrumb page
    */
   breadcrumb: "breadcrumb",
+  collapsible: "collapsible",
   /**
    * Button page
    */

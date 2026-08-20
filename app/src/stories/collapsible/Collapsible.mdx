@@ -1,0 +1,23 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as CollapsibleStories from "./Collapsible.stories";
+
+<Meta of={CollapsibleStories} />
+
+# Collapsible
+
+O Collapsible exibe ou oculta conteudo complementar sem remover o contexto atual da interface.
+
+## Padrao
+
+Use `CollapsibleTrigger` para acionar a exibicao do conteudo e `CollapsibleContent` para o conteudo alternavel.
+
+<Canvas of={CollapsibleStories.Default} />
+
+<Controls />
+
+## Estado inicial aberto
+
+Use `defaultOpen` quando o conteudo deve estar visivel inicialmente.
+
+<Canvas of={CollapsibleStories.DefaultOpen} />

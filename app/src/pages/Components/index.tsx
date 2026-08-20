@@ -46,6 +46,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.checkbox}`,
   },
   {
+    name: "Collapsible",
+    description: "Exibe ou oculta conteudo complementar a partir de um acionador.",
+    href: `/${urls.components}/${urls.collapsible}`,
+  },
+  {
     name: "Datepicker",
     description: "Combina calendário e campo para seleção de datas.",
     href: `/${urls.components}/${urls.datepicker}`,
