@@ -134,6 +134,13 @@ const BreadcrumbDetailsPage = async () => {
   return { Component: Component.BreadcrumbDetails };
 };
 
+const CollapsibleDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/collapsible"),
+  ]);
+  return { Component: Component.CollapsibleDetails };
+};
+
 const DialogDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/dialog")]);
   return { Component: Component.DialogDetails };
@@ -207,6 +214,10 @@ export const router = createBrowserRouter([
           {
             path: urls.breadcrumb,
             lazy: BreadcrumbDetailsPage,
+          },
+          {
+            path: urls.collapsible,
+            lazy: CollapsibleDetailsPage,
           },
           {
             path: urls.button,

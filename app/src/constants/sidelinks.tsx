@@ -87,6 +87,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.checkbox}`,
       },
       {
+        name: "Collapsible",
+        href: `/${urls.components}/${urls.collapsible}`,
+      },
+      {
         name: "Datepicker",
         href: `/${urls.components}/${urls.datepicker}`,
       },
