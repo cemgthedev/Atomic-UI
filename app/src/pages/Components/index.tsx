@@ -16,6 +16,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.avatar}`,
   },
   {
+    name: "Breadcrumb",
+    description: "Indica a hierarquia e a localização atual na navegação.",
+    href: `/${urls.components}/${urls.breadcrumb}`,
+  },
+  {
     name: "Badge",
     description: "Destaca informações com rótulos compactos e personalizáveis.",
     href: `/${urls.components}/${urls.badge}`,

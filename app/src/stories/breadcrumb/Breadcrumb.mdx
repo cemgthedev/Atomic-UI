@@ -1,0 +1,26 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as BreadcrumbStories from "./Breadcrumb.stories";
+
+<Meta of={BreadcrumbStories} />
+
+# Breadcrumb
+
+O Breadcrumb mostra a hierarquia de navegação e identifica a página atual.
+
+## Uso básico
+
+<Canvas of={BreadcrumbStories.Default} />
+
+Use `BreadcrumbLink` nos níveis navegáveis e `BreadcrumbPage` somente para a página atual.
+
+## Separador personalizado
+
+O `BreadcrumbSeparator` aceita conteúdo filho para substituir o ícone padrão.
+
+<Canvas of={BreadcrumbStories.CustomSeparator} />
+
+## Caminhos extensos
+
+Para ocultar níveis intermediários, use `BreadcrumbEllipsis`.
+
+<Canvas of={BreadcrumbStories.WithEllipsis} />
