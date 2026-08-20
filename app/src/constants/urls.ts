@@ -16,6 +16,10 @@ export const urls = {
    */
   components: "components",
   /**
+   * Breadcrumb page
+   */
+  breadcrumb: "breadcrumb",
+  /**
    * Button page
    */
   button: "button",

@@ -127,6 +127,13 @@ const DrawerDetailsPage = async () => {
   return { Component: Component.DrawerDetails };
 };
 
+const BreadcrumbDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/breadcrumb"),
+  ]);
+  return { Component: Component.BreadcrumbDetails };
+};
+
 const DialogDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/dialog")]);
   return { Component: Component.DialogDetails };
@@ -196,6 +203,10 @@ export const router = createBrowserRouter([
           {
             index: true,
             lazy: ComponentsPage,
+          },
+          {
+            path: urls.breadcrumb,
+            lazy: BreadcrumbDetailsPage,
           },
           {
             path: urls.button,

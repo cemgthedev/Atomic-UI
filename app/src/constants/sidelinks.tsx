@@ -67,6 +67,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.avatar}`,
       },
       {
+        name: "Breadcrumb",
+        href: `/${urls.components}/${urls.breadcrumb}`,
+      },
+      {
         name: "Button",
         href: `/${urls.components}/${urls.button}`,
       },
