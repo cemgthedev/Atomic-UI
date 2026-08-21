@@ -107,6 +107,21 @@
   --danger-900: oklch(39.6% 0.141 25.723);
   --danger-950: oklch(25.8% 0.092 26.042);
 
+  /* Error colors */
+  --error: oklch(57.7% 0.245 27.325);
+  --error-foreground: oklch(98.5% 0.002 247.839);
+  --error-50: oklch(97.1% 0.013 17.38);
+  --error-100: oklch(93.6% 0.032 17.717);
+  --error-200: oklch(88.5% 0.062 18.334);
+  --error-300: oklch(80.8% 0.114 19.571);
+  --error-400: oklch(70.4% 0.191 22.216);
+  --error-500: oklch(63.7% 0.237 25.331);
+  --error-600: oklch(57.7% 0.245 27.325); /* DEFAULT */
+  --error-700: oklch(50.5% 0.213 27.518);
+  --error-800: oklch(44.4% 0.177 26.899);
+  --error-900: oklch(39.6% 0.141 25.723);
+  --error-950: oklch(25.8% 0.092 26.042);
+
   /* Muted colors */
   --muted: oklch(87.2% 0.01 258.338);
   --muted-foreground: oklch(44.6% 0.03 256.802);

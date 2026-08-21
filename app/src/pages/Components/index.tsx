@@ -47,7 +47,8 @@ const components: ComponentProps[] = [
   },
   {
     name: "Collapsible",
-    description: "Exibe ou oculta conteudo complementar a partir de um acionador.",
+    description:
+      "Exibe ou oculta conteudo complementar a partir de um acionador.",
     href: `/${urls.components}/${urls.collapsible}`,
   },
   {
@@ -57,7 +58,8 @@ const components: ComponentProps[] = [
   },
   {
     name: "Drawer",
-    description: "Exibe conteúdo em um painel deslizante que pode ser arrastado.",
+    description:
+      "Exibe conteúdo em um painel deslizante que pode ser arrastado.",
     href: `/${urls.components}/${urls.drawer}`,
   },
   {
@@ -140,6 +142,11 @@ const components: ComponentProps[] = [
     name: "Textarea",
     description: "Campo para entrada de textos com múltiplas linhas.",
     href: `/${urls.components}/${urls.textarea}`,
+  },
+  {
+    name: "Toast",
+    description: "Exibe notificações temporárias informando status do sistema.",
+    href: `/${urls.components}/${urls.toast}`,
   },
 ];
 
