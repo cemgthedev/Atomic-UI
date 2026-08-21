@@ -6,7 +6,7 @@ export const toastExample = `<Button
 </Button>`;
 
 export const toastVariantsExample = `<div className="flex flex-wrap justify-center gap-2">
-    {(["default", "primary", "secondary", "success", "warning", "danger"] as const).map(
+    {(["default", "primary", "primary-bordered", "primary-ghost", "secondary", "success", "warning", "danger"] as const).map(
         (variant) => (
             <Button
                 key={variant}
@@ -104,6 +104,49 @@ export const toastPositionsExample = `<div className="flex flex-wrap justify-cen
     >
         Bottom Right
     </Button>
+</div>`;
+
+export const toastCustomsExample = `<div className="flex flex-wrap justify-center gap-2">
+    {(
+    [
+        "default",
+        "primary",
+        "primary-bordered",
+        "primary-ghost",
+        "secondary",
+        "success",
+        "warning",
+        "danger",
+    ] as const
+    ).map((variant) => (
+    <Button
+        key={variant}
+        variant={variant}
+        onClick={() => {
+        toast(
+            <div className="flex gap-1 items-center p-1 animate-pulse">
+            <InfoIcon size={20} />
+            <Text>
+                A custom toast with a{" "}
+                <a
+                href="https://emilkowal.ski/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline leading-0"
+                >
+                link
+                </a>
+            </Text>
+            </div>,
+            {
+            variant: variant,
+            },
+        );
+        }}
+    >
+        {variant}
+    </Button>
+    ))}
 </div>`;
 
 export const toastPropertiesExample = ` <Button

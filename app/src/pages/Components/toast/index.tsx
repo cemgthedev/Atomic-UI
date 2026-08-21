@@ -18,6 +18,7 @@ import {
 } from "@/components/ui";
 import { urls } from "@/constants/urls";
 import {
+  toastCustomsExample,
   toastDescriptionsExample,
   toastExample,
   toastPositionsExample,
@@ -28,7 +29,7 @@ import { toastSourceCode } from "@/pages/Components/toast/codes/source-code";
 import type { UrlProps } from "@/types/urls";
 import { cn } from "@/utils/cn";
 import { copy } from "@/utils/copy";
-import { Copy, EyeIcon } from "lucide-react";
+import { Copy, EyeIcon, InfoIcon } from "lucide-react";
 import { Link, useLocation } from "react-router";
 
 export const sectionLinks: UrlProps[] = [
@@ -47,6 +48,10 @@ export const sectionLinks: UrlProps[] = [
   {
     name: "Posição",
     href: `/${urls.components}/${urls.toast}#posicao`,
+  },
+  {
+    name: "Customizado",
+    href: `/${urls.components}/${urls.toast}#customizado`,
   },
   {
     name: "Propriedades",
@@ -153,6 +158,8 @@ export function ToastDetails() {
                     [
                       "default",
                       "primary",
+                      "primary-bordered",
+                      "primary-ghost",
                       "secondary",
                       "success",
                       "warning",
@@ -349,6 +356,89 @@ export function ToastDetails() {
                 <Button
                   startContent={<Copy size={20} className="text-zinc-600" />}
                   onClick={() => copy(toastPositionsExample)}
+                  className="bg-transparent border-none p-0"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+
+        {/* Customizados */}
+        <div id="customizado" className="flex flex-col gap-3 py-4">
+          <Heading>Customizado</Heading>
+          <Text className="indent-8">
+            Exemplos de toasts totalmente customizados
+          </Text>
+          <Separator size="xs" />
+          <Tabs defaultValue="custom-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="custom-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="custom-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="custom-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <div className="flex flex-wrap justify-center gap-2">
+                  {(
+                    [
+                      "default",
+                      "primary",
+                      "primary-bordered",
+                      "primary-ghost",
+                      "secondary",
+                      "success",
+                      "warning",
+                      "danger",
+                    ] as const
+                  ).map((variant) => (
+                    <Button
+                      key={variant}
+                      variant={variant}
+                      onClick={() => {
+                        toast(
+                          <div className="flex gap-1 items-center p-1 animate-pulse">
+                            <InfoIcon size={20} />
+                            <Text>
+                              A custom toast with a{" "}
+                              <a
+                                href="https://emilkowal.ski/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline leading-0"
+                              >
+                                link
+                              </a>
+                            </Text>
+                          </div>,
+                          {
+                            variant: variant,
+                          },
+                        );
+                      }}
+                    >
+                      {variant}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            </TabsContent>
+            <TabsContent value="custom-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{toastCustomsExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(toastCustomsExample)}
                   className="bg-transparent border-none p-0"
                 />
               </div>

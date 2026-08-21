@@ -1,5 +1,6 @@
 import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
+import type { ReactNode } from "react";
 import {
   Toaster as Sonner,
   toast as toastSonner,
@@ -7,10 +8,10 @@ import {
   type ToasterProps,
 } from "sonner";
 
-export const toastVariants = cva("border!", {
+const toastVariants = cva("border!", {
   variants: {
     variant: {
-      default: "bg-muted! text-foreground!",
+      default: "bg-muted-200! text-foreground!",
 
       dark: "bg-dark! text-dark-foreground!",
 
@@ -24,7 +25,7 @@ export const toastVariants = cva("border!", {
 
       warning: "bg-warning! text-warning-foreground!",
 
-      danger: "bg-danger! text-danger-foreground!",
+      danger: "bg-red-600! text-gray-50!",
 
       "dark-bordered": "border-dark! text-dark!",
 
@@ -38,7 +39,7 @@ export const toastVariants = cva("border!", {
 
       "warning-bordered": "border-warning! text-warning!",
 
-      "danger-bordered": "border-danger! text-danger!",
+      "danger-bordered": "border-red-600! text-red-600!",
 
       ghost: "bg-transparent! border-transparent!",
 
@@ -53,7 +54,7 @@ export const toastVariants = cva("border!", {
 
       "warning-ghost": "bg-warning-200! border-warning-800! text-warning-800!",
 
-      "danger-ghost": "bg-danger-200! border-danger-800! text-danger-800!",
+      "danger-ghost": "bg-red-200! border-red-800! text-red-800!",
     },
   },
 
@@ -80,7 +81,7 @@ const createToastOptions = (options?: ToastOptions) => {
   };
 };
 
-const toast = (message: string, options?: ToastOptions) => {
+const toast = (message: ReactNode, options?: ToastOptions) => {
   return toastSonner(message, createToastOptions(options));
 };
 
@@ -97,4 +98,4 @@ const Toaster = ({ ...props }: ToasterProps) => {
   );
 };
 
-export { toast, Toaster };
+export { toast, Toaster, toastVariants };
