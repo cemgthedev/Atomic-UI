@@ -15,7 +15,7 @@ const toastVariants = cva("border!", {
 
       dark: "bg-dark! text-dark-foreground!",
 
-      muted: "bg-muted! text-foreground! opacity-60!",
+      muted: "bg-muted! text-foreground! opacity-90!",
 
       primary: "bg-primary! text-primary-foreground!",
 
@@ -29,7 +29,7 @@ const toastVariants = cva("border!", {
 
       "dark-bordered": "border-dark! text-dark!",
 
-      "muted-bordered": "border-muted! text-muted! opacity-60!",
+      "muted-bordered": "border-muted! text-muted-600! opacity-90!",
 
       "primary-bordered": "border-primary! text-primary!",
 
