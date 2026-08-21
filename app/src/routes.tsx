@@ -91,6 +91,11 @@ const TextareaDetailsPage = async () => {
   return { Component: Component.TextareaDetails };
 };
 
+const ToastDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/toast")]);
+  return { Component: Component.ToastDetails };
+};
+
 const MessageDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/message")]);
   return { Component: Component.MessageDetails };
@@ -262,6 +267,10 @@ export const router = createBrowserRouter([
           {
             path: urls.textarea,
             lazy: TextareaDetailsPage,
+          },
+          {
+            path: urls.toast,
+            lazy: ToastDetailsPage,
           },
           {
             path: urls.message,

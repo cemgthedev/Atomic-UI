@@ -1,0 +1,59 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as ToastStories from "./Toast.stories";
+
+<Meta of={ToastStories} />
+
+# Toast
+
+Notificação temporária para informar o usuário sobre ações, estados e resultados de operações.
+
+## Padrão
+
+Use para exibir uma mensagem simples ao usuário.
+
+<Canvas of={ToastStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Veja as diferentes aparências suportadas pelo componente.
+
+<Canvas of={ToastStories.Variants} />
+
+## Descrição
+
+Adicione uma descrição para fornecer informações complementares à mensagem principal.
+
+<Canvas of={ToastStories.WithDescription} />
+
+## Ação
+
+Permite adicionar uma ação que o usuário pode executar diretamente no Toast.
+
+<Canvas of={ToastStories.WithAction} />
+
+## Cancelamento
+
+Permite adicionar uma ação de cancelamento ao Toast.
+
+<Canvas of={ToastStories.WithCancel} />
+
+## Posicionamentos
+
+Veja as posições disponíveis para exibição do Toast.
+
+<Canvas of={ToastStories.Positions} />
+
+## Conteúdo customizado
+
+O Toast aceita conteúdo React customizado através de `ReactNode`.
+
+<Canvas of={ToastStories.CustomContent} />
+
+## Duração
+
+Demonstra como personalizar o tempo de exibição do Toast.
+
+<Canvas of={ToastStories.CustomDuration} />

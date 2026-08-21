@@ -5,7 +5,7 @@ import { Footer } from "@/components/structures/Footer";
 import { Header } from "@/components/structures/Header";
 import { Main } from "@/components/structures/Main";
 import { Sidebar } from "@/components/structures/Sidebar";
-import { Progress, ProgressValue } from "@/components/ui";
+import { Progress, ProgressValue, Toaster } from "@/components/ui";
 import { Outlet } from "react-router";
 
 function findScrollableElement(root: HTMLElement): HTMLElement | null {
@@ -96,10 +96,16 @@ export function DefaultLayout() {
       </div>
       <Header />
       <Main ref={mainRef}>
-        <Sidebar collapsible="icon" defaultOpen={false} className="hidden md:block" />
+        <Sidebar
+          collapsible="icon"
+          defaultOpen={false}
+          className="hidden md:block"
+        />
         <Outlet />
       </Main>
       <Footer />
+
+      <Toaster />
     </>
   );
 }

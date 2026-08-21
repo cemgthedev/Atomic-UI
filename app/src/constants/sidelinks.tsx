@@ -166,6 +166,10 @@ export const webUrls: UrlProps[] = [
         name: "Textarea",
         href: `/${urls.components}/${urls.textarea}`,
       },
+      {
+        name: "Toast",
+        href: `/${urls.components}/${urls.toast}`,
+      },
     ],
   },
 ];

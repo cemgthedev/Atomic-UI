@@ -65,6 +65,10 @@ export const urls = {
    */
   textarea: "textarea",
   /**
+   * Toast page
+   */
+  toast: "toast",
+  /**
    * Message page
    */
   message: "message",
