@@ -69,6 +69,10 @@ export const urls = {
    */
   toast: "toast",
   /**
+   * Tooltip page
+   */
+  tooltip: "tooltip",
+  /**
    * Message page
    */
   message: "message",

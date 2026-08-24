@@ -1,0 +1,33 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+
+import * as TooltipStories from "./Tooltip.stories";
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+Exibe uma descrição curta que ajuda a explicar ícones, ações e controles sem ocupar espaço permanente na interface.
+
+## Padrão
+
+Use `TooltipProvider`, `Tooltip`, `TooltipTrigger` e `TooltipContent` para associar a dica ao elemento acionador.
+
+<Canvas of={TooltipStories.Default} />
+
+## Variantes
+
+Exemplo de todas as variantes do tooltip.
+
+<Canvas of={TooltipStories.Variants} />
+
+## Posicionamento
+
+Escolha o lado preferencial com a propriedade `side`.
+
+<Canvas of={TooltipStories.Positions} />
+
+## Atraso
+
+Configure `delayDuration` no provider quando for necessário evitar aberturas imediatas.
+
+<Canvas of={TooltipStories.WithDelay} />

@@ -148,6 +148,11 @@ const components: ComponentProps[] = [
     description: "Exibe notificações temporárias informando status do sistema.",
     href: `/${urls.components}/${urls.toast}`,
   },
+  {
+    name: "Tooltip",
+    description: "Exibe uma breve descrição ao passar o cursor ou focar um elemento.",
+    href: `/${urls.components}/${urls.tooltip}`,
+  },
 ];
 
 export function Components() {

@@ -170,6 +170,10 @@ export const webUrls: UrlProps[] = [
         name: "Toast",
         href: `/${urls.components}/${urls.toast}`,
       },
+      {
+        name: "Tooltip",
+        href: `/${urls.components}/${urls.tooltip}`,
+      },
     ],
   },
 ];
