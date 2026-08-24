@@ -185,6 +185,11 @@ const SwitchDetailsPage = async () => {
   return { Component: Component.SwitchDetails };
 };
 
+const TooltipDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/tooltip")]);
+  return { Component: Component.TooltipDetails };
+};
+
 export const router = createBrowserRouter([
   {
     path: urls.dashboard,
@@ -323,6 +328,10 @@ export const router = createBrowserRouter([
           {
             path: urls.switch,
             lazy: SwitchDetailsPage,
+          },
+          {
+            path: urls.tooltip,
+            lazy: TooltipDetailsPage,
           },
         ],
       },
