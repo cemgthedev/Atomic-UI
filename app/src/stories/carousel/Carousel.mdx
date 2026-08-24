@@ -1,0 +1,44 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as CarouselStories from './Carousel.stories';
+
+<Meta of={CarouselStories} />
+
+# Carousel
+
+Componente para apresentar conteúdo em slides navegáveis. Ele é construído sobre o Embla Carousel e oferece uma composição simples para conteúdo, itens e controles de navegação.
+
+## Uso padrão
+
+Monte o componente com `CarouselContent` para agrupar os slides, `CarouselItem` para cada item e os controles opcionais `CarouselPrevious` e `CarouselNext`.
+
+<Canvas of={CarouselStories.Default} />
+
+<Controls of={CarouselStories.Default} />
+
+```tsx
+<Carousel>
+  <CarouselContent>
+    <CarouselItem>Conteúdo do primeiro slide</CarouselItem>
+    <CarouselItem>Conteúdo do segundo slide</CarouselItem>
+  </CarouselContent>
+  <CarouselPrevious />
+  <CarouselNext />
+</Carousel>
+```
+
+## Múltiplos itens
+
+Altere a base de cada `CarouselItem` para exibir mais de um slide por vez. Neste exemplo, a grade passa de dois para três itens em telas médias.
+
+<Canvas of={CarouselStories.MultipleItems} />
+
+## Orientação vertical
+
+Defina `orientation="vertical"` e forneça uma altura ao `CarouselContent` para navegar os slides verticalmente.
+
+<Canvas of={CarouselStories.Vertical} />
+
+## Acessibilidade
+
+O carousel expõe a região com a descrição apropriada e cada item é identificado como um slide. Quando o foco está dentro do componente, use as setas esquerda e direita para navegar entre os itens. Os botões de anterior e próximo ficam automaticamente desabilitados nos limites da navegação.

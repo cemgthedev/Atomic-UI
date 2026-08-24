@@ -84,6 +84,7 @@ export const urls = {
    * Card page
    */
   card: "card",
+  carousel: "carousel",
   /**
    * Checkbox page
    */

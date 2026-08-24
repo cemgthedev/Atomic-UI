@@ -41,6 +41,12 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.card}`,
   },
   {
+    name: "Carousel",
+    description:
+      "Exibe conteúdos em slides navegáveis horizontal ou verticalmente.",
+    href: `/${urls.components}/${urls.carousel}`,
+  },
+  {
     name: "Checkbox",
     description: "Permite selecionar ou desmarcar opções independentes.",
     href: `/${urls.components}/${urls.checkbox}`,
@@ -48,7 +54,7 @@ const components: ComponentProps[] = [
   {
     name: "Collapsible",
     description:
-      "Exibe ou oculta conteudo complementar a partir de um acionador.",
+      "Exibe ou oculta conteúdo complementar a partir de um acionador.",
     href: `/${urls.components}/${urls.collapsible}`,
   },
   {
@@ -150,7 +156,8 @@ const components: ComponentProps[] = [
   },
   {
     name: "Tooltip",
-    description: "Exibe uma breve descrição ao passar o cursor ou focar um elemento.",
+    description:
+      "Exibe uma breve descrição ao passar o cursor ou focar um elemento.",
     href: `/${urls.components}/${urls.tooltip}`,
   },
 ];
