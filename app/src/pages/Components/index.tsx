@@ -130,6 +130,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.progress}`,
   },
   {
+    name: "Slider",
+    description: "Permite selecionar valores dentro de um intervalo.",
+    href: `/${urls.components}/${urls.slider}`,
+  },
+  {
     name: "Skeleton",
     description: "Exibe um placeholder durante o carregamento do conteúdo.",
     href: `/${urls.components}/${urls.skeleton}`,

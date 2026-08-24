@@ -155,6 +155,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.progress}`,
       },
       {
+        name: "Slider",
+        href: `/${urls.components}/${urls.slider}`,
+      },
+      {
         name: "Skeleton",
         href: `/${urls.components}/${urls.skeleton}`,
       },

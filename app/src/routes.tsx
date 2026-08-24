@@ -69,6 +69,11 @@ const ProgressDetailsPage = async () => {
   return { Component: Component.ProgressDetails };
 };
 
+const SliderDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/slider")]);
+  return { Component: Component.SliderDetails };
+};
+
 const AvatarDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/avatar")]);
   return { Component: Component.AvatarDetails };
@@ -263,6 +268,10 @@ export const router = createBrowserRouter([
           {
             path: urls.progress,
             lazy: ProgressDetailsPage,
+          },
+          {
+            path: urls.slider,
+            lazy: SliderDetailsPage,
           },
           {
             path: urls.avatar,
