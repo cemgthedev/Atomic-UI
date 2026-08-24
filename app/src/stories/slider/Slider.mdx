@@ -1,0 +1,41 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+
+import * as SliderStories from "./Slider.stories";
+
+<Meta of={SliderStories} />
+
+# Slider
+
+Componente para selecionar um ou mais valores dentro de um intervalo.
+
+## Padrão
+
+Use para a seleção de um único valor.
+
+<Canvas of={SliderStories.Default} />
+
+<Controls />
+
+## Variantes
+
+Exemplos de todas as variantes de range.
+
+<Canvas of={SliderStories.Variants} />
+
+## Intervalo
+
+Passe dois valores para permitir a seleção de uma faixa.
+
+<Canvas of={SliderStories.Range} />
+
+## Orientação vertical
+
+Use a orientação vertical quando o espaço horizontal for limitado.
+
+<Canvas of={SliderStories.Vertical} />
+
+## Desabilitado
+
+O estado desabilitado impede a interação.
+
+<Canvas of={SliderStories.Disabled} />

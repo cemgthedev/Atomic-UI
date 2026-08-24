@@ -49,6 +49,10 @@ export const urls = {
    */
   progress: "progress",
   /**
+   * Slider page
+   */
+  slider: "slider",
+  /**
    * Avatar page
    */
   avatar: "avatar",
