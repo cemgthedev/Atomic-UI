@@ -83,6 +83,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.card}`,
       },
       {
+        name: "Carousel",
+        href: `/${urls.components}/${urls.carousel}`,
+      },
+      {
         name: "Checkbox",
         href: `/${urls.components}/${urls.checkbox}`,
       },

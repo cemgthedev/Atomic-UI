@@ -113,6 +113,13 @@ const CardDetailsPage = async () => {
   return { Component: Component.CardDetails };
 };
 
+const CarouselDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/carousel"),
+  ]);
+  return { Component: Component.DetailsCarousel };
+};
+
 const CheckboxDetailsPage = async () => {
   const [Component] = await Promise.all([
     import("@/pages/Components/checkbox"),
@@ -288,6 +295,10 @@ export const router = createBrowserRouter([
           {
             path: urls.card,
             lazy: CardDetailsPage,
+          },
+          {
+            path: urls.carousel,
+            lazy: CarouselDetailsPage,
           },
           {
             path: urls.checkbox,
