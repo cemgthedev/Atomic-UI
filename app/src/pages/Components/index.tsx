@@ -145,6 +145,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.switch}`,
   },
   {
+    name: "Tabs",
+    description: "Organiza conteúdo em abas interativas acessíveis.",
+    href: `/${urls.components}/${urls.tabs}`,
+  },
+  {
     name: "Text",
     description: "Renderiza textos com estilos tipográficos consistentes.",
     href: `/${urls.components}/${urls.text}`,

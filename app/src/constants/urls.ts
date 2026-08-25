@@ -65,6 +65,10 @@ export const urls = {
    */
   input: "input",
   /**
+   * Tabs page
+   */
+  tabs: "tabs",
+  /**
    * Textarea page
    */
   textarea: "textarea",
