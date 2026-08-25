@@ -365,6 +365,28 @@ export function TextareaDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>startContent</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>Conteúdo exibido antes do texto.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    <Text>endContent</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>Conteúdo exibido depois do texto.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
