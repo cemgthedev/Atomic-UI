@@ -85,6 +85,10 @@ export const urls = {
    */
   message: "message",
   /**
+   * Radio group page
+   */
+  radio_group: "radio_group",
+  /**
    * Calendar page
    */
   calendar: "calendar",

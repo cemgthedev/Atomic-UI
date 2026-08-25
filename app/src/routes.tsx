@@ -111,6 +111,13 @@ const MessageDetailsPage = async () => {
   return { Component: Component.MessageDetails };
 };
 
+const RadioGroupDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/radio-group"),
+  ]);
+  return { Component: Component.RadioGroupDetails };
+};
+
 const CalendarDetailsPage = async () => {
   const [Component] = await Promise.all([
     import("@/pages/Components/calendar"),
@@ -305,6 +312,10 @@ export const router = createBrowserRouter([
           {
             path: urls.message,
             lazy: MessageDetailsPage,
+          },
+          {
+            path: urls.radio_group,
+            lazy: RadioGroupDetailsPage,
           },
           {
             path: urls.calendar,
