@@ -1,17 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { EyeOff, Lock, Mail, Search } from "lucide-react";
-import type { ComponentProps } from "react";
 
 import { Input } from "@/components/ui";
 import React from "react";
-
-type InputStoryProps = Omit<
-  ComponentProps<typeof Input>,
-  "startContent" | "endContent"
-> & {
-  startContent?: boolean;
-  endContent?: boolean;
-};
 
 const meta = {
   title: "Components/Input",
@@ -70,20 +60,6 @@ const meta = {
         type: { summary: "string" },
       },
     },
-    startContent: {
-      description: "Define o conteúdo inicial do input.",
-      control: "boolean",
-      table: {
-        type: { summary: "ReactNode" },
-      },
-    },
-    endContent: {
-      description: "Define o conteúdo final do input.",
-      control: "boolean",
-      table: {
-        type: { summary: "ReactNode" },
-      },
-    },
     isClearable: {
       description: "Define se o input possui ação de limpar.",
       control: "boolean",
@@ -95,10 +71,10 @@ const meta = {
       description: "Função chamada quando a ação de limpar é acionada.",
     },
   },
-} satisfies Meta<InputStoryProps>;
+} satisfies Meta<typeof Input>;
 
 export default meta;
-type Story = StoryObj<InputStoryProps>;
+type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   args: {
@@ -106,11 +82,9 @@ export const Default: Story = {
     variant: "default",
     size: "md",
     rounded: "md",
-    startContent: false,
-    endContent: false,
     isClearable: false,
   },
-  render: ({ startContent, endContent, isClearable, placeholder, ...args }) => {
+  render: ({ isClearable, placeholder, ...args }) => {
     const [value, setValue] = React.useState("Texto de exemplo");
 
     function onChangeValue(e: React.ChangeEvent<HTMLInputElement>) {
@@ -126,10 +100,6 @@ export const Default: Story = {
         <Input
           {...args}
           placeholder={placeholder}
-          startContent={
-            startContent ? <Search className="h-4 w-4" /> : undefined
-          }
-          endContent={endContent ? <Mail className="h-4 w-4" /> : undefined}
           value={value}
           onChange={onChangeValue}
           isClearable={isClearable}
@@ -161,12 +131,7 @@ export const Variants: Story = {
     return (
       <div className="flex flex-col gap-3 w-80">
         {variants.map((variant) => (
-          <Input
-            key={variant}
-            variant={variant}
-            placeholder={variant}
-            startContent={<Search className="h-4 w-4" />}
-          />
+          <Input key={variant} variant={variant} placeholder={variant} />
         ))}
       </div>
     );
@@ -181,13 +146,8 @@ export const WithIcons: Story = {
   },
   render: () => (
     <div className="w-80 flex flex-col gap-3">
-      <Input placeholder="E-mail" startContent={<Mail className="h-4 w-4" />} />
-      <Input
-        placeholder="Senha"
-        type="password"
-        startContent={<Lock className="h-4 w-4" />}
-        endContent={<EyeOff className="h-4 w-4" />}
-      />
+      <Input placeholder="E-mail" />
+      <Input placeholder="Senha" type="password" />
     </div>
   ),
 };

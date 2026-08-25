@@ -51,8 +51,6 @@ const inputVariants = cva(
 
 type InputProps = Omit<React.ComponentProps<"input">, "size"> &
   VariantProps<typeof inputVariants> & {
-    startContent?: React.ReactNode;
-    endContent?: React.ReactNode;
     isClearable?: boolean;
     onClear?: () => void;
   };
@@ -64,8 +62,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       variant = "default",
       size = "md",
       rounded = "md",
-      startContent = null,
-      endContent = null,
       isClearable,
       onClear,
       ...props
@@ -74,8 +70,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ) => {
     return (
       <div className={inputVariants({ variant, size, rounded, className })}>
-        {startContent}
-
         <input
           ref={ref}
           className={cn(
@@ -92,8 +86,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           )}
           {...props}
         />
-
-        {endContent}
 
         {isClearable && onClear && props.value && (
           <button
