@@ -89,6 +89,11 @@ const InputDetailsPage = async () => {
   return { Component: Component.InputDetails };
 };
 
+const TabsDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/tabs")]);
+  return { Component: Component.TabsDetails };
+};
+
 const TextareaDetailsPage = async () => {
   const [Component] = await Promise.all([
     import("@/pages/Components/textarea"),
@@ -284,6 +289,10 @@ export const router = createBrowserRouter([
           {
             path: urls.input,
             lazy: InputDetailsPage,
+          },
+          {
+            path: urls.tabs,
+            lazy: TabsDetailsPage,
           },
           {
             path: urls.textarea,

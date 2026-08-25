@@ -167,6 +167,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.switch}`,
       },
       {
+        name: "Tabs",
+        href: `/${urls.components}/${urls.tabs}`,
+      },
+      {
         name: "Text",
         href: `/${urls.components}/${urls.text}`,
       },
