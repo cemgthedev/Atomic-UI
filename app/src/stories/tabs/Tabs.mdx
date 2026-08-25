@@ -1,0 +1,47 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+import * as TabsStories from "./Tabs.stories";
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+Componente de navegação que organiza conteúdo em abas interativas, permitindo alternar entre diferentes seções da interface.
+
+## Exemplo
+
+<Canvas of={TabsStories.Default} />
+
+<Controls />
+
+## Variantes
+
+O `TabsTrigger` suporta diferentes variantes visuais.
+
+<Canvas of={TabsStories.Variants} />
+
+## Tamanhos
+
+O `TabsTrigger` possui cinco tamanhos: `xs`, `sm`, `md`, `lg` e `xl`.
+
+<Canvas of={TabsStories.Sizes} />
+
+## Orientação vertical
+
+Utilize `orientation="vertical"` no `Tabs` para organizar as abas verticalmente.
+
+<Canvas of={TabsStories.Vertical} />
+
+## TabsList
+
+O `TabsList` possui duas variantes:
+
+- `default`
+- `line`
+
+<Canvas of={TabsStories.Line} />
+
+## Abas desabilitadas
+
+Utilize `disabled` no `TabsTrigger` para impedir sua interação.
+
+<Canvas of={TabsStories.Disabled} />
