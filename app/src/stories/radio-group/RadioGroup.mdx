@@ -1,0 +1,130 @@
+import { Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
+import * as RadioGroupStories from "./RadioGroup.stories";
+
+<Meta of={RadioGroupStories} />
+
+# RadioGroup
+
+O **RadioGroup** permite selecionar **uma única opção entre várias alternativas**. Ele é composto por um contêiner (`RadioGroup`) e itens selecionáveis (`RadioGroupItem`), oferecendo suporte a variantes, tamanhos, arredondamentos e integração completa com formulários.
+
+---
+
+## Playground
+
+Utilize os controles abaixo para alterar a aparência do `RadioGroupItem`.
+
+<Canvas of={RadioGroupStories.Playground} />
+
+<Controls of={RadioGroupStories.Playground} />
+
+---
+
+## Variantes
+
+O AtomicUI disponibiliza variantes sólidas, bordered e ghost para todos os temas.
+
+<Canvas of={RadioGroupStories.Variants} />
+
+As variantes disponíveis são:
+
+- `default`
+- `primary`
+- `secondary`
+- `success`
+- `warning`
+- `danger`
+- `dark`
+- `muted`
+- `dark-bordered`
+- `muted-bordered`
+- `primary-bordered`
+- `secondary-bordered`
+- `success-bordered`
+- `warning-bordered`
+- `danger-bordered`
+- `dark-ghost`
+- `muted-ghost`
+- `primary-ghost`
+- `secondary-ghost`
+- `success-ghost`
+- `warning-ghost`
+- `danger-ghost`
+
+---
+
+## Tamanhos
+
+O tamanho altera proporcionalmente o indicador interno e a área clicável do componente.
+
+<Canvas of={RadioGroupStories.Sizes} />
+
+Tamanhos disponíveis:
+
+- `xs`
+- `sm`
+- `md`
+- `lg`
+- `xl`
+
+---
+
+## Arredondamentos
+
+O `rounded` modifica o formato do `RadioGroupItem` e acompanha o indicador interno automaticamente.
+
+<Canvas of={RadioGroupStories.Rounded} />
+
+Arredondamentos disponíveis:
+
+- `xs`
+- `sm`
+- `md`
+- `lg`
+- `xl`
+- `full`
+
+---
+
+## Estado desabilitado
+
+Itens podem ser desabilitados individualmente utilizando `disabled`.
+
+<Canvas of={RadioGroupStories.Disabled} />
+
+---
+
+## Estrutura do componente
+
+O `RadioGroupItem` deve sempre estar dentro de um `RadioGroup`, que controla o valor selecionado.
+
+---
+
+## Propriedades
+
+### RadioGroup
+
+- `defaultValue` — Define o valor selecionado inicialmente.
+- `value` — Controla o valor selecionado do grupo.
+- `onValueChange` — Callback executado quando a seleção muda.
+- `disabled` — Desabilita todos os itens do grupo.
+- `className` — Classes adicionais aplicadas ao contêiner.
+
+### RadioGroupItem
+
+- `value` — Identificador único do item dentro do grupo.
+- `variant` — Define a aparência visual do item.
+- `size` — Controla o tamanho do indicador.
+- `rounded` — Define o formato das bordas.
+- `disabled` — Desabilita apenas o item atual.
+- `className` — Classes adicionais aplicadas ao item.
+
+## Acessibilidade
+
+O componente é construído sobre o **Radix UI RadioGroup**, oferecendo suporte nativo a:
+
+- Navegação por teclado com `Tab` e setas direcionais.
+- Seleção de apenas uma opção por grupo.
+- Estados `checked`, `disabled` e `focus-visible`.
+- Compatibilidade com leitores de tela através dos papéis `radiogroup` e `radio`.
+
+Para melhor acessibilidade, associe cada `RadioGroupItem` a um `Label`.

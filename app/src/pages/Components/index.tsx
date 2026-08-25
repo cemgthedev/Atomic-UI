@@ -110,6 +110,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.message}`,
   },
   {
+    name: "Radio Group",
+    description: "Seleciona apenas uma opção entre várias.",
+    href: `/${urls.components}/${urls.radio_group}`,
+  },
+  {
     name: "Pagination",
     description: "Navega entre páginas de grandes conjuntos de dados.",
     href: `/${urls.components}/${urls.pagination}`,

@@ -139,6 +139,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.message}`,
       },
       {
+        name: "Radio Group",
+        href: `/${urls.components}/${urls.radio_group}`,
+      },
+      {
         name: "Pagination",
         href: `/${urls.components}/${urls.pagination}`,
       },
