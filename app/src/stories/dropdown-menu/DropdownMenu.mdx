@@ -1,0 +1,56 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as DropdownMenuStories from "./DropdownMenu.stories";
+
+<Meta of={DropdownMenuStories} />
+
+# DropdownMenu
+
+Menu suspenso acessível para exibir ações, opções e navegação contextual de forma organizada, rápida e consistente.
+
+---
+
+## Default
+
+Demonstra a utilização básica do DropdownMenu com itens e atalho de teclado.
+
+<Canvas of={DropdownMenuStories.Default} />
+
+---
+
+## Items
+
+Demonstra a organização de itens utilizando grupos, separadores e diferentes variantes.
+
+<Canvas of={DropdownMenuStories.Items} />
+
+---
+
+## Checkbox
+
+Demonstra itens com estado selecionável, incluindo opções marcadas e desabilitadas.
+
+<Canvas of={DropdownMenuStories.Checkbox} />
+
+---
+
+## Radio
+
+Demonstra um grupo de opções mutuamente exclusivas utilizando radio items.
+
+<Canvas of={DropdownMenuStories.Radio} />
+
+---
+
+## Sub Menu
+
+Demonstra a criação de menus hierárquicos com opções dentro de um submenu.
+
+<Canvas of={DropdownMenuStories.SubMenu} />
+
+---
+
+## Properties
+
+Demonstra as propriedades visuais `size`, `variant` e `inset` aplicadas aos itens.
+
+<Canvas of={DropdownMenuStories.Properties} />
