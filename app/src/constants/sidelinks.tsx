@@ -107,6 +107,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.dialog}`,
       },
       {
+        name: "DropdownMenu",
+        href: `/${urls.components}/${urls.dropdown_menu}`,
+      },
+      {
         name: "Badge",
         href: `/${urls.components}/${urls.badge}`,
       },

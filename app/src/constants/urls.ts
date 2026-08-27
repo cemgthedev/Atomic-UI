@@ -110,6 +110,10 @@ export const urls = {
    */
   drawer: "drawer",
   /**
+   * Dropdown Menu page
+   */
+  dropdown_menu: "dropdown_menu",
+  /**
    * Dialog page
    */
   dialog: "dialog",
