@@ -175,6 +175,13 @@ const DialogDetailsPage = async () => {
   return { Component: Component.DialogDetails };
 };
 
+const DropdownMenuDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/dropdown-menu"),
+  ]);
+  return { Component: Component.DropdownMenuDetails };
+};
+
 const LoaderDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/loader")]);
   return { Component: Component.LoaderDetails };
@@ -344,6 +351,10 @@ export const router = createBrowserRouter([
           {
             path: urls.dialog,
             lazy: DialogDetailsPage,
+          },
+          {
+            path: urls.dropdown_menu,
+            lazy: DropdownMenuDetailsPage,
           },
           {
             path: urls.loader,

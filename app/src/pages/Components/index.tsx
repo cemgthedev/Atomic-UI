@@ -74,6 +74,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.dialog}`,
   },
   {
+    name: "DropdownMenu",
+    description: "Menu suspenso acessível para ações e navegação.",
+    href: `/${urls.components}/${urls.dropdown_menu}`,
+  },
+  {
     name: "Separator",
     description: "Separa visualmente seções e grupos de conteúdo.",
     href: `/${urls.components}/${urls.separator}`,

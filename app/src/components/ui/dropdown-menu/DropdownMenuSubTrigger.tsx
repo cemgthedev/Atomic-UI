@@ -9,7 +9,7 @@ import { ChevronRightIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
 
 const dropdownMenuSubTriggerVariants = cva(
-  "flex cursor-default items-center gap-1.5 rounded-md outline-hidden select-none focus:bg-accent focus:text-accent-foreground not-data-[variant=destructive]:focus:**:text-accent-foreground data-open:bg-accent data-open:text-accent-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "border border-transparent flex cursor-default items-center gap-1.5 rounded-md outline-hidden select-none focus:bg-accent focus:text-accent-foreground not-data-[variant=destructive]:focus:**:text-accent-foreground data-open:bg-accent data-open:text-accent-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       inset: {
@@ -18,7 +18,7 @@ const dropdownMenuSubTriggerVariants = cva(
       },
 
       variant: {
-        default: "bg-muted text-foreground hover:opacity-80",
+        default: "bg-transparent text-foreground hover:opacity-80",
         dark: "bg-dark text-dark-foreground hover:opacity-80",
         muted: "bg-muted text-foreground opacity-60 hover:opacity-80",
         primary: "bg-primary text-primary-foreground hover:opacity-80",
@@ -60,7 +60,7 @@ const dropdownMenuSubTriggerVariants = cva(
       size: {
         xl: "text-lg leading-lg p-3",
         lg: "text-md leading-md p-3",
-        md: "text-sm leading-sm px-1.5 py-1",
+        md: "text-md leading-md px-1.5 py-1",
         sm: "text-sm leading-sm p-2",
         xs: "text-sm leading-xs p-2",
       },
