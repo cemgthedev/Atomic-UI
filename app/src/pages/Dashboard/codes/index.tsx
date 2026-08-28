@@ -1,83 +1,12 @@
-// Criando projeto
-export const createProject = `npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm install`;
-
-// Instalando dependências
-export const installDependencies = `npm install clsx tailwind-merge class-variance-authority lucide-react radix-ui`;
-
-// Instalando dependências de desenvolvimento
-export const installDevelopmentDependencies = `npm install -D tailwindcss @tailwindcss/vite tw-animate-css @types/node`;
-
-// Inicializando shadcn/ui
-export const initShadcnUI = `npx shadcn@latest init`;
-
-export const datesAndCalendars = `npm install date-fns react-day-picker`;
-
-export const googleFonts = `npm install @fontsource/fira-sans @fontsource/montserrat`;
-
-export const typographyTokens = `/* * Typography classes */ 
---font-heading: "Fira Sans", sans-serif; 
---font-label: "Fira Sans", sans-serif; 
---font-sans: "Montserrat", sans-serif;`;
-
-// Tailwind CSS configuration
-export const activatePlugin = `import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-});`;
-
-export const tailwindImports = `@import "tailwindcss";
+export const globalStyleCode = `@import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource/fira-sans";
 @import "@fontsource/montserrat";
 
-@custom-variant dark (&:is(.dark *));`;
+@custom-variant dark (&:is(.dark *));
 
-export const tokensAndThemeDefinition = `:root {
-  /*
-  * Theme colors structures and components
-  */
-  --background: oklch(1 0 0);
-  --foreground: oklch(14.1% 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(14.1% 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(14.1% 0.005 285.823);
-
-  /* Primary colors */
-  --primary: oklch(60.9% 0.126 221.723);
-  --primary-foreground: oklch(98.5% 0.002 247.839);
-  --primary-50: oklch(98.4% 0.019 200.873);
-  --primary-100: oklch(95.6% 0.045 203.388);
-  --primary-200: oklch(91.7% 0.08 205.041);
-  --primary-300: oklch(86.5% 0.127 207.078);
-  --primary-400: oklch(78.9% 0.154 211.53);
-  --primary-500: oklch(71.5% 0.143 215.221);
-  --primary-600: oklch(60.9% 0.126 221.723); /* DEFAULT */
-  --primary-700: oklch(52% 0.105 223.128);
-  --primary-800: oklch(45% 0.085 224.283);
-  --primary-900: oklch(39.8% 0.07 227.392);
-  --primary-950: oklch(30.2% 0.056 229.695);
-
-  --border: oklch(96.7% 0.003 264.542);
-  --input: oklch(96.7% 0.003 264.542);
-  --ring: oklch(96.7% 0.003 264.542);
-  --radius-size: 2px;
-  --text-size: 4px;
-  --sidebar: oklch(98.5% 0.002 247.839);
-  --sidebar-foreground: oklch(14.1% 0.005 285.823);
-  --sidebar-primary: oklch(60.9% 0.126 221.723);
-  --sidebar-primary-foreground: oklch(98.5% 0.002 247.839);
-  --sidebar-border: oklch(96.7% 0.003 264.542);
-  --sidebar-ring: oklch(96.7% 0.003 264.542);
-}`;
-
-export const tokensAndThemeDefinitionCode = `:root {
+:root {
   /*
   * Theme colors structures and components
   */
@@ -458,34 +387,3 @@ export const tokensAndThemeDefinitionCode = `:root {
   background-color: var(--muted);
 }
 `;
-
-export const importCSS = `import "./style/globals.css";`;
-
-// Aliases configuration
-export const typeScriptAliasConfiguration = `{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
-}`;
-
-export const viteAliasConfiguration = `import path from "path";
-
-export default defineConfig({
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-});`;
-
-export const aliasExemple = `import { Button } from "@/components/ui";
-import { cn } from "@/utils/cn";`;
-
-export const barrelFileExport = `export * from "@/components/ui/avatar";
-export * from "@/components/ui/badge";
-export * from "@/components/ui/button";`;
-
-export const barrelFileImport = `import { Avatar, Badge, Button } from "@/components/ui";`;

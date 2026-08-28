@@ -1,6 +1,6 @@
 import { urls } from "@/constants/urls";
 import { cn } from "@/utils/cn";
-import { BookOpen, Component, Home, Settings2 } from "lucide-react";
+import { BookOpen, Component, Home } from "lucide-react";
 import type { ComponentProps } from "react";
 import { Link, useLocation } from "react-router";
 
@@ -67,7 +67,8 @@ export function Navbar({
             Componentes
           </Link>
         </li>
-        <li>
+        {/**
+         * <li>
           <Link
             to={urls.customization}
             className={cn(
@@ -81,6 +82,7 @@ export function Navbar({
             Customização
           </Link>
         </li>
+         */}
       </ul>
     </nav>
   );

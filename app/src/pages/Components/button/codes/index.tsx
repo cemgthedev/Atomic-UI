@@ -91,62 +91,42 @@ export const buttonSizesExemple = `<div className="flex justify-center flex-wrap
 </div>`;
 
 export const buttonRoundsExemple = `<div className="flex justify-center flex-wrap gap-4">
-<div className="space-y-1">
-  <Button
-    variant={"primary"}
-    rounded={"xs"}
-    className="w-full"
-  >
-    Botão
-  </Button>
-  <Text>xs</Text>
-</div>
-<div className="space-y-1">
-  <Button
-    variant={"primary"}
-    rounded={"sm"}
-    className="w-full"
-  >
-    Botão
-  </Button>
-  <Text>sm</Text>
-</div>
-<div className="space-y-1">
-  <Button variant={"primary"} className="w-full">
-    Botão
-  </Button>
-  <Text>md</Text>
-</div>
-<div className="space-y-1">
-  <Button
-    variant={"primary"}
-    rounded={"lg"}
-    className="w-full"
-  >
-    Botão
-  </Button>
-  <Text>lg</Text>
-</div>
-<div className="space-y-1">
-  <Button
-    variant={"primary"}
-    rounded={"xl"}
-    className="w-full"
-  >
-    Botão
-  </Button>
-  <Text>xl</Text>
-</div>
-<div className="space-y-1">
-  <Button
-    variant={"primary"}
-    rounded={"full"}
-    className="w-full"
-  >
-    Botão
-  </Button>
-  <Text>full</Text>
-</div>
+  <div className="space-y-1">
+    <Button variant={"primary"} rounded={"xs"} className="w-full">
+      Botão
+    </Button>
+    <Text>xs</Text>
+  </div>
+  <div className="space-y-1">
+    <Button variant={"primary"} rounded={"sm"} className="w-full">
+      Botão
+    </Button>
+    <Text>sm</Text>
+  </div>
+  <div className="space-y-1">
+    <Button variant={"primary"} className="w-full">
+      Botão
+    </Button>
+    <Text>md</Text>
+  </div>
+  <div className="space-y-1">
+    <Button variant={"primary"} rounded={"lg"} className="w-full">
+      Botão
+    </Button>
+    <Text>lg</Text>
+  </div>
+  <div className="space-y-1">
+    <Button variant={"primary"} rounded={"xl"} className="w-full">
+      Botão
+    </Button>
+    <Text>xl</Text>
+  </div>
+  <div className="space-y-1">
+    <Button variant={"primary"} rounded={"full"} className="w-full">
+      Botão
+    </Button>
+    <Text>full</Text>
+  </div>
 </div>`;
 
 export const buttonPropertiesExemple = `<Button variant={"default"} size={"md"} rounded={"md"}>

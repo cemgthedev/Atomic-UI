@@ -115,6 +115,7 @@ export function Sidebar({
                         isCollapsed && "justify-center",
                       )}
                       startContent={group.icon}
+                      onClick={() => setOpen(true)}
                     >
                       {!isCollapsed && (
                         <>

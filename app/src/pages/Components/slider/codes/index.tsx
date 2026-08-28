@@ -1,8 +1,7 @@
 export const sliderExample = `<Slider defaultValue={[50]} max={100} step={1} />`;
 
 export const sliderVariantsExample = `<div className="w-full max-w-2xl flex flex-col gap-6">
-  {(
-    [
+  {([
       "default",
       "dark",
       "muted",
@@ -11,8 +10,7 @@ export const sliderVariantsExample = `<div className="w-full max-w-2xl flex flex
       "success",
       "warning",
       "danger",
-    ] as const
-  ).map((variant) => (
+    ] as const).map((variant) => (
     <div key={variant} className="flex flex-col gap-2">
       <Label className="capitalize">{variant}</Label>
       <Slider variant={variant} defaultValue={[60]} />

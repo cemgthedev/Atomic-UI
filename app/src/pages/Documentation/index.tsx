@@ -55,6 +55,13 @@ const technologies: TechnologyProps[] = [
     icon: "/shadcnui-icon.svg",
     href: "https://ui.shadcn.com/",
   },
+  {
+    name: "Radix",
+    description:
+      "Coleção de primitivas acessíveis e não estilizadas para construção de componentes de interface reutilizáveis.",
+    icon: "/radixui-icon.svg",
+    href: "https://www.radix-ui.com/",
+  },
 ];
 
 export function Documentation() {
