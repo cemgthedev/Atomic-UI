@@ -6,14 +6,7 @@ import {
   Text,
 } from "@/components/ui";
 import { urls } from "@/constants/urls";
-import {
-  BookOpen,
-  Component,
-  Home,
-  Mail,
-  Phone,
-  Settings2,
-} from "lucide-react";
+import { BookOpen, Component, Home, Mail, Phone } from "lucide-react";
 import { useMemo } from "react";
 import { Link, useLocation } from "react-router";
 
@@ -24,12 +17,10 @@ export function Footer() {
 
   const shouldShowSidebar = useMemo(
     () =>
-      footerRoutes.some(
-        (route) => {
-          const normalized = route.startsWith("/") ? route : `/${route}`;
-          return pathname === normalized || pathname.startsWith(`${normalized}/`);
-        },
-      ),
+      footerRoutes.some((route) => {
+        const normalized = route.startsWith("/") ? route : `/${route}`;
+        return pathname === normalized || pathname.startsWith(`${normalized}/`);
+      }),
     [pathname],
   );
 
@@ -114,7 +105,8 @@ export function Footer() {
                 </Text>
               </Link>
             </li>
-            <li>
+            {/**
+             * <li>
               <Link
                 to={urls.customization}
                 className="flex gap-1 items-center justify-center hover:opacity-80 duration-200"
@@ -136,6 +128,7 @@ export function Footer() {
                 </Text>
               </Link>
             </li>
+             */}
           </ul>
         </nav>
 

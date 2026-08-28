@@ -8,9 +8,12 @@ import {
   datesAndCalendars,
   googleFonts,
   importCSS,
+  initShadcnUI,
   installDependencies,
+  installDevelopmentDependencies,
   tailwindImports,
   tokensAndThemeDefinition,
+  tokensAndThemeDefinitionCode,
   typeScriptAliasConfiguration,
   typographyTokens,
   viteAliasConfiguration,
@@ -95,15 +98,46 @@ export function Installation() {
 
         <Separator size="xs" />
 
-        <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          <pre className="w-full overflow-auto scrollbar-thin mr-1">
-            <code>{installDependencies}</code>
-          </pre>
-          <Button
-            startContent={<Copy size={20} className="text-zinc-600" />}
-            onClick={() => copy(installDependencies)}
-            className="bg-transparent border-none p-0"
-          />
+        <div className="flex flex-col gap-2">
+          <Label size="sm">Dependências</Label>
+          <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+            <pre className="w-full overflow-auto scrollbar-thin mr-1">
+              <code>{installDependencies}</code>
+            </pre>
+            <Button
+              startContent={<Copy size={20} className="text-zinc-600" />}
+              onClick={() => copy(installDependencies)}
+              className="bg-transparent border-none p-0"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label size="sm">Dependências de desenvolvimento</Label>
+          <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+            <pre className="w-full overflow-auto scrollbar-thin mr-1">
+              <code>{installDevelopmentDependencies}</code>
+            </pre>
+            <Button
+              startContent={<Copy size={20} className="text-zinc-600" />}
+              onClick={() => copy(installDevelopmentDependencies)}
+              className="bg-transparent border-none p-0"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Label size="sm">Inicializando shadcn/ui</Label>
+          <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+            <pre className="w-full overflow-auto scrollbar-thin mr-1">
+              <code>{initShadcnUI}</code>
+            </pre>
+            <Button
+              startContent={<Copy size={20} className="text-zinc-600" />}
+              onClick={() => copy(initShadcnUI)}
+              className="bg-transparent border-none p-0"
+            />
+          </div>
         </div>
 
         <Text className="indent-8">
@@ -218,7 +252,7 @@ export function Installation() {
               </pre>
               <Button
                 startContent={<Copy size={20} className="text-zinc-600" />}
-                onClick={() => copy(tokensAndThemeDefinition)}
+                onClick={() => copy(tokensAndThemeDefinitionCode)}
                 className="bg-transparent border-none p-0"
               />
             </div>

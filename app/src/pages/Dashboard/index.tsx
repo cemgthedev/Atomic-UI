@@ -9,7 +9,9 @@ import {
   Text,
 } from "@/components/ui";
 import { urls } from "@/constants/urls";
-import { Component, Copy, Footprints, Settings2 } from "lucide-react";
+import { globalStyleCode } from "@/pages/Dashboard/codes";
+import { copy } from "@/utils/copy";
+import { Component, Copy, Footprints } from "lucide-react";
 import { Link } from "react-router";
 
 export function Dashboard() {
@@ -27,8 +29,9 @@ export function Dashboard() {
           <Label>Interfaces modernas com componentes atômicos</Label>
           <Text>
             O Atomic UI é um Design System desenvolvido com componentes
-            personalizados baseados em shadcn/ui, oferecendo acessibilidade,
-            flexibilidade e uma excelente experiência para desenvolvedores.
+            personalizados baseados em shadcn/ui e radix, oferecendo
+            acessibilidade, flexibilidade e uma excelente experiência para
+            desenvolvedores.
           </Text>
         </div>
 
@@ -134,13 +137,15 @@ export function Dashboard() {
               startContent={<Copy size={20} />}
               variant="dark-ghost"
               className="w-full"
+              onClick={() => copy(globalStyleCode)}
             >
               Copiar
             </Button>
           </div>
         </div>
 
-        <Link
+        {/**
+         * <Link
           to={urls.customization}
           className={buttonVariants({
             variant: "primary-bordered",
@@ -150,6 +155,7 @@ export function Dashboard() {
           <Settings2 size={20} />
           Customização
         </Link>
+         */}
       </div>
     </section>
   );
