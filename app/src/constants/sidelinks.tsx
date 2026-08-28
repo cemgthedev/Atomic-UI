@@ -6,7 +6,6 @@ export const webUrls: UrlProps[] = [
   {
     name: "Documentação",
     icon: <BookOpen size={20} />,
-    href: `/${urls.documentation}#introducao`,
     sub: [
       {
         name: "Introdução",
@@ -25,7 +24,6 @@ export const webUrls: UrlProps[] = [
   {
     name: "Instalação",
     icon: <Download size={20} />,
-    href: `/${urls.documentation}/${urls.installation}#instalacao`,
     sub: [
       {
         name: "Instalação",
@@ -56,7 +54,6 @@ export const webUrls: UrlProps[] = [
   {
     name: "Componentes",
     icon: <Component size={20} />,
-    href: `/${urls.components}#todos`,
     sub: [
       {
         name: "Todos",
@@ -65,6 +62,10 @@ export const webUrls: UrlProps[] = [
       {
         name: "Avatar",
         href: `/${urls.components}/${urls.avatar}`,
+      },
+      {
+        name: "Badge",
+        href: `/${urls.components}/${urls.badge}`,
       },
       {
         name: "Breadcrumb",
@@ -99,24 +100,16 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.datepicker}`,
       },
       {
-        name: "Drawer",
-        href: `/${urls.components}/${urls.drawer}`,
-      },
-      {
         name: "Dialog",
         href: `/${urls.components}/${urls.dialog}`,
       },
       {
+        name: "Drawer",
+        href: `/${urls.components}/${urls.drawer}`,
+      },
+      {
         name: "DropdownMenu",
         href: `/${urls.components}/${urls.dropdown_menu}`,
-      },
-      {
-        name: "Badge",
-        href: `/${urls.components}/${urls.badge}`,
-      },
-      {
-        name: "Separator",
-        href: `/${urls.components}/${urls.separator}`,
       },
       {
         name: "Heading",
@@ -143,10 +136,6 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.message}`,
       },
       {
-        name: "Radio Group",
-        href: `/${urls.components}/${urls.radio_group}`,
-      },
-      {
         name: "Pagination",
         href: `/${urls.components}/${urls.pagination}`,
       },
@@ -155,20 +144,28 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.popover}`,
       },
       {
-        name: "Sheet",
-        href: `/${urls.components}/${urls.sheet}`,
-      },
-      {
         name: "Progress",
         href: `/${urls.components}/${urls.progress}`,
       },
       {
-        name: "Slider",
-        href: `/${urls.components}/${urls.slider}`,
+        name: "Radio Group",
+        href: `/${urls.components}/${urls.radio_group}`,
+      },
+      {
+        name: "Separator",
+        href: `/${urls.components}/${urls.separator}`,
+      },
+      {
+        name: "Sheet",
+        href: `/${urls.components}/${urls.sheet}`,
       },
       {
         name: "Skeleton",
         href: `/${urls.components}/${urls.skeleton}`,
+      },
+      {
+        name: "Slider",
+        href: `/${urls.components}/${urls.slider}`,
       },
       {
         name: "Switch",

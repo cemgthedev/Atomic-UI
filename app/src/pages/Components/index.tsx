@@ -16,14 +16,14 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.avatar}`,
   },
   {
-    name: "Breadcrumb",
-    description: "Indica a hierarquia e a localização atual na navegação.",
-    href: `/${urls.components}/${urls.breadcrumb}`,
-  },
-  {
     name: "Badge",
     description: "Destaca informações com rótulos compactos e personalizáveis.",
     href: `/${urls.components}/${urls.badge}`,
+  },
+  {
+    name: "Breadcrumb",
+    description: "Indica a hierarquia e a localização atual na navegação.",
+    href: `/${urls.components}/${urls.breadcrumb}`,
   },
   {
     name: "Button",
@@ -63,25 +63,20 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.datepicker}`,
   },
   {
+    name: "Dialog",
+    description: "Exibe conteúdo sobreposto que requer a atenção do usuário.",
+    href: `/${urls.components}/${urls.dialog}`,
+  },
+  {
     name: "Drawer",
     description:
       "Exibe conteúdo em um painel deslizante que pode ser arrastado.",
     href: `/${urls.components}/${urls.drawer}`,
   },
   {
-    name: "Dialog",
-    description: "Exibe conteúdo sobreposto que requer a atenção do usuário.",
-    href: `/${urls.components}/${urls.dialog}`,
-  },
-  {
     name: "DropdownMenu",
     description: "Menu suspenso acessível para ações e navegação.",
     href: `/${urls.components}/${urls.dropdown_menu}`,
-  },
-  {
-    name: "Separator",
-    description: "Separa visualmente seções e grupos de conteúdo.",
-    href: `/${urls.components}/${urls.separator}`,
   },
   {
     name: "Heading",
@@ -115,11 +110,6 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.message}`,
   },
   {
-    name: "Radio Group",
-    description: "Seleciona apenas uma opção entre várias.",
-    href: `/${urls.components}/${urls.radio_group}`,
-  },
-  {
     name: "Pagination",
     description: "Navega entre páginas de grandes conjuntos de dados.",
     href: `/${urls.components}/${urls.pagination}`,
@@ -130,24 +120,34 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.popover}`,
   },
   {
-    name: "Sheet",
-    description: "Exibe conteúdo em um painel deslizante sobre a interface.",
-    href: `/${urls.components}/${urls.sheet}`,
-  },
-  {
     name: "Progress",
     description: "Representa visualmente o progresso de uma tarefa.",
     href: `/${urls.components}/${urls.progress}`,
   },
   {
-    name: "Slider",
-    description: "Permite selecionar valores dentro de um intervalo.",
-    href: `/${urls.components}/${urls.slider}`,
+    name: "Radio Group",
+    description: "Seleciona apenas uma opção entre várias.",
+    href: `/${urls.components}/${urls.radio_group}`,
+  },
+  {
+    name: "Separator",
+    description: "Separa visualmente seções e grupos de conteúdo.",
+    href: `/${urls.components}/${urls.separator}`,
+  },
+  {
+    name: "Sheet",
+    description: "Exibe conteúdo em um painel deslizante sobre a interface.",
+    href: `/${urls.components}/${urls.sheet}`,
   },
   {
     name: "Skeleton",
     description: "Exibe um placeholder durante o carregamento do conteúdo.",
     href: `/${urls.components}/${urls.skeleton}`,
+  },
+  {
+    name: "Slider",
+    description: "Permite selecionar valores dentro de um intervalo.",
+    href: `/${urls.components}/${urls.slider}`,
   },
   {
     name: "Switch",

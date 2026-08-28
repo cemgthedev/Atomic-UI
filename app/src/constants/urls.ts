@@ -3,144 +3,187 @@ export const urls = {
    * Dashboard page
    */
   dashboard: "",
+
   /**
    * Documentation page
    */
   documentation: "documentation",
+
   /**
    * Installation page
    */
   installation: "installation",
+
   /**
    * Components page
    */
   components: "components",
-  /**
-   * Breadcrumb page
-   */
-  breadcrumb: "breadcrumb",
-  collapsible: "collapsible",
-  /**
-   * Button page
-   */
-  button: "button",
-  /**
-   * Badge page
-   */
-  badge: "badge",
-  /**
-   * Text page
-   */
-  text: "text",
-  /**
-   * Label page
-   */
-  label: "label",
-  /**
-   * Heading page
-   */
-  heading: "heading",
-  /**
-   * Separator page
-   */
-  separator: "separator",
-  /**
-   * Progress page
-   */
-  progress: "progress",
-  /**
-   * Slider page
-   */
-  slider: "slider",
+
   /**
    * Avatar page
    */
   avatar: "avatar",
+
   /**
-   * Image page
+   * Badge page
    */
-  image: "image",
+  badge: "badge",
+
   /**
-   * Input page
+   * Breadcrumb page
    */
-  input: "input",
+  breadcrumb: "breadcrumb",
+
   /**
-   * Tabs page
+   * Button page
    */
-  tabs: "tabs",
-  /**
-   * Textarea page
-   */
-  textarea: "textarea",
-  /**
-   * Toast page
-   */
-  toast: "toast",
-  /**
-   * Tooltip page
-   */
-  tooltip: "tooltip",
-  /**
-   * Message page
-   */
-  message: "message",
-  /**
-   * Radio group page
-   */
-  radio_group: "radio_group",
+  button: "button",
+
   /**
    * Calendar page
    */
   calendar: "calendar",
+
   /**
    * Card page
    */
   card: "card",
+
+  /**
+   * Carousel page
+   */
   carousel: "carousel",
+
   /**
    * Checkbox page
    */
   checkbox: "checkbox",
+
+  /**
+   * Collapsible page
+   */
+  collapsible: "collapsible",
+
   /**
    * Datepicker page
    */
   datepicker: "datepicker",
-  /**
-   * Drawer page
-   */
-  drawer: "drawer",
-  /**
-   * Dropdown Menu page
-   */
-  dropdown_menu: "dropdown_menu",
+
   /**
    * Dialog page
    */
   dialog: "dialog",
+
+  /**
+   * Drawer page
+   */
+  drawer: "drawer",
+
+  /**
+   * Dropdown Menu page
+   */
+  dropdown_menu: "dropdown_menu",
+
+  /**
+   * Heading page
+   */
+  heading: "heading",
+
+  /**
+   * Image page
+   */
+  image: "image",
+
+  /**
+   * Input page
+   */
+  input: "input",
+
+  /**
+   * Label page
+   */
+  label: "label",
+
   /**
    * Loader page
    */
   loader: "loader",
+
+  /**
+   * Message page
+   */
+  message: "message",
+
   /**
    * Pagination page
    */
   pagination: "pagination",
+
   /**
    * Popover page
    */
   popover: "popover",
+
+  /**
+   * Progress page
+   */
+  progress: "progress",
+
+  /**
+   * Radio Group page
+   */
+  radio_group: "radio_group",
+
+  /**
+   * Separator page
+   */
+  separator: "separator",
+
   /**
    * Sheet page
    */
   sheet: "sheet",
+
   /**
    * Skeleton page
    */
   skeleton: "skeleton",
+
+  /**
+   * Slider page
+   */
+  slider: "slider",
+
   /**
    * Switch page
    */
   switch: "switch",
+
+  /**
+   * Tabs page
+   */
+  tabs: "tabs",
+
+  /**
+   * Text page
+   */
+  text: "text",
+
+  /**
+   * Textarea page
+   */
+  textarea: "textarea",
+
+  /**
+   * Toast page
+   */
+  toast: "toast",
+
+  /**
+   * Tooltip page
+   */
+  tooltip: "tooltip",
+
   /**
    * Customization page
    */
