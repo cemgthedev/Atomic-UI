@@ -1,6 +1,7 @@
-import { Heading, Label, Separator, Text } from "@/components/ui";
+import { Heading, Input, Label, Separator, Text } from "@/components/ui";
 import { urls } from "@/constants/urls";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { Search, SquareArrowOutUpRight } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router";
 
 type ComponentProps = {
@@ -183,6 +184,20 @@ const components: ComponentProps[] = [
 ];
 
 export function Components() {
+  const [search, setSearch] = useState("");
+
+  const filteredComponents = components.filter((component) => {
+    const searchTerm = search.toLowerCase().trim();
+    return (
+      component.name.toLowerCase().includes(searchTerm) ||
+      component.description.toLowerCase().includes(searchTerm)
+    );
+  });
+
+  const handleSearch = (value: string) => {
+    setSearch(value);
+  };
+
   return (
     <section className="scroll-progress min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
       {/* Todos */}
@@ -199,8 +214,18 @@ export function Components() {
 
         <Separator size="xs" />
 
+        <Input
+          value={search}
+          onChange={(event) => handleSearch(event.target.value)}
+          startContent={<Search className="opacity-80" />}
+          placeholder="Filtrar componentes..."
+          aria-label="Filtrar componentes"
+          variant={"primary"}
+          className="w-full md:w-4/5 lg:w-2/3"
+        />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {components?.map((component) => (
+          {filteredComponents?.map((component) => (
             <div className="flex flex-col gap-1 p-3 rounded-lg border border-muted-200">
               <Label size="xs">{component.name}</Label>
               <Text>{component.description}</Text>
