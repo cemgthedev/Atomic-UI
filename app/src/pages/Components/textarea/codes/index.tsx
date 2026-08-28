@@ -1,16 +1,14 @@
 export const textareaExample = `<Textarea placeholder="Digite sua mensagem" />`;
 
 export const textareaVariantsExample = `<div className="w-full max-w-md flex flex-col gap-3">
-  {(
-    [
+  {([
       "default",
       "primary",
       "secondary",
       "success",
       "warning",
       "danger",
-    ] as const
-  ).map((variant) => (
+    ] as const).map((variant) => (
     <Textarea
       key={variant}
       variant={variant}

@@ -160,21 +160,23 @@ export function RadioGroupDetails() {
             <TabsContent value="variants-exemple">
               <div className="w-full flex justify-center items-center p-3 gap-4 bg-muted-100 border border-muted-200 rounded-lg">
                 <div className="flex flex-wrap justify-center gap-6">
-                  {[
-                    "primary",
-                    "primary-bordered",
-                    "primary-ghost",
-                    "secondary",
-                    "dark",
-                    "success",
-                    "warning",
-                    "danger",
-                    "muted",
-                  ].map((variant) => (
+                  {(
+                    [
+                      "primary",
+                      "primary-bordered",
+                      "primary-ghost",
+                      "secondary",
+                      "dark",
+                      "success",
+                      "warning",
+                      "danger",
+                      "muted",
+                    ] as const
+                  ).map((variant) => (
                     <div key={variant}>
                       <RadioGroup>
                         <div className="flex items-center gap-2">
-                          <RadioGroupItem value="1" variant={variant as any} />
+                          <RadioGroupItem value="1" variant={variant} />
                           <Label>{variant}</Label>
                         </div>
                       </RadioGroup>
