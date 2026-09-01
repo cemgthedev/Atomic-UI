@@ -131,6 +131,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.radio_group}`,
   },
   {
+    name: "Select",
+    description: "Permite escolher um valor em uma lista de opções.",
+    href: `/${urls.components}/${urls.select}`,
+  },
+  {
     name: "Separator",
     description: "Separa visualmente seções e grupos de conteúdo.",
     href: `/${urls.components}/${urls.separator}`,

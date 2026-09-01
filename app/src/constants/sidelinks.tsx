@@ -152,6 +152,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.radio_group}`,
       },
       {
+        name: "Select",
+        href: `/${urls.components}/${urls.select}`,
+      },
+      {
         name: "Separator",
         href: `/${urls.components}/${urls.separator}`,
       },

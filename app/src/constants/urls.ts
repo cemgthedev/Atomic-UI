@@ -135,6 +135,11 @@ export const urls = {
   radio_group: "radio_group",
 
   /**
+   * Select page
+   */
+  select: "select",
+
+  /**
    * Separator page
    */
   separator: "separator",
