@@ -80,6 +80,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.dropdown_menu}`,
   },
   {
+    name: "Field",
+    description: "Estrutura formulários com rótulos, descrição e validação.",
+    href: `/${urls.components}/${urls.field}`,
+  },
+  {
     name: "Heading",
     description: "Renderiza títulos semânticos com estilos padronizados.",
     href: `/${urls.components}/${urls.heading}`,

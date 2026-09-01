@@ -85,6 +85,11 @@ export const urls = {
   dropdown_menu: "dropdown_menu",
 
   /**
+   * Field page
+   */
+  field: "field",
+
+  /**
    * Heading page
    */
   heading: "heading",

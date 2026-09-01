@@ -15,11 +15,11 @@ const fieldLabelVariants = cva("font-medium font-label", {
       danger: "text-danger",
     },
     size: {
-      xl: "text-3xl",
-      lg: "text-2xl",
-      md: "text-xl",
-      sm: "text-lg",
-      xs: "text-md",
+      xl: "text-xl",
+      lg: "text-lg",
+      md: "text-md",
+      sm: "text-sm",
+      xs: "text-xs",
     },
   },
   defaultVariants: {

@@ -29,7 +29,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="flex flex-col items-center justify-center gap-4 px-6 py-3 border-t border-border backdrop-blur-2xl bg-muted-50/30">
+    <footer className="bg-red-500flex flex-col items-center justify-center gap-4 px-6 py-3 border-t border-border backdrop-blur-2xl bg-muted-50/30">
       <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-60">
         <div className="flex flex-col items-center justify-center">
           <Link to={urls.dashboard}>

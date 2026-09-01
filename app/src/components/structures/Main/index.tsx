@@ -11,7 +11,7 @@ export const Main = forwardRef<HTMLElement, MainProps>(function Main(
   return (
     <main
       ref={ref}
-      className="min-h-[calc(100vh-73px)] flex justify-start items-start gap-0 p-0"
+      className="min-h-[calc(100vh-73px)] flex justify-start items-start gap-0 p-0 m-0"
     >
       {children}
     </main>

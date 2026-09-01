@@ -112,6 +112,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.dropdown_menu}`,
       },
       {
+        name: "Field",
+        href: `/${urls.components}/${urls.field}`,
+      },
+      {
         name: "Heading",
         href: `/${urls.components}/${urls.heading}`,
       },

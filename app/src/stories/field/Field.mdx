@@ -1,0 +1,68 @@
+import { Canvas, Meta, Subtitle, Title } from "@storybook/addon-docs/blocks";
+
+import * as FieldStories from "./Field.stories";
+
+<Meta of={FieldStories} title="Components/Field" />
+
+<Title>Field</Title>
+<Subtitle>
+  Estrutura composicional para organizar formulários com labels, descrições,
+  mensagens de erro e conteúdo de entrada.
+</Subtitle>
+
+## Visão geral
+
+O Field é a base para a criação de formulários consistentes, combinando
+componentes de texto, seleção, checkbox e switches em um layout acessível e
+visualmente uniforme.
+
+<Canvas of={FieldStories.Form} />
+
+## Uso
+
+```tsx
+import {
+  Checkbox,
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldLabel,
+  FieldLegend,
+  FieldSet,
+  Input,
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+  Switch,
+  Textarea,
+} from "@/components/ui";
+
+export function Example() {
+  return (
+    <FieldSet>
+      <FieldLegend>Dados pessoais</FieldLegend>
+      <FieldGroup>
+        <Field>
+          <FieldLabel>Nome</FieldLabel>
+          <FieldContent>
+            <Input placeholder="Seu nome" />
+          </FieldContent>
+        </Field>
+
+        <Field>
+          <FieldLabel>Mensagem</FieldLabel>
+          <FieldContent>
+            <Textarea placeholder="Escreva sua mensagem" />
+          </FieldContent>
+          <FieldError>Campo obrigatório.</FieldError>
+        </Field>
+      </FieldGroup>
+    </FieldSet>
+  );
+}
+```
