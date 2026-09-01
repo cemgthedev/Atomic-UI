@@ -62,7 +62,7 @@ const inputGroupButtonVariants = cva(
     },
     defaultVariants: {
       variant: "default",
-      size: "md",
+      size: "xs",
       rounded: "md",
     },
   },
@@ -78,7 +78,7 @@ type InputGroupButtonProps = React.ComponentProps<"button"> &
 function InputGroupButton({
   className,
   variant = "default",
-  size = "md",
+  size = "xs",
   rounded = "md",
   asChild = false,
   startContent = null,

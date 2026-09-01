@@ -151,6 +151,14 @@ const InputDetailsPage = async () => {
   return { Component: Component.InputDetails };
 };
 
+const InputGroupDetailsPage = async () => {
+  const [Component] = await Promise.all([
+    import("@/pages/Components/input-group"),
+  ]);
+
+  return { Component: Component.InputGroupDetails };
+};
+
 const LabelDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/label")]);
 
@@ -369,6 +377,10 @@ export const router = createBrowserRouter([
           {
             path: urls.input,
             lazy: InputDetailsPage,
+          },
+          {
+            path: urls.input_group,
+            lazy: InputGroupDetailsPage,
           },
           {
             path: urls.label,
