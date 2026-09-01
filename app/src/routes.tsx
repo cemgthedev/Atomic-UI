@@ -127,6 +127,12 @@ const DropdownMenuDetailsPage = async () => {
   return { Component: Component.DropdownMenuDetails };
 };
 
+const FieldDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/field")]);
+
+  return { Component: Component.FieldDetails };
+};
+
 const HeadingDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/heading")]);
 
@@ -347,6 +353,10 @@ export const router = createBrowserRouter([
           {
             path: urls.dropdown_menu,
             lazy: DropdownMenuDetailsPage,
+          },
+          {
+            path: urls.field,
+            lazy: FieldDetailsPage,
           },
           {
             path: urls.heading,
