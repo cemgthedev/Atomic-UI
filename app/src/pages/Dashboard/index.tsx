@@ -15,6 +15,11 @@ import { Component, Copy, Footprints } from "lucide-react";
 import { Link } from "react-router";
 
 export function Dashboard() {
+  const items = [
+    { label: "Light", value: "light" },
+    { label: "Dark", value: "dark" },
+    { label: "System", value: "system" },
+  ];
   return (
     <section className="scroll-progress w-full flex flex-col items-center gap-8 px-4 py-8 md:px-8 md:py-16 mb-16">
       {/* Introduction */}

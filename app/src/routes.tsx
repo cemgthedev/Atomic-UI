@@ -193,6 +193,12 @@ const RadioGroupDetailsPage = async () => {
   return { Component: Component.RadioGroupDetails };
 };
 
+const SelectDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/select")]);
+
+  return { Component: Component.SelectDetails };
+};
+
 const SeparatorDetailsPage = async () => {
   const [Component] = await Promise.all([
     import("@/pages/Components/separator"),
@@ -381,6 +387,10 @@ export const router = createBrowserRouter([
           {
             path: urls.radio_group,
             lazy: RadioGroupDetailsPage,
+          },
+          {
+            path: urls.select,
+            lazy: SelectDetailsPage,
           },
           {
             path: urls.separator,

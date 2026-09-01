@@ -1,0 +1,59 @@
+import { Canvas, Meta, Story, Subtitle, Title } from "@storybook/addon-docs/blocks";
+
+import * as SelectStories from "./Select.stories";
+
+<Meta of={SelectStories} title="Components/Select" />
+
+<Title>Select</Title>
+<Subtitle>
+  Componente de seleção para listar opções de forma acessível e consistente.
+</Subtitle>
+
+## Visão geral
+
+O Select permite que o usuário escolha um único valor em uma lista estruturada, oferecendo controle visual de variantes, tamanhos e arredondamento.
+
+<Canvas of={SelectStories.Default} />
+
+## Variantes
+
+<Canvas of={SelectStories.Variants} />
+
+## Tamanhos
+
+<Canvas of={SelectStories.Sizes} />
+
+## Arredondamentos
+
+<Canvas of={SelectStories.Rounds} />
+
+## Uso
+
+```tsx
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui";
+
+export function Example() {
+  return (
+    <Select defaultValue="option-1">
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Selecione..." />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel>Opções</SelectLabel>
+          <SelectItem value="option-1">Opção 1</SelectItem>
+          <SelectItem value="option-2">Opção 2</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+  );
+}
+```
