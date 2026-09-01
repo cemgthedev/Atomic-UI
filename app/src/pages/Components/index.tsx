@@ -100,6 +100,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.input}`,
   },
   {
+    name: "Input Group",
+    description: "Agrupa campos, anexos e ações em um único controle.",
+    href: `/${urls.components}/${urls.input_group}`,
+  },
+  {
     name: "Label",
     description:
       "Identifica e descreve campos de formulário de forma acessível.",
@@ -224,15 +229,20 @@ export function Components() {
 
         <Separator size="xs" />
 
-        <Input
-          value={search}
-          onChange={(event) => handleSearch(event.target.value)}
-          startContent={<Search className="opacity-80" />}
-          placeholder="Filtrar componentes..."
-          aria-label="Filtrar componentes"
-          variant={"primary"}
-          className="w-full md:w-4/5 lg:w-2/3"
-        />
+        <div className="relative w-full md:w-4/5 lg:w-2/3">
+          <Search
+            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 opacity-80"
+            size={18}
+          />
+          <Input
+            value={search}
+            onChange={(event) => handleSearch(event.target.value)}
+            placeholder="Filtrar componentes..."
+            aria-label="Filtrar componentes"
+            variant="primary"
+            className="w-full pl-10"
+          />
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredComponents?.map((component) => (

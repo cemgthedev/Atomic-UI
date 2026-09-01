@@ -1,11 +1,8 @@
-import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
-import { X } from "lucide-react";
-
 const inputVariants = cva(
-  "group/input flex gap-2 w-full items-center border overflow-hidden px-3",
+  "group/input flex gap-2 w-full items-center border px-3 focus:outline-none",
   {
     variants: {
       variant: {
@@ -50,73 +47,19 @@ const inputVariants = cva(
 );
 
 type InputProps = Omit<React.ComponentProps<"input">, "size"> &
-  VariantProps<typeof inputVariants> & {
-    startContent?: React.ReactNode;
-    endContent?: React.ReactNode;
-    isClearable?: boolean;
-    onClear?: () => void;
-  };
+  VariantProps<typeof inputVariants>;
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
-    {
-      className,
-      variant = "default",
-      size = "md",
-      rounded = "md",
-      startContent = null,
-      endContent = null,
-      isClearable,
-      onClear,
-      ...props
-    },
+    { className, variant = "default", size = "md", rounded = "md", ...props },
     ref,
   ) => {
     return (
-      <div className={inputVariants({ variant, size, rounded, className })}>
-        {startContent}
-
-        <input
-          ref={ref}
-          className={cn(
-            "flex h-full w-full bg-transparent text-base focus:outline-none disabled:cursor-not-allowed",
-            // Variant colors
-            "group-data-[variant=default]/input:text-foreground",
-            "group-data-[variant=dark]/input:text-dark-foreground",
-            "group-data-[variant=muted]/input:text-foreground",
-            "group-data-[variant=primary]/input:text-cyan-800",
-            "group-data-[variant=secondary]/input:text-violet-800",
-            "group-data-[variant=success]/input:text-emerald-800",
-            "group-data-[variant=warning]/input:text-yellow-800",
-            "group-data-[variant=danger]/input:text-red-800",
-          )}
-          {...props}
-        />
-
-        {endContent}
-
-        {isClearable && onClear && props.value && (
-          <button
-            aria-label="Limpar"
-            className={cn(
-              "flex items-center hover:opacity-80 transition-opacity",
-              // Variant colors
-              "group-data-[variant=default]/input:text-foreground",
-              "group-data-[variant=dark]/input:text-dark-foreground",
-              "group-data-[variant=muted]/input:text-foreground",
-              "group-data-[variant=primary]/input:text-cyan-800",
-              "group-data-[variant=secondary]/input:text-violet-800",
-              "group-data-[variant=success]/input:text-emerald-800",
-              "group-data-[variant=warning]/input:text-yellow-800",
-              "group-data-[variant=danger]/input:text-red-800",
-            )}
-            type="button"
-            onClick={onClear}
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
+      <input
+        ref={ref}
+        className={inputVariants({ variant, size, rounded, className })}
+        {...props}
+      />
     );
   },
 );

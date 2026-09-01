@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as InputGroupStories from './InputGroup.stories';
+
+<Meta of={InputGroupStories} />
+
+# InputGroup
+
+Agrupa campos, textos e ações em uma única estrutura visual para criar formulários mais consistentes e compactos.
+
+## Padrão
+
+Use o componente para combinar entradas e conteúdos auxiliares em um único bloco.
+
+<Canvas of={InputGroupStories.Default} />
+
+<Controls />
+
+## Com texto e botão
+
+O grupo também funciona bem para valores monetários, pesquisas e ações rápidas.
+
+<Canvas of={InputGroupStories.WithTextAndButton} />
+
+## Textarea
+
+É possível empregar a estrutura em áreas maiores de texto com addon em bloco.
+
+<Canvas of={InputGroupStories.TextareaGroup} />

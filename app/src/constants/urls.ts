@@ -105,6 +105,11 @@ export const urls = {
   input: "input",
 
   /**
+   * Input Group page
+   */
+  input_group: "input_group",
+
+  /**
    * Label page
    */
   label: "label",
