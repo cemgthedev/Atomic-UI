@@ -1,8 +1,8 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
-const textareaVariants = cva(
-  "group/textarea min-h-fit flex gap-2 w-full border overflow-hidden px-3 py-2 focus:outline-none",
+const inputGroupInputVariants = cva(
+  "group/input flex gap-2 w-full items-center border overflow-hidden px-3",
   {
     variants: {
       variant: {
@@ -10,7 +10,7 @@ const textareaVariants = cva(
           "bg-background text-foreground border-gray-200 hover:border-gray-400 focus-within:border-gray-900",
         dark: "bg-dark text-dark-foreground border-gray-200 hover:border-gray-400 focus-within:border-gray-200",
         muted:
-          "bg-background text-foreground border-gray-200 hover:border-gray-400 focus-within:border-gray-900 opacity-60",
+          "bg-background text-foreground border-muted-200 hover:border-muted-400 focus-within:border-muted-900 opacity-60",
         primary:
           "bg-background text-primary-800 border-primary-200 hover:border-primary-400 focus-within:border-primary-900",
         secondary:
@@ -22,7 +22,15 @@ const textareaVariants = cva(
         danger:
           "bg-background text-danger-800 border-danger-200 hover:border-danger-400 focus-within:border-danger-900",
       },
+      size: {
+        xl: "min-h-13 max-h-13",
+        lg: "min-h-12 max-h-12",
+        md: "min-h-11 max-h-11",
+        sm: "min-h-10 max-h-10",
+        xs: "min-h-9 max-h-9",
+      },
       rounded: {
+        full: "rounded-full",
         xl: "rounded-xl",
         lg: "rounded-lg",
         md: "rounded-md",
@@ -32,29 +40,37 @@ const textareaVariants = cva(
     },
     defaultVariants: {
       variant: "default",
+      size: "md",
       rounded: "md",
     },
   },
 );
 
-type TextareaProps = Omit<React.ComponentProps<"textarea">, "size"> &
-  VariantProps<typeof textareaVariants>;
+type InputGroupInputProps = Omit<React.ComponentProps<"input">, "size"> &
+  VariantProps<typeof inputGroupInputVariants>;
 
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+const InputGroupInput = React.forwardRef<
+  HTMLInputElement,
+  InputGroupInputProps
+>(
   (
-    { className, variant = "default", rounded = "md", rows = 3, ...props },
+    { className, variant = "default", size = "md", rounded = "md", ...props },
     ref,
   ) => {
     return (
-      <textarea
+      <input
         ref={ref}
-        rows={rows}
-        className={textareaVariants({ variant, rounded, className })}
+        className={inputGroupInputVariants({
+          variant,
+          size,
+          rounded,
+          className,
+        })}
         {...props}
       />
     );
   },
 );
 
-export { Textarea, textareaVariants };
-export type { TextareaProps };
+export { InputGroupInput, inputGroupInputVariants };
+export type { InputGroupInputProps };

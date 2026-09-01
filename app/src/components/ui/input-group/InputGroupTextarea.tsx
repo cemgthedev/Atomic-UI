@@ -1,8 +1,8 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
-const textareaVariants = cva(
-  "group/textarea min-h-fit flex gap-2 w-full border overflow-hidden px-3 py-2 focus:outline-none",
+const inputGroupTextareaVariants = cva(
+  "group/textarea flex gap-2 w-full max-h-fit border overflow-hidden px-3 py-2",
   {
     variants: {
       variant: {
@@ -22,6 +22,13 @@ const textareaVariants = cva(
         danger:
           "bg-background text-danger-800 border-danger-200 hover:border-danger-400 focus-within:border-danger-900",
       },
+      size: {
+        xl: "min-h-16",
+        lg: "min-h-14",
+        md: "min-h-12",
+        sm: "min-h-10",
+        xs: "min-h-9",
+      },
       rounded: {
         xl: "rounded-xl",
         lg: "rounded-lg",
@@ -32,29 +39,37 @@ const textareaVariants = cva(
     },
     defaultVariants: {
       variant: "default",
+      size: "md",
       rounded: "md",
     },
   },
 );
 
-type TextareaProps = Omit<React.ComponentProps<"textarea">, "size"> &
-  VariantProps<typeof textareaVariants>;
+type InputGroupTextareaProps = Omit<React.ComponentProps<"textarea">, "size"> &
+  VariantProps<typeof inputGroupTextareaVariants>;
 
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+const InputGroupTextarea = React.forwardRef<
+  HTMLTextAreaElement,
+  InputGroupTextareaProps
+>(
   (
-    { className, variant = "default", rounded = "md", rows = 3, ...props },
+    { className, variant = "default", size = "md", rounded = "md", ...props },
     ref,
   ) => {
     return (
       <textarea
         ref={ref}
-        rows={rows}
-        className={textareaVariants({ variant, rounded, className })}
+        className={inputGroupTextareaVariants({
+          variant,
+          size,
+          rounded,
+          className,
+        })}
         {...props}
       />
     );
   },
 );
 
-export { Textarea, textareaVariants };
-export type { TextareaProps };
+export { InputGroupTextarea, inputGroupTextareaVariants };
+export type { InputGroupTextareaProps };

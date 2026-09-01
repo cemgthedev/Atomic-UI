@@ -365,28 +365,6 @@ export function InputDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
-                    <Text>startContent</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>Conteúdo exibido antes do texto.</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>-</Text>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Text>endContent</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>Conteúdo exibido depois do texto.</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>-</Text>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -416,19 +394,6 @@ export function InputDetails() {
                   </TableCell>
                   <TableCell>
                     <Text>md</Text>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Text>isClearable</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>
-                      Adiciona um botão para limpar o conteúdo do input.
-                    </Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>false</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

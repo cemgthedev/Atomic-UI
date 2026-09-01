@@ -21,7 +21,6 @@ import {
   textareaExample,
   textareaPropertiesExample,
   textareaRoundsExample,
-  textareaSizesExample,
   textareaVariantsExample,
 } from "@/pages/Components/textarea/codes";
 import { textareaSourceCode } from "@/pages/Components/textarea/codes/source-code";
@@ -39,10 +38,6 @@ export const sectionLinks: UrlProps[] = [
   {
     name: "Variantes",
     href: `/${urls.components}/${urls.textarea}#variantes`,
-  },
-  {
-    name: "Tamanhos",
-    href: `/${urls.components}/${urls.textarea}#tamanhos`,
   },
   {
     name: "Arredondamentos",
@@ -185,58 +180,6 @@ export function TextareaDetails() {
           </Tabs>
         </div>
 
-        {/* Tamanhos */}
-        <div id="tamanhos" className="flex flex-col gap-3 py-4">
-          <div className="flex flex-col justify-between gap-4 lg:flex-row">
-            <div className="flex flex-col gap-1">
-              <Heading>Tamanhos</Heading>
-              <Text className="indent-8">
-                Exemplos de tamanhos do componente Textarea.
-              </Text>
-            </div>
-          </div>
-
-          <Separator size="xs" />
-
-          <Tabs defaultValue="sizes-example" className="w-full">
-            <TabsList className="bg-background border border-muted-200">
-              <TabsTrigger
-                value="sizes-example"
-                className="data-active:bg-primary-100"
-              >
-                <Text size="sm">Exemplo</Text>
-              </TabsTrigger>
-              <TabsTrigger
-                value="sizes-code"
-                className="data-active:bg-primary-100"
-              >
-                <Text size="sm">Código</Text>
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="sizes-example">
-              <div className="w-full flex justify-center items-center p-3 gap-4 bg-muted-100 border border-muted-200 rounded-lg">
-                <div className="w-full max-w-md flex flex-col gap-3">
-                  {(["xs", "sm", "md", "lg", "xl"] as const).map((size) => (
-                    <Textarea key={size} size={size} placeholder={size} />
-                  ))}
-                </div>
-              </div>
-            </TabsContent>
-            <TabsContent value="sizes-code">
-              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-                <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                  <code>{textareaSizesExample}</code>
-                </pre>
-                <Button
-                  startContent={<Copy size={20} className="text-zinc-600" />}
-                  onClick={() => copy(textareaSizesExample)}
-                  className="bg-transparent border-none p-0"
-                />
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-
         {/* Arredondamentos */}
         <div id="arredondamentos" className="flex flex-col gap-3 py-4">
           <div className="flex flex-col justify-between gap-4 lg:flex-row">
@@ -326,7 +269,6 @@ export function TextareaDetails() {
                 <div className="w-full max-w-md">
                   <Textarea
                     variant="default"
-                    size="md"
                     rounded="md"
                     placeholder="Exemplo"
                   />
@@ -365,28 +307,6 @@ export function TextareaDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
-                    <Text>startContent</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>Conteúdo exibido antes do texto.</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>-</Text>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Text>endContent</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>Conteúdo exibido depois do texto.</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>-</Text>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -416,19 +336,6 @@ export function TextareaDetails() {
                   </TableCell>
                   <TableCell>
                     <Text>md</Text>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <Text>isClearable</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>
-                      Adiciona um botão para limpar o conteúdo do textarea.
-                    </Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>false</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>
