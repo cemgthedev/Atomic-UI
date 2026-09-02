@@ -247,6 +247,12 @@ const SwitchDetailsPage = async () => {
   return { Component: Component.SwitchDetails };
 };
 
+const TableDetailsPage = async () => {
+  const [Component] = await Promise.all([import("@/pages/Components/table")]);
+
+  return { Component: Component.TableDetails };
+};
+
 const TabsDetailsPage = async () => {
   const [Component] = await Promise.all([import("@/pages/Components/tabs")]);
 
@@ -433,6 +439,10 @@ export const router = createBrowserRouter([
           {
             path: urls.switch,
             lazy: SwitchDetailsPage,
+          },
+          {
+            path: urls.table,
+            lazy: TableDetailsPage,
           },
           {
             path: urls.tabs,

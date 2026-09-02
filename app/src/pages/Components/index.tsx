@@ -167,6 +167,11 @@ const components: ComponentProps[] = [
     href: `/${urls.components}/${urls.switch}`,
   },
   {
+    name: "Table",
+    description: "Organiza dados em linhas e colunas.",
+    href: `/${urls.components}/${urls.table}`,
+  },
+  {
     name: "Tabs",
     description: "Alterna entre diferentes conteúdos relacionados.",
     href: `/${urls.components}/${urls.tabs}`,

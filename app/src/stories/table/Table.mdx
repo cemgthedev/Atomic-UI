@@ -1,0 +1,15 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+
+import * as TableStories from './Table.stories';
+
+<Meta of={TableStories} />
+
+# Table
+
+Organiza dados tabulares em linhas e colunas, com suporte a cabeçalho, corpo, rodapé e legenda.
+
+## Padrão
+
+Use a composição de subcomponentes para manter a estrutura semântica da tabela.
+
+<Canvas of={TableStories.Default} />
