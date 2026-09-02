@@ -180,6 +180,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.switch}`,
       },
       {
+        name: "Table",
+        href: `/${urls.components}/${urls.table}`,
+      },
+      {
         name: "Tabs",
         href: `/${urls.components}/${urls.tabs}`,
       },

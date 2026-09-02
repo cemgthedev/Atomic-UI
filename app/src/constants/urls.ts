@@ -175,6 +175,11 @@ export const urls = {
   switch: "switch",
 
   /**
+   * Table page
+   */
+  table: "table",
+
+  /**
    * Tabs page
    */
   tabs: "tabs",
