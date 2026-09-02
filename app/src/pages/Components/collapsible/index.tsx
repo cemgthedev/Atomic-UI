@@ -45,51 +45,6 @@ const sectionLinks: UrlProps[] = [
   },
 ];
 
-type ExampleTabsProps = {
-  code: string;
-  example: React.ReactNode;
-  name: string;
-};
-
-function ExampleTabs({ code, example, name }: ExampleTabsProps) {
-  return (
-    <Tabs defaultValue={`${name}-example`} className="w-full">
-      <TabsList className="bg-background border border-muted-200">
-        <TabsTrigger
-          value={`${name}-example`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Exemplo</Text>
-        </TabsTrigger>
-        <TabsTrigger
-          value={`${name}-code`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Codigo</Text>
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value={`${name}-example`}>
-        <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          {example}
-        </div>
-      </TabsContent>
-      <TabsContent value={`${name}-code`}>
-        <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          <pre className="w-full overflow-auto scrollbar-thin mr-1">
-            <code>{code}</code>
-          </pre>
-          <Button
-            startContent={<Copy size={20} className="text-zinc-600" />}
-            onClick={() => copy(code)}
-            className="bg-transparent border-none p-0"
-            aria-label="Copiar codigo"
-          />
-        </div>
-      </TabsContent>
-    </Tabs>
-  );
-}
-
 function CollapsibleExample({
   defaultOpen = false,
 }: {
@@ -139,11 +94,40 @@ export function CollapsibleDetails() {
             </Button>
           </div>
           <Separator size="xs" />
-          <ExampleTabs
-            name="collapsible"
-            code={collapsibleExample}
-            example={<CollapsibleExample />}
-          />
+          <Tabs defaultValue="collapsible-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="collapsible-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="collapsible-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Codigo</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="collapsible-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <CollapsibleExample />
+              </div>
+            </TabsContent>
+            <TabsContent value="collapsible-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{collapsibleExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(collapsibleExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar codigo"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Estado Inicial */}
@@ -154,11 +138,43 @@ export function CollapsibleDetails() {
             componente for montado.
           </Text>
           <Separator size="xs" />
-          <ExampleTabs
-            name="collapsible-default-open"
-            code={collapsibleDefaultOpenExample}
-            example={<CollapsibleExample defaultOpen />}
-          />
+          <Tabs
+            defaultValue="collapsible-default-open-example"
+            className="w-full"
+          >
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="collapsible-default-open-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="collapsible-default-open-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Codigo</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="collapsible-default-open-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <CollapsibleExample defaultOpen />
+              </div>
+            </TabsContent>
+            <TabsContent value="collapsible-default-open-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{collapsibleDefaultOpenExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(collapsibleDefaultOpenExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar codigo"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Propriedades */}

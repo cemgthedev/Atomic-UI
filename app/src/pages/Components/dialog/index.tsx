@@ -31,7 +31,6 @@ import type { UrlProps } from "@/types/urls";
 import { cn } from "@/utils/cn";
 import { copy } from "@/utils/copy";
 import { Copy } from "lucide-react";
-import type { ReactNode } from "react";
 import { Link, useLocation } from "react-router";
 
 const sectionLinks: UrlProps[] = [
@@ -41,46 +40,6 @@ const sectionLinks: UrlProps[] = [
     href: `/${urls.components}/${urls.dialog}#propriedades`,
   },
 ];
-
-type ExampleProps = { value: string; example: string; children: ReactNode };
-
-function Example({ value, example, children }: ExampleProps) {
-  return (
-    <Tabs defaultValue={`${value}-example`} className="w-full">
-      <TabsList className="bg-background border border-muted-200">
-        <TabsTrigger
-          value={`${value}-example`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Exemplo</Text>
-        </TabsTrigger>
-        <TabsTrigger
-          value={`${value}-code`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Código</Text>
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value={`${value}-example`}>
-        <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          {children}
-        </div>
-      </TabsContent>
-      <TabsContent value={`${value}-code`}>
-        <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          <pre className="w-full overflow-auto scrollbar-thin mr-1">
-            <code>{example}</code>
-          </pre>
-          <Button
-            startContent={<Copy size={20} className="text-zinc-600" />}
-            onClick={() => copy(example)}
-            className="bg-transparent border-none p-0"
-          />
-        </div>
-      </TabsContent>
-    </Tabs>
-  );
-}
 
 export function DialogDetails() {
   const { pathname, hash } = useLocation();
@@ -108,25 +67,55 @@ export function DialogDetails() {
             </Button>
           </div>
           <Separator size="xs" />
-          <Example value="dialog" example={dialogExample}>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="primary">Abrir Dialog</Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <Heading size="sm">Excluir projeto?</Heading>
-                  <Text size="sm">Esta ação não poderá ser desfeita.</Text>
-                </DialogHeader>
-                <DialogFooter>
-                  <DialogClose asChild>
-                    <Button variant="dark-ghost">Cancelar</Button>
-                  </DialogClose>
-                  <Button variant="primary">Excluir</Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
-          </Example>
+          <Tabs defaultValue="dialog-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="dialog-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="dialog-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="dialog-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="primary">Abrir Dialog</Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <Heading size="sm">Excluir projeto?</Heading>
+                      <Text size="sm">Esta ação não poderá ser desfeita.</Text>
+                    </DialogHeader>
+                    <DialogFooter>
+                      <DialogClose asChild>
+                        <Button variant="dark-ghost">Cancelar</Button>
+                      </DialogClose>
+                      <Button variant="primary">Excluir</Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </TabsContent>
+            <TabsContent value="dialog-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{dialogExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(dialogExample)}
+                  className="bg-transparent border-none p-0"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
         <div id="propriedades" className="flex flex-col gap-3 pt-4 pb-16">
           <Heading>Propriedades</Heading>
@@ -134,24 +123,56 @@ export function DialogDetails() {
             Propriedades para personalizar o componente Dialog.
           </Text>
           <Separator size="xs" />
-          <Example value="dialog-properties" example={dialogPropertiesExample}>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="primary">Abrir Dialog personalizado</Button>
-              </DialogTrigger>
-              <DialogContent showCloseButton={false}>
-                <DialogHeader>
-                  <Heading size="sm">Fechamento personalizado</Heading>
-                  <Text size="sm">
-                    O botão de fechar padrão foi desabilitado.
-                  </Text>
-                </DialogHeader>
-                <DialogFooter showCloseButton>
-                  <Button variant="primary">Confirmar</Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
-          </Example>
+          <Tabs defaultValue="dialog-properties-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="dialog-properties-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="dialog-properties-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="dialog-properties-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="primary">
+                      Abrir Dialog personalizado
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent showCloseButton={false}>
+                    <DialogHeader>
+                      <Heading size="sm">Fechamento personalizado</Heading>
+                      <Text size="sm">
+                        O botão de fechar padrão foi desabilitado.
+                      </Text>
+                    </DialogHeader>
+                    <DialogFooter showCloseButton>
+                      <Button variant="primary">Confirmar</Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </TabsContent>
+            <TabsContent value="dialog-properties-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{dialogPropertiesExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(dialogPropertiesExample)}
+                  className="bg-transparent border-none p-0"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
           <div className="border border-muted-200 p-3 rounded-lg">
             <Table>
               <TableHeader>
