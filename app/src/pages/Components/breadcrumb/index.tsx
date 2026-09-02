@@ -112,7 +112,9 @@ export function BreadcrumbDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Breadcrumb</Heading>
               <Text className="indent-8">
-                Exibe a hierarquia de navegação e indica a página atual.
+                Exibe o caminho percorrido dentro da aplicação, permitindo
+                navegar rapidamente entre páginas e diferentes níveis da
+                estrutura.
               </Text>
             </div>
             <Button

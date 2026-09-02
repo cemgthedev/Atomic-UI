@@ -106,8 +106,8 @@ export function SheetDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Sheet</Heading>
               <Text className="indent-8">
-                Componente para exibir conteúdo em um painel deslizante sobre a
-                interface.
+                Exibe um painel sobreposto que desliza pela interface para
+                apresentar conteúdos, ações ou formulários temporários.
               </Text>
             </div>
             <Button
@@ -150,20 +150,18 @@ export function SheetDetails() {
           <Separator size="xs" />
           <Example value="sheet-sides" example={sheetSidesExample}>
             <div className="flex flex-wrap justify-center gap-3">
-              {(["top", "right", "bottom", "left"] as const).map(
-                (side) => (
-                  <Sheet key={side}>
-                    <SheetTrigger asChild>
-                      <Button variant="primary">{side}</Button>
-                    </SheetTrigger>
-                    <SheetContent side={side}>
-                      <SheetHeader>
-                        <Heading size="sm">Sheet {side}</Heading>
-                      </SheetHeader>
-                    </SheetContent>
-                  </Sheet>
-                ),
-              )}
+              {(["top", "right", "bottom", "left"] as const).map((side) => (
+                <Sheet key={side}>
+                  <SheetTrigger asChild>
+                    <Button variant="primary">{side}</Button>
+                  </SheetTrigger>
+                  <SheetContent side={side}>
+                    <SheetHeader>
+                      <Heading size="sm">Sheet {side}</Heading>
+                    </SheetHeader>
+                  </SheetContent>
+                </Sheet>
+              ))}
             </div>
           </Example>
         </div>
@@ -198,21 +196,39 @@ export function SheetDetails() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead><Text>Nome</Text></TableHead>
-                  <TableHead><Text>Descrição</Text></TableHead>
-                  <TableHead><Text>Valor padrão</Text></TableHead>
+                  <TableHead>
+                    <Text>Nome</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Descrição</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Valor padrão</Text>
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 <TableRow>
-                  <TableCell><Text>side</Text></TableCell>
-                  <TableCell><Text>Define o lado em que o painel é exibido.</Text></TableCell>
-                  <TableCell><Text>right</Text></TableCell>
+                  <TableCell>
+                    <Text>side</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>Define o lado em que o painel é exibido.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>right</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell><Text>showCloseButton</Text></TableCell>
-                  <TableCell><Text>Define se o botão de fechar é exibido.</Text></TableCell>
-                  <TableCell><Text>true</Text></TableCell>
+                  <TableCell>
+                    <Text>showCloseButton</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>Define se o botão de fechar é exibido.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>true</Text>
+                  </TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -220,7 +236,9 @@ export function SheetDetails() {
         </div>
       </section>
       <aside className="hidden lg:flex flex-col gap-2 min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] min-w-fit max-w-fit border-l border-muted-200 px-3 py-8 overflow-auto scrollbar-none">
-        <Label size="sm" className="text-right px-3">Seções</Label>
+        <Label size="sm" className="text-right px-3">
+          Seções
+        </Label>
         <nav>
           {sectionLinks.map((item) => {
             const href = item.href ?? "";

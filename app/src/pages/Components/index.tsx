@@ -13,187 +13,182 @@ type ComponentProps = {
 const components: ComponentProps[] = [
   {
     name: "Avatar",
-    description: "Exibe a imagem ou as iniciais de um usuário ou entidade.",
+    description: "Exibe imagem ou identidade visual de um usuário.",
     href: `/${urls.components}/${urls.avatar}`,
   },
   {
     name: "Badge",
-    description: "Destaca informações com rótulos compactos e personalizáveis.",
+    description: "Destaca status, categorias ou informações curtas.",
     href: `/${urls.components}/${urls.badge}`,
   },
   {
     name: "Breadcrumb",
-    description: "Indica a hierarquia e a localização atual na navegação.",
+    description: "Exibe o caminho de navegação atual.",
     href: `/${urls.components}/${urls.breadcrumb}`,
   },
   {
     name: "Button",
-    description: "Aciona ações por meio de botões com variantes e estados.",
+    description: "Executa ações principais da interface.",
     href: `/${urls.components}/${urls.button}`,
   },
   {
     name: "Calendar",
-    description: "Exibe um calendário para navegação e seleção de datas.",
+    description: "Exibe datas em formato de calendário.",
     href: `/${urls.components}/${urls.calendar}`,
   },
   {
     name: "Card",
-    description: "Exibe um card para agrupamento de informações.",
+    description: "Agrupa conteúdos relacionados em um bloco.",
     href: `/${urls.components}/${urls.card}`,
   },
   {
     name: "Carousel",
-    description:
-      "Exibe conteúdos em slides navegáveis horizontal ou verticalmente.",
+    description: "Exibe conteúdo em sequência deslizável.",
     href: `/${urls.components}/${urls.carousel}`,
   },
   {
     name: "Checkbox",
-    description: "Permite selecionar ou desmarcar opções independentes.",
+    description: "Seleciona uma ou mais opções disponíveis.",
     href: `/${urls.components}/${urls.checkbox}`,
   },
   {
     name: "Collapsible",
-    description:
-      "Exibe ou oculta conteúdo complementar a partir de um acionador.",
+    description: "Expande ou recolhe uma seção.",
     href: `/${urls.components}/${urls.collapsible}`,
   },
   {
     name: "Datepicker",
-    description: "Combina calendário e campo para seleção de datas.",
+    description: "Seleciona datas em um campo interativo.",
     href: `/${urls.components}/${urls.datepicker}`,
   },
   {
     name: "Dialog",
-    description: "Exibe conteúdo sobreposto que requer a atenção do usuário.",
+    description: "Exibe conteúdo em uma janela modal.",
     href: `/${urls.components}/${urls.dialog}`,
   },
   {
     name: "Drawer",
-    description:
-      "Exibe conteúdo em um painel deslizante que pode ser arrastado.",
+    description: "Exibe painel deslizante lateral ou inferior.",
     href: `/${urls.components}/${urls.drawer}`,
   },
   {
     name: "DropdownMenu",
-    description: "Menu suspenso acessível para ações e navegação.",
+    description: "Exibe lista de ações ou opções.",
     href: `/${urls.components}/${urls.dropdown_menu}`,
   },
   {
     name: "Field",
-    description: "Estrutura formulários com rótulos, descrição e validação.",
+    description: "Agrupa elementos de um campo de formulário.",
     href: `/${urls.components}/${urls.field}`,
   },
   {
     name: "Heading",
-    description: "Renderiza títulos semânticos com estilos padronizados.",
+    description: "Exibe títulos e hierarquias de conteúdo.",
     href: `/${urls.components}/${urls.heading}`,
   },
   {
     name: "Image",
-    description: "Exibe imagens com suporte a personalização e responsividade.",
+    description: "Exibe imagens responsivas na interface.",
     href: `/${urls.components}/${urls.image}`,
   },
   {
     name: "Input",
-    description: "Campo de entrada para textos e outros valores.",
+    description: "Recebe informações digitadas pelo usuário.",
     href: `/${urls.components}/${urls.input}`,
   },
   {
     name: "Input Group",
-    description: "Agrupa campos, anexos e ações em um único controle.",
+    description: "Agrupa entrada com elementos auxiliares.",
     href: `/${urls.components}/${urls.input_group}`,
   },
   {
     name: "Label",
-    description:
-      "Identifica e descreve campos de formulário de forma acessível.",
+    description: "Identifica campos e controles da interface.",
     href: `/${urls.components}/${urls.label}`,
   },
   {
     name: "Loader",
-    description: "Indica carregamento ou processamento de informações.",
+    description: "Indica carregamento de conteúdos ou ações.",
     href: `/${urls.components}/${urls.loader}`,
   },
   {
     name: "Message",
-    description: "Exibe mensagens informativas, de sucesso, aviso ou erro.",
+    description: "Exibe mensagens informativas ao usuário.",
     href: `/${urls.components}/${urls.message}`,
   },
   {
     name: "Pagination",
-    description: "Navega entre páginas de grandes conjuntos de dados.",
+    description: "Navega entre páginas de conteúdo.",
     href: `/${urls.components}/${urls.pagination}`,
   },
   {
     name: "Popover",
-    description: "Exibe conteúdo contextual sobreposto ao elemento acionador.",
+    description: "Exibe conteúdo contextual em sobreposição.",
     href: `/${urls.components}/${urls.popover}`,
   },
   {
     name: "Progress",
-    description: "Representa visualmente o progresso de uma tarefa.",
+    description: "Indica progresso de uma tarefa.",
     href: `/${urls.components}/${urls.progress}`,
   },
   {
     name: "Radio Group",
-    description: "Seleciona apenas uma opção entre várias.",
+    description: "Seleciona apenas uma opção disponível.",
     href: `/${urls.components}/${urls.radio_group}`,
   },
   {
     name: "Select",
-    description: "Permite escolher um valor em uma lista de opções.",
+    description: "Seleciona uma opção em lista.",
     href: `/${urls.components}/${urls.select}`,
   },
   {
     name: "Separator",
-    description: "Separa visualmente seções e grupos de conteúdo.",
+    description: "Separa conteúdos em diferentes seções.",
     href: `/${urls.components}/${urls.separator}`,
   },
   {
     name: "Sheet",
-    description: "Exibe conteúdo em um painel deslizante sobre a interface.",
+    description: "Exibe painel deslizante sobre a interface.",
     href: `/${urls.components}/${urls.sheet}`,
   },
   {
     name: "Skeleton",
-    description: "Exibe um placeholder durante o carregamento do conteúdo.",
+    description: "Exibe estrutura temporária durante carregamento.",
     href: `/${urls.components}/${urls.skeleton}`,
   },
   {
     name: "Slider",
-    description: "Permite selecionar valores dentro de um intervalo.",
+    description: "Seleciona valores dentro de um intervalo.",
     href: `/${urls.components}/${urls.slider}`,
   },
   {
     name: "Switch",
-    description: "Alterna entre estados ligado e desligado.",
+    description: "Ativa ou desativa uma configuração.",
     href: `/${urls.components}/${urls.switch}`,
   },
   {
     name: "Tabs",
-    description: "Organiza conteúdo em abas interativas acessíveis.",
+    description: "Alterna entre diferentes conteúdos relacionados.",
     href: `/${urls.components}/${urls.tabs}`,
   },
   {
     name: "Text",
-    description: "Renderiza textos com estilos tipográficos consistentes.",
+    description: "Exibe textos e conteúdos escritos.",
     href: `/${urls.components}/${urls.text}`,
   },
   {
     name: "Textarea",
-    description: "Campo para entrada de textos com múltiplas linhas.",
+    description: "Recebe textos longos em formulários.",
     href: `/${urls.components}/${urls.textarea}`,
   },
   {
     name: "Toast",
-    description: "Exibe notificações temporárias informando status do sistema.",
+    description: "Exibe notificações temporárias na interface.",
     href: `/${urls.components}/${urls.toast}`,
   },
   {
     name: "Tooltip",
-    description:
-      "Exibe uma breve descrição ao passar o cursor ou focar um elemento.",
+    description: "Exibe informações adicionais ao interagir.",
     href: `/${urls.components}/${urls.tooltip}`,
   },
 ];

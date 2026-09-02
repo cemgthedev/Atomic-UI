@@ -17,8 +17,7 @@ const meta = {
     layout: "padded",
     docs: {
       description: {
-        component:
-          "Indica a hierarquia de navegação e a localização atual da página.",
+        component: "Exibe o caminho de navegação atual.",
       },
     },
   },

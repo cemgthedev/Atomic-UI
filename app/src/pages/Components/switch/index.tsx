@@ -55,7 +55,8 @@ export function SwitchDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Switch</Heading>
               <Text className="indent-8">
-                Componente switch para alternar entre estados ativo e inativo.
+                Controla estados binários, permitindo ativar ou desativar
+                configurações de forma simples, rápida e intuitiva.
               </Text>
             </div>
             <Button

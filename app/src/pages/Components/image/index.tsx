@@ -69,8 +69,9 @@ export function ImageDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Image</Heading>
               <Text className="indent-8">
-                Exibe imagens com suporte a tamanhos, arredondamento e estados
-                de carregamento.
+                Exibe imagens adaptáveis à interface, oferecendo suporte a
+                proporções, tamanhos e carregamento eficiente em diferentes
+                layouts.
               </Text>
             </div>
             <Button

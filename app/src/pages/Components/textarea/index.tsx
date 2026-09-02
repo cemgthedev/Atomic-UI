@@ -62,8 +62,8 @@ export function TextareaDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Textarea</Heading>
               <Text className="indent-8">
-                Campo de entrada de texto multilinha com suporte a variantes,
-                tamanhos e arredondamento.
+                Permite inserir, editar e visualizar textos longos em
+                formulários, comentários, descrições ou mensagens.
               </Text>
             </div>
             <Button

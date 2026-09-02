@@ -75,8 +75,8 @@ export function FieldDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Field</Heading>
               <Text className="indent-8">
-                Estrutura composicional para agrupar rótulos, descrições, erro e
-                conteúdo de formulários com consistência acessível.
+                Estrutura um campo de formulário reunindo rótulo, entrada,
+                descrição e mensagens de validação em um único componente.
               </Text>
             </div>
             <Button

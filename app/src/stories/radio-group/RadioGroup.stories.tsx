@@ -9,6 +9,14 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 const meta = {
   title: "Components/RadioGroup",
   component: RadioGroupItem,
+  parameters: {
+    layout: "centered",
+    docs: {
+      description: {
+        component: "Seleciona apenas uma opção disponível.",
+      },
+    },
+  },
   args: {
     value: "option-1",
     variant: "default",

@@ -20,8 +20,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente de popover para exibir conteúdo complementar em contexto.",
+        component: "Exibe conteúdo contextual em sobreposição.",
       },
     },
   },

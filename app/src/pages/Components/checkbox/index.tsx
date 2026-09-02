@@ -62,8 +62,8 @@ export function CheckboxDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Checkbox</Heading>
               <Text className="indent-8">
-                Componente de seleção binária com suporte a variantes, estados e
-                ícone.
+                Permite selecionar ou remover múltiplas opções de maneira
+                independente, sendo ideal para listas, filtros e formulários.
               </Text>
             </div>
             <Button

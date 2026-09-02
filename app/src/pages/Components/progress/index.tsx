@@ -78,8 +78,8 @@ export function ProgressDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Progress</Heading>
               <Text className="indent-8">
-                Indica visualmente o status de conclusão de uma tarefa ou
-                processo.
+                Representa o progresso de uma tarefa ou processo por meio de uma
+                barra visual simples e atualizável.
               </Text>
             </div>
             <Button

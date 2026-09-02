@@ -62,8 +62,8 @@ export function MessageDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Message</Heading>
               <Text className="indent-8">
-                Componente de texto para mensagens informativas, de alerta ou de
-                estado.
+                Exibe mensagens contextuais para informar estados, sucessos,
+                avisos ou erros de maneira clara e consistente.
               </Text>
             </div>
             <Button

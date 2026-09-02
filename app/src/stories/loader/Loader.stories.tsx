@@ -15,7 +15,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component: "Indicador visual de carregamento com variantes e tamanhos.",
+        component: "Indica carregamento de conteúdos ou ações.",
       },
     },
   },

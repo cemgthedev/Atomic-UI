@@ -12,7 +12,7 @@ const meta = {
     layout: "padded",
     docs: {
       description: {
-        component: "Linha divisória para separar conteúdos em blocos visuais.",
+        component: "Separa conteúdos em diferentes seções.",
       },
     },
   },

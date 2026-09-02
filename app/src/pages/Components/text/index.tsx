@@ -60,8 +60,8 @@ export function TextDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Text</Heading>
               <Text className="indent-8">
-                Tipografia consistente para textos de apoio, descrições e
-                conteúdo.
+                Exibe conteúdos textuais da interface com suporte a diferentes
+                estilos, pesos, tamanhos e variações tipográficas.
               </Text>
             </div>
             <Button

@@ -72,8 +72,8 @@ export function SelectDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Select</Heading>
               <Text className="indent-8">
-                Componente para seleção de um valor em uma lista de opções, com
-                foco em acessibilidade e consistência visual.
+                Exibe uma lista suspensa de opções para selecionar um único
+                valor de forma compacta e organizada.
               </Text>
             </div>
             <Button

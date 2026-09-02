@@ -64,8 +64,9 @@ export function SkeletonDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Skeleton</Heading>
               <Text className="indent-8">
-                Indicador de carregamento para representar conteúdo em
-                processamento.
+                Exibe uma estrutura temporária semelhante ao conteúdo final,
+                proporcionando uma experiência visual mais fluida durante o
+                carregamento.
               </Text>
             </div>
             <Button

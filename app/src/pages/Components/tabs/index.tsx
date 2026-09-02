@@ -71,9 +71,8 @@ export function TabsDetails() {
               <Heading>Tabs</Heading>
               <Text className="indent-8">
                 {" "}
-                Componente de navegação que organiza conteúdo em abas
-                interativas, permitindo alternar entre diferentes seções da
-                interface de forma intuitiva, acessível e responsiva.
+                Permite alternar entre diferentes seções de conteúdo sem trocar
+                de página, mantendo a interface organizada.
               </Text>
             </div>
             <Button

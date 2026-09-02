@@ -55,7 +55,8 @@ export function SliderDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Slider</Heading>
               <Text className="indent-8">
-                Permite selecionar um ou mais valores dentro de um intervalo.
+                Permite selecionar e ajustar valores dentro de um intervalo
+                definido utilizando um controle deslizante interativo.
               </Text>
             </div>
             <Button

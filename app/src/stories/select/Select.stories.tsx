@@ -21,17 +21,14 @@ type SelectStoryProps = ComponentProps<typeof Select> & {
 const meta = {
   title: "Components/Select",
   component: Select,
-
   parameters: {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente de seleção para escolher um valor de uma lista. Suporta variantes, tamanhos e arredondamento.",
+        component: "Seleciona uma opção em lista.",
       },
     },
   },
-
   argTypes: {
     variant: {
       description: "Define a variante visual do trigger.",

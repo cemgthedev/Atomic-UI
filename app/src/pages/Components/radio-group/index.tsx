@@ -69,7 +69,8 @@ export function RadioGroupDetails() {
               <Heading>Radio Group</Heading>
               <Text className="indent-8">
                 {" "}
-                Seleciona apenas uma opção entre várias.
+                Organiza opções mutuamente exclusivas, permitindo selecionar
+                apenas uma alternativa dentro de um grupo de escolhas.
               </Text>
             </div>
             <Button

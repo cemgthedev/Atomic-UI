@@ -22,8 +22,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente para exibir conteúdo em um painel deslizante sobre a interface.",
+        component: "Exibe painel deslizante sobre a interface.",
       },
     },
   },
@@ -46,9 +45,7 @@ export const Default: Story = {
       <SheetContent>
         <SheetHeader>
           <Heading size="sm">Sheet simples</Heading>
-          <Text size="sm">
-            Este conteúdo é exibido em um painel lateral.
-          </Text>
+          <Text size="sm">Este conteúdo é exibido em um painel lateral.</Text>
         </SheetHeader>
         <SheetFooter>
           <SheetClose asChild>

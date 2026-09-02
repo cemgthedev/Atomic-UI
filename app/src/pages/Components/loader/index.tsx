@@ -62,7 +62,9 @@ export function LoaderDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Loader</Heading>
               <Text className="indent-8">
-                Indicador de carregamento com suporte a variantes e tamanhos.
+                Informa visualmente que um conteúdo ou ação está em
+                processamento, reduzindo incerteza durante o carregamento da
+                interface.
               </Text>
             </div>
             <Button

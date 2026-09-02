@@ -100,8 +100,8 @@ export function DrawerDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Drawer</Heading>
               <Text className="indent-8">
-                Componente para exibir conteúdo em um painel deslizante que pode
-                ser arrastado para fechar.
+                Exibe um painel deslizante lateral ou inferior para mostrar
+                conteúdos, formulários ou ações sem trocar de página.
               </Text>
             </div>
             <Button

@@ -67,9 +67,9 @@ export function ButtonDetails() {
               <Heading>Button</Heading>
               <Text className="indent-8">
                 {" "}
-                Explore todos os componentes disponíveis no AtomicUI,
-                desenvolvidos para oferecer consistência, personalização e
-                reutilização na construção de interfaces modernas.
+                Permite executar ações importantes da interface, oferecendo
+                diferentes variantes, tamanhos e estados para diversos fluxos de
+                interação.
               </Text>
             </div>
             <Button

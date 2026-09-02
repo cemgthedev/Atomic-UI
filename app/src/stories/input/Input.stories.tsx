@@ -9,8 +9,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Campo de entrada versátil com suporte a variantes, ícones, tamanho e ação de limpar.",
+        component: "Recebe informações digitadas pelo usuário.",
       },
     },
   },

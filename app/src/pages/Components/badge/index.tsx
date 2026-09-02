@@ -67,8 +67,9 @@ export function BadgeDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Badge</Heading>
               <Text className="indent-8">
-                Componentes pequenos e destacados para evidenciar estados,
-                categorias ou status em interfaces.
+                Apresenta informações curtas e destacadas, como status,
+                categorias ou etiquetas, de forma visualmente simples e fácil de
+                identificar.
               </Text>
             </div>
             <Button

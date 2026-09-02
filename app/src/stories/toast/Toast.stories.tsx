@@ -20,8 +20,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Toast baseado no Sonner com variantes customizadas do AtomicUI.",
+        component: "Exibe notificações temporárias na interface.",
       },
     },
   },

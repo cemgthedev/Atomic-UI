@@ -72,7 +72,8 @@ export function ToastDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Toast</Heading>
               <Text className="indent-8">
-                Exibe notificações temporárias informando status do sistema.
+                Exibe notificações temporárias para informar resultados de ações
+                ou eventos, sem interromper a interação do usuário.
               </Text>
             </div>
             <Button

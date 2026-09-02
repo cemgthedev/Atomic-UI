@@ -16,8 +16,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Agrupa campos de entrada, textos, botões e anexos em um único bloco visualmente consistente.",
+        component: "Agrupa entrada com elementos auxiliares.",
       },
     },
   },

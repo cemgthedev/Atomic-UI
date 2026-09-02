@@ -23,7 +23,7 @@ const meta = {
       },
       description: {
         component:
-          "Badge utilizado para exibir informações adicionais. Suporta múltiplas variantes e tamanhos.",
+          "Destaca status, categorias ou informações curtas.",
       },
     },
   },

@@ -85,8 +85,8 @@ export function DropdownMenuDetails() {
               <Heading>DropdownMenu</Heading>
               <Text className="indent-8">
                 {" "}
-                Menu suspenso acessível para exibir ações, opções e navegação
-                contextual de forma organizada, rápida e consistente.
+                Apresenta uma lista de ações ou opções em um menu contextual
+                compacto, acessível a partir de um gatilho.
               </Text>
             </div>
             <Button

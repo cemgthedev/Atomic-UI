@@ -64,8 +64,8 @@ export function DatepickerDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Datepicker</Heading>
               <Text className="indent-8">
-                Componentes para seleção de datas nos modos simples, intervalo e
-                múltiplo.
+                Permite selecionar datas diretamente em um campo de entrada com
+                suporte a calendário e navegação entre períodos.
               </Text>
             </div>
             <Button

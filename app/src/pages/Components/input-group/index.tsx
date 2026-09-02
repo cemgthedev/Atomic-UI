@@ -66,8 +66,8 @@ export function InputGroupDetails() {
             <div className="flex flex-col gap-1">
               <Heading>InputGroup</Heading>
               <Text className="indent-8">
-                Agrupa campos de entrada, textos, ações e anexos em um único
-                bloco visualmente consistente.
+                Organiza um campo de entrada junto a elementos auxiliares, como
+                ícones, botões, prefixos ou sufixos relacionados.
               </Text>
             </div>
             <Button

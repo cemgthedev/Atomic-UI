@@ -70,8 +70,8 @@ export function PaginationDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Pagination</Heading>
               <Text className="indent-8">
-                Componente de paginação para navegação entre páginas de
-                conteúdo.
+                Controla a navegação entre páginas de conteúdos extensos,
+                facilitando acesso organizado a listas, tabelas e coleções.
               </Text>
             </div>
             <Button

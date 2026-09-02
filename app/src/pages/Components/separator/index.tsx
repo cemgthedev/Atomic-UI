@@ -66,8 +66,8 @@ export function SeparatorDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Separator</Heading>
               <Text className="indent-8">
-                Separa conteúdos em blocos visuais com uma linha horizontal
-                elegante.
+                Adiciona uma linha divisória para separar visualmente conteúdos,
+                seções ou grupos de componentes na interface.
               </Text>
             </div>
             <Button

@@ -20,7 +20,7 @@ const meta = {
       },
       description: {
         component:
-          "Avatar utilizado para exibir imagens ou ícones de perfil. Suporta múltiplas variantes, tamanhos e bordas.",
+          "Exibe imagem ou identidade visual de um usuário.",
       },
     },
   },

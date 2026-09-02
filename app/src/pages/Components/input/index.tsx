@@ -67,8 +67,8 @@ export function InputDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Input</Heading>
               <Text className="indent-8">
-                Campo de entrada para texto com suporte a variantes, tamanhos e
-                arredondamento.
+                Permite inserir e editar diferentes tipos de dados em
+                formulários, com suporte a estados e validações.
               </Text>
             </div>
             <Button

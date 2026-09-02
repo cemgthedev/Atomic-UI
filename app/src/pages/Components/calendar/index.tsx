@@ -67,8 +67,8 @@ export function CalendarDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Calendar</Heading>
               <Text className="indent-8">
-                Exibe um calendário para navegação e seleção de datas com opções
-                de estilo do botão.
+                Apresenta datas em uma visualização de calendário, permitindo
+                navegação entre períodos e seleção de dias específicos.
               </Text>
             </div>
             <Button

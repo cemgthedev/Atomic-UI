@@ -12,8 +12,7 @@ const meta = {
         exclude: ["theme", "captionLayout", "locale"],
       },
       description: {
-        component:
-          "Calendário utilizado para selecionar datas. Suporta múltiplas variantes, tamanhos e bordas.",
+        component: "Exibe datas em formato de calendário.",
       },
     },
   },

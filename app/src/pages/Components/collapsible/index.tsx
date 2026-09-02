@@ -125,7 +125,8 @@ export function CollapsibleDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Collapsible</Heading>
               <Text className="indent-8">
-                Exibe ou oculta conteudo complementar a partir de um acionador.
+                Permite expandir ou recolher uma seção de conteúdo, economizando
+                espaço e melhorando a organização da interface.
               </Text>
             </div>
             <Button

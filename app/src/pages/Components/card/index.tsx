@@ -74,10 +74,9 @@ export function CardDetails() {
               <Heading>Card</Heading>
               <Text className="indent-8">
                 {" "}
-                Um componente de interface utilizado para agrupar e organizar
-                informações relacionadas em uma área visual independente. É
-                comum em dashboards, páginas de produtos, perfis, listas,
-                artigos e seções informativas.
+                Agrupa conteúdos relacionados em um contêiner visual organizado,
+                facilitando apresentação, separação e reutilização de
+                informações na interface.
               </Text>
             </div>
             <Button

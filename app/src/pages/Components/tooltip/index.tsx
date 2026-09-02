@@ -103,8 +103,8 @@ export function TooltipDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Tooltip</Heading>
               <Text className="indent-8">
-                Exibe uma breve descrição ao passar o cursor ou focar um
-                elemento.
+                Apresenta informações curtas e contextuais relacionadas a um
+                elemento, auxiliando compreensão sem ocupar espaço permanente.
               </Text>
             </div>
             <Button
