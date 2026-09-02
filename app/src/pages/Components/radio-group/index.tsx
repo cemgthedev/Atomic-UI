@@ -69,7 +69,8 @@ export function RadioGroupDetails() {
               <Heading>Radio Group</Heading>
               <Text className="indent-8">
                 {" "}
-                Seleciona apenas uma opção entre várias.
+                Organiza opções mutuamente exclusivas, permitindo selecionar
+                apenas uma alternativa dentro de um grupo de escolhas.
               </Text>
             </div>
             <Button
@@ -401,7 +402,10 @@ export function RadioGroupDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -414,6 +418,9 @@ export function RadioGroupDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>RadioGroup</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -424,6 +431,9 @@ export function RadioGroupDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>RadioGroup</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>
@@ -436,6 +446,9 @@ export function RadioGroupDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>RadioGroup</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
@@ -446,6 +459,9 @@ export function RadioGroupDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>RadioGroup</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>value</Text>
                   </TableCell>
@@ -458,6 +474,9 @@ export function RadioGroupDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>RadioGroup</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>defaultValue</Text>
                   </TableCell>
                   <TableCell>
@@ -468,6 +487,9 @@ export function RadioGroupDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>RadioGroup</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>disabled</Text>
                   </TableCell>

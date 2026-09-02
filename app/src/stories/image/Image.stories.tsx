@@ -21,8 +21,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente para exibir imagens com suporte a skeleton, fallback e sobreposição visual.",
+        component: "Exibe imagens responsivas na interface.",
       },
     },
   },

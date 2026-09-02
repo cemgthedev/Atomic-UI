@@ -22,8 +22,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente para exibir conteúdo em um painel deslizante que pode ser arrastado para fechar.",
+        component: "Exibe painel deslizante lateral ou inferior.",
       },
     },
   },

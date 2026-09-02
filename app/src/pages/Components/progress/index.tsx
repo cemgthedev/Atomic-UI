@@ -78,8 +78,8 @@ export function ProgressDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Progress</Heading>
               <Text className="indent-8">
-                Indica visualmente o status de conclusão de uma tarefa ou
-                processo.
+                Representa o progresso de uma tarefa ou processo por meio de uma
+                barra visual simples e atualizável.
               </Text>
             </div>
             <Button
@@ -569,7 +569,10 @@ export function ProgressDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -582,6 +585,9 @@ export function ProgressDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Progress</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -592,6 +598,9 @@ export function ProgressDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Progress</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>
@@ -604,6 +613,9 @@ export function ProgressDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Progress</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
@@ -614,6 +626,9 @@ export function ProgressDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Progress</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>striped</Text>
                   </TableCell>
@@ -627,6 +642,9 @@ export function ProgressDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Progress</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>animated</Text>
                   </TableCell>

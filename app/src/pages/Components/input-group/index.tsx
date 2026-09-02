@@ -66,8 +66,8 @@ export function InputGroupDetails() {
             <div className="flex flex-col gap-1">
               <Heading>InputGroup</Heading>
               <Text className="indent-8">
-                Agrupa campos de entrada, textos, ações e anexos em um único
-                bloco visualmente consistente.
+                Organiza um campo de entrada junto a elementos auxiliares, como
+                ícones, botões, prefixos ou sufixos relacionados.
               </Text>
             </div>
             <Button
@@ -350,7 +350,10 @@ export function InputGroupDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -363,6 +366,9 @@ export function InputGroupDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>InputGroup</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -373,6 +379,9 @@ export function InputGroupDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>InputGroup</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>
@@ -385,6 +394,9 @@ export function InputGroupDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>InputGroup</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
@@ -395,6 +407,9 @@ export function InputGroupDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>InputGroup</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>align</Text>
                   </TableCell>

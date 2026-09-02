@@ -31,8 +31,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente de navegação por slides baseado em Embla Carousel, com suporte a orientação horizontal e vertical.",
+        component: "Exibe conteúdo em sequência deslizável.",
       },
     },
   },

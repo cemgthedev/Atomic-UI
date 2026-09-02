@@ -12,8 +12,7 @@ const meta = {
     layout: "padded",
     docs: {
       description: {
-        component:
-          "Componente de título para estruturar hierarquias de conteúdo.",
+        component: "Exibe títulos e hierarquias de conteúdo.",
       },
     },
   },

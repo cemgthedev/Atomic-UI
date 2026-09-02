@@ -61,8 +61,9 @@ export function LabelDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Label</Heading>
               <Text className="indent-8">
-                Componente acessível para rotular campos e controlar a
-                experiência do formulário.
+                Apresenta um texto descritivo associado a campos e controles,
+                melhorando identificação, acessibilidade e compreensão do
+                formulário.
               </Text>
             </div>
             <Button
@@ -276,7 +277,10 @@ export function LabelDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -289,6 +293,9 @@ export function LabelDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Label</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -299,6 +306,9 @@ export function LabelDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Label</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>

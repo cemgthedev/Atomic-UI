@@ -44,7 +44,7 @@ export const sectionLinks: UrlProps[] = [
   },
   {
     name: "Variantes",
-    href: `/${urls.components}/${urls.button}#variantes`,
+    href: `/${urls.components}/${urls.card}#variantes`,
   },
   {
     name: "Tamanhos",
@@ -74,10 +74,9 @@ export function CardDetails() {
               <Heading>Card</Heading>
               <Text className="indent-8">
                 {" "}
-                Um componente de interface utilizado para agrupar e organizar
-                informações relacionadas em uma área visual independente. É
-                comum em dashboards, páginas de produtos, perfis, listas,
-                artigos e seções informativas.
+                Agrupa conteúdos relacionados em um contêiner visual organizado,
+                facilitando apresentação, separação e reutilização de
+                informações na interface.
               </Text>
             </div>
             <Button
@@ -496,7 +495,10 @@ export function CardDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -509,6 +511,9 @@ export function CardDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Card</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -520,6 +525,9 @@ export function CardDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Card</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -530,6 +538,9 @@ export function CardDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Card</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

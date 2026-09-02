@@ -62,7 +62,9 @@ export function LoaderDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Loader</Heading>
               <Text className="indent-8">
-                Indicador de carregamento com suporte a variantes e tamanhos.
+                Informa visualmente que um conteúdo ou ação está em
+                processamento, reduzindo incerteza durante o carregamento da
+                interface.
               </Text>
             </div>
             <Button
@@ -273,7 +275,10 @@ export function LoaderDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -286,6 +291,9 @@ export function LoaderDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Loader</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -297,6 +305,9 @@ export function LoaderDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Loader</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -307,6 +318,9 @@ export function LoaderDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Loader</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>icon</Text>
                   </TableCell>

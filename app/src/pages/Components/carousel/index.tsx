@@ -77,9 +77,8 @@ export function DetailsCarousel() {
             <div className="flex flex-col gap-1">
               <Heading>Carousel</Heading>
               <Text className="indent-8">
-                Organiza conteúdos em slides navegáveis, com suporte a
-                orientação horizontal e vertical, múltiplos itens por
-                visualização e controles de navegação.
+                Exibe uma sequência de conteúdos deslizáveis, permitindo
+                navegação entre itens por gestos, botões ou indicadores visuais.
               </Text>
             </div>
             <Button
@@ -94,10 +93,16 @@ export function DetailsCarousel() {
           <Separator size="xs" />
           <Tabs defaultValue="carousel-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
-              <TabsTrigger value="carousel-example" className="data-active:bg-primary-100">
+              <TabsTrigger
+                value="carousel-example"
+                className="data-active:bg-primary-100"
+              >
                 <Text size="sm">Exemplo</Text>
               </TabsTrigger>
-              <TabsTrigger value="carousel-code" className="data-active:bg-primary-100">
+              <TabsTrigger
+                value="carousel-code"
+                className="data-active:bg-primary-100"
+              >
                 <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
@@ -121,7 +126,12 @@ export function DetailsCarousel() {
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
                   <code>{carouselExample}</code>
                 </pre>
-                <Button startContent={<Copy size={20} className="text-zinc-600" />} onClick={() => copy(carouselExample)} className="bg-transparent border-none p-0" aria-label="Copiar código" />
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(carouselExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar código"
+                />
               </div>
             </TabsContent>
           </Tabs>
@@ -138,10 +148,16 @@ export function DetailsCarousel() {
           <Separator size="xs" />
           <Tabs defaultValue="multiple-items-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
-              <TabsTrigger value="multiple-items-example" className="data-active:bg-primary-100">
+              <TabsTrigger
+                value="multiple-items-example"
+                className="data-active:bg-primary-100"
+              >
                 <Text size="sm">Exemplo</Text>
               </TabsTrigger>
-              <TabsTrigger value="multiple-items-code" className="data-active:bg-primary-100">
+              <TabsTrigger
+                value="multiple-items-code"
+                className="data-active:bg-primary-100"
+              >
                 <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
@@ -150,7 +166,10 @@ export function DetailsCarousel() {
                 <Carousel className="w-full max-w-3xl">
                   <CarouselContent>
                     {slides.map((slide, index) => (
-                      <CarouselItem key={slide} className="basis-1/2 md:basis-1/3">
+                      <CarouselItem
+                        key={slide}
+                        className="basis-1/2 md:basis-1/3"
+                      >
                         <Slide label={slide} index={index} />
                       </CarouselItem>
                     ))}
@@ -165,7 +184,12 @@ export function DetailsCarousel() {
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
                   <code>{carouselMultipleItemsExample}</code>
                 </pre>
-                <Button startContent={<Copy size={20} className="text-zinc-600" />} onClick={() => copy(carouselMultipleItemsExample)} className="bg-transparent border-none p-0" aria-label="Copiar código" />
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(carouselMultipleItemsExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar código"
+                />
               </div>
             </TabsContent>
           </Tabs>
@@ -182,16 +206,25 @@ export function DetailsCarousel() {
           <Separator size="xs" />
           <Tabs defaultValue="vertical-example" className="w-full">
             <TabsList className="bg-background border border-muted-200">
-              <TabsTrigger value="vertical-example" className="data-active:bg-primary-100">
+              <TabsTrigger
+                value="vertical-example"
+                className="data-active:bg-primary-100"
+              >
                 <Text size="sm">Exemplo</Text>
               </TabsTrigger>
-              <TabsTrigger value="vertical-code" className="data-active:bg-primary-100">
+              <TabsTrigger
+                value="vertical-code"
+                className="data-active:bg-primary-100"
+              >
                 <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
             <TabsContent value="vertical-example">
               <div className="w-full flex justify-center items-center p-6 bg-muted-100 border border-muted-200 rounded-lg">
-                <Carousel orientation="vertical" className="w-full max-w-xs h-fit">
+                <Carousel
+                  orientation="vertical"
+                  className="w-full max-w-xs h-fit"
+                >
                   <CarouselContent className="h-44">
                     {slides.slice(0, 3).map((slide, index) => (
                       <CarouselItem key={slide}>
@@ -209,7 +242,12 @@ export function DetailsCarousel() {
                 <pre className="w-full overflow-auto scrollbar-thin mr-1">
                   <code>{carouselVerticalExample}</code>
                 </pre>
-                <Button startContent={<Copy size={20} className="text-zinc-600" />} onClick={() => copy(carouselVerticalExample)} className="bg-transparent border-none p-0" aria-label="Copiar código" />
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(carouselVerticalExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar código"
+                />
               </div>
             </TabsContent>
           </Tabs>
@@ -228,7 +266,10 @@ export function DetailsCarousel() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -241,6 +282,9 @@ export function DetailsCarousel() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Carousel</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>orientation</Text>
                   </TableCell>
                   <TableCell>
@@ -251,6 +295,9 @@ export function DetailsCarousel() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Carousel</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>opts</Text>
                   </TableCell>
@@ -263,6 +310,9 @@ export function DetailsCarousel() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Carousel</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>plugins</Text>
                   </TableCell>
                   <TableCell>
@@ -273,6 +323,9 @@ export function DetailsCarousel() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Carousel</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>setApi</Text>
                   </TableCell>

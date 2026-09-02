@@ -12,8 +12,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente para selecionar um ou mais valores dentro de um intervalo.",
+        component: "Seleciona valores dentro de um intervalo.",
       },
     },
   },

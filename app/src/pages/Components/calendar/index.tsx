@@ -67,8 +67,8 @@ export function CalendarDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Calendar</Heading>
               <Text className="indent-8">
-                Exibe um calendário para navegação e seleção de datas com opções
-                de estilo do botão.
+                Apresenta datas em uma visualização de calendário, permitindo
+                navegação entre períodos e seleção de dias específicos.
               </Text>
             </div>
             <Button
@@ -372,7 +372,10 @@ export function CalendarDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -385,6 +388,9 @@ export function CalendarDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Calendar</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>calendarButtonVariant</Text>
                   </TableCell>
                   <TableCell>
@@ -395,6 +401,9 @@ export function CalendarDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Calendar</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>calendarButtonRounded</Text>
                   </TableCell>
@@ -409,6 +418,9 @@ export function CalendarDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Calendar</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>showOutsideDays</Text>
                   </TableCell>
                   <TableCell>
@@ -421,6 +433,9 @@ export function CalendarDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Calendar</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>mode</Text>
                   </TableCell>

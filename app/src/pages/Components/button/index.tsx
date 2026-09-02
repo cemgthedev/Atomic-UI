@@ -67,9 +67,9 @@ export function ButtonDetails() {
               <Heading>Button</Heading>
               <Text className="indent-8">
                 {" "}
-                Explore todos os componentes disponíveis no AtomicUI,
-                desenvolvidos para oferecer consistência, personalização e
-                reutilização na construção de interfaces modernas.
+                Permite executar ações importantes da interface, oferecendo
+                diferentes variantes, tamanhos e estados para diversos fluxos de
+                interação.
               </Text>
             </div>
             <Button
@@ -477,7 +477,10 @@ export function ButtonDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -490,6 +493,9 @@ export function ButtonDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Button</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>startContent</Text>
                   </TableCell>
                   <TableCell>
@@ -500,6 +506,9 @@ export function ButtonDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Button</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>endContent</Text>
                   </TableCell>
@@ -512,6 +521,9 @@ export function ButtonDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Button</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -523,6 +535,9 @@ export function ButtonDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Button</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -533,6 +548,9 @@ export function ButtonDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Button</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

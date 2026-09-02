@@ -67,8 +67,9 @@ export function BadgeDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Badge</Heading>
               <Text className="indent-8">
-                Componentes pequenos e destacados para evidenciar estados,
-                categorias ou status em interfaces.
+                Apresenta informações curtas e destacadas, como status,
+                categorias ou etiquetas, de forma visualmente simples e fácil de
+                identificar.
               </Text>
             </div>
             <Button
@@ -476,7 +477,10 @@ export function BadgeDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -489,6 +493,9 @@ export function BadgeDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>startContent</Text>
                   </TableCell>
                   <TableCell>
@@ -499,6 +506,9 @@ export function BadgeDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>endContent</Text>
                   </TableCell>
@@ -511,6 +521,9 @@ export function BadgeDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -522,6 +535,9 @@ export function BadgeDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -532,6 +548,9 @@ export function BadgeDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

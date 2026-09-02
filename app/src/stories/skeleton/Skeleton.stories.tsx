@@ -12,8 +12,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Placeholder animado utilizado para indicar carregamento de conteúdo em interfaces.",
+        component: "Exibe estrutura temporária durante carregamento.",
       },
     },
   },

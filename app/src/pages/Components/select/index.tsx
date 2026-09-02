@@ -72,8 +72,8 @@ export function SelectDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Select</Heading>
               <Text className="indent-8">
-                Componente para seleção de um valor em uma lista de opções, com
-                foco em acessibilidade e consistência visual.
+                Exibe uma lista suspensa de opções para selecionar um único
+                valor de forma compacta e organizada.
               </Text>
             </div>
             <Button
@@ -394,76 +394,90 @@ export function SelectDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
                     <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
-                    <Text>Tipo</Text>
+                    <Text>Descrição</Text>
                   </TableHead>
                   <TableHead>
-                    <Text>Descrição</Text>
+                    <Text>Valor padrão</Text>
                   </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 <TableRow>
                   <TableCell>
-                    <Text>variant</Text>
+                    <Text>SelectTrigger</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>
-                      {" "}
-                      "default" | "dark" | "muted" | "primary" | "secondary" |
-                      "success" | "warning" | "danger"
-                    </Text>
+                    <Text>variant</Text>
                   </TableCell>
                   <TableCell>
                     <Text>Define a variação visual do trigger.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>default</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>SelectTrigger</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>"xs" | "sm" | "md" | "lg" | "xl"</Text>
+                    <Text>Altera a altura e o espaçamento do campo.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Altera a altura e o espaçamento do campo.</Text>
+                    <Text>md</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>SelectTrigger</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>"xs" | "sm" | "md" | "lg" | "xl" | "full"</Text>
+                    <Text>Controla o arredondamento das bordas.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Controla o arredondamento das bordas.</Text>
+                    <Text>md</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
-                    <Text>placeholder</Text>
+                    <Text>SelectTrigger</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>string</Text>
+                    <Text>placeholder</Text>
                   </TableCell>
                   <TableCell>
                     <Text>
                       Texto exibido quando nenhum valor está selecionado.
                     </Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>SelectTrigger</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>disabled</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>boolean</Text>
+                    <Text>Desativa a seleção do componente.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>Desativa a seleção do componente.</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

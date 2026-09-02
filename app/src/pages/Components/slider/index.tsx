@@ -55,7 +55,8 @@ export function SliderDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Slider</Heading>
               <Text className="indent-8">
-                Permite selecionar um ou mais valores dentro de um intervalo.
+                Permite selecionar e ajustar valores dentro de um intervalo
+                definido utilizando um controle deslizante interativo.
               </Text>
             </div>
             <Button
@@ -369,7 +370,10 @@ export function SliderDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -382,6 +386,9 @@ export function SliderDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Slider</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>defaultValue</Text>
                   </TableCell>
                   <TableCell>
@@ -392,6 +399,9 @@ export function SliderDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Slider</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>min</Text>
                   </TableCell>
@@ -404,6 +414,9 @@ export function SliderDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Slider</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>max</Text>
                   </TableCell>
                   <TableCell>
@@ -414,6 +427,9 @@ export function SliderDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Slider</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>step</Text>
                   </TableCell>
@@ -426,6 +442,9 @@ export function SliderDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Slider</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>orientation</Text>
                   </TableCell>
                   <TableCell>
@@ -436,6 +455,9 @@ export function SliderDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Slider</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>disabled</Text>
                   </TableCell>

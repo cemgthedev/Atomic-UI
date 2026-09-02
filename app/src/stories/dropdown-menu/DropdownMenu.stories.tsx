@@ -22,6 +22,12 @@ const meta = {
   component: DropdownMenu,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "Exibe painel deslizante lateral ou inferior.Exibe lista de ações ou opções.",
+      },
+    },
   },
 } satisfies Meta<typeof DropdownMenu>;
 

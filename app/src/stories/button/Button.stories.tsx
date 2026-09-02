@@ -23,7 +23,7 @@ const meta = {
       },
       description: {
         component:
-          "Botão utilizado para disparar ações. Suporta múltiplas variantes, tamanhos e bordas.",
+          "Executa ações principais da interface.",
       },
     },
   },

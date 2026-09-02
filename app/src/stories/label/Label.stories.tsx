@@ -12,8 +12,7 @@ const meta = {
     layout: "padded",
     docs: {
       description: {
-        component:
-          "Etiqueta para associar texto a campos e controles de formulário.",
+        component: "Identifica campos e controles da interface.",
       },
     },
   },

@@ -12,8 +12,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente de texto para mensagens curtas, avisos e conteúdo informativo.",
+        component: "Exibe mensagens informativas ao usuário.",
       },
     },
   },

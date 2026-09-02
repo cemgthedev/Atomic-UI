@@ -62,8 +62,8 @@ export function CheckboxDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Checkbox</Heading>
               <Text className="indent-8">
-                Componente de seleção binária com suporte a variantes, estados e
-                ícone.
+                Permite selecionar ou remover múltiplas opções de maneira
+                independente, sendo ideal para listas, filtros e formulários.
               </Text>
             </div>
             <Button
@@ -374,7 +374,10 @@ export function CheckboxDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -387,6 +390,9 @@ export function CheckboxDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -397,6 +403,9 @@ export function CheckboxDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>
@@ -409,6 +418,9 @@ export function CheckboxDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
@@ -420,6 +432,9 @@ export function CheckboxDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>defaultChecked</Text>
                   </TableCell>
                   <TableCell>
@@ -430,6 +445,9 @@ export function CheckboxDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>icon</Text>
                   </TableCell>

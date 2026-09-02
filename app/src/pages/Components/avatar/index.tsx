@@ -64,8 +64,9 @@ export function AvatarDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Avatar</Heading>
               <Text className="indent-8">
-                Exibe representações visuais de pessoas ou entidades com suporte
-                a imagem e fallback.
+                Exibe a identidade visual de um usuário por meio de imagem,
+                ícone ou iniciais, facilitando reconhecimento e personalização
+                da interface.
               </Text>
             </div>
             <Button
@@ -338,7 +339,10 @@ export function AvatarDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -351,6 +355,9 @@ export function AvatarDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Avatar</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -361,6 +368,9 @@ export function AvatarDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Avatar</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

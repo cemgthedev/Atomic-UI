@@ -17,8 +17,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Exibe ou oculta conteúdo complementar a partir de um acionador.",
+        component: "Expande ou recolhe uma seção.",
       },
     },
   },

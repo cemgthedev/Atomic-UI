@@ -12,7 +12,8 @@ const meta = {
     layout: "padded",
     docs: {
       description: {
-        component: "Texto base para composição de conteúdo em interfaces.",
+        component:
+          "Exibe textos e conteúdos escritos.",
       },
     },
   },

@@ -21,8 +21,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente de barra de progresso para indicar status ou evolução de uma tarefa.",
+        component: "Indica progresso de uma tarefa.",
       },
     },
   },

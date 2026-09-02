@@ -13,8 +13,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Seletores de data com modos simples, intervalo e múltiplo, com personalização de entrada e calendário.",
+        component: "Seleciona datas em um campo interativo.",
       },
     },
   },

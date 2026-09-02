@@ -9,8 +9,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Área de texto multilinha com suporte a variantes, tamanhos, conteúdo auxiliar e ação de limpar.",
+        component: "Recebe textos longos em formulários.",
       },
     },
   },

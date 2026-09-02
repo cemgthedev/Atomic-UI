@@ -13,8 +13,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Componente de alternância para ligar e desligar opções com suporte a variantes, tamanhos e estados.",
+        component: "Ativa ou desativa uma configuração.",
       },
     },
   },

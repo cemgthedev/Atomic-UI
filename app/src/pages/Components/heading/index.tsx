@@ -61,8 +61,8 @@ export function HeadingDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Heading</Heading>
               <Text className="indent-8">
-                Títulos semânticos que ajudam a estruturar hierarquias de
-                conteúdo.
+                Exibe títulos e subtítulos organizados por níveis hierárquicos,
+                melhorando estrutura, leitura e acessibilidade da interface.
               </Text>
             </div>
             <Button
@@ -276,7 +276,10 @@ export function HeadingDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -289,6 +292,9 @@ export function HeadingDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Heading</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -299,6 +305,9 @@ export function HeadingDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Heading</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>

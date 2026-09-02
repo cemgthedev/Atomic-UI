@@ -43,8 +43,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Exibe uma breve descrição ao passar o cursor ou focar um elemento.",
+        component: "Exibe informações adicionais ao interagir.",
       },
     },
   },

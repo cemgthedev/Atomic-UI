@@ -72,7 +72,8 @@ export function ToastDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Toast</Heading>
               <Text className="indent-8">
-                Exibe notificações temporárias informando status do sistema.
+                Exibe notificações temporárias para informar resultados de ações
+                ou eventos, sem interromper a interação do usuário.
               </Text>
             </div>
             <Button
@@ -502,7 +503,10 @@ export function ToastDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -516,6 +520,9 @@ export function ToastDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -527,6 +534,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>className</Text>
                   </TableCell>
@@ -541,6 +551,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>duration</Text>
                   </TableCell>
@@ -557,6 +570,9 @@ export function ToastDetails() {
 
                 <TableRow>
                   <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>position</Text>
                   </TableCell>
                   <TableCell>
@@ -568,6 +584,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>description</Text>
                   </TableCell>
@@ -584,6 +603,9 @@ export function ToastDetails() {
 
                 <TableRow>
                   <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>id</Text>
                   </TableCell>
                   <TableCell>
@@ -595,6 +617,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>closeButton</Text>
                   </TableCell>
@@ -609,6 +634,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>action</Text>
                   </TableCell>

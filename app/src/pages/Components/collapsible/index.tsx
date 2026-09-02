@@ -45,51 +45,6 @@ const sectionLinks: UrlProps[] = [
   },
 ];
 
-type ExampleTabsProps = {
-  code: string;
-  example: React.ReactNode;
-  name: string;
-};
-
-function ExampleTabs({ code, example, name }: ExampleTabsProps) {
-  return (
-    <Tabs defaultValue={`${name}-example`} className="w-full">
-      <TabsList className="bg-background border border-muted-200">
-        <TabsTrigger
-          value={`${name}-example`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Exemplo</Text>
-        </TabsTrigger>
-        <TabsTrigger
-          value={`${name}-code`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Codigo</Text>
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value={`${name}-example`}>
-        <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          {example}
-        </div>
-      </TabsContent>
-      <TabsContent value={`${name}-code`}>
-        <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          <pre className="w-full overflow-auto scrollbar-thin mr-1">
-            <code>{code}</code>
-          </pre>
-          <Button
-            startContent={<Copy size={20} className="text-zinc-600" />}
-            onClick={() => copy(code)}
-            className="bg-transparent border-none p-0"
-            aria-label="Copiar codigo"
-          />
-        </div>
-      </TabsContent>
-    </Tabs>
-  );
-}
-
 function CollapsibleExample({
   defaultOpen = false,
 }: {
@@ -116,6 +71,7 @@ function CollapsibleExample({
 export function CollapsibleDetails() {
   const { pathname, hash } = useLocation();
   const currentUrl = `${pathname}${hash ?? ""}`;
+
   return (
     <>
       <section className="scroll-progress min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
@@ -125,7 +81,8 @@ export function CollapsibleDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Collapsible</Heading>
               <Text className="indent-8">
-                Exibe ou oculta conteudo complementar a partir de um acionador.
+                Permite expandir ou recolher uma seção de conteúdo, economizando
+                espaço e melhorando a organização da interface.
               </Text>
             </div>
             <Button
@@ -134,30 +91,91 @@ export function CollapsibleDetails() {
               onClick={() => copy(collapsibleSourceCode)}
               className="min-w-fit"
             >
-              Copiar codigo fonte
+              Copiar código fonte
             </Button>
           </div>
           <Separator size="xs" />
-          <ExampleTabs
-            name="collapsible"
-            code={collapsibleExample}
-            example={<CollapsibleExample />}
-          />
+          <Tabs defaultValue="collapsible-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="collapsible-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="collapsible-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="collapsible-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <CollapsibleExample />
+              </div>
+            </TabsContent>
+            <TabsContent value="collapsible-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{collapsibleExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(collapsibleExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar código"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Estado Inicial */}
         <div id="estado-inicial" className="flex flex-col gap-3 py-4">
           <Heading>Estado inicial</Heading>
           <Text className="indent-8">
-            Use <code>defaultOpen</code> para exibir o conteudo quando o
+            Use <code>defaultOpen</code> para exibir o conteúdo quando o
             componente for montado.
           </Text>
           <Separator size="xs" />
-          <ExampleTabs
-            name="collapsible-default-open"
-            code={collapsibleDefaultOpenExample}
-            example={<CollapsibleExample defaultOpen />}
-          />
+          <Tabs
+            defaultValue="collapsible-default-open-example"
+            className="w-full"
+          >
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="collapsible-default-open-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="collapsible-default-open-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Codigo</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="collapsible-default-open-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <CollapsibleExample defaultOpen />
+              </div>
+            </TabsContent>
+            <TabsContent value="collapsible-default-open-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{collapsibleDefaultOpenExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(collapsibleDefaultOpenExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar codigo"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Propriedades */}
@@ -181,6 +199,9 @@ export function CollapsibleDetails() {
                   <TableHead>
                     <Text>Descrição</Text>
                   </TableHead>
+                  <TableHead>
+                    <Text>Valor padrão</Text>
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -194,6 +215,9 @@ export function CollapsibleDetails() {
                   <TableCell>
                     <Text>Define se o conteudo inicia aberto.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -204,6 +228,9 @@ export function CollapsibleDetails() {
                   </TableCell>
                   <TableCell>
                     <Text>Controla o estado aberto do componente.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -216,6 +243,9 @@ export function CollapsibleDetails() {
                   <TableCell>
                     <Text>Chamado quando o estado aberto e alterado.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -227,6 +257,9 @@ export function CollapsibleDetails() {
                   <TableCell>
                     <Text>Combina o acionador com o elemento filho.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -237,6 +270,9 @@ export function CollapsibleDetails() {
                   </TableCell>
                   <TableCell>
                     <Text>Mantem o conteudo montado mesmo quando fechado.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

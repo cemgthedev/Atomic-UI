@@ -85,8 +85,8 @@ export function DropdownMenuDetails() {
               <Heading>DropdownMenu</Heading>
               <Text className="indent-8">
                 {" "}
-                Menu suspenso acessível para exibir ações, opções e navegação
-                contextual de forma organizada, rápida e consistente.
+                Apresenta uma lista de ações ou opções em um menu contextual
+                compacto, acessível a partir de um gatilho.
               </Text>
             </div>
             <Button
@@ -480,7 +480,10 @@ export function DropdownMenuDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -494,6 +497,9 @@ export function DropdownMenuDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>DropdownMenu</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>open</Text>
                   </TableCell>
                   <TableCell>
@@ -505,6 +511,9 @@ export function DropdownMenuDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>DropdownMenu</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>defaultOpen</Text>
                   </TableCell>
@@ -521,6 +530,9 @@ export function DropdownMenuDetails() {
 
                 <TableRow>
                   <TableCell>
+                    <Text>DropdownMenu</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>onOpenChange</Text>
                   </TableCell>
                   <TableCell>
@@ -535,6 +547,9 @@ export function DropdownMenuDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>DropdownMenu</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>modal</Text>
                   </TableCell>

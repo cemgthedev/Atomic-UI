@@ -47,8 +47,7 @@ const meta = {
     layout: "padded",
     docs: {
       description: {
-        component:
-          "Componente de paginação para navegar entre páginas de conteúdo.",
+        component: "Navega entre páginas de conteúdo.",
       },
     },
   },

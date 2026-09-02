@@ -27,7 +27,7 @@ const meta = {
         exclude: ["theme", "asChild"],
       },
       description: {
-        component: "Componente para agrupamento de informações.",
+        component: "Agrupa conteúdos relacionados em um bloco.",
       },
     },
   },

@@ -62,8 +62,8 @@ export function MessageDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Message</Heading>
               <Text className="indent-8">
-                Componente de texto para mensagens informativas, de alerta ou de
-                estado.
+                Exibe mensagens contextuais para informar estados, sucessos,
+                avisos ou erros de maneira clara e consistente.
               </Text>
             </div>
             <Button
@@ -285,7 +285,10 @@ export function MessageDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -298,6 +301,9 @@ export function MessageDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Message</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -308,6 +314,9 @@ export function MessageDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Message</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>

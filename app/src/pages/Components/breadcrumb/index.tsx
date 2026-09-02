@@ -54,51 +54,6 @@ const sectionLinks: UrlProps[] = [
   },
 ];
 
-type ExampleTabsProps = {
-  code: string;
-  example: React.ReactNode;
-  name: string;
-};
-
-function ExampleTabs({ code, example, name }: ExampleTabsProps) {
-  return (
-    <Tabs defaultValue={`${name}-example`} className="w-full">
-      <TabsList className="bg-background border border-muted-200">
-        <TabsTrigger
-          value={`${name}-example`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Exemplo</Text>
-        </TabsTrigger>
-        <TabsTrigger
-          value={`${name}-code`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Código</Text>
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value={`${name}-example`}>
-        <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          {example}
-        </div>
-      </TabsContent>
-      <TabsContent value={`${name}-code`}>
-        <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          <pre className="w-full overflow-auto scrollbar-thin mr-1">
-            <code>{code}</code>
-          </pre>
-          <Button
-            startContent={<Copy size={20} className="text-zinc-600" />}
-            onClick={() => copy(code)}
-            className="bg-transparent border-none p-0"
-            aria-label="Copiar código"
-          />
-        </div>
-      </TabsContent>
-    </Tabs>
-  );
-}
-
 export function BreadcrumbDetails() {
   const { pathname, hash } = useLocation();
   const currentUrl = `${pathname}${hash ?? ""}`;
@@ -112,7 +67,9 @@ export function BreadcrumbDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Breadcrumb</Heading>
               <Text className="indent-8">
-                Exibe a hierarquia de navegação e indica a página atual.
+                Exibe o caminho percorrido dentro da aplicação, permitindo
+                navegar rapidamente entre páginas e diferentes níveis da
+                estrutura.
               </Text>
             </div>
             <Button
@@ -125,29 +82,56 @@ export function BreadcrumbDetails() {
             </Button>
           </div>
           <Separator size="xs" />
-          <ExampleTabs
-            name="breadcrumb"
-            code={breadcrumbExample}
-            example={
-              <Breadcrumb>
-                <BreadcrumbList>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/">Início</BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/components">
-                      Componentes
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-                  </BreadcrumbItem>
-                </BreadcrumbList>
-              </Breadcrumb>
-            }
-          />
+          <Tabs defaultValue="breadcrumb-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="breadcrumb-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="breadcrumb-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="breadcrumb-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <Breadcrumb>
+                  <BreadcrumbList>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/">Início</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/components">
+                        Componentes
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                    </BreadcrumbItem>
+                  </BreadcrumbList>
+                </Breadcrumb>
+              </div>
+            </TabsContent>
+            <TabsContent value="breadcrumb-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{breadcrumbExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(breadcrumbExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar código"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Separador */}
@@ -158,29 +142,56 @@ export function BreadcrumbDetails() {
             <code>BreadcrumbSeparator</code>.
           </Text>
           <Separator size="xs" />
-          <ExampleTabs
-            name="breadcrumb-separator"
-            code={breadcrumbCustomSeparatorExample}
-            example={
-              <Breadcrumb>
-                <BreadcrumbList>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/">Início</BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator>/</BreadcrumbSeparator>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/components">
-                      Componentes
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator>/</BreadcrumbSeparator>
-                  <BreadcrumbItem>
-                    <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-                  </BreadcrumbItem>
-                </BreadcrumbList>
-              </Breadcrumb>
-            }
-          />
+          <Tabs defaultValue="breadcrumb-separator-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="breadcrumb-separator-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="breadcrumb-separator-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="breadcrumb-separator-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <Breadcrumb>
+                  <BreadcrumbList>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/">Início</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator>/</BreadcrumbSeparator>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/components">
+                        Componentes
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator>/</BreadcrumbSeparator>
+                    <BreadcrumbItem>
+                      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                    </BreadcrumbItem>
+                  </BreadcrumbList>
+                </Breadcrumb>
+              </div>
+            </TabsContent>
+            <TabsContent value="breadcrumb-separator-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{breadcrumbCustomSeparatorExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(breadcrumbCustomSeparatorExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar código"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Itens Ocultos */}
@@ -191,33 +202,60 @@ export function BreadcrumbDetails() {
             intermediários omitidos.
           </Text>
           <Separator size="xs" />
-          <ExampleTabs
-            name="breadcrumb-ellipsis"
-            code={breadcrumbEllipsisExample}
-            example={
-              <Breadcrumb>
-                <BreadcrumbList>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/">Início</BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbEllipsis />
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/components">
-                      Componentes
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-                  </BreadcrumbItem>
-                </BreadcrumbList>
-              </Breadcrumb>
-            }
-          />
+          <Tabs defaultValue="breadcrumb-ellipsis-example" className="w-full">
+            <TabsList className="bg-background border border-muted-200">
+              <TabsTrigger
+                value="breadcrumb-ellipsis-example"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Exemplo</Text>
+              </TabsTrigger>
+              <TabsTrigger
+                value="breadcrumb-ellipsis-code"
+                className="data-active:bg-primary-100"
+              >
+                <Text size="sm">Código</Text>
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="breadcrumb-ellipsis-example">
+              <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <Breadcrumb>
+                  <BreadcrumbList>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/">Início</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbEllipsis />
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/components">
+                        Componentes
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                    </BreadcrumbItem>
+                  </BreadcrumbList>
+                </Breadcrumb>
+              </div>
+            </TabsContent>
+            <TabsContent value="breadcrumb-ellipsis-code">
+              <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                  <code>{breadcrumbEllipsisExample}</code>
+                </pre>
+                <Button
+                  startContent={<Copy size={20} className="text-zinc-600" />}
+                  onClick={() => copy(breadcrumbEllipsisExample)}
+                  className="bg-transparent border-none p-0"
+                  aria-label="Copiar código"
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Propriedades */}
@@ -236,10 +274,13 @@ export function BreadcrumbDetails() {
                     <Text>Componente</Text>
                   </TableHead>
                   <TableHead>
+                    <Text>Propriedade</Text>
+                  </TableHead>
+                  <TableHead>
                     <Text>Descrição</Text>
                   </TableHead>
                   <TableHead>
-                    <Text>Propriedade</Text>
+                    <Text>Valor padrão</Text>
                   </TableHead>
                 </TableRow>
               </TableHeader>
@@ -249,10 +290,13 @@ export function BreadcrumbDetails() {
                     <Text>Breadcrumb</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>props de nav</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Contêiner de navegação.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>props de nav</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -260,10 +304,13 @@ export function BreadcrumbDetails() {
                     <Text>BreadcrumbLink</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>asChild: false</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Link para um nível anterior.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>asChild: false</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -271,10 +318,13 @@ export function BreadcrumbDetails() {
                     <Text>BreadcrumbPage</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>props de span</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Representa a página atual.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>props de span</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -282,10 +332,13 @@ export function BreadcrumbDetails() {
                     <Text>BreadcrumbSeparator</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>children: ChevronRight</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Separa os níveis.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>children: ChevronRight</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -293,10 +346,13 @@ export function BreadcrumbDetails() {
                     <Text>BreadcrumbEllipsis</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>props de span</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Indica níveis omitidos.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>props de span</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

@@ -16,8 +16,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Checkbox utilizado para seleção binária com suporte a variantes, tamanhos, estados de disabled e validação visual.",
+        component: "Seleciona uma ou mais opções disponíveis.",
       },
     },
   },

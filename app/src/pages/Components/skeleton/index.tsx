@@ -64,8 +64,9 @@ export function SkeletonDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Skeleton</Heading>
               <Text className="indent-8">
-                Indicador de carregamento para representar conteúdo em
-                processamento.
+                Exibe uma estrutura temporária semelhante ao conteúdo final,
+                proporcionando uma experiência visual mais fluida durante o
+                carregamento.
               </Text>
             </div>
             <Button
@@ -331,7 +332,10 @@ export function SkeletonDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -344,6 +348,9 @@ export function SkeletonDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Skeleton</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -355,6 +362,9 @@ export function SkeletonDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Skeleton</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -365,6 +375,9 @@ export function SkeletonDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Skeleton</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

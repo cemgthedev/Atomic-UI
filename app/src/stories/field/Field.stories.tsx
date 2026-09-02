@@ -32,8 +32,7 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "Agrupa e organiza campos do formulário com rótulos, descrição e mensagens de erro.",
+        component: "Agrupa elementos de um campo de formulário.",
       },
     },
   },

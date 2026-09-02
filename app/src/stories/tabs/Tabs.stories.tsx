@@ -6,6 +6,11 @@ const meta = {
   component: Tabs,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component: "Alterna entre diferentes conteúdos relacionados.",
+      },
+    },
   },
   argTypes: {
     defaultValue: {

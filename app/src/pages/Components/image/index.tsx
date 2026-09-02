@@ -69,8 +69,9 @@ export function ImageDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Image</Heading>
               <Text className="indent-8">
-                Exibe imagens com suporte a tamanhos, arredondamento e estados
-                de carregamento.
+                Exibe imagens adaptáveis à interface, oferecendo suporte a
+                proporções, tamanhos e carregamento eficiente em diferentes
+                layouts.
               </Text>
             </div>
             <Button
@@ -380,7 +381,10 @@ export function ImageDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -393,6 +397,9 @@ export function ImageDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Image</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -404,6 +411,9 @@ export function ImageDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Image</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
@@ -414,6 +424,9 @@ export function ImageDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Image</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>aspect</Text>
                   </TableCell>

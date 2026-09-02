@@ -60,8 +60,8 @@ export function TextDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Text</Heading>
               <Text className="indent-8">
-                Tipografia consistente para textos de apoio, descrições e
-                conteúdo.
+                Exibe conteúdos textuais da interface com suporte a diferentes
+                estilos, pesos, tamanhos e variações tipográficas.
               </Text>
             </div>
             <Button
@@ -275,7 +275,10 @@ export function TextDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -288,6 +291,9 @@ export function TextDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Text</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -298,6 +304,9 @@ export function TextDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Text</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>

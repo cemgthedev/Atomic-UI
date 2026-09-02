@@ -31,7 +31,6 @@ import type { UrlProps } from "@/types/urls";
 import { cn } from "@/utils/cn";
 import { copy } from "@/utils/copy";
 import { Copy } from "lucide-react";
-import type { ReactNode } from "react";
 import { Link, useLocation } from "react-router";
 
 export const sectionLinks: UrlProps[] = [
@@ -50,47 +49,6 @@ export const sectionLinks: UrlProps[] = [
   },
 ];
 
-type ExampleTabsProps = { id: string; children: ReactNode; code: string };
-
-function ExampleTabs({ id, children, code }: ExampleTabsProps) {
-  return (
-    <Tabs defaultValue={`${id}-example`} className="w-full">
-      <TabsList className="bg-background border border-muted-200">
-        <TabsTrigger
-          value={`${id}-example`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Exemplo</Text>
-        </TabsTrigger>
-        <TabsTrigger
-          value={`${id}-code`}
-          className="data-active:bg-primary-100"
-        >
-          <Text size="sm">Código</Text>
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value={`${id}-example`}>
-        <div className="w-full flex justify-center items-center p-6 bg-muted-100 border border-muted-200 rounded-lg">
-          {children}
-        </div>
-      </TabsContent>
-      <TabsContent value={`${id}-code`}>
-        <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-          <pre className="w-full overflow-auto scrollbar-thin mr-1">
-            <code>{code}</code>
-          </pre>
-          <Button
-            startContent={<Copy size={20} className="text-zinc-600" />}
-            onClick={() => copy(code)}
-            className="bg-transparent border-none p-0"
-            aria-label="Copiar código"
-          />
-        </div>
-      </TabsContent>
-    </Tabs>
-  );
-}
-
 export function TooltipDetails() {
   const { pathname, hash } = useLocation();
   const currentUrl = `${pathname}${hash ?? ""}`;
@@ -103,8 +61,8 @@ export function TooltipDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Tooltip</Heading>
               <Text className="indent-8">
-                Exibe uma breve descrição ao passar o cursor ou focar um
-                elemento.
+                Apresenta informações curtas e contextuais relacionadas a um
+                elemento, auxiliando compreensão sem ocupar espaço permanente.
               </Text>
             </div>
             <Button
@@ -118,14 +76,45 @@ export function TooltipDetails() {
           </div>
           <Separator size="xs" />
           <TooltipProvider>
-            <ExampleTabs id="tooltip" code={tooltipExample}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button variant="primary">Passe o cursor</Button>
-                </TooltipTrigger>
-                <TooltipContent>Informação complementar</TooltipContent>
-              </Tooltip>
-            </ExampleTabs>
+            <Tabs defaultValue="tooltip-example" className="w-full">
+              <TabsList className="bg-background border border-muted-200">
+                <TabsTrigger
+                  value="tooltip-example"
+                  className="data-active:bg-primary-100"
+                >
+                  <Text size="sm">Exemplo</Text>
+                </TabsTrigger>
+                <TabsTrigger
+                  value="tooltip-code"
+                  className="data-active:bg-primary-100"
+                >
+                  <Text size="sm">Código</Text>
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="tooltip-example">
+                <div className="w-full flex justify-center items-center p-6 bg-muted-100 border border-muted-200 rounded-lg">
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="primary">Passe o cursor</Button>
+                    </TooltipTrigger>
+                    <TooltipContent>Informação complementar</TooltipContent>
+                  </Tooltip>
+                </div>
+              </TabsContent>
+              <TabsContent value="tooltip-code">
+                <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                  <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                    <code>{tooltipExample}</code>
+                  </pre>
+                  <Button
+                    startContent={<Copy size={20} className="text-zinc-600" />}
+                    onClick={() => copy(tooltipExample)}
+                    className="bg-transparent border-none p-0"
+                    aria-label="Copiar código"
+                  />
+                </div>
+              </TabsContent>
+            </Tabs>
           </TooltipProvider>
         </div>
 
@@ -136,20 +125,53 @@ export function TooltipDetails() {
           </Text>
           <Separator size="xs" />
           <TooltipProvider>
-            <ExampleTabs id="tooltip-positions" code={tooltipPositionsExample}>
-              <div className="grid grid-cols-2 gap-12 p-12">
-                {(["top", "right", "bottom", "left"] as const).map((side) => (
-                  <Tooltip key={side} defaultOpen>
-                    <TooltipTrigger asChild>
-                      <Button variant="secondary">{side}</Button>
-                    </TooltipTrigger>
-                    <TooltipContent side={side} sideOffset={8}>
-                      Tooltip à {side}
-                    </TooltipContent>
-                  </Tooltip>
-                ))}
-              </div>
-            </ExampleTabs>
+            <Tabs defaultValue="tooltip-positions-example" className="w-full">
+              <TabsList className="bg-background border border-muted-200">
+                <TabsTrigger
+                  value="tooltip-positions-example"
+                  className="data-active:bg-primary-100"
+                >
+                  <Text size="sm">Exemplo</Text>
+                </TabsTrigger>
+                <TabsTrigger
+                  value="tooltip-positions-code"
+                  className="data-active:bg-primary-100"
+                >
+                  <Text size="sm">Código</Text>
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="tooltip-positions-example">
+                <div className="w-full flex justify-center items-center p-6 bg-muted-100 border border-muted-200 rounded-lg">
+                  <div className="grid grid-cols-2 gap-12 p-12">
+                    {(["top", "right", "bottom", "left"] as const).map(
+                      (side) => (
+                        <Tooltip key={side} defaultOpen>
+                          <TooltipTrigger asChild>
+                            <Button variant="secondary">{side}</Button>
+                          </TooltipTrigger>
+                          <TooltipContent side={side} sideOffset={8}>
+                            Tooltip à {side}
+                          </TooltipContent>
+                        </Tooltip>
+                      ),
+                    )}
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="tooltip-positions-code">
+                <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                  <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                    <code>{tooltipPositionsExample}</code>
+                  </pre>
+                  <Button
+                    startContent={<Copy size={20} className="text-zinc-600" />}
+                    onClick={() => copy(tooltipPositionsExample)}
+                    className="bg-transparent border-none p-0"
+                    aria-label="Copiar código"
+                  />
+                </div>
+              </TabsContent>
+            </Tabs>
           </TooltipProvider>
         </div>
 
@@ -161,32 +183,67 @@ export function TooltipDetails() {
           </Text>
           <Separator size="xs" />
           <TooltipProvider>
-            <ExampleTabs id="tooltip-variants" code={tooltipVariantsExample}>
-              <div className="grid grid-cols-2 gap-12 p-12">
-                {(
-                  [
-                    "default",
-                    "dark",
-                    "primary",
-                    "primary-bordered",
-                    "primary-ghost",
-                    "secondary",
-                    "success",
-                    "warning",
-                    "danger",
-                  ] as const
-                ).map((variant) => (
-                  <Tooltip key={variant} defaultOpen>
-                    <TooltipTrigger asChild>
-                      <Button variant={variant}>{variant}</Button>
-                    </TooltipTrigger>
-                    <TooltipContent variant={variant} side="top" sideOffset={8}>
-                      Tooltip {variant}
-                    </TooltipContent>
-                  </Tooltip>
-                ))}
-              </div>
-            </ExampleTabs>
+            <Tabs defaultValue="tooltip-variants-example" className="w-full">
+              <TabsList className="bg-background border border-muted-200">
+                <TabsTrigger
+                  value="tooltip-variants-example"
+                  className="data-active:bg-primary-100"
+                >
+                  <Text size="sm">Exemplo</Text>
+                </TabsTrigger>
+                <TabsTrigger
+                  value="tooltip-variants-code"
+                  className="data-active:bg-primary-100"
+                >
+                  <Text size="sm">Código</Text>
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="tooltip-variants-example">
+                <div className="w-full flex justify-center items-center p-6 bg-muted-100 border border-muted-200 rounded-lg">
+                  <div className="grid grid-cols-2 gap-12 p-12">
+                    {(
+                      [
+                        "default",
+                        "dark",
+                        "primary",
+                        "primary-bordered",
+                        "primary-ghost",
+                        "secondary",
+                        "success",
+                        "warning",
+                        "danger",
+                      ] as const
+                    ).map((variant) => (
+                      <Tooltip key={variant} defaultOpen>
+                        <TooltipTrigger asChild>
+                          <Button variant={variant}>{variant}</Button>
+                        </TooltipTrigger>
+                        <TooltipContent
+                          variant={variant}
+                          side="top"
+                          sideOffset={8}
+                        >
+                          Tooltip {variant}
+                        </TooltipContent>
+                      </Tooltip>
+                    ))}
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="tooltip-variants-code">
+                <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                  <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                    <code>{tooltipVariantsExample}</code>
+                  </pre>
+                  <Button
+                    startContent={<Copy size={20} className="text-zinc-600" />}
+                    onClick={() => copy(tooltipVariantsExample)}
+                    className="bg-transparent border-none p-0"
+                    aria-label="Copiar código"
+                  />
+                </div>
+              </TabsContent>
+            </Tabs>
           </TooltipProvider>
         </div>
 
@@ -197,26 +254,57 @@ export function TooltipDetails() {
           </Text>
           <Separator size="xs" />
           <TooltipProvider delayDuration={300}>
-            <ExampleTabs
-              id="tooltip-properties"
-              code={tooltipPropertiesExample}
-            >
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button variant="default">Com atraso</Button>
-                </TooltipTrigger>
-                <TooltipContent side="bottom" sideOffset={8}>
-                  Aparece após 300 ms
-                </TooltipContent>
-              </Tooltip>
-            </ExampleTabs>
+            <Tabs defaultValue="tooltip-properties-example" className="w-full">
+              <TabsList className="bg-background border border-muted-200">
+                <TabsTrigger
+                  value="tooltip-properties-example"
+                  className="data-active:bg-primary-100"
+                >
+                  <Text size="sm">Exemplo</Text>
+                </TabsTrigger>
+                <TabsTrigger
+                  value="tooltip-properties-code"
+                  className="data-active:bg-primary-100"
+                >
+                  <Text size="sm">Código</Text>
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="tooltip-properties-example">
+                <div className="w-full flex justify-center items-center p-6 bg-muted-100 border border-muted-200 rounded-lg">
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="default">Com atraso</Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" sideOffset={8}>
+                      Aparece após 300 ms
+                    </TooltipContent>
+                  </Tooltip>
+                </div>
+              </TabsContent>
+              <TabsContent value="tooltip-properties-code">
+                <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
+                  <pre className="w-full overflow-auto scrollbar-thin mr-1">
+                    <code>{tooltipPropertiesExample}</code>
+                  </pre>
+                  <Button
+                    startContent={<Copy size={20} className="text-zinc-600" />}
+                    onClick={() => copy(tooltipPropertiesExample)}
+                    className="bg-transparent border-none p-0"
+                    aria-label="Copiar código"
+                  />
+                </div>
+              </TabsContent>
+            </Tabs>
           </TooltipProvider>
           <div className="border border-muted-200 p-3 rounded-lg">
             <Table>
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -229,6 +317,9 @@ export function TooltipDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Tooltip</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -239,6 +330,9 @@ export function TooltipDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Tooltip</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>delayDuration</Text>
                   </TableCell>
@@ -251,6 +345,9 @@ export function TooltipDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Tooltip</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>side</Text>
                   </TableCell>
                   <TableCell>
@@ -261,6 +358,9 @@ export function TooltipDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Tooltip</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>sideOffset</Text>
                   </TableCell>

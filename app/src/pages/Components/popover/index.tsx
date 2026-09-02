@@ -62,8 +62,8 @@ export function PopoverDetails() {
             <div className="flex flex-col gap-1">
               <Heading>Popover</Heading>
               <Text className="indent-8">
-                Componente de popover para exibir conteúdo complementar em
-                contexto.
+                Apresenta conteúdos contextuais próximos ao elemento acionador,
+                sem interromper o fluxo principal da interface.
               </Text>
             </div>
             <Button
@@ -233,7 +233,10 @@ export function PopoverDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -246,6 +249,9 @@ export function PopoverDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Popover</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>defaultOpen</Text>
                   </TableCell>
                   <TableCell>
@@ -257,6 +263,9 @@ export function PopoverDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Popover</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>align</Text>
                   </TableCell>
                   <TableCell>
@@ -267,6 +276,9 @@ export function PopoverDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Popover</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>sideOffset</Text>
                   </TableCell>
