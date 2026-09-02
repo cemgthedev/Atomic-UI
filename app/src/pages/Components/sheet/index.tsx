@@ -242,7 +242,10 @@ export function SheetDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -255,6 +258,9 @@ export function SheetDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Sheet</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>side</Text>
                   </TableCell>
                   <TableCell>
@@ -265,6 +271,9 @@ export function SheetDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Sheet</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>showCloseButton</Text>
                   </TableCell>

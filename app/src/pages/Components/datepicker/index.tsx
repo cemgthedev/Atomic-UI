@@ -308,7 +308,10 @@ export function DatepickerDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -321,6 +324,9 @@ export function DatepickerDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>DatePicker</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>placeholder</Text>
                   </TableCell>
                   <TableCell>
@@ -331,6 +337,9 @@ export function DatepickerDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>DatePicker</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>inputVariant</Text>
                   </TableCell>
@@ -343,6 +352,9 @@ export function DatepickerDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>DatePicker</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>inputRounded</Text>
                   </TableCell>
                   <TableCell>
@@ -354,6 +366,9 @@ export function DatepickerDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>DatePicker</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>calendarVariant</Text>
                   </TableCell>
                   <TableCell>
@@ -364,6 +379,9 @@ export function DatepickerDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>DatePicker</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>calendarRounded</Text>
                   </TableCell>

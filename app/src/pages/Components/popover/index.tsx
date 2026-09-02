@@ -233,7 +233,10 @@ export function PopoverDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -246,6 +249,9 @@ export function PopoverDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Popover</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>defaultOpen</Text>
                   </TableCell>
                   <TableCell>
@@ -257,6 +263,9 @@ export function PopoverDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Popover</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>align</Text>
                   </TableCell>
                   <TableCell>
@@ -267,6 +276,9 @@ export function PopoverDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Popover</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>sideOffset</Text>
                   </TableCell>

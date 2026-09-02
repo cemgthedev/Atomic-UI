@@ -294,7 +294,10 @@ export function TextareaDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -307,6 +310,9 @@ export function TextareaDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Textarea</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -318,6 +324,9 @@ export function TextareaDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Textarea</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -328,6 +337,9 @@ export function TextareaDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Textarea</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

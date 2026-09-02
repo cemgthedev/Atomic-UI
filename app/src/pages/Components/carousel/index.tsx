@@ -266,7 +266,10 @@ export function DetailsCarousel() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -279,6 +282,9 @@ export function DetailsCarousel() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Carousel</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>orientation</Text>
                   </TableCell>
                   <TableCell>
@@ -289,6 +295,9 @@ export function DetailsCarousel() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Carousel</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>opts</Text>
                   </TableCell>
@@ -301,6 +310,9 @@ export function DetailsCarousel() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Carousel</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>plugins</Text>
                   </TableCell>
                   <TableCell>
@@ -311,6 +323,9 @@ export function DetailsCarousel() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Carousel</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>setApi</Text>
                   </TableCell>

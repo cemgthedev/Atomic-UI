@@ -200,7 +200,7 @@ export function Footer() {
         </ul>
       </div>
 
-      <p>
+      <p className="text-sm text-foreground/80 text-center">
         &copy; 2026 cemg.dev. Desenvolvido por cemg.dev. Todos os direitos
         reservados.
       </p>

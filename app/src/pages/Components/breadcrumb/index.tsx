@@ -274,10 +274,13 @@ export function BreadcrumbDetails() {
                     <Text>Componente</Text>
                   </TableHead>
                   <TableHead>
+                    <Text>Propriedade</Text>
+                  </TableHead>
+                  <TableHead>
                     <Text>Descrição</Text>
                   </TableHead>
                   <TableHead>
-                    <Text>Propriedade</Text>
+                    <Text>Valor padrão</Text>
                   </TableHead>
                 </TableRow>
               </TableHeader>
@@ -287,10 +290,13 @@ export function BreadcrumbDetails() {
                     <Text>Breadcrumb</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>props de nav</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Contêiner de navegação.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>props de nav</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -298,10 +304,13 @@ export function BreadcrumbDetails() {
                     <Text>BreadcrumbLink</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>asChild: false</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Link para um nível anterior.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>asChild: false</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -309,10 +318,13 @@ export function BreadcrumbDetails() {
                     <Text>BreadcrumbPage</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>props de span</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Representa a página atual.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>props de span</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -320,10 +332,13 @@ export function BreadcrumbDetails() {
                     <Text>BreadcrumbSeparator</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>children: ChevronRight</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Separa os níveis.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>children: ChevronRight</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -331,10 +346,13 @@ export function BreadcrumbDetails() {
                     <Text>BreadcrumbEllipsis</Text>
                   </TableCell>
                   <TableCell>
+                    <Text>props de span</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>Indica níveis omitidos.</Text>
                   </TableCell>
                   <TableCell>
-                    <Text>props de span</Text>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

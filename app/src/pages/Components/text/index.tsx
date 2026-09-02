@@ -275,7 +275,10 @@ export function TextDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -288,6 +291,9 @@ export function TextDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Text</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -298,6 +304,9 @@ export function TextDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Text</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>

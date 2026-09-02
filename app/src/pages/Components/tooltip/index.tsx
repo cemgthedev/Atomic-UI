@@ -301,7 +301,10 @@ export function TooltipDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -314,6 +317,9 @@ export function TooltipDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Tooltip</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -324,6 +330,9 @@ export function TooltipDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Tooltip</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>delayDuration</Text>
                   </TableCell>
@@ -336,6 +345,9 @@ export function TooltipDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Tooltip</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>side</Text>
                   </TableCell>
                   <TableCell>
@@ -346,6 +358,9 @@ export function TooltipDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Tooltip</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>sideOffset</Text>
                   </TableCell>

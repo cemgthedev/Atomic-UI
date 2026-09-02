@@ -71,6 +71,7 @@ function CollapsibleExample({
 export function CollapsibleDetails() {
   const { pathname, hash } = useLocation();
   const currentUrl = `${pathname}${hash ?? ""}`;
+
   return (
     <>
       <section className="scroll-progress min-h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] w-full px-4 md:px-8 flex flex-col overflow-auto">
@@ -90,7 +91,7 @@ export function CollapsibleDetails() {
               onClick={() => copy(collapsibleSourceCode)}
               className="min-w-fit"
             >
-              Copiar codigo fonte
+              Copiar código fonte
             </Button>
           </div>
           <Separator size="xs" />
@@ -106,7 +107,7 @@ export function CollapsibleDetails() {
                 value="collapsible-code"
                 className="data-active:bg-primary-100"
               >
-                <Text size="sm">Codigo</Text>
+                <Text size="sm">Código</Text>
               </TabsTrigger>
             </TabsList>
             <TabsContent value="collapsible-example">
@@ -123,7 +124,7 @@ export function CollapsibleDetails() {
                   startContent={<Copy size={20} className="text-zinc-600" />}
                   onClick={() => copy(collapsibleExample)}
                   className="bg-transparent border-none p-0"
-                  aria-label="Copiar codigo"
+                  aria-label="Copiar código"
                 />
               </div>
             </TabsContent>
@@ -134,7 +135,7 @@ export function CollapsibleDetails() {
         <div id="estado-inicial" className="flex flex-col gap-3 py-4">
           <Heading>Estado inicial</Heading>
           <Text className="indent-8">
-            Use <code>defaultOpen</code> para exibir o conteudo quando o
+            Use <code>defaultOpen</code> para exibir o conteúdo quando o
             componente for montado.
           </Text>
           <Separator size="xs" />
@@ -198,6 +199,9 @@ export function CollapsibleDetails() {
                   <TableHead>
                     <Text>Descrição</Text>
                   </TableHead>
+                  <TableHead>
+                    <Text>Valor padrão</Text>
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -211,6 +215,9 @@ export function CollapsibleDetails() {
                   <TableCell>
                     <Text>Define se o conteudo inicia aberto.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -221,6 +228,9 @@ export function CollapsibleDetails() {
                   </TableCell>
                   <TableCell>
                     <Text>Controla o estado aberto do componente.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -233,6 +243,9 @@ export function CollapsibleDetails() {
                   <TableCell>
                     <Text>Chamado quando o estado aberto e alterado.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -244,6 +257,9 @@ export function CollapsibleDetails() {
                   <TableCell>
                     <Text>Combina o acionador com o elemento filho.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -254,6 +270,9 @@ export function CollapsibleDetails() {
                   </TableCell>
                   <TableCell>
                     <Text>Mantem o conteudo montado mesmo quando fechado.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

@@ -276,7 +276,10 @@ export function HeadingDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -289,6 +292,9 @@ export function HeadingDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Heading</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -299,6 +305,9 @@ export function HeadingDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Heading</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>

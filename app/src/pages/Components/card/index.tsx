@@ -44,7 +44,7 @@ export const sectionLinks: UrlProps[] = [
   },
   {
     name: "Variantes",
-    href: `/${urls.components}/${urls.button}#variantes`,
+    href: `/${urls.components}/${urls.card}#variantes`,
   },
   {
     name: "Tamanhos",
@@ -495,7 +495,10 @@ export function CardDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -508,6 +511,9 @@ export function CardDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Card</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -519,6 +525,9 @@ export function CardDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Card</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -529,6 +538,9 @@ export function CardDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Card</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

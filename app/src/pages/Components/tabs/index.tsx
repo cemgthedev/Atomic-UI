@@ -23,7 +23,6 @@ import {
   tabsExample,
   tabsPropertiesExample,
   tabsSizesExample,
-  tabsTriggerPropertiesExample,
   tabsVariantsExample,
   tabsVerticalExample,
 } from "@/pages/Components/tabs/codes";
@@ -547,13 +546,14 @@ export function TabsDetails() {
                 <TableHeader>
                   <TableRow>
                     <TableHead>
-                      <Text>Nome</Text>
+                      <Text>Componente</Text>
                     </TableHead>
-
+                    <TableHead>
+                      <Text>Propriedade</Text>
+                    </TableHead>
                     <TableHead>
                       <Text>Descrição</Text>
                     </TableHead>
-
                     <TableHead>
                       <Text>Valor padrão</Text>
                     </TableHead>
@@ -563,15 +563,16 @@ export function TabsDetails() {
                 <TableBody>
                   <TableRow>
                     <TableCell>
+                      <Text>Tabs</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>defaultValue</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Define a aba que será selecionada inicialmente.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>-</Text>
                     </TableCell>
@@ -579,15 +580,16 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>Tabs</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>value</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Define a aba atualmente selecionada de forma controlada.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>-</Text>
                     </TableCell>
@@ -595,15 +597,16 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>Tabs</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>onValueChange</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Função executada quando a aba selecionada é alterada.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>-</Text>
                     </TableCell>
@@ -611,16 +614,17 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>Tabs</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>orientation</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Define a orientação das abas entre horizontal e
                         vertical.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>horizontal</Text>
                     </TableCell>
@@ -628,15 +632,16 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>Tabs</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>activationMode</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Define como as abas são ativadas durante a navegação.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>automatic</Text>
                     </TableCell>
@@ -644,15 +649,16 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>Tabs</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>dir</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Define a direção de leitura e navegação das abas.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>ltr</Text>
                     </TableCell>
@@ -660,143 +666,33 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>Tabs</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>className</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Define classes CSS adicionais para estilização do
                         componente.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>-</Text>
                     </TableCell>
                   </TableRow>
-                </TableBody>
-              </Table>
-            </div>
-          </div>
-
-          {/* TabsTrigger */}
-          <div className="flex flex-col gap-3">
-            <Heading size="sm">TabsTrigger</Heading>
-
-            <Tabs
-              activationMode="automatic"
-              defaultValue="properties-trigger-exemple"
-              className="w-full"
-            >
-              <TabsList className="bg-background border border-muted-200">
-                <TabsTrigger
-                  value="properties-trigger-exemple"
-                  className="data-active:bg-primary-100"
-                >
-                  <Text size={"sm"}>Exemplo</Text>
-                </TabsTrigger>
-
-                <TabsTrigger
-                  value="properties-trigger-code"
-                  className="data-active:bg-primary-100"
-                >
-                  <Text size={"sm"}>Código</Text>
-                </TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="properties-trigger-exemple">
-                <div className="w-full flex justify-center items-center p-3 bg-muted-100 border border-muted-200 rounded-lg">
-                  <Tabs defaultValue="primary" className="w-full">
-                    <TabsList className="flex flex-wrap">
-                      <TabsTrigger value="primary" variant="primary" size="md">
-                        Primary
-                      </TabsTrigger>
-
-                      <TabsTrigger
-                        value="secondary"
-                        variant="secondary"
-                        size="md"
-                      >
-                        Secondary
-                      </TabsTrigger>
-
-                      <TabsTrigger value="success" variant="success" size="md">
-                        Success
-                      </TabsTrigger>
-                    </TabsList>
-
-                    <TabsContent value="primary">
-                      <Card>
-                        <CardContent className="pt-6">
-                          <Label>Primary</Label>
-                        </CardContent>
-                      </Card>
-                    </TabsContent>
-
-                    <TabsContent value="secondary">
-                      <Card>
-                        <CardContent className="pt-6">
-                          <Label>Secondary</Label>
-                        </CardContent>
-                      </Card>
-                    </TabsContent>
-
-                    <TabsContent value="success">
-                      <Card>
-                        <CardContent className="pt-6">
-                          <Label>Success</Label>
-                        </CardContent>
-                      </Card>
-                    </TabsContent>
-                  </Tabs>
-                </div>
-              </TabsContent>
-
-              <TabsContent value="properties-trigger-code">
-                <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-                  <pre className="w-full overflow-auto scrollbar-thin mr-1">
-                    <code>{tabsTriggerPropertiesExample}</code>
-                  </pre>
-
-                  <Button
-                    startContent={<Copy size={20} className="text-zinc-600" />}
-                    onClick={() => copy(tabsTriggerPropertiesExample)}
-                    className="bg-transparent border-none p-0"
-                  />
-                </div>
-              </TabsContent>
-            </Tabs>
-
-            <div className="border border-muted-200 p-3 rounded-lg">
-              <Table>
-                <TableHeader>
                   <TableRow>
-                    <TableHead>
-                      <Text>Nome</Text>
-                    </TableHead>
-
-                    <TableHead>
-                      <Text>Descrição</Text>
-                    </TableHead>
-
-                    <TableHead>
-                      <Text>Valor padrão</Text>
-                    </TableHead>
-                  </TableRow>
-                </TableHeader>
-
-                <TableBody>
-                  <TableRow>
+                    <TableCell>
+                      <Text>TabsTrigger</Text>
+                    </TableCell>
                     <TableCell>
                       <Text>value</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Identifica a aba e a associa ao conteúdo correspondente.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>-</Text>
                     </TableCell>
@@ -804,13 +700,14 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>TabsTrigger</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>variant</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>Define a aparência visual da aba.</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>default</Text>
                     </TableCell>
@@ -818,13 +715,14 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>TabsTrigger</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>size</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>Define o tamanho da aba.</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>md</Text>
                     </TableCell>
@@ -832,13 +730,14 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>TabsTrigger</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>disabled</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>Desabilita a interação com a aba.</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>false</Text>
                     </TableCell>
@@ -846,15 +745,16 @@ export function TabsDetails() {
 
                   <TableRow>
                     <TableCell>
+                      <Text>TabsTrigger</Text>
+                    </TableCell>
+                    <TableCell>
                       <Text>className</Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>
                         Define classes CSS adicionais para estilização da aba.
                       </Text>
                     </TableCell>
-
                     <TableCell>
                       <Text>-</Text>
                     </TableCell>

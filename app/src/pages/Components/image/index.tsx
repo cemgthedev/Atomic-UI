@@ -381,7 +381,10 @@ export function ImageDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -394,6 +397,9 @@ export function ImageDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Image</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -405,6 +411,9 @@ export function ImageDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Image</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
@@ -415,6 +424,9 @@ export function ImageDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Image</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>aspect</Text>
                   </TableCell>

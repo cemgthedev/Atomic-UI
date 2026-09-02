@@ -344,10 +344,13 @@ export function FieldDetails() {
                     <Text>Componente</Text>
                   </TableHead>
                   <TableHead>
-                    <Text>Uso</Text>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
-                    <Text>Observação</Text>
+                    <Text>Descrição</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Valor padrão</Text>
                   </TableHead>
                 </TableRow>
               </TableHeader>
@@ -362,6 +365,9 @@ export function FieldDetails() {
                   <TableCell>
                     <Text>Define a organização do campo.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -372,6 +378,9 @@ export function FieldDetails() {
                   </TableCell>
                   <TableCell>
                     <Text>Identifica o campo visualmente.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
                 <TableRow>
@@ -384,6 +393,9 @@ export function FieldDetails() {
                   <TableCell>
                     <Text>Explica o propósito do campo.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -395,6 +407,9 @@ export function FieldDetails() {
                   <TableCell>
                     <Text>Exibe validação ou alertas.</Text>
                   </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>
@@ -405,6 +420,9 @@ export function FieldDetails() {
                   </TableCell>
                   <TableCell>
                     <Text>Pode representar seções do formulário.</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>-</Text>
                   </TableCell>
                 </TableRow>
               </TableBody>

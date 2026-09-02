@@ -244,7 +244,10 @@ export function DrawerDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -257,6 +260,9 @@ export function DrawerDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Drawer</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>direction</Text>
                   </TableCell>
                   <TableCell>
@@ -267,6 +273,9 @@ export function DrawerDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Drawer</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>modal</Text>
                   </TableCell>

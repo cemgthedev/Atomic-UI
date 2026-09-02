@@ -503,7 +503,10 @@ export function ToastDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -517,6 +520,9 @@ export function ToastDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -528,6 +534,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>className</Text>
                   </TableCell>
@@ -542,6 +551,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>duration</Text>
                   </TableCell>
@@ -558,6 +570,9 @@ export function ToastDetails() {
 
                 <TableRow>
                   <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>position</Text>
                   </TableCell>
                   <TableCell>
@@ -569,6 +584,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>description</Text>
                   </TableCell>
@@ -585,6 +603,9 @@ export function ToastDetails() {
 
                 <TableRow>
                   <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>id</Text>
                   </TableCell>
                   <TableCell>
@@ -596,6 +617,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>closeButton</Text>
                   </TableCell>
@@ -610,6 +634,9 @@ export function ToastDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>Toast</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>action</Text>
                   </TableCell>

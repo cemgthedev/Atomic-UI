@@ -350,7 +350,10 @@ export function InputGroupDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -363,6 +366,9 @@ export function InputGroupDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>InputGroup</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -373,6 +379,9 @@ export function InputGroupDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>InputGroup</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>
@@ -385,6 +394,9 @@ export function InputGroupDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>InputGroup</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
@@ -395,6 +407,9 @@ export function InputGroupDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>InputGroup</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>align</Text>
                   </TableCell>

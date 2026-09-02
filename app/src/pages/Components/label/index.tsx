@@ -277,7 +277,10 @@ export function LabelDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -290,6 +293,9 @@ export function LabelDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Label</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -300,6 +306,9 @@ export function LabelDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Label</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>

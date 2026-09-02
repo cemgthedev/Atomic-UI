@@ -480,7 +480,10 @@ export function DropdownMenuDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -494,6 +497,9 @@ export function DropdownMenuDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>DropdownMenu</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>open</Text>
                   </TableCell>
                   <TableCell>
@@ -505,6 +511,9 @@ export function DropdownMenuDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>DropdownMenu</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>defaultOpen</Text>
                   </TableCell>
@@ -521,6 +530,9 @@ export function DropdownMenuDetails() {
 
                 <TableRow>
                   <TableCell>
+                    <Text>DropdownMenu</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>onOpenChange</Text>
                   </TableCell>
                   <TableCell>
@@ -535,6 +547,9 @@ export function DropdownMenuDetails() {
                 </TableRow>
 
                 <TableRow>
+                  <TableCell>
+                    <Text>DropdownMenu</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>modal</Text>
                   </TableCell>

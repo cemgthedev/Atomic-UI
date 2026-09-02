@@ -374,7 +374,10 @@ export function CheckboxDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -387,6 +390,9 @@ export function CheckboxDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -397,6 +403,9 @@ export function CheckboxDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>
@@ -409,6 +418,9 @@ export function CheckboxDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
                   <TableCell>
@@ -420,6 +432,9 @@ export function CheckboxDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>defaultChecked</Text>
                   </TableCell>
                   <TableCell>
@@ -430,6 +445,9 @@ export function CheckboxDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Checkbox</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>icon</Text>
                   </TableCell>

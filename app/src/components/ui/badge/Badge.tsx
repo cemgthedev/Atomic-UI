@@ -88,26 +88,10 @@ function Badge({
   children,
   ...props
 }: BadgeProps) {
-  if (asChild)
-    return (
-      <div className={cn(badgeVariants({ variant, size, rounded, className }))}>
-        {startContent}
-
-        <Slot.Root
-          data-slot="span"
-          data-variant={variant}
-          data-size={size}
-          {...props}
-        >
-          {children}
-        </Slot.Root>
-
-        {endContent}
-      </div>
-    );
+  const Comp = asChild ? Slot.Root : "span";
 
   return (
-    <span
+    <Comp
       data-slot="span"
       data-variant={variant}
       data-size={size}
@@ -115,11 +99,9 @@ function Badge({
       {...props}
     >
       {startContent}
-
       {children}
-
       {endContent}
-    </span>
+    </Comp>
   );
 }
 

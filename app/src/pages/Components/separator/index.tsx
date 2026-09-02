@@ -394,7 +394,10 @@ export function SeparatorDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -407,6 +410,9 @@ export function SeparatorDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Separator</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -418,6 +424,9 @@ export function SeparatorDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Separator</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -428,6 +437,9 @@ export function SeparatorDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Separator</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>orientation</Text>
                   </TableCell>

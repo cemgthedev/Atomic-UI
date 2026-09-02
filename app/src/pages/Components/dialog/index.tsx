@@ -178,7 +178,10 @@ export function DialogDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -191,7 +194,10 @@ export function DialogDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
-                    <Text>showCloseButton (DialogContent)</Text>
+                    <Text>DialogContent</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>showCloseButton</Text>
                   </TableCell>
                   <TableCell>
                     <Text>
@@ -205,7 +211,10 @@ export function DialogDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
-                    <Text>showCloseButton (DialogFooter)</Text>
+                    <Text>DialogFooter</Text>
+                  </TableCell>
+                  <TableCell>
+                    <Text>showCloseButton</Text>
                   </TableCell>
                   <TableCell>
                     <Text>

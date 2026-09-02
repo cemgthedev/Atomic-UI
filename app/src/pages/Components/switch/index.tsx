@@ -302,7 +302,10 @@ export function SwitchDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -315,6 +318,9 @@ export function SwitchDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Switch</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -325,6 +331,9 @@ export function SwitchDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Switch</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>size</Text>
                   </TableCell>
@@ -337,6 +346,9 @@ export function SwitchDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Switch</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>defaultChecked</Text>
                   </TableCell>
                   <TableCell>
@@ -347,6 +359,9 @@ export function SwitchDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Switch</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>disabled</Text>
                   </TableCell>

@@ -332,7 +332,10 @@ export function SkeletonDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -345,6 +348,9 @@ export function SkeletonDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Skeleton</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -356,6 +362,9 @@ export function SkeletonDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Skeleton</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -366,6 +375,9 @@ export function SkeletonDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Skeleton</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

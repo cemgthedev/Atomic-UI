@@ -352,7 +352,10 @@ export function InputDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -365,6 +368,9 @@ export function InputDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Input</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -376,6 +382,9 @@ export function InputDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Input</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -386,6 +395,9 @@ export function InputDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Input</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>

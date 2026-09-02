@@ -477,7 +477,10 @@ export function BadgeDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead>
-                    <Text>Nome</Text>
+                    <Text>Componente</Text>
+                  </TableHead>
+                  <TableHead>
+                    <Text>Propriedade</Text>
                   </TableHead>
                   <TableHead>
                     <Text>Descrição</Text>
@@ -490,6 +493,9 @@ export function BadgeDetails() {
               <TableBody>
                 <TableRow>
                   <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>startContent</Text>
                   </TableCell>
                   <TableCell>
@@ -500,6 +506,9 @@ export function BadgeDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>endContent</Text>
                   </TableCell>
@@ -512,6 +521,9 @@ export function BadgeDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>variant</Text>
                   </TableCell>
                   <TableCell>
@@ -523,6 +535,9 @@ export function BadgeDetails() {
                 </TableRow>
                 <TableRow>
                   <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
+                  <TableCell>
                     <Text>size</Text>
                   </TableCell>
                   <TableCell>
@@ -533,6 +548,9 @@ export function BadgeDetails() {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>
+                    <Text>Badge</Text>
+                  </TableCell>
                   <TableCell>
                     <Text>rounded</Text>
                   </TableCell>
