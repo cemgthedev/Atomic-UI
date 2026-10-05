@@ -464,7 +464,6 @@ export const importCSS = `import "./style/globals.css";`;
 // Aliases configuration
 export const typeScriptAliasConfiguration = `{
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
