@@ -470,12 +470,12 @@ export const typeScriptAliasConfiguration = `{
   }
 }`;
 
-export const viteAliasConfiguration = `import path from "path";
+export const viteAliasConfiguration = `import path from "node:path";
 
 export default defineConfig({
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
 });`;
