@@ -1,6 +1,5 @@
 export const globalStyleCode = `@import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
 @import "@fontsource/fira-sans";
 @import "@fontsource/montserrat";
 

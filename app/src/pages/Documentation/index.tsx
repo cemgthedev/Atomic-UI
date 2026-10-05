@@ -49,13 +49,6 @@ const technologies: TechnologyProps[] = [
     href: "https://www.tailwind-variants.org/",
   },
   {
-    name: "Shadcn/ui",
-    description:
-      "Coleção de componentes reutilizáveis construída sobre Radix UI e Tailwind CSS.",
-    icon: "/shadcnui-icon.svg",
-    href: "https://ui.shadcn.com/",
-  },
-  {
     name: "Radix",
     description:
       "Coleção de primitivas acessíveis e não estilizadas para construção de componentes de interface reutilizáveis.",

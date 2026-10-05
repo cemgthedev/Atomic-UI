@@ -29,9 +29,8 @@ export function Dashboard() {
           <Label>Interfaces modernas com componentes atômicos</Label>
           <Text>
             O Atomic UI é um Design System desenvolvido com componentes
-            personalizados baseados em shadcn/ui e radix, oferecendo
-            acessibilidade, flexibilidade e uma excelente experiência para
-            desenvolvedores.
+            personalizados baseados no radix, oferecendo acessibilidade,
+            flexibilidade e uma excelente experiência para desenvolvedores.
           </Text>
         </div>
 

@@ -9,9 +9,6 @@ export const installDependencies = `npm install clsx tailwind-merge class-varian
 // Instalando dependências de desenvolvimento
 export const installDevelopmentDependencies = `npm install -D tailwindcss @tailwindcss/vite tw-animate-css @types/node`;
 
-// Inicializando shadcn/ui
-export const initShadcnUI = `npx shadcn@4.20.0 init`;
-
 export const datesAndCalendars = `npm install date-fns react-day-picker`;
 
 export const googleFonts = `npm install @fontsource/fira-sans @fontsource/montserrat`;
@@ -32,7 +29,6 @@ export default defineConfig({
 
 export const tailwindImports = `@import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
 @import "@fontsource/fira-sans";
 @import "@fontsource/montserrat";
 

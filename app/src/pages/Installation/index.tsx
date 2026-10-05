@@ -8,7 +8,6 @@ import {
   datesAndCalendars,
   googleFonts,
   importCSS,
-  initShadcnUI,
   installDependencies,
   installDevelopmentDependencies,
   tailwindImports,
@@ -121,20 +120,6 @@ export function Installation() {
             <Button
               startContent={<Copy size={20} className="text-zinc-600" />}
               onClick={() => copy(installDevelopmentDependencies)}
-              className="bg-transparent border-none p-0"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <Label size="sm">Inicializando shadcn/ui</Label>
-          <div className="w-full flex justify-between p-3 bg-muted-100 border border-muted-200 rounded-lg">
-            <pre className="w-full overflow-auto scrollbar-thin mr-1">
-              <code>{initShadcnUI}</code>
-            </pre>
-            <Button
-              startContent={<Copy size={20} className="text-zinc-600" />}
-              onClick={() => copy(initShadcnUI)}
               className="bg-transparent border-none p-0"
             />
           </div>
