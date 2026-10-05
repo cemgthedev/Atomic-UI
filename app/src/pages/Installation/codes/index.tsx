@@ -10,7 +10,7 @@ export const installDependencies = `npm install clsx tailwind-merge class-varian
 export const installDevelopmentDependencies = `npm install -D tailwindcss @tailwindcss/vite tw-animate-css @types/node`;
 
 // Inicializando shadcn/ui
-export const initShadcnUI = `npx shadcn@latest init`;
+export const initShadcnUI = `npx shadcn@4.20.0 init`;
 
 export const datesAndCalendars = `npm install date-fns react-day-picker`;
 
