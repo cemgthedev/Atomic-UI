@@ -128,6 +128,10 @@ export const webUrls: UrlProps[] = [
         href: `/${urls.components}/${urls.input}`,
       },
       {
+        name: "InputGroup",
+        href: `/${urls.components}/${urls.input_group}`,
+      },
+      {
         name: "Label",
         href: `/${urls.components}/${urls.label}`,
       },
