@@ -115,6 +115,8 @@ const ImageContent = React.forwardRef<HTMLImageElement, ImageContentProps>(
     return (
       <img
         ref={ref}
+        src={src}
+        alt={alt}
         data-slot="image-content"
         className={cn(
           !loaded && "opacity-0",
