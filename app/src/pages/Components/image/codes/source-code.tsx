@@ -21,7 +21,7 @@ function useImageContext() {
   return context;
 }
 
-const imageVariants = cva("relative overflow-hidden select-none border", {
+const imageVariants = cva("relative overflow-hidden select-none border border-muted-300 bg-muted-200", {
   variants: {
     size: {
       "5xl": "w-44 h-44",
@@ -107,17 +107,21 @@ type ImageContentProps = React.ComponentProps<"img"> &
 const ImageContent = React.forwardRef<HTMLImageElement, ImageContentProps>(
   ({ className, onLoad, onError, src, alt, ...props }, ref) => {
     const { loaded, error, setLoaded, setError } = useImageContext();
-    
-    if (!src) {
+
+    const hasInvalidSrc = !src;
+
+    useEffect(() => {
+      setError(hasInvalidSrc);
+    }, [hasInvalidSrc]);if (!src) {
       setError(true);
     }
 
     return (
       <img
         ref={ref}
+        data-slot="image-content"
         src={src}
         alt={alt}
-        data-slot="image-content"
         className={cn(
           !loaded && "opacity-0",
           loaded && "opacity-100",
