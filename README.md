@@ -10,11 +10,11 @@ Explore the dashboard, browse the component catalog, and inspect live examples a
 
 ![Atomic UI dashboard and design-token customization](docs/screenshots/dashboard.png)
 
+![Documentation and first steps](docs/screenshots/first-steps.png)
+
 ![Component catalog](docs/screenshots/components.png)
 
 ![Button variants and sizes](docs/screenshots/component-button-example.png)
-
-![Documentation and first steps](docs/screenshots/first-steps.png)
 
 ## Problem and goals
 
